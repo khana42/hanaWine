@@ -11,6 +11,7 @@
 <body>
 	<div id="wrap">
 		<h1>안녕</h1>
+	<h2>안녕2</h2>
 	</div>
 	<!-- div#wrap -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
