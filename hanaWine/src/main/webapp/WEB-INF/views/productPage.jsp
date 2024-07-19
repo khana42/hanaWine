@@ -8,7 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="/style/style.css?v">
+	<link rel="stylesheet" href="/style/style2.css?v">
 </head>
 <body>
 		<div id="wrap">
@@ -86,6 +86,7 @@
                 <!-- div#wineDetailArea -->
             </div>
             <!-- div#wineInfo -->
+            <span>.</span>
         </Main>
         <!-- Main#main -->
 
@@ -101,7 +102,7 @@
                 <li class="mainLi" data-target="reservation">
                     <a href="#">구매예약 안내</a>
                 </li>
-               
+               	
                 <li class="mainLi" data-target="qa">
                     <a href="#">Q&A</a>
 
@@ -127,12 +128,10 @@
         </footer>
         <!-- Footer#footer -->
 
-<span>안녕하세!!!</span>
-
     </div>
     <!-- div#wrap -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="/script/script.js"></script>
+	<script src="/script/script2.js"></script>
 </body>
 </html>    

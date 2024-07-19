@@ -1,3 +1,4 @@
+
 $(function () {
 
 
@@ -18,7 +19,7 @@ $(function () {
             // 모든 탭의 스타일 초기화
             $("#mainTab li").css({
                 "background-color": "",
-                "color": ""
+                "color": " "
             });
 
             // 클릭된 탭에 스타일 적용
@@ -28,6 +29,8 @@ $(function () {
             });
 
         });
+        
+        
 
 
     });
