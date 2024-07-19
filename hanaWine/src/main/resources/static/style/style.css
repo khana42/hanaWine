@@ -1,0 +1,341 @@
+@charset "UTF-8";
+<<<<<<< HEAD
+@import url(style_Reset.css);
+
+
+
+div#wrap {
+    width: 1200px;
+    padding: 20px 10px;
+    border: 3px solid #aaa;
+    border-radius: 6px;
+    margin: 20px auto;
+}
+#select{
+	/*border: 1px solid #000;*/
+	justify-content: space-between;
+	margin: 10px;
+	padding: 10px;
+	}
+#selecOp{
+    width: 300px;
+	/*border: 1px solid #000;*/
+	display: inline-block;
+    
+}
+ul#select0{
+
+	padding:2px 6px;
+	margin:2px 8px; 
+}
+ul#select0>li{
+	font-size: 13px;
+	padding:2px 5px;
+	margin:2px 2px;
+}
+#priceSel{
+	width: 160px;
+	/* border: 1px solid #000;*/
+}
+#selecPrice{
+	margin: 7px;
+	width: 300px
+}
+h1 {
+    font-size: 36px;
+    text-align: left;
+    padding: 0 0 0 25px;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+
+button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+/*슬라이드 쇼*/
+/*.con{
+  max-width:1100px;
+  margin:0 auto;
+  border:solid red;
+}*/
+
+
+.slide_wrapper{
+  /*border:solid red;*/
+  position:relative;
+  width:890px;
+  margin:0 auto;
+  height:200px;
+  overflow:hidden;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.slides{
+  position:absolute;
+  left:0;
+  top:0;
+  transition:left 0.5s ease-out;
+}
+
+.slides li:not(:last-child){
+  justify-content:flex-start;
+  margin-right:30px;
+}
+
+
+.controls{
+  text-align:center;
+}
+
+.controls span{
+  z-index:2;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.controls>.prev{
+  right:calc(100% - 20px);
+}
+
+.controls>.next{
+  left:calc(100% - 20px);
+}
+
+.ha{
+  width:50px;
+}
+.prev:hover {
+	cursor: pointer;
+}
+.next:hover {
+	cursor: pointer;
+}
+
+div#main{
+/* 	border: 3px solid #000; */
+
+	justify-content: space-around;
+	flex-wrap:wrap;
+	margin: 15px;
+}
+#wine{
+	
+	justify-content:space-around;
+	border: 1px solid #000;
+	width: 500px;
+	text-align: center;
+	border-radius: 6px;
+	margin: 15px;
+	}
+.name{
+	margin: 15px;
+	font-size: 18px;
+	font-weight: bold;
+}	
+.price{
+ margin-top: 150px;
+}
+=======
+@import url(style.reset.css);
+
+div#wrap {
+    width: 1200px;
+    border: 1px solid #000;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+/* RouteArea 시작 */
+#RouteArea {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+#RouteArea span {
+    font-size: 14px;
+    color: #666;
+}
+
+/* RouteArea 끝 */
+
+
+
+/* Main#main 시작  */
+
+#main {
+    display: flex;
+    justify-content: space-between;
+}
+
+#main .wineInfo {
+    display: flex;
+    width: 100%;
+    margin: 50px;
+    /* border: 1px solid #000; */
+}
+
+#wineImgArea img {
+    max-width: 300px;
+    height: auto;
+    padding: 20px;
+    margin: 30px;
+    /* border: 1px solid #000; */
+}
+
+
+
+/* wine 제품 디테일 영역 시작 */
+
+#wineDetailArea {
+    margin-left: 20px;
+    flex: 1;
+    padding: 20px;
+    margin: 30px;
+    /* border: 1px solid #000; */
+}
+
+#wineDetailArea h2 {
+    margin-top: 100px;
+    font-size: 24px;
+}
+
+.wineSubtitle {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 20px;
+
+}
+
+.wineDetails {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+
+.wineDetails li {
+    margin-bottom: 5px;
+    /* border: 1px solid #000; */
+}
+
+
+.wineRatings {
+    margin-bottom: 20px;
+
+}
+
+.wineRating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.wineRating span {
+    width: 50px;
+    font-size: 14px;
+}
+
+.ratingBar {
+    width: 200px;
+    height: 10px;
+    background-color: #ddd;
+    margin-left: 10px;
+    position: relative;
+}
+
+.ratingFill {
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#priceArea {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+#priceArea span:first-child {
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+#priceArea span:last-child {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#btnArea {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#btnArea button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#btnArea button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* wine 제품 디테일 영역 끝 */
+
+
+/* 상세정보 탭메뉴 시작 */
+#tabArea {
+    margin-top: 20px;
+}
+
+#mainTab {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    margin: 0;
+}
+
+.mainLi {
+    flex: 1;
+    text-align: center;
+}
+
+.mainLi a {
+    display: block;
+    padding: 15px 0;
+    font-size: 24px;
+	font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mainLi a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+/* 상세정보 탭메뉴 끝 */
+>>>>>>> remotes/origin/sooksook
