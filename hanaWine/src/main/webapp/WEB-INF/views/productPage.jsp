@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="/style/style.css?v">
 </head>
 <body>
-	<div id="wrap">
 		<div id="wrap">
 
         <div id="RouteArea">
@@ -132,8 +131,7 @@
 
     </div>
     <!-- div#wrap -->
-	</div>
-	<!-- div#wrap -->
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="/script/script.js"></script>
 </body>
