@@ -10,5 +10,10 @@ public class ProjController {
 	@RequestMapping("/")
     public String root_test() throws Exception{
         return "subpage1";
-    }}
 
+	}
+	@RequestMapping("/productPage")
+	public String productPage() {
+		return "productPage";
+	
+	}}
