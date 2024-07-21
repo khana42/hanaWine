@@ -101,7 +101,7 @@
                 <li class="mainLi" data-target="reservation">
                     <a href="#">구매예약 안내</a>
                 </li>
-                </li>
+               
                 <li class="mainLi" data-target="qa">
                     <a href="#">Q&A</a>
 
@@ -127,7 +127,7 @@
         </footer>
         <!-- Footer#footer -->
 
-
+<span>안녕하세!!!</span>
 
     </div>
     <!-- div#wrap -->
