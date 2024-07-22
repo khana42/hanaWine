@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HanaController {
 
-	@RequestMapping("/")
+	@RequestMapping("/main")
 	public String root() {
 		return "main";
 	}
