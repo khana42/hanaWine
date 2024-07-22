@@ -5,14 +5,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.proj.Board.Dao.BoardDao;
+import com.proj.Board.HanaDao.HanaBoardDao;
 
 import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
-public class BoardController {
+public class HanaBoardCont {
 	@Autowired
-	private BoardDao boardDao;
+	private HanaBoardDao boardDao;
 	
 	// 메인 페이지 리퀘스트 맵핑
 	@RequestMapping("/")
@@ -24,13 +24,13 @@ public class BoardController {
 	@RequestMapping("/boardList")
 	public String boardList(Model model) {
 		model.addAttribute("mtdBoardList", boardDao.mtdBoardList());
-		return "boardList";
+		return "BoardList";
 	}
 	
 	// 글 입력 양식
 	@RequestMapping("/writeForm")
 	public String writeForm() {
-		return "writeForm";
+		return "WriteForm";
 	}	
 	
 	// 글 저장 리퀘스트 맵핑
@@ -47,7 +47,7 @@ public class BoardController {
 			e.getMessage();
 		}
 		
-		return "redirect:boardList";
+		return "redirect:BoardList";
 	}
 	
 	// 내용 보기 리퀘스트 맵핑
@@ -60,7 +60,7 @@ public class BoardController {
 		} catch(Exception e) {
 			e.getMessage();
 		}
-		return "boardView";
+		return "BoardView";
 		
 	}
 	
@@ -74,7 +74,7 @@ public class BoardController {
 			boardDao.mtdBoardDelete(num);
 		} catch(Exception e) {e.getMessage();}
 		
-		return "redirect:boardList";
+		return "redirect:BoardList";
 	}
 	
 	
