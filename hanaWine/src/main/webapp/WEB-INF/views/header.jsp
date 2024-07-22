@@ -2,6 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
  
+<%
+String uid = (String)session.getAttribute("uid");
+%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -20,8 +23,14 @@
 		
 		<div id="loginArea">
 			<ul class="dFlex">
+			<% if (uid != null) { %>
+			<!-- 로그인 상태 -->
+				<li id="logout">로그아웃</li>
+			<% } else { %>
+			<!-- 로그아웃 상태 -->
 				<li id="login">로그인</li>
 				<li id="join">회원가입</li>
+			<% } %>
 				<li>장바구니</li>
 			</ul>
 		</div>
