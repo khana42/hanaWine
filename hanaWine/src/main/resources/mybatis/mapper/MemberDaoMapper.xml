@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DTD 문서 타입 지정 -->
+<!DOCTYPE mapper 
+PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.exam.board.dao.BoardDao">
+
+	<!-- • namespace → 인터페이스로 만든 DAO 지정(패키지포함) • id → DAO에서 사용할 추상메서드 지정 • resultType 
+		→ DB에서 Select 결과를 반환하여 저장할 DTO 지정(패키지포함) • #{param1}, #{param2}, ... → 사용할 
+		추상메서드의 매개변수 지정 -->
+
+	<!-- BBS 글 목록 태그 -->
+	<select id="mtdBoardList"
+		resultType="com.exam.board.dto.BoardDto">
+		select * from board order by num desc
+	</select>
+
+	<!-- BBS 글저장 태그 -->
+	<insert id="mtdBoardWrite">
+		insert into board (writer, title, content)
+		values ( #{param1}, #{param2}, #{param3} )
+	</insert>
+	
+	<!-- BBS 글 상세 내용 보기 -->
+	<select id="mtdBoardView" resultType="com.exam.board.dto.BoardDto">
+		select * from board where num = #{param1}
+	</select>
+	
+	<!-- BBS 글삭제 태그 -->
+	<delete id="mtdBoardDelete">
+		delete from board where num = #{param1}
+	</delete>
+
+</mapper>
