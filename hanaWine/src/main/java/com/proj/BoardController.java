@@ -1,14 +1,11 @@
 package com.proj;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.exam.board.dao.BoardDao;
+import com.proj.board.dao.BoardDao;
 
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -46,12 +43,7 @@ public class BoardController {
 			String title = req.getParameter("title");
 			String content = req.getParameter("content");
 			
-			Map<String, String> map = new HashMap<String, String>();
-			map.put("item1", writer);
-			map.put("item2", title);
-			map.put("item3", content);
-			
-			boardDao.mtdBoardWrite(map);
+			boardDao.mtdBoardWrite(writer, title, content);
 		} catch (Exception e) {
 			e.getMessage();
 		}

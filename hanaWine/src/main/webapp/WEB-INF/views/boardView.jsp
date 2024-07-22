@@ -8,11 +8,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>내용보기</title>
-	<link rel="stylesheet" href="/style/style4.css?v">
+	<link rel="stylesheet" href="/style/style.css?v">
 </head>
 <body>
 	<div id="wrap">
-		<h1>내용보기(MyBatis_Param)</h1>
+		<h1>내용보기(MyBatis)</h1>
 		<hr>
 		<ul>
 			<li>작성자 : ${mtdBoardView.writer }</li>
@@ -24,6 +24,6 @@
 	</div>
 	<!-- div#wrap -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="/script/script4.js"></script>
+	<script src="/script/script.js"></script>
 </body>
 </html>    
