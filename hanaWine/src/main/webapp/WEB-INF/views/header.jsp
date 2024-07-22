@@ -32,12 +32,12 @@
 	<div id="gnbArea" class="dFlex">
 		<nav id="nav">
 			<ul id="mainMenu" class="dFlex">
-				<li>와인
+				<li id="wineCateMain" data-cate="wine">와인
 					<ul class="subMenu">
-						<li>화이트 와인</li>
-						<li>레드 와인</li>
-						<li>스파클링</li>
-						<li>1</li>
+						<li class="wineCate" data-cate="white">화이트 와인</li>
+						<li class="wineCate" data-cate="red">레드 와인</li>
+						<li class="wineCate" data-cate="sparkling">스파클링</li>
+						<li class="wineCate" data-cate="1">1</li>
 					</ul>		
 				</li>
 				<li>음식
@@ -76,6 +76,7 @@
 	</div>
 	<!-- div#gnbArea -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	
 	<script src="/script/script3.js"></script>
 </body>
 </html>    

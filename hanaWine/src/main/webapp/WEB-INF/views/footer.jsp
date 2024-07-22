@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="/style/style.css?v">
+	<link rel="stylesheet" href="/style/style3.css?v">
 </head>
 <body>
 	<div id="wrap">
