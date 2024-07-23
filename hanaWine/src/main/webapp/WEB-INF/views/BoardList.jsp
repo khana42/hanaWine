@@ -8,11 +8,11 @@
 <head>
 <meta charset="UTF-8">
 <title>글목록</title>
-<link rel="stylesheet" href="/style/style.css?v">
+<link rel="stylesheet" href="/style/style4.css?v">
 </head>
 <body>
 	<div id="wrap">
-		<h1>BBS 목록보기(MyBatis)</h1>
+		<h1>공지사항</h1>
 		<hr>
 		<table>
 			<tbody>
@@ -49,6 +49,6 @@
 	<!-- div#wrap -->
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="/script/script.js"></script>
+	<script src="/script/script4.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>글쓰기</title>
-	<link rel="stylesheet" href="/style/style.css?v">
+	<link rel="stylesheet" href="/style/style4.css?v">
 </head>
 <body>
 	<div id="wrap">
@@ -42,6 +42,6 @@
 	</div>
 	<!-- div#wrap -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="/script/script.js"></script>
+	<script src="/script/script4.js"></script>
 </body>
 </html>    
