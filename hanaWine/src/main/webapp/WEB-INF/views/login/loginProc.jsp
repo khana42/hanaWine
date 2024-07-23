@@ -1,3 +1,4 @@
+<%@page import="com.proj.dao.DAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -6,7 +7,7 @@
 <% 
  String uid = request.getParameter("uid");
  String upw = request.getParameter("upw");
- boolean chk = dao.mtdLogin(uid, upw, session); //어케 해야할지 생각해보기
+// boolean chk = dao.mtdLogin(uid, upw, session); //어케 해야할지 생각해보기
 %> 
 
 <script>

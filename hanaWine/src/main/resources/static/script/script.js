@@ -36,4 +36,5 @@ $("#wine").click(function(){
 	
 	location.href="/productPage"
 });
-});
+
+	});
