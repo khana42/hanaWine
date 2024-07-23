@@ -9,6 +9,9 @@
 <link rel="stylesheet" href="/style/style.css?v">
 </head>
 <body>
+<header id="header">
+		<%@ include file="header.jsp" %>
+	</header>
 	<div id="wrap">
 
 		<h1>${wineName}</h1>

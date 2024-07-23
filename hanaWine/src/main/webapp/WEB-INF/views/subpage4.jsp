@@ -10,7 +10,9 @@
 </head>
 <body>
 	<div id="wrap">
-
+<header id="header">
+		<%@ include file="header.jsp" %>
+	</header>
 		<h1>${wineName}</h1>
 		<div class="slide_wrapper">
 			<ul class="slides dFlex">

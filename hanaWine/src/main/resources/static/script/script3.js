@@ -61,7 +61,18 @@ $("#wineCateMain").click(function() {
    
 	location.href = "/wine";
 	});
-
+$("#wineCateFood").click(function() {
+   
+	location.href = "/food";
+	});
+$("#wineCateGrape").click(function() {
+   
+	location.href = "/grape";
+	});	
+	$("#wineCateCountry").click(function() {
+   
+	location.href = "/country";
+	});	
 
 	$(".wineCate").click(function(e) {
      e.stopPropagation()

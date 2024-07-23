@@ -10,10 +10,11 @@
 <link rel="stylesheet" href="/style/style.css?v">
 </head>
 <body>
-	<div id="wrap">
-<header id="header">
+    <header id="header">
 		<%@ include file="header.jsp" %>
 	</header>
+	<div id="wrap">
+
 		<h1>${wineName}</h1>
 		<div class="slide_wrapper">
 			<ul class="slides dFlex">
