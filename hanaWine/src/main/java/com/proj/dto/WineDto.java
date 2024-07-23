@@ -8,6 +8,7 @@ public class WineDto {
 	
 	private int idx;
 	private String brand;
+	private String wineKind;
 	private String wineKrName;
 	private String wineEnName;
 	private String country;
@@ -16,6 +17,12 @@ public class WineDto {
 	private String img;  
 	private Timestamp createTM;
 	
+	public String getWineKind() {
+		return wineKind;
+	}
+	public void setWineKind(String wineKind) {
+		this.wineKind = wineKind;
+	}
 	public String getWineKrName() {
 		return wineKrName;
 	}

@@ -31,40 +31,59 @@ public class FrontController {
 //		목록	페이지
 	
 	
-	@RequestMapping("/food")
-	public	String	food(Model	model)	{
-	model.addAttribute("daoWineList", svcInface.svcList());
-		return	"subpage2";
-	}
-	@RequestMapping("/grape")
-	public	String	grape(Model	model)	{
-	model.addAttribute("daoWineList", svcInface.svcList());
-		return	"subpage3";
-	}
-	@RequestMapping("/country")
-	public	String	country(Model	model)	{
-	model.addAttribute("daoWineList", svcInface.svcList());
-		return	"subpage4";
-	}
+	
 	@RequestMapping("/wine")
-	public String root1 (Model   model){
+	public String root (Model   model){
 	      model.addAttribute("daoWineList", svcInface.svcList());
 	     String wineName = "";
-	      wineName = "wine";
+	      wineName = "WINE";
 	    model.addAttribute("wineName", wineName ); //얘를 페이지에서 보여줘
 
 	      return   "subpage1";
 	}
+	@RequestMapping("/food")
+	public String root1 (Model   model){
+	      model.addAttribute("daoWineList", svcInface.svcList());
+	     String wineName = "";
+	      wineName = "Food";
+	    model.addAttribute("wineName", wineName ); //얘를 페이지에서 보여줘
+
+	      return   "subpage2";
+	}
+	@RequestMapping("/grape")
+	public String root2 (Model   model){
+	      model.addAttribute("daoWineList", svcInface.svcList());
+	     String wineName = "";
+	      wineName = "Grape";
+	    model.addAttribute("wineName", wineName ); //얘를 페이지에서 보여줘
+
+	      return   "subpage3";
+	}
+	@RequestMapping("/country")
+	public String root3 (Model   model){
+	      model.addAttribute("daoWineList", svcInface.svcList());
+	     String wineName = "";
+	      wineName = "Country";
+	    model.addAttribute("wineName", wineName ); //얘를 페이지에서 보여줘
+
+	      return   "subpage4";
+	}
 	
 	@RequestMapping("/wine/{cate}")
-	public String wine(@PathVariable("cate") String cate,Model   model){
+	public String wine(@PathVariable("cate") String cate, Model  model){
 	      model.addAttribute("daoWineList", svcInface.svcList());
 	      String wineName = "";
-	      wineName = "whiteWine";
+	      wineName = cate;
+	     
 	    model.addAttribute("wineName", wineName );
-	      return   "subpage1";
-	}
 
-	   }
+	    
+	      return "subpage1";
+	      
+	}
+		
+		
+
+	}
 
 

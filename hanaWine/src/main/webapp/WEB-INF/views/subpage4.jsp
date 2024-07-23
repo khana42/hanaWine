@@ -11,7 +11,7 @@
 <body>
 	<div id="wrap">
 
-		<h1>country</h1>
+		<h1>${wineName}</h1>
 		<div class="slide_wrapper">
 			<ul class="slides dFlex">
 				<li><img src="http://placehold.it/200x200" alt=""></li>
@@ -47,6 +47,7 @@
 			</div>
 		</div>
 <!--       목록 -->
+<c:forEach	var="list"	items="${daoWineList}">
 		<div id="main" class="dFlex">
 			<div id="wine" class="dFlex">
 				<div class="img1">
@@ -163,11 +164,13 @@
 				</div>
 			</div>
 		</div>
+ </c:forEach>
 <!-- 		목록끝 -->
 	</div>
 <!-- div#wrap -->
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="/script/script.js"></script>
+
 </body>
 </html>

@@ -11,8 +11,10 @@
 </head>
 <body>
 	<div id="wrap">
-
-		<h1>${wineName }</h1>
+<header id="header">
+		<%@ include file="header.jsp" %>
+	</header>
+		<h1>${wineName}</h1>
 		<div class="slide_wrapper">
 			<ul class="slides dFlex">
 				<li><img src="http://placehold.it/200x200" alt=""></li>
@@ -165,7 +167,8 @@
 				</div>
 			</div>
 		</div>
-		</c:forEach>
+				</c:forEach>
+	
 <!-- 		목록끝 -->
 	</div>
 <!-- div#wrap -->

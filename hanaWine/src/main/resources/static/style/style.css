@@ -10,6 +10,9 @@ div#wrap {
     border-radius: 6px;
     margin: 20px auto;
 }
+#main{
+	margin-top: 100px;
+}
 #select{
 	/*border: 1px solid #000;*/
 	justify-content: space-between;
