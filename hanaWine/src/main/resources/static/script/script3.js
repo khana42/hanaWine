@@ -57,13 +57,18 @@ $(function() {
 			$(this).children('ul.subMenu').stop().slideUp();
 		});
 		
-	$("#wineCateMain").click(function() {
-		location.href = "/subpage1";
+$("#wineCateMain").click(function() {
+   
+	location.href = "/wine";
 	});
 
 
-	$(".wineCate").click(function() {
-        let cate = $(this).data('cate');
-		location.href = "/subpage1/	" + cate;
+	$(".wineCate").click(function(e) {
+     e.stopPropagation()
+     let cate = $(this).data('cate');
+	location.href = "/wine/" + cate;
+   
 	});
+
+	
 });

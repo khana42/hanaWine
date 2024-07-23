@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<% %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -11,7 +12,7 @@
 <body>
 	<div id="wrap">
 
-		<h1>white wine</h1>
+		<h1>${wineName }</h1>
 		<div class="slide_wrapper">
 			<ul class="slides dFlex">
 				<li><img src="http://placehold.it/200x200" alt=""></li>

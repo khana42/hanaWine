@@ -40,7 +40,7 @@
 						<li class="wineCate" data-cate="1">1</li>
 					</ul>		
 				</li>
-				<li>음식
+				<li id="wineCateFood">음식
 					<ul class="subMenu">
 						<li>2</li>
 						<li></li>
@@ -48,7 +48,7 @@
 						<li></li>
 					</ul>			
 				</li>
-				<li>포도종류
+				<li id="wineCateGrape">포도종류
 					<ul class="subMenu">
 						<li>3</li>
 						<li></li>
@@ -56,7 +56,7 @@
 						<li></li>
 					</ul>				
 				</li>
-				<li>나라
+				<li id="wineCateCountry">나라
 					<ul class="subMenu">
 						<li>4</li>
 						<li></li>
