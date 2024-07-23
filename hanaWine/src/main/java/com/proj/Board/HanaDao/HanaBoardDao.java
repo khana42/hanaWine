@@ -1,6 +1,7 @@
 package com.proj.Board.HanaDao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
 
@@ -16,7 +17,7 @@ public interface HanaBoardDao {
 	public HanaBoardDto mtdBoardView(int num);
 	// 내용 보기(=상세 보기)
 	
-	public int mtdBoardWrite(String writer, String title, String content);
+	public int mtdBoardWrite(Map<String, String>map);
 	// 글 저장
 	
 	public int mtdBoardDelete(int num);

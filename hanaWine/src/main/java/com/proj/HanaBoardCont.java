@@ -1,5 +1,8 @@
 package com.proj;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,12 +16,6 @@ import jakarta.servlet.http.HttpServletRequest;
 public class HanaBoardCont {
 	@Autowired
 	private HanaBoardDao boardDao;
-	
-	// 메인 페이지 리퀘스트 맵핑
-	@RequestMapping("/")
-	public String root() throws Exception{
-		return "redirect:boardList";
-	}
 	
 	// 목록 페이지 리퀘스트 맵핑
 	@RequestMapping("/boardList")
@@ -42,12 +39,19 @@ public class HanaBoardCont {
 			String title = req.getParameter("title");
 			String content = req.getParameter("content");
 			
-			boardDao.mtdBoardWrite(writer, title, content);
+			Map<String, String> map = new HashMap<String, String>();
+			map.put("item1", writer);
+			map.put("item2", title);
+			map.put("item3", content);
+			
+			boardDao.mtdBoardWrite(map);
+
 		} catch (Exception e) {
 			e.getMessage();
 		}
+	
 		
-		return "redirect:BoardList";
+		return "redirect:boardList";
 	}
 	
 	// 내용 보기 리퀘스트 맵핑

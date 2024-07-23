@@ -11,26 +11,31 @@
 <link rel="stylesheet" href="/style/style4.css?v">
 </head>
 <body>
-	<div id="wrap">
+	<div id="boardListHeader">
+	
+	<%@ include file="header.jsp" %>	
+	
+	</div>
+
+	<div id="boardWrap">
 		<h1>공지사항</h1>
-		<hr>
 		<table>
 			<tbody>
 				<tr>
-					<th style="width: 80px">번호</th>
+					<th>번호</th>
 					<th>제목</th>
-					<th style="width: 100px">작성자</th>
-					<th style="width: 60px">삭제</th>
+					<th>작성날짜</th>
+					<th>삭제</th>
 				</tr>
+				
 				<c:forEach var="boardList" items="${mtdBoardList }">
-				<tr>
+				<tr class="boardTr">
 					<td>${boardList.num }</td>
 					<td><a href="/boardView?num=${boardList.num }">${boardList.title }</a></td>
 					<td>${boardList.writer }</td>
 					<td class="delIcon">&times;
 					<input type="hidden" value="${boardList.num }">
-					</td>
-					
+					</td>	
 				</tr>
 				</c:forEach>
 			</tbody>

@@ -1,3 +1,101 @@
 @charset "UTF-8";
+
 @import url(style_Reset.css);
 
+/* BoardList */
+div#boardWrap {
+	width: 1000px;
+	padding: 30px;
+	margin: 0 auto;
+}
+
+div#boardWrap>h1 {
+	margin-bottom: 10px;
+	text-indent: 10px;
+}
+
+div#boardWrap>hr {
+	margin: 20px 0;
+}
+
+div#boardWrap>table {
+	border-collapse: collapse;
+}
+
+div#boardWrap>table>tbody>tr>th {
+	background-color: rgba(125, 125, 0, 0.2);
+	text-align: center;
+	height: 50px;
+}
+
+div#boardWrap>table>tbody>tr>th:nth-child(1) {
+	width: 100px;
+}
+
+div#boardWrap>table>tbody>tr>th:nth-child(2) {
+	width: 707px;
+}
+
+div#boardWrap>table>tbody>tr>th:nth-child(3) {
+	width: 200px;
+}
+
+div#boardWrap>table>tbody>tr>th:nth-child(4) {
+	width: 50px;
+}
+
+div#boardWrap>table>tbody>tr>td {
+	padding: 10px;
+}
+
+div#boardWrap>table>tbody>tr>td:not(:nth-child(2)) {
+	text-align: center;
+}
+
+div#boardWrap>table>tbody>tr>td:nth-child(2) {
+	padding-left: 50px;
+}
+
+.boardTr:hover {
+	background: rgba(125, 125, 0, 0.1);
+}
+
+
+div#boardWrap>table>tbody>tr>th:last-chilid{
+	display: none;
+}
+
+div#boardWrap>table>tbody>tr>td:last-chilid{
+	display: none;
+}
+
+
+/* BoardList 끝 */
+
+/* boardView */
+div#boardViewWrap {
+	width: 1000px;
+	padding: 30px;
+	margin: 0 auto;
+}
+
+div#boardViewWrap>h1 {
+	margin-bottom: 10px;
+	text-indent: 10px;
+}
+
+div#boardViewWrap>ul>li{
+	margin: 10px 0;
+}
+
+
+
+/* boardView */
+
+/* writeFormWrap */
+div#writeFormWrap {
+	width: 500px;
+	padding: 10px;
+	border: 1px solid #000;
+	margin: 10px auto;
+}

@@ -11,12 +11,19 @@
 	<link rel="stylesheet" href="/style/style4.css?v">
 </head>
 <body>
-	<div id="wrap">
-		<h1>내용보기(MyBatis)</h1>
+	<div id="boardListHeader">
+	
+		<%@ include file="header.jsp" %>	
+	
+	</div>
+
+
+	<div id="boardViewWrap">
+		<h1>공지사항</h1>
 		<hr>
 		<ul>
-			<li>작성자 : ${mtdBoardView.writer }</li>
 			<li>제목 : ${mtdBoardView.title }</li>
+			<li>작성일자 : ${mtdBoardView.writer }</li>
 			<li>내용 : ${mtdBoardView.content }</li>
 		</ul>
 		<hr>

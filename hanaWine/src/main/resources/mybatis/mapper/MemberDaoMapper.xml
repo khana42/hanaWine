@@ -19,9 +19,9 @@ PUBLIC
 	</select>
 
 	<!-- BBS 글저장 태그 -->
-	<insert id="mtdBoardWrite">
-		insert into board (writer, title, content)
-		values ( #{param1}, #{param2}, #{param3} )
+	<insert id="mtdBoardWrite" parameterType="java.util.HashMap">
+		insert into bbsTable (writer, title, content)
+		values (#{item1}, #{item2}, #{item3})
 	</insert>
 	
 	<!-- BBS 글 상세 내용 보기 -->
