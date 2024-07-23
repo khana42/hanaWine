@@ -12,7 +12,7 @@
 <body>
 	<div id="Join2wrap">
 		
-		<h1>${"Join02.jsp 파일"}</h1>
+		
         <header id="header">
             <h1>회원 가입</h1>
         </header>
@@ -145,7 +145,7 @@
 
                         <div class="agreeDiv">
                             <p class="agreeP">[필수] 이용약관 동의</p>
-                            <iframe src="약관동의 텍스트/이용약관동의.txt"></iframe>
+                          <iframe src="/iframe/text01.html"></iframe>
 
                             <div class="termAgree">
                                 <label id="reqLable1">
@@ -162,7 +162,7 @@
                         <div class="agreeDiv">
 
                             <p class="agreeP">[필수] 개인정보 수집 및 이용 동의</p>
-                            <iframe src="약관동의 텍스트/개인정보 수집 및 이용동의.txt"></iframe>
+                          <iframe src="/iframe/text02.html"></iframe>
 
 
                             <div class="termAgree">
@@ -180,7 +180,7 @@
                         <div class="agreeDiv">
 
                             <p class="agreeP">[선택] 쇼핑정보 수신 동의</p>
-                            <iframe src="약관동의 텍스트/쇼핑정보 선택동의.txt"></iframe>
+                           <iframe src="/iframe/text03.html"></iframe>
 
                             <div class="termAgree">
 

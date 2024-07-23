@@ -1,66 +1,94 @@
 @charset "UTF-8";
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * *회원가입 첫번째 페이지 * * * * * */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 div#Join1wrap {
-    width: 550px;
+    width: 450px;
     border: 1px solid #aaa;
     padding: 20px;
 }
 
 div#Join1 {
-    width: 550px;
+    width: 450px;
     text-align: center;
     /* border: 1px solid #000; */
-    padding: 30px 20px;
+    padding: 15px 0;
 }
 
 div#Join1>a {
     display: inline-block;
-    width: 450px;
-    border: 1px solid #aaa;
-    padding: 15px 1px;
+    width: 337px;
+    border: 1px solid #ddd;
+    padding: 8px 0px;
     cursor: pointer;
+    font-size: 13px;
 }
 
-div#N_K {
+div#Join1wrap>div#bd {
+    border: 0.25px solid rgb(0, 0, 0, 0.25);
+    width: 335px;
+    border-bottom: none;
+    margin-left: 57px;
+
+
+}
+
+div.N_K {
     /* border: 1px solid #f70505; */
-    width: 550px;
-    height: 300px;
-    padding: 20px;
+    width: 450px;
+    padding: 3px 2px;
     text-align: center;
+
 }
 
-div#N_K img {
+div.N_K span.n_k {
+    border: 1px solid #ddd;
+    transform: translate(-4px, -12px);
+    padding: 9px 80px;
+
+}
+
+div.N_K span {
+    /* border: 2px solid #a89e0a; */
     display: inline-block;
-    border: 1px solid #000;
-    width: 50px;
 
 }
 
-div#N_K>a {
-    padding: 15px 1px;
+div.N_K img {
+    display: inline-block;
+    border: 1px solid #ddd;
+    width: 35px;
+
+    /* line-height: 50px; */
+
+}
+
+div.N_K>a {
+    padding: 5px 5px;
     margin: 5px;
     display: inline-block;
-    width: 450px;
-    border: 1px solid #aaa;
-    font-size: 20px;
+    width: 350px;
+    height: 40px;
+
+    /* border: 1px solid #dd3333; */
+    font-size: 13px;
 
 }
 
-div#N_K>span#text {
+div.N_K>span#text {
     display: inline-block;
-    width: 450px;
-    font-size: 14px;
+    width: 350px;
+    font-size: 9px;
     text-align: left;
     margin: 15px 0;
+    color: purple;
 }
 
 div#login_go {
-    width: 550px;
+    width: 450px;
     text-align: center;
     margin: 5px 0 20px;
+    margin-top: 20px;
 }
 
 div#login_go>a#login_go {
@@ -69,7 +97,17 @@ div#login_go>a#login_go {
 
 div#login_go>span {
     color: #aaa;
+    font-size: 10px;
+
 }
+
+
+div#login_go>a {
+    color: #aaa;
+    font-size: 10px;
+}
+
+
 
 
 
