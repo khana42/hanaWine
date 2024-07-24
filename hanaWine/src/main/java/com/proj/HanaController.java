@@ -37,19 +37,24 @@ public class HanaController {
 	
 	@RequestMapping("/join")
 	public String join() {
-		return "/login/join";
+		return "join";
 	}
 
 	@RequestMapping("/login")
 	public String login() {
-		return "/login/login";
+		return "login";
 	}
 
 	@RequestMapping("/userList")
     public String getUserList(Model model) {
         List<UserVO> userList = userService.getUserList();
         model.addAttribute("list", userList);
-        return "/login/userList";
+        return "userList";
+	}
+	
+	@RequestMapping("/loginProc")
+	public String loginProc() {
+		return "loginProc";
 	}
     
 	@GetMapping("/loginForm")
@@ -65,7 +70,7 @@ public class HanaController {
 			return "main";
 		}
 		//로그인되지 않은 상태
-		return "/login/login";
+		return "login";
 	}
 	
 	@PostMapping("/loginForm")
@@ -74,7 +79,7 @@ public class HanaController {
 		String id = userService.login(uid, upw);
 		if(id == null) {
 			//로그인 실패
-			return "/login/login";
+			return "login";
 		}
 		session.setAttribute("uid", id);
 		return "main";
