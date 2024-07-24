@@ -4,7 +4,7 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.proj.dao.WineDao">
-  <select id="daoWineList" resultType="com.proj.dto.WineDto">
+  <select id="daoWineListAll" resultType="com.proj.dto.WineDto">
     SELECT 
 	(SELECT BRANDNAME FROM projectDB.brand WHERE IDX = A.brand) AS BRAND,
     A.wineKind, A.wineKrName, A.wineEnName,
@@ -16,5 +16,33 @@
 	LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx 
     INNER JOIN  projectDB.food C ON B.foodIdx = C.idx 
   </select>
-  <select id=""></select>
+  <select id="daoWineList" parameterType="String" resultType="com.proj.dto.WineDto">
+    SELECT 
+	(SELECT BRANDNAME FROM projectDB.brand WHERE IDX = A.brand) AS BRAND,
+    A.wineKind, A.wineKrName, A.wineEnName,
+    (SELECT countryname FROM projectDB.country WHERE IDX = A.country) AS country,
+    (SELECT grapename FROM projectDB.grape WHERE IDX = A.GRAPE) AS grape,
+    A.price,A.img, A.createTM,
+    C.foodName
+    FROM projectDB.wine A 
+	LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx 
+    INNER JOIN  projectDB.food C ON B.foodIdx = C.idx 
+    WHERE wineKind = #{wineKind}
+    
+  </select>
+  
+  <select id="daoWineListFood" parameterType="String" resultType="com.proj.dto.WineDto">
+    SELECT 
+	(SELECT BRANDNAME FROM projectDB.brand WHERE IDX = A.brand) AS BRAND,
+    A.wineKind, A.wineKrName, A.wineEnName,
+    (SELECT countryname FROM projectDB.country WHERE IDX = A.country) AS country,
+    (SELECT grapename FROM projectDB.grape WHERE IDX = A.GRAPE) AS grape,
+    A.price,A.img, A.createTM,
+    C.foodName
+    FROM projectDB.wine A 
+	LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx 
+    INNER JOIN  projectDB.food C ON B.foodIdx = C.idx 
+    WHERE foodName = #{foodName}
+    
+  </select>
   </mapper>	

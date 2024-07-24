@@ -51,123 +51,31 @@
 		</div>
 <!--       목록 -->
 <c:forEach	var="list"	items="${daoWineList}">
-		<div id="main" class="dFlex">
+		 <div id="main" class="dFlex">
 			<div id="wine" class="dFlex">
 				<div class="img1">
 					<img src="http://placehold.it/200x300" alt="">
 				</div>
 				<div class="name">
 					<div class="bdname">
-						<span>브랜드 이름</span>
+						<span>${list.brand}</span>
 					</div>
 					<div class="winame">
-						<span>와인 이름</span>
+						<span>${list.wineKrName}</span>
+					</div>
+					<div class="enWiname">
+						<span>${list.wineEnName}</span>
 					</div>
 					<div class="con">
-						<span>나라 국기 이미지 : 이름</span>
+						<span>${list.country}</span>
 					</div>
 					<div class="price">
-						<span>가격</span>
-					</div>
-				</div>
-			</div>
-			<div id="wine" class="dFlex">
-				<div class="img1">
-					<img src="http://placehold.it/200x300" alt="">
-				</div>
-				<div class="name">
-					<div class="bdname">
-						<span>브랜드 이름</span>
-					</div>
-					<div class="winame">
-						<span>와인 이름</span>
-					</div>
-					<div class="conname">
-						<span>나라 국기 이미지 : 이름</span>
-					</div>
-					<div class="price">
-						<span>가격</span>
-					</div>
-				</div>
-			</div>
-			<div id="wine" class="dFlex">
-				<div class="img1">
-					<img src="http://placehold.it/200x300" alt="">
-				</div>
-				<div class="name">
-					<div class="bdname">
-						<span>브랜드 이름</span>
-					</div>
-					<div class="winame">
-						<span>와인 이름</span>
-					</div>
-					<div class="conname">
-						<span>나라 국기 이미지 : 이름</span>
-					</div>
-					<div class="price">
-						<span>가격</span>
-					</div>
-				</div>
-			</div>
-			<div id="wine" class="dFlex">
-				<div class="img1">
-					<img src="http://placehold.it/200x300" alt="">
-				</div>
-				<div class="name">
-					<div class="bdname">
-						<span>브랜드 이름</span>
-					</div>
-					<div class="winame">
-						<span>와인 이름</span>
-					</div>
-					<div class="conname">
-						<span>나라 국기 이미지 : 이름</span>
-					</div>
-					<div class="price">
-						<span>가격</span>
-					</div>
-				</div>
-			</div>
-			<div id="wine" class="dFlex">
-				<div class="img1">
-					<img src="http://placehold.it/200x300" alt="">
-				</div>
-				<div class="name">
-					<div class="bdname">
-						<span>브랜드 이름</span>
-					</div>
-					<div class="winame">
-						<span>와인 이름</span>
-					</div>
-					<div class="conname">
-						<span>나라 국기 이미지 : 이름</span>
-					</div>
-					<div class="price">
-						<span>가격</span>
-					</div>
-				</div>
-			</div>
-			<div id="wine" class="dFlex">
-				<div class="img1">
-					<img src="http://placehold.it/200x300" alt="">
-				</div>
-				<div class="name">
-					<div class="bdname">
-						<span>브랜드 이름</span>
-					</div>
-					<div class="winame">
-						<span>와인 이름</span>
-					</div>
-					<div class="conname">
-						<span>나라 국기 이미지 : 이름</span>
-					</div>
-					<div class="price">
-						<span>가격</span>
+						<span>${list.price}</span>
 					</div>
 				</div>
 			</div>
 		</div>
-</c:forEach>
+	 	</c:forEach>
 <!-- 		목록끝 -->
 	</div>
 <!-- div#wrap -->

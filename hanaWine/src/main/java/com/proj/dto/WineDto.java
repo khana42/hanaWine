@@ -16,7 +16,30 @@ public class WineDto {
 	private int price;
 	private String img;  
 	private Timestamp createTM;
+	private String foodIdx;
+	private String foodName;
+	private String wineIdx;
 	
+	public String getWineIdx() {
+		return wineIdx;
+	}
+	public void setWineIdx(String wineIdx) {
+	
+		
+	}
+	public String getFoodName() {
+		return foodName;
+	}
+	public void setFoodName(String foodName) {
+		this.foodName = foodName;
+		
+	}
+	public String getFoodIdx() {
+		return foodIdx;
+	}
+	public void setFoodIdx(String foodIdx) {
+		this.foodIdx = foodIdx;
+	}
 	public String getWineKind() {
 		return wineKind;
 	}

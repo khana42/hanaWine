@@ -10,10 +10,25 @@ import com.proj.dto.WineDto;
 
 @Service
 public class SvcImplet implements SvcInface {
-@Autowired
-WineDao wineDao;
+	@Autowired
+	WineDao wineDao;
+	
 	@Override
-	public List<WineDto> svcList() {
-		return wineDao.daoWineList();
+	public List<WineDto> svcList(String wineKind) {
+		  System.out.println(wineKind);
+		  
+		return wineDao.daoWineList(wineKind);
 	}
+	@Override
+	public List<WineDto> svcListAll() {
+		return wineDao.daoWineListAll();
+	}
+
+
+    @Override
+    public List<WineDto> svcListFood(String foodName) {
+    	 System.out.println(foodName);
+		return wineDao.daoWineListFood(foodName);
+	
+	}	
 }

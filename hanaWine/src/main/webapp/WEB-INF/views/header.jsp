@@ -40,11 +40,11 @@
 					
 					</ul>		
 				</li>
-				<li id="wineCateFood">음식
-					<ul class="subMenu">
-						<li class="wineCate" data-cate="BEAF">소</li>
-						<li class="wineCate" data-cate="LAMB">양</li>
-						<li class="wineCate" data-cate="CHEESE">치즈</li>
+				<li id="wineCateFood" data-cate="Food">음식
+					<ul class="subMenu" >
+						<li class="wineFood" data-cate="소고기">소</li>
+						<li class="wineFood" data-cate="치즈">치즈</li>
+						<li class="wineFood" data-cate="양고기">양</li>
 					
 					</ul>			
 				</li>
@@ -57,9 +57,9 @@
 				</li>
 				<li id="wineCateCountry">나라
 					<ul class="subMenu">
-						<li class="wineCate" data-cate="ITALY">이탈리아</li>
-						<li class="wineCate" data-cate="FRANCE">프랑스</li>
-						<li class="wineCate" data-cate="PORTUGAL">포르투갈</li>
+						<li class="wineCate" data-cate="이탈리아">이탈리아</li>
+						<li class="wineCate" data-cate="독일">독일</li>
+<!-- 						//<li class="wineCate" data-cate="PORTUGAL">포르투갈</li> -->
 					</ul>			
 				</li>
 				<li>커뮤니티</li>

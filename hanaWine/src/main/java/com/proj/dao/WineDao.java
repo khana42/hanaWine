@@ -8,5 +8,8 @@ import com.proj.dto.WineDto;
 
 @Mapper
 public interface WineDao {
-public List<WineDto> daoWineList();
+	public List<WineDto> daoWineListAll();
+	public List<WineDto> daoWineList(String wineKind);
+    public List<WineDto> daoWineListFood(String foodName);
+	
 }

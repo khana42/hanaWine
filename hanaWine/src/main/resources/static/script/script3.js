@@ -51,35 +51,39 @@ $(function() {
 	$('#mainMenu>li').mouseover(function() {
 		$(this).children('ul.subMenu').stop().slideDown(0);
 	});
-	
+
 	$('#mainMenu>li').mouseout(
 		function() {
 			$(this).children('ul.subMenu').stop().slideUp();
 		});
-		
-$("#wineCateMain").click(function() {
-   
-	location.href = "/wine";
+
+	$("#wineCateMain").click(function() {
+		location.href = "/wine";
 	});
-$("#wineCateFood").click(function() {
-   
-	location.href = "/food";
+
+	$("#wineCateFood").click(function() {
+		location.href = "/food";
 	});
-$("#wineCateGrape").click(function() {
-   
-	location.href = "/grape";
-	});	
+	$("#wineCateGrape").click(function() {
+
+		location.href = "/grape";
+	});
 	$("#wineCateCountry").click(function() {
-   
-	location.href = "/country";
-	});	
+
+		location.href = "/country";
+	});
 
 	$(".wineCate").click(function(e) {
-     e.stopPropagation()
-     let cate = $(this).data('cate');
-	location.href = "/wine/" + cate;
-   
+		e.stopPropagation()
+		let cate = $(this).data('cate');
+		location.href = "/wine/" + cate;
+
+	});
+$(".wineFood").click(function(e) {
+		e.stopPropagation()
+		let cate = $(this).data('cate');
+		location.href = "/food/" + cate;
+
 	});
 
-	
 });
