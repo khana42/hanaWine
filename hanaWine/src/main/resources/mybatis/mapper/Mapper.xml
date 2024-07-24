@@ -8,7 +8,7 @@
 	select uname, uid, upw, email, phone, gender from memberList
 	</select>
 	
-	<select id="getUserByUid" resultType="com.example.demo.dto.UserVO">
+	<select id="getUserByUid" resultType="com.proj.dto.UserVO">
 	SELECT * FROM memberList
 	WHERE num=#{uid}
 	</select>
