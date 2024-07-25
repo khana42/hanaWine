@@ -1,11 +1,17 @@
 package com.proj;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
+import com.proj.Vo.Criteria;
+import com.proj.Vo.PageMaker;
 import com.proj.svc.SvcInface;
 
 @Controller
@@ -21,17 +27,17 @@ public class FrontController {
 	@RequestMapping("/join")
 	public String join() {
 		return "/join";
-	}
+ 	 }
 
 	@RequestMapping("/Join02")
 	public String join02() {
 		return "Join02";
 	}
 
-	@RequestMapping("/login")
-	public String login() {
-		return "login";
-	}
+	//@RequestMapping("/login")
+	//public String login() {
+	//	return "login";
+	//}
 	
 	//목록	페이지
 	@RequestMapping("/wine")
@@ -107,6 +113,18 @@ public class FrontController {
 		model.addAttribute("wineName", wineName); // 얘를 페이지에서 보여줘
 
 		return "subpage4";
+	}
+	@RequestMapping(value="/subpage1")
+	public ModelAndView page(Criteria criteria)throws Exception{
+		ModelAndView modelAndView = new ModelAndView("subpage1");
+		PageMaker pageMaker = new PageMaker();
+		pageMaker.setCriteria(criteria);
+		pageMaker.setTotalcount(100);
+	
+		List<Map<String, Object>> list = svcInface.svcWineList(criteria);
+		modelAndView.addObject("list",list);
+		modelAndView.addObject("pageMaker",pageMaker);
+		return modelAndView;
 	}
 	
 }

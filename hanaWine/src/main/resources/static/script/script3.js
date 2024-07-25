@@ -79,7 +79,7 @@ $(function() {
 		location.href = "/wine/" + cate;
 
 	});
-$(".wineFood").click(function(e) {
+	$(".wineFood").click(function(e) {
 		e.stopPropagation()
 		let cate = $(this).data('cate');
 		location.href = "/food/" + cate;

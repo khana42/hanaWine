@@ -1,10 +1,12 @@
 package com.proj.svc;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.proj.Vo.Criteria;
 import com.proj.dao.WineDao;
 import com.proj.dto.WineDto;
 
@@ -30,5 +32,9 @@ public class SvcImplet implements SvcInface {
     	 System.out.println(foodName);
 		return wineDao.daoWineListFood(foodName);
 	
-	}	
+	}
+    @Override
+    public List<Map<String, Object>> svcWineList(Criteria criteria){
+    	return wineDao.daoWinePageList(criteria);
+    }
 }

@@ -81,6 +81,23 @@
 	 	</c:forEach>
 	
 <!-- 		목록끝 -->
+<!-- 페이징 작업 -->
+<ul class="btn-group pagination">
+ <c:if test="${pageMaker.prev > 1}">
+<li>
+<a href='<c:url"value=/subpag1?page=${pageMaker.startPage-1 }">>'</a><i class="fa fa-chevron-left"></i></a>
+</li>
+</c:if>
+<c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="pageNum">    
+<li><a href='<c:url value="/subpag1?page=${pageNum }"/>'><i class="fa">${pageNum }</i></a></li>
+</c:forEach>
+<c:if test="${pageMaker.next && pageMaker.endPage >0 }">
+<li>
+<a href='<c:url value="/subpage1?page=${pageMaker.endPage+1 }"/>'>
+<i class="fa fa-chevron-right"></i></a>
+</li>
+</c:if>
+</ul>
 	</div>
 <!-- div#wrap -->
 	<script
