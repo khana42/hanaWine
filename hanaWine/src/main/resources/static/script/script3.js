@@ -56,8 +56,14 @@ $(function() {
 		function() {
 			$(this).children('ul.subMenu').stop().slideUp();
 		});
-		
-$("#wineCateMain").click(function() {
+	
+	//로그인 버튼 클릭
+	$("loginBtn").click(function(){
+		location.href = "/loginProc";
+	});
+	
+	//헤더의 gnb 클릭시 	
+	$("#wineCateMain").click(function() {
    
 	location.href = "/wine";
 	});

@@ -3,6 +3,7 @@ package com.proj.dao;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import com.proj.dto.UserVO;
 
@@ -10,7 +11,9 @@ import com.proj.dto.UserVO;
 public interface UserMapper {
 
 	//회원 목록
-		List<UserVO> getUserList();
-		//id 가져오기
-		UserVO getUserByUid(String uid);
+	List<UserVO> getUserList();
+	
+	//id 가져오기
+	UserVO getUserByUid(@Param("uid") String uid);
+	
 }

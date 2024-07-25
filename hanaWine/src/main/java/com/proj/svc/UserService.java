@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.proj.dao.UserMapper;
 import com.proj.dto.UserVO;
 
+import jakarta.servlet.http.HttpSession;
+
 
 
 @Service
@@ -16,6 +18,7 @@ public class UserService {
 	@Autowired
 	private UserMapper userMapper;
 
+	//회원 목록 보기
     public List<UserVO> getUserList() {
     	
     	List<UserVO> list = userMapper.getUserList();
@@ -34,16 +37,25 @@ public class UserService {
         return list;
     }
     
-    public String login(String uid, String upw) {
-    	UserVO userVo = userMapper.getUserByUid(uid);
-    	if(userVo.getUpw().equals(upw)) {
-    		return userVo.getUid();
-    	}
-    	return null;
+    //로그인
+    public boolean login(String uid, String upw, HttpSession session) {
+        UserVO userVo = userMapper.getUserByUid(uid);
+        
+        // 사용자 정보가 null이 아니고, 비밀번호가 일치하면 로그인 성공
+        if (userVo != null && userVo.getUpw() != null && userVo.getUpw().equals(upw)) {
+            return true;
+        }
+        
+        // 그 외의 경우는 로그인 실패
+        return false;
     }
     
     //id로 user 데이터를 가져옴
     public UserVO getUserByID(String uid) {
     	return userMapper.getUserByUid(uid);
+    }
+    
+    public boolean isLoggedIn(HttpSession session) {
+        return session.getAttribute("username") != null;
     }
 }
