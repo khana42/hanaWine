@@ -37,8 +37,6 @@ $(function() {
 
 	//로그인 클릭시 회원가입 버튼
 	$("#joinBtn").click(function() {
-
-
 		window.opener.location.href = "/join";
 		window.self.close();
 	});
@@ -57,10 +55,11 @@ $(function() {
 			$(this).children('ul.subMenu').stop().slideUp();
 		});
 	
-	//로그인 버튼 클릭
+	//로그인 페이지의 로그인 버튼 클릭
 	$("loginBtn").click(function(){
 		location.href = "/loginProc";
 	});
+	
 	
 	//헤더의 gnb 클릭시 	
 	$("#wineCateMain").click(function() {

@@ -24,12 +24,12 @@ String uid = (String)session.getAttribute("uid");
 		
 		<div id="loginArea">
 			<ul class="dFlex">
-			<% if (uid != null) { %>
+<%-- 			<% if (uid != null) { %> --%>
 				<li id="logout">로그아웃</li>
-			<% } else { %>	
+<%-- 			<% } else { %>	 --%>
 				<li id="login">로그인</li>
 				<li id="join">회원가입</li>
-			<% } %>
+<%-- 			<% } %> --%>
 				<li>장바구니</li>
 			</ul>
 		</div>

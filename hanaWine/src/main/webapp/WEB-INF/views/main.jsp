@@ -46,16 +46,7 @@
 		</div>
 	</main>
 	
-	<script>
-        // 팝업 창에서 전송된 메시지(로그인 성공) 처리
-        window.addEventListener('message', function(event) {
-            if (event.data === 'login_success') {
-                // 팝업 창이 닫힌 후에 처리할 로직
-                window.location.href = '/'; // 메인 페이지로 리다이렉트
-            }
-        });
-    </script>
-				
+			
 	<footer id="footer">
 		<%@ include file="footer.jsp" %>
 	</footer>

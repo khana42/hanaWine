@@ -14,7 +14,7 @@
 
 		<h1>로그인</h1>
 
-		<form action="/login" method="post">
+		<form action="/login" method="post" onsubmit="closePopupAndRedirect()">
 			<input type="text" name="uid" required autofocus placeholder="아이디 입력">
 			<input type="password" name="upw" required placeholder="비밀번호 입력">
 			<button type="submit" id="loginBtn">로그인</button>
@@ -22,14 +22,15 @@
 			<label> <input type="checkbox"> <span>아이디 저장</span>
 			</label>
 		</form>
-		<!-- 로그인 성공 시 팝업창 닫고 메인으로 -->
+		<!-- 로그인시 팝업창 닫힘 -->
 		<script>
-			function loginSuccess() {
-				// 부모 창으로 메시지 전송 (예: 로그인 성공)
-				window.opener.postMessage('login_success', '*');
-				// 팝업 창 닫기
-				window.close();
-			}
+		function closePopupAndRedirect() {
+     	   // 팝업창 닫기
+     	   window.close();
+
+       	 // 부모 창으로 이동
+       	 window.opener.location.href = '/'; // 메인 페이지 URL로 변경
+   		 }
 		</script>
 
 

@@ -64,9 +64,10 @@ public class HanaController {
         if (loginResult) {
             // 세션에 사용자 정보 저장
             session.setAttribute("uid", uid);
+            
             return "main"; // 로그인 성공 시 메인 페이지로 리다이렉트
         } else {
-            return "redirect:/login"; // 로그인 실패 시 다시 로그인 페이지로 리다이렉트
+            return "login"; // 로그인 실패 시 다시 로그인 페이지로 리다이렉트
         }
 	}
 
