@@ -9,8 +9,7 @@
 	</select>
 	
 	<select id="getUserByUid" resultType="com.proj.dto.UserVO">
-	SELECT * FROM memberList
-	WHERE uid=#{uid}
+	SELECT * FROM memberList WHERE uid=#{uid}
 	</select>
 	
 	

@@ -14,6 +14,7 @@ import com.proj.dao.UserMapper;
 import com.proj.dto.UserVO;
 import com.proj.svc.UserService;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
@@ -39,10 +40,10 @@ public class HanaController {
 		return "userList";
 	}
 	
-//	@RequestMapping("/loginProc")
-//	public String loginProc() {
-//		return "loginProc";
-//	}
+	@RequestMapping("/loginProc")
+	public String loginProc() {
+		return "loginProc";
+	}
 
 	//로그인
     @GetMapping("/login")
@@ -63,9 +64,9 @@ public class HanaController {
 
         if (loginResult) {
             // 세션에 사용자 정보 저장
-            session.setAttribute("uid", uid);
+            session.setAttribute("sUid", uid);
             
-            return "main"; // 로그인 성공 시 메인 페이지로 리다이렉트
+            return "loginProc"; // 로그인 성공 시 메인 페이지로 리다이렉트
         } else {
             return "login"; // 로그인 실패 시 다시 로그인 페이지로 리다이렉트
         }
@@ -73,9 +74,24 @@ public class HanaController {
 
 	//로그아웃
 	@RequestMapping("/logout")
-	public String logout(HttpSession session) {
+	public String logout(HttpServletRequest req) {
+		HttpSession session = req.getSession(false);
+        if (session != null) {
 		session.invalidate();
+        }
 		return "redirect:/main";
+	}
+	
+	@RequestMapping("/logoutProc")
+	public String logoutProc() {
+		
+		return "main";
+	}
+	
+	//회원가입
+	@RequestMapping("/join")
+	public String join() {
+		return "join";
 	}
 
 }

@@ -13,7 +13,7 @@ public interface UserMapper {
 	//회원 목록
 	List<UserVO> getUserList();
 	
-	//id 가져오기
+	// DB uid 가져오기
 	UserVO getUserByUid(@Param("uid") String uid);
 	
 }

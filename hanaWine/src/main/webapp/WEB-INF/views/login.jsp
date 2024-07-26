@@ -22,23 +22,7 @@
 			<label> <input type="checkbox"> <span>아이디 저장</span>
 			</label>
 		</form>
-		<!-- 로그인시 팝업창 닫힘 -->
-		<script>
-		function closePopupAndRedirect() {
-     	   // 팝업창 닫기
-     	   window.close();
-
-       	 // 부모 창으로 이동
-       	 window.opener.location.href = '/'; // 메인 페이지 URL로 변경
-   		 }
-		</script>
-
-
-		<!-- 로그인 실패 시 메시지 표시 -->
-		<c:if test="${param.error != null}">
-			<p style="color: red;">Invalid username or password.</p>
-		</c:if>
-
+		
 		<div id="idSave"></div>
 
 		<div id="find">

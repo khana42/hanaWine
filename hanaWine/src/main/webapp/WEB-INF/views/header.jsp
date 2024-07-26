@@ -3,8 +3,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 
 <%
-String uid = (String)session.getAttribute("uid");
-
+//사용자가 적은 id
+String uid = request.getParameter("uid");
+//사용자가 적은 pw
+String upw = request.getParameter("upw");
+//session.setAttribute("uid", "hana");
+String id = (String)session.getAttribute("uid");
+out.print("uid : " + uid);
+out.print("-------");
+out.print("upw : " + upw);
+out.print("-------");
+out.print("session uid : " + id);
 %>   
 <!DOCTYPE html>
 <html lang="ko">
@@ -24,12 +33,12 @@ String uid = (String)session.getAttribute("uid");
 		
 		<div id="loginArea">
 			<ul class="dFlex">
-<%-- 			<% if (uid != null) { %> --%>
-				<li id="logout">로그아웃</li>
-<%-- 			<% } else { %>	 --%>
+ 			<% if (uid == null) { %> 
 				<li id="login">로그인</li>
 				<li id="join">회원가입</li>
-<%-- 			<% } %> --%>
+			<% } else { %>	
+				<li id="logout" >로그아웃</li>
+ 			<% } %> 
 				<li>장바구니</li>
 			</ul>
 		</div>

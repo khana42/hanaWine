@@ -41,8 +41,8 @@ public class UserService {
     public boolean login(String uid, String upw, HttpSession session) {
         UserVO userVo = userMapper.getUserByUid(uid);
         
-        // 사용자 정보가 null이 아니고, 비밀번호가 일치하면 로그인 성공
-        if (userVo != null && userVo.getUpw() != null && userVo.getUpw().equals(upw)) {
+        // uid/upw가 null이 아니고, id/pw 일치하면 로그인 성공
+        if (userVo != null && userVo.getUid().equals(uid) && userVo.getUpw() != null && userVo.getUpw().equals(upw)) {
             return true;
         }
         
@@ -50,12 +50,14 @@ public class UserService {
         return false;
     }
     
+    public boolean isLoggedIn(HttpSession session) {
+    	return session.getAttribute("uid") != null;
+    }
+    
+    
     //id로 user 데이터를 가져옴
     public UserVO getUserByID(String uid) {
     	return userMapper.getUserByUid(uid);
     }
     
-    public boolean isLoggedIn(HttpSession session) {
-        return session.getAttribute("username") != null;
-    }
 }
