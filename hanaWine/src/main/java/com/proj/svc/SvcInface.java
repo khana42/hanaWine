@@ -13,7 +13,7 @@ public interface SvcInface {
 
 	public List<WineDto> svcListFood(String foodName);
 	
-	public List<Map<String, Object>> svcWineList(Criteria criteria);
+	
 
 	
 }

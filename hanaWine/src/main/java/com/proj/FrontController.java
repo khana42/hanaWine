@@ -6,8 +6,10 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.proj.Vo.Criteria;
@@ -113,18 +115,6 @@ public class FrontController {
 		model.addAttribute("wineName", wineName); // 얘를 페이지에서 보여줘
 
 		return "subpage4";
-	}
-	@RequestMapping(value="/subpage1")
-	public ModelAndView page(Criteria criteria)throws Exception{
-		ModelAndView modelAndView = new ModelAndView("subpage1");
-		PageMaker pageMaker = new PageMaker();
-		pageMaker.setCriteria(criteria);
-		pageMaker.setTotalcount(100);
-	
-		List<Map<String, Object>> list = svcInface.svcWineList(criteria);
-		modelAndView.addObject("list",list);
-		modelAndView.addObject("pageMaker",pageMaker);
-		return modelAndView;
 	}
 	
 }

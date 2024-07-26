@@ -32,9 +32,6 @@ public class SvcImplet implements SvcInface {
     	 System.out.println(foodName);
 		return wineDao.daoWineListFood(foodName);
 	
-	}
-    @Override
-    public List<Map<String, Object>> svcWineList(Criteria criteria){
-    	return wineDao.daoWinePageList(criteria);
+
     }
 }
