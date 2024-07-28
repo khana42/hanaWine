@@ -8,12 +8,11 @@ String uid = request.getParameter("uid");
 //사용자가 적은 pw
 String upw = request.getParameter("upw");
 //session.setAttribute("uid", "hana");
-String id = (String)session.getAttribute("uid");
 out.print("uid : " + uid);
 out.print("-------");
 out.print("upw : " + upw);
 out.print("-------");
-out.print("session uid : " + id);
+
 %>   
 <!DOCTYPE html>
 <html lang="ko">

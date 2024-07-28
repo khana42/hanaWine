@@ -40,11 +40,6 @@ public class HanaController {
 		return "userList";
 	}
 	
-	@RequestMapping("/loginProc")
-	public String loginProc() {
-		return "loginProc";
-	}
-
 	//로그인
     @GetMapping("/login")
     public String index(HttpSession session) {
@@ -66,7 +61,7 @@ public class HanaController {
             // 세션에 사용자 정보 저장
             session.setAttribute("sUid", uid);
             
-            return "loginProc"; // 로그인 성공 시 메인 페이지로 리다이렉트
+            return "main"; // 로그인 성공 시 메인 페이지로 리다이렉트
         } else {
             return "login"; // 로그인 실패 시 다시 로그인 페이지로 리다이렉트
         }
