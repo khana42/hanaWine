@@ -11,7 +11,7 @@ import com.proj.dto.UserVO;
 public interface UserMapper {
 
 	//회원 목록
-	List<UserVO> getUserList();
+	List<UserVO> getUserID();
 	
 	// DB uid 가져오기
 	UserVO getUserByUid(@Param("uid") String uid);

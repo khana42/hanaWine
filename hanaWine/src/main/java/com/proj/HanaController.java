@@ -27,62 +27,75 @@ public class HanaController {
 	private UserMapper userMapper;
 
 	@GetMapping("/")
-	public String root(HttpSession session) {
+	public String root() {
 
 			return "main";
 	}
+	
+	@GetMapping("/login")
+	public String login() {
 
+			return "login";
+	}
+	
 	// 회원 목록 보기
 	@RequestMapping("/userList")
-	public String getUserList(Model model) {
-		List<UserVO> userList = userService.getUserList();
-		model.addAttribute("list", userList);
+	public String getUserID(Model model) {
+		List<UserVO> getUserID = userService.getUserID();
+		model.addAttribute("list", getUserID);
 		return "userList";
 	}
 	
 	//로그인
-    @GetMapping("/login")
-    public String index(HttpSession session) {
-        if (userService.isLoggedIn(session)) {
+    @GetMapping("/main")
+    public String index(HttpServletRequest req) {
+    	HttpSession session = req.getSession(false);
+        if (session != null && userService.isLoggedIn(session)) {
+        	System.out.print(session);
             return "main"; // 로그인 상태면 메인 페이지로 이동
         } else {
             return "login"; // 로그인 되지 않았으면 로그인 페이지로 이동
         }
     }
 
-	@PostMapping("/login")
+	@PostMapping("/main")
     public String handleLogin(@RequestParam("uid") String uid,
                               @RequestParam("upw") String upw,
-                              HttpSession session) {
+                              HttpServletRequest req) {
         // 로그인 성공 여부 확인
+		HttpSession session = req.getSession(); // 새로운 세션을 생성하거나 기존 세션을 가져옴
         boolean loginResult = userService.login(uid, upw,session);
 
         if (loginResult) {
             // 세션에 사용자 정보 저장
             session.setAttribute("sUid", uid);
+            session.setMaxInactiveInterval(5);
             
-            return "main"; // 로그인 성공 시 메인 페이지로 리다이렉트
+            return "main"; // 로그인 성공 시 메인 페이지로 
+            
         } else {
-            return "login"; // 로그인 실패 시 다시 로그인 페이지로 리다이렉트
+        	
+            return "login"; // 로그인 실패 시 다시 로그인 페이지로 
+            
         }
 	}
 
 	//로그아웃
 	@RequestMapping("/logout")
-	public String logout(HttpServletRequest req) {
-		HttpSession session = req.getSession(false);
-        if (session != null) {
-		session.invalidate();
-        }
-		return "redirect:/main";
-	}
-	
-	@RequestMapping("/logoutProc")
-	public String logoutProc() {
-		
+	public String logout(HttpSession session) {
+		session.invalidate();		
 		return "main";
-	}
 	
+	
+//	@RequestMapping("/logout")
+//	public String logout(HttpServletRequest req) {
+//		HttpSession session = req.getSession(false);
+//        if (session != null) {
+//		session.invalidate();
+//        }
+//		return "main";
+	}
+
 	//회원가입
 	@RequestMapping("/join")
 	public String join() {

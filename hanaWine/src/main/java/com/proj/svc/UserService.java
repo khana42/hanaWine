@@ -19,9 +19,9 @@ public class UserService {
 	private UserMapper userMapper;
 
 	//회원 목록 보기
-    public List<UserVO> getUserList() {
+    public List<UserVO> getUserID() {
     	
-    	List<UserVO> list = userMapper.getUserList();
+    	List<UserVO> list = userMapper.getUserID( );
     	for (int i = 0; i < list.size(); i++) {
     		UserVO uvo = list.get(i);
     	
@@ -42,8 +42,9 @@ public class UserService {
         UserVO userVo = userMapper.getUserByUid(uid);
         
         // uid/upw가 null이 아니고, id/pw 일치하면 로그인 성공
-        if (userVo != null && userVo.getUid().equals(uid) && userVo.getUpw() != null && userVo.getUpw().equals(upw)) {
-            return true;
+        if (userVo.getUid().equals(uid)&& userVo.getUpw().equals(upw)) {
+        	session.setAttribute("isLoggedIn", true);
+        	return true;
         }
         
         // 그 외의 경우는 로그인 실패
@@ -51,7 +52,9 @@ public class UserService {
     }
     
     public boolean isLoggedIn(HttpSession session) {
-    	return session.getAttribute("uid") != null;
+    	Boolean isLoggedIn = (Boolean) session.getAttribute("isLoggedIn");
+    	return isLoggedIn != null && isLoggedIn;
+    	//    	return session.getAttribute("uid") != null;
     }
     
     
