@@ -12,6 +12,12 @@
 <body>
 	<div id="loginWrap">
 
+		<div id="logo">
+			<a href="/">
+				<img src="/img/logo.png" alt="로고 이미지">
+			</a>
+		</div>
+		
 		<h1>로그인</h1>
 
 		<form action="/main" method="post" >

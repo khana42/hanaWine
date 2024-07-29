@@ -51,7 +51,7 @@ public class HanaController {
     public String index(HttpServletRequest req) {
     	HttpSession session = req.getSession(false);
         if (session != null && userService.isLoggedIn(session)) {
-        	System.out.print(session);
+        	
             return "main"; // 로그인 상태면 메인 페이지로 이동
         } else {
             return "login"; // 로그인 되지 않았으면 로그인 페이지로 이동
@@ -69,7 +69,7 @@ public class HanaController {
         if (loginResult) {
             // 세션에 사용자 정보 저장
             session.setAttribute("sUid", uid);
-            session.setMaxInactiveInterval(5);
+            session.setMaxInactiveInterval(1);
             
             return "main"; // 로그인 성공 시 메인 페이지로 
             

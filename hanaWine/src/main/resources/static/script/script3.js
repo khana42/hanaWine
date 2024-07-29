@@ -17,16 +17,22 @@ $(function() {
 		);
 	}
 
-	//로그인 창
+	//로그인 페이지로 이동
 	$("#login").click(function() {
 	location.href = "/login";
 
 	});
 
+	//로그인페이지의 로그인 버튼
+	$("loginBtn").click(function(){
+		
+	});
+	
+	
 	//로그인페이지의 회원가입 버튼
 	$("#joinBtn").click(function() {
-		window.opener.location.href = "/join";
-		window.self.close();
+		location.href = "/join";
+		
 	});
 
 	//메인페이지 회원가입 클릭 시
@@ -36,6 +42,7 @@ $(function() {
 
 	//메인페이지의 로그아웃 클릭
 	$("#logout").click(function() {
+		confirm("로그아웃 하시겠습니까?");
 		location.href="/";
 	});
 
