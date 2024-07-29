@@ -2,100 +2,87 @@
 
 @import url(style_Reset.css);
 
-/* BoardList */
-div#boardWrap {
-	width: 1000px;
-	padding: 30px;
-	margin: 0 auto;
-}
-
-div#boardWrap>h1 {
-	margin-bottom: 10px;
-	text-indent: 10px;
-}
-
-div#boardWrap>hr {
-	margin: 20px 0;
-}
-
-div#boardWrap>table {
-	border-collapse: collapse;
-}
-
-div#boardWrap>table>tbody>tr>th {
-	background-color: rgba(125, 125, 0, 0.2);
-	text-align: center;
-	height: 50px;
-}
-
-div#boardWrap>table>tbody>tr>th:nth-child(1) {
-	width: 100px;
-}
-
-div#boardWrap>table>tbody>tr>th:nth-child(2) {
-	width: 707px;
-}
-
-div#boardWrap>table>tbody>tr>th:nth-child(3) {
-	width: 200px;
-}
-
-div#boardWrap>table>tbody>tr>th:nth-child(4) {
-	width: 50px;
-}
-
-div#boardWrap>table>tbody>tr>td {
+div#wrap {
+	width: 690px;
+	border: 3px solid #aaa;
 	padding: 10px;
+	margin: 10px auto;
 }
 
-div#boardWrap>table>tbody>tr>td:not(:nth-child(2)) {
-	text-align: center;
-}
-
-div#boardWrap>table>tbody>tr>td:nth-child(2) {
-	padding-left: 50px;
-}
-
-.boardTr:hover {
-	background: rgba(125, 125, 0, 0.1);
-}
-
-
-div#boardWrap>table>tbody>tr>th:last-chilid{
-	display: none;
-}
-
-div#boardWrap>table>tbody>tr>td:last-chilid{
-	display: none;
-}
-
-
-/* BoardList 끝 */
-
-/* boardView */
-div#boardViewWrap {
-	width: 1000px;
-	padding: 30px;
-	margin: 0 auto;
-}
-
-div#boardViewWrap>h1 {
-	margin-bottom: 10px;
-	text-indent: 10px;
-}
-
-div#boardViewWrap>ul>li{
+hr {
 	margin: 10px 0;
 }
 
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
 
-
-/* boardView */
-
-/* writeFormWrap */
-div#writeFormWrap {
-	width: 500px;
+th {
+	color: #000;
 	padding: 10px;
-	border: 1px solid #000;
+	background-color: rgba(136, 136, 136, 0.1);
+}
+
+td {
+	padding: 6px;
+	border-bottom: 1px solid #ddd;
+}
+
+td:not(:nth-child(3)) {
+	text-align: center;
+}
+
+td.ques {
+	text-align: left;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgba(51, 51, 51, 0.5);
+	font-weight: bold;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+li {
+	line-height: 30px;
+}
+
+td.delIcon:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+button {
+	padding: 10px;
+}
+
+div#search>ul>li {
+	display: inline-block;
+	font-size: 14px;
+	padding: 0 5px;
+}
+
+div#search>ul>li:hover {
+	color: #aaa;
+}
+
+textarea{
+	
+	transform: translateX(-110px);
+	
+}
+
+div#quesWrap {
+	width: 690px;
+	border: 3px solid #aaa;
+	padding: 10px;
 	margin: 10px auto;
 }

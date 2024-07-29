@@ -7,27 +7,21 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>내용보기</title>
+	<title>답변 확인</title>
 	<link rel="stylesheet" href="/style/style4.css?v">
 </head>
 <body>
-	<div id="boardListHeader">
-	
-		<%@ include file="header.jsp" %>	
-	
-	</div>
-
-
-	<div id="boardViewWrap">
-		<h1>공지사항</h1>
+	<div id="wrap">
+		<h1>답변 확인</h1>
 		<hr>
 		<ul>
-			<li>제목 : ${mtdBoardView.title }</li>
-			<li>작성일자 : ${mtdBoardView.writer }</li>
-			<li>내용 : ${mtdBoardView.content }</li>
+			<li>분류 : ${mtdQboardView.qCategory }</li>
+			<li>제목 : ${mtdQboardView.qTitle }</li>
+			<li>내용 : ${mtdQboardView.qContent }</li>
 		</ul>
 		<hr>
-		<button type="button" onclick="location.href='/boardList'">목록</button>
+		<button type="button" onclick="location.href='/qBoardList'">목록</button>
+		
 	</div>
 	<!-- div#wrap -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
