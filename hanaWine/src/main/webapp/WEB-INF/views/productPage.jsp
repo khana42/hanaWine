@@ -52,25 +52,19 @@
 							<div class="wineRating">
 								<span>당도</span>
 								<div class="ratingBar">
-									<div class="ratingFill" style="width: 60%;"></div>
+									<div class="ratingFill" style="width: ${wine.sweetness}%;"></div>
 								</div>
 							</div>
 							<div class="wineRating">
 								<span>산도</span>
 								<div class="ratingBar">
-									<div class="ratingFill" style="width: 80%;"></div>
-								</div>
-							</div>
-							<div class="wineRating">
-								<span>타닌</span>
-								<div class="ratingBar">
-									<div class="ratingFill" style="width: 20%;"></div>
+									<div class="ratingFill" style="width: ${wine.acidity}%;"></div>
 								</div>
 							</div>
 							<div class="wineRating">
 								<span>바디</span>
 								<div class="ratingBar">
-									<div class="ratingFill" style="width: 40%;"></div>
+									<div class="ratingFill" style="width: ${wine.body}%;"></div>
 								</div>
 							</div>
 						</div>
@@ -82,6 +76,7 @@
 							<button>찜</button>
 							<button>장바구니</button>
 							<button>구매하기</button>
+
 						</div>
 						<!-- div#btnArea -->
 
