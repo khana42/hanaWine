@@ -48,17 +48,17 @@
 					
 					</ul>			
 				</li>
-				<li id="wineCateGrape">포도종류
+				<li id="wineCateGrape" data-cate="Grape">포도종류
 					<ul class="subMenu">
-						<li class="wineCate" data-cate="Syrah">시라</li>
-						<li class="wineCate" data-cate="Malbec">말벡</li>
-						<li class="wineCate" data-cate="Nebbiolo">네비올라</li>
+						<li class="wineGrape" data-cate="쉬라즈">시라</li>
+						<li class="wineGrape" data-cate="말벡">말벡</li>
+						<li class="wineGrape" data-cate="네비올라">네비올라</li>
 					</ul>				
 				</li>
-				<li id="wineCateCountry">나라
+				<li id="wineCateCountry" data-cate="Country">나라
 					<ul class="subMenu">
-						<li class="wineCate" data-cate="이탈리아">이탈리아</li>
-						<li class="wineCate" data-cate="독일">독일</li>
+						<li class="wineCountry" data-cate="이탈리아">이탈리아</li>
+						<li class="wineCountry" data-cate="독일">독일</li>
 <!-- 						//<li class="wineCate" data-cate="PORTUGAL">포르투갈</li> -->
 					</ul>			
 				</li>

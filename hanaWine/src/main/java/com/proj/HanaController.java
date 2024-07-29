@@ -11,9 +11,9 @@ public class HanaController {
 	//	return "main";
 	//}
 	
-	//@RequestMapping("/join")
+	//@RequestMapping("/join2")
 	//public String join() {
-	//	return "join";
+	//	return "join2";
 	//}
 	
 	//@RequestMapping("/login")

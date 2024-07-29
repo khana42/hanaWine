@@ -45,7 +45,7 @@ $(function() {
 
 	//메인페이지 회원가입 클릭 시
 	$("#join").click(function() {
-		location.href = "/join";
+		location.href = "/Join02";
 	});
 
 	$('#mainMenu>li').mouseover(function() {
@@ -58,7 +58,10 @@ $(function() {
 		});
 
 	$("#wineCateMain").click(function() {
+
+
 		location.href = "/wine";
+
 	});
 
 	$("#wineCateFood").click(function() {
@@ -84,6 +87,18 @@ $(function() {
 		let cate = $(this).data('cate');
 		location.href = "/food/" + cate;
 
+	});
+	$(".wineGrape").click(function(e) {
+		e.stopPropagation()
+		let cate = $(this).data('cate');
+		location.href = "/grape/" + cate;
+     
+	});
+	$(".wineCountry").click(function(e) {
+		e.stopPropagation()
+		let cate = $(this).data('cate');
+		location.href = "/country/" + cate;
+   
 	});
 
 });

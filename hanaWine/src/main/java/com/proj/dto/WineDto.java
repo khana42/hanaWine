@@ -19,7 +19,22 @@ public class WineDto {
 	private String foodIdx;
 	private String foodName;
 	private String wineIdx;
+	private String grapeName;
+	private String countryName;
 	
+	
+	public String getCountryName() {
+		return countryName;
+	}
+	public void setCountryName(String countryName) {
+		this.countryName = countryName;
+	}
+	public String getGrapeName() {
+		return grapeName;
+	}
+	public void setGrapeName(String grapeName) {
+		this.grapeName = grapeName;
+	}
 	public String getWineIdx() {
 		return wineIdx;
 	}
@@ -82,6 +97,7 @@ public class WineDto {
 	}
 	public void setGrape(String grape) {
 		this.grape = grape;
+		
 	}
 	public int getPrice() {
 		return price;
