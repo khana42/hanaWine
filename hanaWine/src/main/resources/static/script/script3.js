@@ -37,7 +37,7 @@ $(function() {
 	//메인페이지의 로그아웃 클릭
 	$("#logout").click(function() {
 		confirm("로그아웃 하시겠습니까?");
-		location.href="/";
+		location.href="/logout";
 	});
 
 	//헤더에 마우스 올릴 시 메뉴 펼쳐져지고 닫혀짐
