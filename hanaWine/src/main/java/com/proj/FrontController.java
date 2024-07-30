@@ -21,17 +21,7 @@ import com.proj.svc.SvcInface;
 public class FrontController {
 	@Autowired
 	private SvcInface svcInface;
-    
-	@RequestMapping("/")
-	public String root() {
-		return "/main";
-	}
-
-	@RequestMapping("/join")
-	public String join() {
-		return "/join";
- 	 }
-
+   	
 	@RequestMapping("/Join02")
 	public String join02() {
 		return "Join02";

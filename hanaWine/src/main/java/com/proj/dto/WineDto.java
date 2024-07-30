@@ -3,7 +3,7 @@ package com.proj.dto;
 import java.sql.Timestamp;
 
 
-public class WineDto {
+public class WineDto extends SearchVO { //검색 기능 구현하기 위해 SerchVO 상속
 
 	
 	private int idx;

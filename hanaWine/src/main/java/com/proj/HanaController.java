@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.proj.dao.UserMapper;
 import com.proj.dto.UserVO;
+import com.proj.svc.SearchService;
 import com.proj.svc.UserService;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -26,6 +27,9 @@ public class HanaController {
 	@Autowired
 	private UserMapper userMapper;
 
+	@Autowired
+	private SearchService searchService;
+	
 	@GetMapping("/")
 	public String root() {
 
@@ -85,15 +89,6 @@ public class HanaController {
 	public String logout(HttpSession session) {
 		session.invalidate();		
 		return "main";
-	
-	
-//	@RequestMapping("/logout")
-//	public String logout(HttpServletRequest req) {
-//		HttpSession session = req.getSession(false);
-//        if (session != null) {
-//		session.invalidate();
-//        }
-//		return "main";
 	}
 
 	//회원가입
@@ -101,5 +96,13 @@ public class HanaController {
 	public String join() {
 		return "join";
 	}
-
+	
+	//와인 종류 검색
+	@GetMapping("/goodsDetail")
+	public void goodsKindGet(String wineKind,Model model) {
+		
+		/* 조회 페이지 정보 */
+		model.addAttribute("goodsInfo", searchService.goodsKind(wineKind));
+		
+	}
 }

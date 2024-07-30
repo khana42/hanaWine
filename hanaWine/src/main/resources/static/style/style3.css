@@ -60,13 +60,54 @@ div#gnbArea{
 	font-weight: bold;
 }
 
-#gnbArea #nav ul.subMenu {
+#gnbArea #nav li#wineCateMain ul.subMenu {
 	width: 150px;
 	background-color: #fff;
-
+	
     display: none;
 
     position: absolute;
+	left: -57px;    
+    top: 30px;
+}
+#gnbArea #nav li#wineCateFood ul.subMenu {
+	width: 90px;
+	background-color: #fff;
+	
+    display: none;
+
+    position: absolute;
+	left: -30px;    
+    top: 30px;
+}
+#gnbArea #nav li#wineCateGrape ul.subMenu {
+	width: 120px;
+	background-color: #fff;
+	
+    display: none;
+
+    position: absolute;
+	left: -30px;    
+    top: 30px;
+}
+#gnbArea #nav li#wineCateCountry ul.subMenu {
+	width: 120px;
+	background-color: #fff;
+	
+    display: none;
+
+    position: absolute;
+	left: -45px;    
+    top: 30px;
+}
+#gnbArea #nav li#community ul.subMenu {
+	width: 125px;
+	background-color: #fff;
+	
+    display: none;
+
+    position: absolute;
+	left: -32px;    
     top: 30px;
 }
 #gnbArea #nav ul.subMenu li {
