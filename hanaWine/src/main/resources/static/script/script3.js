@@ -22,12 +22,6 @@ $(function() {
 	location.href = "/login";
 
 	});
-
-	//로그인페이지의 로그인 버튼
-	$("loginBtn").click(function(){
-		
-	});
-	
 	
 	//로그인페이지의 회원가입 버튼
 	$("#joinBtn").click(function() {

@@ -69,7 +69,7 @@ public class HanaController {
         if (loginResult) {
             // 세션에 사용자 정보 저장
             session.setAttribute("sUid", uid);
-            session.setMaxInactiveInterval(1);
+            session.setMaxInactiveInterval(2);
             
             return "main"; // 로그인 성공 시 메인 페이지로 
             

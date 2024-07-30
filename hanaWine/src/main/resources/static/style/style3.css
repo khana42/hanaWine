@@ -148,8 +148,13 @@ div#loginWrap {
 	padding: 15px;
 	margin: 20px auto;
 }
+#loginWrap #logo{
+	text-align: center;
+	
+}
 #loginWrap h1{
 	text-align: center;
+	margin-top: 150px;
 }
 #loginWrap form {
 	width: 100%;

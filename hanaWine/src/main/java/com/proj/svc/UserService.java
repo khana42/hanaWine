@@ -39,10 +39,14 @@ public class UserService {
     
     //로그인
     public boolean login(String uid, String upw, HttpSession session) {
+    	 if (uid == null || upw == null) {
+    	        return false; // 입력값이 null인 경우 로그인 실패
+    	    }
+    	
         UserVO userVo = userMapper.getUserByUid(uid);
         
-        // uid/upw가 null이 아니고, id/pw 일치하면 로그인 성공
-        if (userVo.getUid().equals(uid)&& userVo.getUpw().equals(upw)) {
+        // userVo가 null인지 확인 후, id/pw 일치하면 로그인 성공
+        if (userVo != null &&userVo.getUid().equals(uid)&& userVo.getUpw().equals(upw)) {
         	session.setAttribute("isLoggedIn", true);
         	return true;
         }
