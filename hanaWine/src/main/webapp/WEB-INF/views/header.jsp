@@ -70,9 +70,9 @@ String sUid = (String)session.getAttribute("sUid");
 <!-- 						//<li class="wineCate" data-cate="PORTUGAL">포르투갈</li> -->
 					</ul>			
 				</li>
-				<li id="community">커뮤니티
-					<ul class="subMenu">
-						<li class="notice">공지사항</li>
+				<li id="community" onclick="location.href='/notice_list'">커뮤니티
+					<ul class="subMenu" >
+						<li class="notice" onclick="location.href='/notice_list'">공지사항</li>
 						<li class="notice">자주하는 질문</li>
 						<li class="notice">1:1 문의</li>
 					</ul>
