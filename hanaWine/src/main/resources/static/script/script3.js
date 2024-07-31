@@ -57,6 +57,14 @@ $(function() {
 			$(this).children('ul.subMenu').stop().slideUp();
 		});
 
+///////////커뮤니티////////////////
+$(".qBoard").click(function(){
+	location.href = "/qBoardList";
+	
+	
+});
+
+
 	$("#wineCateMain").click(function() {
 
 

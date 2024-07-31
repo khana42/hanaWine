@@ -19,10 +19,10 @@ public class QboardController {
 	private QboardDao qboardDao;
 
 	// qBoardList.jsp 로 이동
-	@RequestMapping("/")
-	public String qBoard() {
-		return "qBoardList";
-	}
+	//@RequestMapping("/")
+	//public String qBoard() {
+	//	return "qBoardList";
+	//}
 
 	// qWriteForm.jsp 로 이동
 	@RequestMapping("/qWriteForm")

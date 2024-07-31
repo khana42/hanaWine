@@ -151,6 +151,8 @@ div.userInfo span.info1 {
 div.userInfo input.infoInput {
     width: 420px;
     padding: 5px;
+   
+   
 }
 
 .userInfo input {
@@ -166,7 +168,7 @@ div.userInfo input.infoInput {
 }
 
 .userInfo input#useremail {
-    width: 140px;
+    
     border: 1px solid #bbb;
     bottom: none;
 }

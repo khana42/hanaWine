@@ -1,7 +1,7 @@
 package com.proj.svc;
 
 import java.util.List;
-import java.util.Map;
+
 
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class SvcImplet implements SvcInface {
 
 	@Override
 	public List<WineDto> svcList(String wineKind) {
-		System.out.println(wineKind);
+	
 
 		return wineDao.daoWineList(wineKind);
 	}

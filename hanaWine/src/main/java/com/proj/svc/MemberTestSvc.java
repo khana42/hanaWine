@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.proj.dao.MemberTestDao;
 import com.proj.dto.MembrTestDto;
@@ -11,13 +12,11 @@ import com.proj.dto.MembrTestDto;
 @Service
 public class MemberTestSvc implements MemberTestSvcIf {
 	@Autowired
-	MemberTestDao memberTestDao;
+	  MemberTestDao memberTestDao;
+    @Override
+    @Transactional
+    public void memberjoin(MembrTestDto memberTestDto) throws Exception {
+    	memberTestDao.memberjoin(memberTestDto);
 
-	@Override
-	public List<MembrTestDto> svcMemberList(String uid) {
-		
-		return memberTestDao.daoMemberList(uid);
-	}
-
-	
+}
 }

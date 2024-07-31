@@ -62,7 +62,7 @@
 <!-- 						//<li class="wineCate" data-cate="PORTUGAL">포르투갈</li> -->
 					</ul>			
 				</li>
-				<li>커뮤니티</li>
+				<li class = qBoard>커뮤니티</li>
 			</ul>
 		</nav>
 		

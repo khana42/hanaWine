@@ -37,10 +37,10 @@ public class FrontController {
 		return "Join02";
 	}
 
-	//@RequestMapping("/login")
-	//public String login() {
-	//	return "login";
-	//}
+	@RequestMapping("/login")
+	public String login() {
+		return "login";
+	}
 	
 	//목록	페이지
 	@RequestMapping("/wine")

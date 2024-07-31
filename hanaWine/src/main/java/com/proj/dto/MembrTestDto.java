@@ -1,50 +1,77 @@
-package com.proj.dto;
+package com.proj.dto;	
 
-import java.sql.Timestamp;
+
 
 public class MembrTestDto {
 
-	private int idx;
-	private String uid;
-	private String upw;
-	private String uname;
-	private String uidemail;
-	private Timestamp joinTM;
-	public int getIdx() {
-		return idx;
+
+	//회원 id
+	private String memberId;
+	
+	//회원 비밀번호
+	private String memberPw;
+	
+	//회원 이름
+	private String memberName;
+	
+	//회원 이메일
+	private String memberMail;
+	
+	//회원 우편번호
+	private String memberAddr1;
+	
+	private String memberPhone;
+	
+	
+
+	public String getMemberPhone() {
+		return memberPhone;
 	}
-	public void setIdx(int idx) {
-		this.idx = idx;
+
+	public void setMemberPhone(String memberPhone) {
+		this.memberPhone = memberPhone;
 	}
-	public String getUid() {
-		return uid;
+
+	public String getMemberId() {
+		return memberId;
 	}
-	public void setUid(String uid) {
-		this.uid = uid;
+
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
 	}
-	public String getUpw() {
-		return upw;
+
+	public String getMemberPw() {
+		return memberPw;
 	}
-	public void setUpw(String upw) {
-		this.upw = upw;
+
+	public void setMemberPw(String memberPw) {
+		this.memberPw = memberPw;
 	}
-	public String getUname() {
-		return uname;
+
+	public String getMemberName() {
+		return memberName;
 	}
-	public void setUname(String uname) {
-		this.uname = uname;
+
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
 	}
-	public String getUidemail() {
-		return uidemail;
+
+	public String getMemberMail() {
+		return memberMail;
 	}
-	public void setUidemail(String uidemail) {
-		this.uidemail = uidemail;
+
+	public void setMemberMail(String memberMail) {
+		this.memberMail = memberMail;
 	}
-	public Timestamp getJoinTM() {
-		return joinTM;
+
+	public String getMemberAddr1() {
+		return memberAddr1;
 	}
-	public void setJoinTM(Timestamp joinTM) {
-		this.joinTM = joinTM;
+
+	public void setMemberAddr1(String memberAddr1) {
+		this.memberAddr1 = memberAddr1;
 	}
+
+
 	
 }
