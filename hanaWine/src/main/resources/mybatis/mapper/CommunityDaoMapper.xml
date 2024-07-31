@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DTD 문서 타입 지정 -->
+<!DOCTYPE mapper 
+PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.proj.dao.CommunityDao">
+
+	<!-- BBS 글 목록 태그 -->
+	<select id="mtdNoticeList"
+		resultType="com.proj.dto.CommunityDto">
+		select * from noticeTb order by notiNum desc
+	</select>
+
+	<!-- BBS 글저장 태그 -->
+	<insert id="mtdNoticeWrite" parameterType="java.util.HashMap">
+		insert into noticeTb
+		(notiDate, notiTit, notiCon)
+		values
+		(#{item1}, #{item2}, #{item3})
+	</insert>
+
+	<!-- BBS 글 상세 내용 보기 -->
+	<select id="mtdNoticeView"
+		resultType="com.proj.dto.CommunityDto">
+		select * from noticeTb where notiNum = #{param1}
+	</select>
+
+</mapper>
