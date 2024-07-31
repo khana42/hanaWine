@@ -12,7 +12,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<!-- BBS 글저장 태그 -->
-	<insert id="mtdBoardWrite">
+	<insert id="mtdBoardWrite" >
 		insert into wineList (productNameKR, productNameEN, typeOfWine, grape, brand, price, nation, nationDetail, region, goodsImg, goodsInfo, recipe)
 		values ( #{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6}, #{param7}, #{param8}, #{param9}, #{param10}, #{param11}, #{param12})
 	</insert>
