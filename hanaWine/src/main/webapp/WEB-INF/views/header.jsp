@@ -81,8 +81,10 @@ String sUid = (String)session.getAttribute("sUid");
 		</nav>
 		
 		<div id="search">
-			<input type="text" placeholder="와인을 검색해 보세요.">
-			<img src="/img/search.png" alt="검색이미지">
+			<input type="text" name="keyword" placeholder="와인을 검색해 보세요.">
+			<a href="#">
+				<img src="/img/btn_search.png" alt="검색">
+			</a>
 		</div>
 		
 	</div>

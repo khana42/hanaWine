@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class SearchVO {
-	private String searchKeyword;
-	private String searchValue;
+	private String keyword; //검색 키워드
+	
 }

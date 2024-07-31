@@ -63,13 +63,11 @@ public class HanaController {
 	}
 
 	@PostMapping("/main")
-	public String handleLogin(@RequestParam("uid") String uid, @RequestParam("upw") String upw,
-			HttpServletRequest req) {
+	public String handleLogin(@RequestParam("uid") String uid, @RequestParam("upw") String upw,HttpServletRequest req) {
 		// 로그인 성공 여부 확인
 		HttpSession session = req.getSession(); // 새로운 세션을 생성하거나 기존 세션을 가져옴
 		boolean loginResult = userService.login(uid, upw, session);
 
-<<<<<<< HEAD
         if (loginResult) {
             // 세션에 사용자 정보 저장
             session.setAttribute("sUid", uid);
@@ -82,20 +80,6 @@ public class HanaController {
             return "login"; // 로그인 실패 시 다시 로그인 페이지로 
             
         }
-=======
-		if (loginResult) {
-			// 세션에 사용자 정보 저장
-			session.setAttribute("sUid", uid);
-//            session.setMaxInactiveInterval(2);
-
-			return "redirect:/"; // 로그인 성공 시 메인 페이지로
-
-		} else {
-
-			return "login"; // 로그인 실패 시 다시 로그인 페이지로
-
-		}
->>>>>>> 30cc85857dca9b3b876648eda2e072d9c981f98d
 	}
 
 	// 로그아웃

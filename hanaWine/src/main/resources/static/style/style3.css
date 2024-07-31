@@ -61,13 +61,13 @@ div#gnbArea{
 }
 
 #gnbArea #nav li#wineCateMain ul.subMenu {
-	width: 150px;
+	width: 130px;
 	background-color: #fff;
 	
     display: none;
 
     position: absolute;
-	left: -57px;    
+	left: -50px;    
     top: 30px;
 }
 #gnbArea #nav li#wineCateFood ul.subMenu {
@@ -123,18 +123,22 @@ div#gnbArea{
 	width: 250px;
 	position: relative;
 	left: -20px;
+	top: -10px;
 }
 #gnbArea #search input{
 	width: 100%;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	padding: 5px;
+	padding: 10px;
 }
 #gnbArea #search img{
 	position: absolute;
 	width: 20px;
-	top: 5px;
-	right: 7px;
+	top: 9px;
+	right: 10px;
+}
+#gnbArea #search img:hover{
+	cursor: pointer;
 }
 /* GNB 시작 */
 /* header CSS 끝 */
