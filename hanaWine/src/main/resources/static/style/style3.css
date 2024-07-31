@@ -14,15 +14,17 @@ div#logoArea{
 
 #logoArea #logo{
 /* 	border: 1px solid #000; */
-	margin-left: 380px;
+	margin-left: 35px;
+	
 }
 #logoArea #loginArea{
-	font-size: 15px;
+	font-size: 16px;
 	margin-right: 10px;
-	transform: translateY(18px);
+	transform: translateY(70px);
 }
 #logoArea #loginArea li{
 	margin-right: 15px;
+	
 }
 #logoArea #loginArea li:hover{
 	cursor: pointer;
