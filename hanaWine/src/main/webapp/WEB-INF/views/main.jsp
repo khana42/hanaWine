@@ -45,7 +45,8 @@
 			</div>
 		</div>
 	</main>
-				
+	
+			
 	<footer id="footer">
 		<%@ include file="footer.jsp" %>
 	</footer>

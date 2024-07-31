@@ -1,7 +1,9 @@
 $(function() {
+	
+	
 	//메인페이지 슬라이드쇼
 	setInterval(fnSlide, 4000);
-	// fnSlide를 3초 단위로 반복함
+	// fnSlide를 4초 단위로 반복함
 
 	function fnSlide() {
 		$('#slideShow').animate(
@@ -15,90 +17,49 @@ $(function() {
 		);
 	}
 
-	//로그인 창
-	$("#login").off("click").on("click", function() {
-
-		let fName = "/login";
-		let alias = "";
-		let scrWidth = screen.width;
-		let popWidth = 440;
-		let leftPos = (scrWidth - popWidth) / 2;
-		let scrHeight = screen.height;
-		let popHeight = 400;
-		let topPos = (scrHeight - popHeight) / 2;
-
-		let prop = "width=" + popWidth;
-		prop += " height=" + popHeight;
-		prop += " left=" + leftPos;
-		prop += " top=" + topPos;
-		window.open(fName, alias, prop);
+	//로그인 페이지로 이동
+	$("#login").click(function() {
+	location.href = "/login";
 
 	});
-
-	//로그인 클릭시 회원가입 버튼
+	
+	//로그인페이지의 회원가입 버튼
 	$("#joinBtn").click(function() {
-
-
-		window.opener.location.href = "/join";
-		window.self.close();
+		location.href = "/join";
+		
 	});
 
 	//메인페이지 회원가입 클릭 시
 	$("#join").click(function() {
-		location.href = "/Join02";
+		location.href = "/join";
 	});
 
+	//메인페이지의 로그아웃 클릭
+	$("#logout").click(function() {
+		confirm("로그아웃 하시겠습니까?");
+		location.href="/logout";
+	});
+
+	//헤더에 마우스 올릴 시 메뉴 펼쳐져지고 닫혀짐
 	$('#mainMenu>li').mouseover(function() {
 		$(this).children('ul.subMenu').stop().slideDown(0);
 	});
-
 	$('#mainMenu>li').mouseout(
 		function() {
 			$(this).children('ul.subMenu').stop().slideUp();
 		});
 
+
+	//헤더의 gnb 클릭시 	
 	$("#wineCateMain").click(function() {
-
-
 		location.href = "/wine";
-
 	});
-
-	$("#wineCateFood").click(function() {
-		location.href = "/food";
-	});
-	$("#wineCateGrape").click(function() {
-
-		location.href = "/grape";
-	});
-	$("#wineCateCountry").click(function() {
-
-		location.href = "/country";
-	});
-
 	$(".wineCate").click(function(e) {
 		e.stopPropagation()
 		let cate = $(this).data('cate');
 		location.href = "/wine/" + cate;
 
 	});
-	$(".wineFood").click(function(e) {
-		e.stopPropagation()
-		let cate = $(this).data('cate');
-		location.href = "/food/" + cate;
 
-	});
-	$(".wineGrape").click(function(e) {
-		e.stopPropagation()
-		let cate = $(this).data('cate');
-		location.href = "/grape/" + cate;
-     
-	});
-	$(".wineCountry").click(function(e) {
-		e.stopPropagation()
-		let cate = $(this).data('cate');
-		location.href = "/country/" + cate;
-   
-	});
 
 });
