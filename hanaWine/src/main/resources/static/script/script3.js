@@ -1,6 +1,4 @@
 $(function() {
-	
-	
 	//메인페이지 슬라이드쇼
 	setInterval(fnSlide, 4000);
 	// fnSlide를 4초 단위로 반복함
@@ -60,6 +58,16 @@ $(function() {
 		location.href = "/wine/" + cate;
 
 	});
-
+	
+	//검색
+	$("#btnSearch").click(function(e){	
+		e.preventDefault();	
+		var url = "${pageContext.request.contextPath}/board/getBoardList";		
+		url = url + "&keyword=" + $('#keyword').val();		
+		location.href = url;		
+		console.log(url);	
+	});
 
 });
+
+

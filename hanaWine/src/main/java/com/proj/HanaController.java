@@ -8,9 +8,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.proj.dao.UserMapper;
+import com.proj.dto.SearchVO;
 import com.proj.dto.UserVO;
 import com.proj.svc.SearchService;
 import com.proj.svc.UserService;
@@ -98,11 +100,12 @@ public class HanaController {
 	}
 
 	// 와인 종류 검색
-	@GetMapping("/goodsDetail")
-	public void goodsKindGet(String wineKind, Model model) {
-
-		/* 조회 페이지 정보 */
-		model.addAttribute("goodsInfo", searchService.goodsKind(wineKind));
-
+	@RequestMapping(value = "/getBoardList", method = RequestMethod.GET)	
+	public String getBoardList(Model model, @RequestParam(required = false) String keyword) throws Exception {				
+		SearchVO search = new SearchVO();		
+		search.setKeyword(keyword);				
+		
+		return "searchList";
 	}
+	
 }
