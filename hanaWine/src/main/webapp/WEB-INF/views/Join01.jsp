@@ -14,11 +14,11 @@
 
 <body>
     <div id="Join1wrap">
-
-        <div id="Join1">
-            <a href="join_02.html">쇼핑몰 회원가입</a>
+		<div id="Join1">
+            <p id=joingo>쇼핑몰 회원가입</p>
+            <a href="/member/Join02.jsp">쇼핑몰 회원가입</a>
         </div>
-        <hr>
+        <div id="bd"></div>
         <!-- div#Join -->
 
         <div class="N_K">
@@ -28,6 +28,8 @@
                 <span class="n_k">네이버 아이디 회원가입</span>
             </a>
         </div>
+        
+        
 
 		<div class="N_K">
             <a href="#">
