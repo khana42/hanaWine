@@ -12,11 +12,11 @@ import com.proj.dto.WineDto;
 
 public interface WineDao {
 	public List<WineDto> daoWineListAll();
-	public List<WineDto> daoWineList(String wineKind);
+	public List<WineDto> daoWineList(String typeName);
     public List<WineDto> daoWineListFood(String foodName);
     public List<WineDto> daoWineListGrape(String grapename);
-    public List<WineDto> daoWineListCountry(String countryname);
-    public List<WineDto> daoPriceHighList(@Param("sortByPrice") String sortByPrice);
+    public List<WineDto> daoWineListCountry(String nationName);
+   
     
 	
 }

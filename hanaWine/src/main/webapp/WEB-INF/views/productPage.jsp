@@ -31,46 +31,47 @@
 
 		<Main id="main" class="dFlex">
 
-			<c:forEach var="wine" items="${wineList}">
+			
 
-				<div class="wineInfo">
+				<div class="wineInfo" >
 					<div id="wineImgArea">
 						<img src="images/testImg.png" alt="제품이미지영역">
 					</div>
+<%-- 				<c:forEach	var="list"	items="${getAllWines}"> --%>
 					<div id="wineDetailArea">
-						<h2>${wine.productNameKR}</h2>
-						<p class="wineSubtitle">${wine.productNameEN}</p>
+						<h2>${productPage.wineKrName}</h2>
+						<p class="wineSubtitle">${productPage.wineEgName}</p>
 						<ul class="wineDetails">
-							<li><strong>브랜드</strong> ${wine.brand}</li>
-							<li><strong>종류:</strong> ${wine.typeOfWine}</li>
-							<li><strong>원산지:</strong> ${wine.nation} &gt; ${wine.region}</li>
-							<li><strong>포도품종:</strong> ${wine.grape}</li>
-							<li><strong>도수:</strong>${wine.alcohol}</li>
+							
+							<li><strong>종류:</strong> ${productPage.typeOfWine}</li>
+							<li><strong>원산지:</strong> ${productPage.nation} &gt; ${productPage.region}</li>
+							<li><strong>포도품종:</strong> ${productPage.grape}</li>
+							<li><strong>도수:</strong>${productPage.alcohol}</li>
 						</ul>
 
 						<div class="wineRatings">
 							<div class="wineRating">
 								<span>당도</span>
 								<div class="ratingBar">
-									<div class="ratingFill" style="width: ${wine.sweetness}%;"></div>
+									<div class="ratingFill" style="width: ${productPage.sweetness}%;"></div>
 								</div>
 							</div>
 							<div class="wineRating">
 								<span>산도</span>
 								<div class="ratingBar">
-									<div class="ratingFill" style="width: ${wine.acidity}%;"></div>
+									<div class="ratingFill" style="width: ${productPage.acidity}%;"></div>
 								</div>
 							</div>
 							<div class="wineRating">
 								<span>바디</span>
 								<div class="ratingBar">
-									<div class="ratingFill" style="width: ${wine.body}%;"></div>
+									<div class="ratingFill" style="width: ${productPage.body}%;"></div>
 								</div>
 							</div>
 						</div>
 						<hr>
 						<div id="priceArea">
-							<span>가격 : </span> <span>${wine.price}</span>
+							<span>가격 : </span> <span>${productPage.price}</span>
 						</div>
 						<div id="btnArea">
 							<button>찜</button>
@@ -81,13 +82,14 @@
 						<!-- div#btnArea -->
 
 					</div>
+<%-- 					</c:forEach> --%>
 					<!-- div#wineDetailArea -->
 				</div>
 				<!-- div#wineInfo -->
 		</Main>
 		<!-- Main#main -->
 
-		</c:forEach>
+		
 
 
 

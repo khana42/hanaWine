@@ -39,7 +39,7 @@ $(function() {
 	$("#joinBtn").click(function() {
 
 
-		window.opener.location.href = "/join";
+		window.opener.location.href = "/Join02";
 		window.self.close();
 	});
 

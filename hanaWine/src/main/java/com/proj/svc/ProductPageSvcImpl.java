@@ -15,8 +15,9 @@ public class ProductPageSvcImpl implements ProductPageSvc {
 	private ProductPageDao ProductPageDao;
 
 	@Override
-	public List<ProductPageDto> SvcList(int num) {
-		return ProductPageDao.DaoList(num);
-
-	}
+	public ProductPageDto getWineProduct(String wineKrName) {
+		 return ProductPageDao.getWineByName(wineKrName);
+	
+}
+	  
 }

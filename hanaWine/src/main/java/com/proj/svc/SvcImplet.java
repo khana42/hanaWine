@@ -16,10 +16,10 @@ public class SvcImplet implements SvcInface {
 	WineDao wineDao;
 
 	@Override
-	public List<WineDto> svcList(String wineKind) {
+	public List<WineDto> svcList(String typeName) {
 	
 
-		return wineDao.daoWineList(wineKind);
+		return wineDao.daoWineList(typeName);
 	}
 
 	@Override
@@ -42,15 +42,11 @@ public class SvcImplet implements SvcInface {
 		return wineDao.daoWineListGrape(grapename);
 	}
 	@Override
-	public List<WineDto> svcListCountry(String countryname){
+	public List<WineDto> svcListCountry(String nationName){
 		
-		return wineDao.daoWineListCountry(countryname);
+		return wineDao.daoWineListCountry(nationName);
 	}
 	
 
-	@Override
-	public List<WineDto> scvPriceHighList(@Param("sortByPrice") String sortByPrice) {
 
-		return wineDao.daoPriceHighList(sortByPrice);
-	}
 }

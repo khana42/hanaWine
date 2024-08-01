@@ -54,22 +54,22 @@
 		<!--       목록 -->
          <c:forEach	var="list"	items="${daoWineList}">
 		 <div id="main" class="dFlex" >
-				<div id="wine" class="dFlex" name="winePage">
+				<div id="wine" class="dFlex wineInfo" name="winePage"  data-winekrname="${list.wineKrName}" >
 					<div class="img1">
 						<img src="http://placehold.it/200x300" alt="">
 					</div>
 					<div class="name">
-						<div class="bdname">
-							<span>${list.brand}</span>
-						</div>
 						<div class="winame">
 							<span>${list.wineKrName}</span>
 						</div>
 						<div class="enWiname">
-							<span>${list.wineEnName}</span>
+							<span>${list.wineEgName}</span>
+						</div>
+						<div class="bdname">
+							<span>${list.region}</span>
 						</div>
 						<div class="con">
-							<span>${list.country}</span>
+							<span>${list.nation}</span>
 						</div>
 						<div class="price">
 							<span>${list.price}</span>
