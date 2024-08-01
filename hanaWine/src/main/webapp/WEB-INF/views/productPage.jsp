@@ -1,32 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>    
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    
-    
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="/style/style2.css?v">
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="/style/style2.css?v">
 </head>
 <body>
 
-<div id="wrap">
-
-		<header id="header">
-			
-		</header>
-
-		<div id="RouteArea">
-			<span>HOME > ALL WINES > PRODUCT</span>
+	<div id="wrap">
+		<header id="header"> </header>
+		
+			<div id="RouteArea">
+			<span><a href="main.jsp" id="mainLink" class="routeLink">HOME</a></span>
+			<span>></span>
+			<span><a href="subpage1.jsp" id="subpageLink" class="routeLink">ALL WINES</a></span>
+			<span>></span>
+			<span><a href="productPage.jsp" id="productpageLink" class="routeLink"></a>PRODUCT</span>
 		</div>
-
-		<select name="sortArea">
-			<option value="">-</option>
-			<option value="newest">최신순</option>
-			<option value="oldest">오래된순</option>
-		</select>
 
 
 		<Main id="main" class="dFlex">
@@ -35,7 +30,7 @@
 
 				<div class="wineInfo">
 					<div id="wineImgArea">
-						<img src="images/testImg.png" alt="제품이미지영역">
+						<img src="${wine.goodsImg}" alt="제품이미지영역">
 					</div>
 					<div id="wineDetailArea">
 						<h2>${wine.productNameKR}</h2>
@@ -49,25 +44,37 @@
 						</ul>
 
 						<div class="wineRatings">
+
 							<div class="wineRating">
 								<span>당도</span>
 								<div class="ratingBar">
-									<div class="ratingFill" style="width: ${wine.sweetness}%;"></div>
+									<div class="ratingFill" style="width: ${wine.sweetness*20}%;"></div>
 								</div>
+								<!-- div.ratingBar -->
 							</div>
+							<!-- div.wineRating -->
+							
 							<div class="wineRating">
 								<span>산도</span>
 								<div class="ratingBar">
-									<div class="ratingFill" style="width: ${wine.acidity}%;"></div>
+									<div class="ratingFill" style="width: ${wine.acidity*20}%;"></div>
 								</div>
+								<!-- div.ratingBar -->	
 							</div>
+							<!-- div.wineRating -->
+							
 							<div class="wineRating">
 								<span>바디</span>
 								<div class="ratingBar">
-									<div class="ratingFill" style="width: ${wine.body}%;"></div>
+									<div class="ratingFill" style="width: ${wine.body*20}%;"></div>
 								</div>
+								<!-- div.ratingBar -->	
 							</div>
+							<!-- div.wineRating -->
+						
 						</div>
+						<!--div.wineRatings -->
+						
 						<hr>
 						<div id="priceArea">
 							<span>가격 : </span> <span>${wine.price}</span>
@@ -105,21 +112,19 @@
 			</ul>
 		</nav>
 		<div class="contents productDetail">
-			<img src="images/sample상세페이지.jpg" alt="">
+			<img src="${wine.Recipe}" alt="상세페이지">
 		</div>
 		<div class="contents recommFood" style="display: none;">
-			<img src="images/페어링샘플.png" alt="">
+			<img src="${wine.goodsInfo}" alt="추천 페어링 음식">
 		</div>
 		<div class="contents reservation" style="display: none;">
-			<img src="images/pickup이미지.PNG" alt="">
+			<img src="images/pickup이미지.PNG" alt="배송정보">
 		</div>
 		<div class="contents qa" style="display: none;">관리자페이지</div>
 
 
 
-		<footer id="footer">
-			
-		</footer>
+		<footer id="footer"> </footer>
 
 
 	</div>
@@ -129,4 +134,4 @@
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="/script/script2.js"></script>
 </body>
-</html>    
+</html>

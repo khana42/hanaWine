@@ -16,7 +16,6 @@ public class ProductPageController {
 	@GetMapping("/productPage")
 	public String list(Model model) {
 		model.addAttribute("wineList", ProductPageSvc.SvcList(1));
-
 		return "productPage";
 	}
 
