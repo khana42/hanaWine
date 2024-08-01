@@ -58,16 +58,37 @@ $(function() {
 		location.href = "/wine/" + cate;
 
 	});
-	
+	//<c:url var="getBoardListURL" value="/board/getBoardList"></c:url>
+
 	//검색
-	$("#btnSearch").click(function(e){	
-		e.preventDefault();	
-		var url = "${pageContext.request.contextPath}/board/getBoardList";		
-		url = url + "&keyword=" + $('#keyword').val();		
-		location.href = url;		
-		console.log(url);	
-	});
+//	$("#btnSearch").click(function(e) {
+//		e.preventDefault();
+////		let url = "/search"; // URL을 직접 입력
+//		let keyword = $('#keyword').val(); // 키워드 값을 가져옴
+////		if (keyword) { // 키워드가 비어있지 않은 경우에만 추가
+////			url += "?keyword=" + encodeURIComponent(keyword); // 쿼리 문자열에 추가
+////		}
+//		location.href = "/wineList"; // 페이지 이동
+//		console.log(url); // URL 출력
+//		console.log("키워드: " + keyword);
+//});${pageContext.request.contextPath}
+	   $(document).ready(function() {
+        $("#btnSearch").click(function(event) {
+            event.preventDefault(); // 기본 링크 클릭 동작 방지
+            var keyword = $("#keyword").val(); // 검색어 가져오기
+            
+            // 검색어가 있는 경우에만 링크로 이동
+            if (keyword) {
+                // 검색어를 URL 쿼리 매개변수로 추가
+                var url = "/search?keyword=" + encodeURIComponent(keyword);
+                window.location.href = url; // 페이지 이동
+            } else {
+                alert("검색어를 입력하세요."); // 검색어가 없으면 경고
+            }
+        });
 
 });
+});
+
 
 

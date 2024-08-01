@@ -2,11 +2,20 @@
 
 <!DOCTYPE	mapper	PUBLIC	"-//mybatis.org//DTD Mapper 3.0//EN"
 		"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper	namespace="com.proj.dao.SearchDao">
-    <select id="getBoardList" resultType="com.freehoon.web.board.model.BoardVO">		
-    SELECT * FROM wineList
-    <if test="keyword != null and keyword != '' ">			
-    AND typeOfWind like CONCAT('%', #{keyword}, '%')			
-    </if>		
+
+<mapper namespace="com.proj.dao.SearchDao">
+	<select id="searchWines" resultType="com.proj.dto.WineDto">
+		     SELECT A.wineKrName, A.wineEgName,
+(SELECT typeName FROM projectDB.typeOfWine WHERE IDX = A.typeOfWine ) AS TYPEOFWINE,
+(SELECT nationName FROM projectDB.nation WHERE IDX = A.nation) AS NATION,
+A.region,
+(SELECT grapeName From projectDB.grape WHERE IDX = A.grape)AS GRAPE ,
+A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
+C.foodName
+FROM projectDB.wineListTest A
+LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx
+INNER JOIN  projectDB.food C ON B.foodIdx = C.idx
+WHERE wineKrName LIKE CONCAT('%', #{keyword}, '%')
+        OR wineEgName LIKE CONCAT('%', #{keyword}, '%')
 	</select>
 </mapper>

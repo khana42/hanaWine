@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.proj.dao.UserMapper;
 import com.proj.dto.SearchVO;
 import com.proj.dto.UserVO;
-import com.proj.svc.SearchService;
+import com.proj.dto.WineDto;
+
 import com.proj.svc.UserService;
+import com.proj.svc.WineService;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -29,8 +31,11 @@ public class HanaController {
 	@Autowired
 	private UserMapper userMapper;
 
+//	@Autowired
+//	private SearchService searchService;
+	
 	@Autowired
-	private SearchService searchService;
+	private WineService wineService;
 
 	@GetMapping("/")
 	public String root() {
@@ -100,12 +105,14 @@ public class HanaController {
 	}
 
 	// 와인 종류 검색
-	@RequestMapping(value = "/getBoardList", method = RequestMethod.GET)	
-	public String getBoardList(Model model, @RequestParam(required = false) String keyword) throws Exception {				
-		SearchVO search = new SearchVO();		
-		search.setKeyword(keyword);				
-		
-		return "searchList";
+	@GetMapping("/search")
+	public String search(@RequestParam("keyword") String keyword, Model model) {
+        List<WineDto> wines = wineService.searchWines(keyword);
+        model.addAttribute("wines", wines);
+        return "subpage11"; 
 	}
+		
+		
+	
 	
 }
