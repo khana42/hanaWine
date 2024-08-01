@@ -9,6 +9,6 @@ import com.proj.dto.ProductPageDto;
 
 @Mapper
 public interface ProductPageDao {
-	List<ProductPageDto> DaoList(@Param("param1") int num);
+	List<ProductPageDto> DaoList(@Param("num")int num);
 
 }

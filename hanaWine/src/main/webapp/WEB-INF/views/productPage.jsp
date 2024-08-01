@@ -13,7 +13,9 @@
 <body>
 
 	<div id="wrap">
-		<header id="header"> </header>
+		<header id="header">
+
+	</header>
 		
 			<div id="RouteArea">
 			<span><a href="main.jsp" id="mainLink" class="routeLink">HOME</a></span>
@@ -123,8 +125,9 @@
 		<div class="contents qa" style="display: none;">관리자페이지</div>
 
 
+	<footer id="footer">
 
-		<footer id="footer"> </footer>
+	</footer>
 
 
 	</div>

@@ -5,7 +5,5 @@ import java.util.List;
 import com.proj.dto.ProductPageDto;
 
 public interface ProductPageSvc {
-	
-List <ProductPageDto> SvcList(int num);
-
+	List <ProductPageDto> SvcList(int num);
 }
