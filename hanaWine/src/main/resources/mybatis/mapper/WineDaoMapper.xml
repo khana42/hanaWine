@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.proj.dao.WineDao">
+  <select id="daoWineListAll" resultType="com.proj.dto.WineDto">
+    SELECT 
+	(SELECT BRANDNAME FROM projectDB.brand WHERE IDX = A.brand) AS BRAND,
+    A.wineKind, A.wineKrName, A.wineEnName,
+    (SELECT countryname FROM projectDB.country WHERE IDX = A.country) AS country,
+    (SELECT grapename FROM projectDB.grape WHERE IDX = A.GRAPE) AS grape,
+    A.price,A.img, A.createTM,
+    C.foodName
+    FROM projectDB.wine A 
+	LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx 
+    INNER JOIN  projectDB.food C ON B.foodIdx = C.idx 
+  </select>
+  <select id="daoWineList" parameterType="String" resultType="com.proj.dto.WineDto">
+    SELECT 
+	(SELECT BRANDNAME FROM projectDB.brand WHERE IDX = A.brand) AS BRAND,
+    A.wineKind, A.wineKrName, A.wineEnName,
+    (SELECT countryname FROM projectDB.country WHERE IDX = A.country) AS country,
+    (SELECT grapename FROM projectDB.grape WHERE IDX = A.GRAPE) AS grape,
+    A.price,A.img, A.createTM,
+    C.foodName
+    FROM projectDB.wine A 
+	LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx 
+    INNER JOIN  projectDB.food C ON B.foodIdx = C.idx 
+    WHERE wineKind = #{wineKind}
+    
+  </select>
+  
+  <select id="daoWineListFood" parameterType="String" resultType="com.proj.dto.WineDto">
+    SELECT 
+	(SELECT BRANDNAME FROM projectDB.brand WHERE IDX = A.brand) AS BRAND,
+    A.wineKind, A.wineKrName, A.wineEnName,
+    (SELECT countryname FROM projectDB.country WHERE IDX = A.country) AS country,
+    (SELECT grapename FROM projectDB.grape WHERE IDX = A.GRAPE) AS grape,
+    A.price,A.img, A.createTM,
+    C.foodName
+    FROM projectDB.wine A 
+	LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx 
+    INNER JOIN  projectDB.food C ON B.foodIdx = C.idx 
+    WHERE foodName = #{foodName}
+    
+  </select>
+  <select id="daoWineListGrape" parameterType="String" resultType="com.proj.dto.WineDto">
+    SELECT 
+	(SELECT BRANDNAME FROM projectDB.brand WHERE IDX = A.brand) AS BRAND,
+    A.wineKind, A.wineKrName, A.wineEnName,
+    (SELECT countryname FROM projectDB.country WHERE IDX = A.country) AS country,
+    (SELECT grapename FROM projectDB.grape WHERE IDX = A.GRAPE) AS grape,
+    A.price,A.img, A.createTM,
+    C.foodName
+    FROM projectDB.wine A 
+    inner join projectDB.grape G on A.grape = G.idx 
+	LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx 
+    INNER JOIN  projectDB.food C ON B.foodIdx = C.idx 
+    WHERE G.grapename = #{grapename}
+    
+  </select>
+  <select id="daoWineListCountry" parameterType="String" resultType="com.proj.dto.WineDto">
+    SELECT 
+	(SELECT BRANDNAME FROM projectDB.brand WHERE IDX = A.brand) AS BRAND,
+    A.wineKind, A.wineKrName, A.wineEnName,
+    (SELECT countryname FROM projectDB.country WHERE IDX = A.country) AS country,
+    (SELECT grapename FROM projectDB.grape WHERE IDX = A.GRAPE) AS grape,
+    A.price,A.img, A.createTM,
+    C.foodName
+    FROM projectDB.wine A 
+    inner join projectDB.country T on A.country = T.idx
+    inner join projectDB.grape G on A.grape = G.idx 
+	LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx 
+    INNER JOIN  projectDB.food C ON B.foodIdx = C.idx 
+    WHERE T.countryName = #{countryname}
+    
+  </select>
+<select id="daoPriceHighList" parameterType="String" resultType="com.proj.dto.WineDto">	
+   SELECT 
+	(SELECT BRANDNAME FROM projectDB.brand WHERE IDX = A.brand) AS BRAND,
+    A.wineKind, A.wineKrName, A.wineEnName,
+    (SELECT countryname FROM projectDB.country WHERE IDX = A.country) AS country,
+    (SELECT grapename FROM projectDB.grape WHERE IDX = A.GRAPE) AS grape,
+    A.price,A.img, A.createTM,
+    C.foodName
+    FROM projectDB.wine A 
+	LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx 
+    INNER JOIN  projectDB.food C ON B.foodIdx = C.idx 
+    <if test="sortByPrice != null and sortByPrice == 'desc'">
+        ORDER BY A.price DESC
+    </if>
+    <if test="sortByPrice != null and sortByPrice == 'asc'">
+        ORDER BY A.price ASC
+    </if>
+    
+ </select>
+  
+  </mapper>	

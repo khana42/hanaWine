@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE	mapper	PUBLIC	"-//mybatis.org//DTD Mapper 3.0//EN"
+		"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper	namespace="com.proj.dao.SearchDao">
+    <select id="getBoardList" resultType="com.freehoon.web.board.model.BoardVO">		
+    SELECT * FROM wineList
+    <if test="keyword != null and keyword != '' ">			
+    AND typeOfWind like CONCAT('%', #{keyword}, '%')			
+    </if>		
+	</select>
+</mapper>

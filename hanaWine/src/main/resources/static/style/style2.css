@@ -1,0 +1,195 @@
+@charset "UTF-8";
+@import url(style_Reset.css);
+
+div#wrap {
+    width: 1200px;
+    border: 1px solid #000;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+/* RouteArea 시작 */
+#RouteArea {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+#RouteArea span {
+    font-size: 14px;
+    color: #666;
+}
+
+/* RouteArea 끝 */
+
+
+
+/* Main#main 시작  */
+
+#main {
+    display: flex;
+    justify-content: space-between;
+}
+
+#main .wineInfo {
+    display: flex;
+    width: 100%;
+    margin: 50px;
+    /* border: 1px solid #000; */
+}
+
+#wineImgArea img {
+    max-width: 300px;
+    height: auto;
+    padding: 20px;
+    margin: 30px;
+    /* border: 1px solid #000; */
+}
+
+
+
+/* wine 제품 디테일 영역 시작 */
+
+#wineDetailArea {
+    margin-left: 20px;
+    flex: 1;
+    padding: 20px;
+    margin: 30px;
+    /* border: 1px solid #000; */
+}
+
+#wineDetailArea h2 {
+    margin-top: 100px;
+    font-size: 24px;
+}
+
+.wineSubtitle {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 20px;
+
+}
+
+.wineDetails {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+
+.wineDetails li {
+    margin-bottom: 5px;
+    /* border: 1px solid #000; */
+}
+
+
+.wineRatings {
+    margin-bottom: 20px;
+
+}
+
+.wineRating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.wineRating span {
+    width: 50px;
+    font-size: 14px;
+}
+
+.ratingBar {
+    width: 200px;
+    height: 10px;
+    background-color: #ddd;
+    margin-left: 10px;
+    position: relative;
+}
+
+.ratingFill {
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#priceArea {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+#priceArea span:first-child {
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+#priceArea span:last-child {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#btnArea {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#btnArea button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#btnArea button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* wine 제품 디테일 영역 끝 */
+
+
+/* 상세정보 탭메뉴 시작 */
+#tabArea {
+    margin-top: 20px;
+}
+
+#mainTab {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    margin: 0;
+}
+
+.mainLi {
+    flex: 1;
+    text-align: center;
+}
+
+.mainLi a {
+    display: block;
+    padding: 15px 0;
+    font-size: 24px;
+	font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mainLi a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+/* 상세정보 탭메뉴 끝 */
+
