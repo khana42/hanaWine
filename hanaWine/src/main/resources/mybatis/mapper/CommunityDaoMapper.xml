@@ -41,5 +41,13 @@ PUBLIC
 		resultType="com.proj.dto.CommunityDto">
 		select * from faqTb order by faqNum desc
 	</select>
+	
+	<!-- 1:1 질문(fnq) 글저장 태그 -->
+	<insert id="mtdQnaReg" parameterType="java.util.HashMap">
+		insert into qnaTb
+		(qnaName, qnaPhone, qnaCategory, qnaTit, qnaContent)
+		values
+		(#{item1}, #{item2}, #{item3}, #{item4}, #{item5})
+	</insert>
 
 </mapper>

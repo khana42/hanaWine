@@ -18,7 +18,7 @@
 
 	<div id="wrap">
 		<div id="faqWriteForm">
-			<h1>공지사항 게시물 입력(관리자)</h1>
+			<h1>자주하는 질문 게시물 입력(관리자)</h1>
 			<hr>
 			<form action="/faq_reg">
 				<table>

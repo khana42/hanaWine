@@ -25,4 +25,7 @@ public interface CommunityDao {
 	// 자주하는 질문 리스트 보기
 	public List<CommunityDto> mtdFaqList();
 
+	// 1:1 문의 하기 DB에 저장 DAO
+	public int mtdQnaReg(Map<String, String> map);
+
 }

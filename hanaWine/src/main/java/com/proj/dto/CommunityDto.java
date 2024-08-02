@@ -55,4 +55,48 @@ public class CommunityDto {
 		this.faqAnsw = faqAnsw;
 	}
 	
+	private int qnaNum;
+	private String qnaName;
+	private String qnaPhone;
+	private String qnaCategory;
+	public int getQnaNum() {
+		return qnaNum;
+	}
+	public void setQnaNum(int qnaNum) {
+		this.qnaNum = qnaNum;
+	}
+	public String getQnaName() {
+		return qnaName;
+	}
+	public void setQnaName(String qnaName) {
+		this.qnaName = qnaName;
+	}
+	public String getQnaPhone() {
+		return qnaPhone;
+	}
+	public void setQnaPhone(String qnaPhone) {
+		this.qnaPhone = qnaPhone;
+	}
+	public String getQnaCategory() {
+		return qnaCategory;
+	}
+	public void setQnaCategory(String qnaCategory) {
+		this.qnaCategory = qnaCategory;
+	}
+	public String getQnaTit() {
+		return qnaTit;
+	}
+	public void setQnaTit(String qnaTit) {
+		this.qnaTit = qnaTit;
+	}
+	public String getQnaContent() {
+		return qnaContent;
+	}
+	public void setQnaContent(String qnaContent) {
+		this.qnaContent = qnaContent;
+	}
+
+	private String qnaTit;
+	private String qnaContent;
+	
 }

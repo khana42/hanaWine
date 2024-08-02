@@ -73,7 +73,7 @@ String sUid = (String)session.getAttribute("sUid");
 				<li id="community" onclick="location.href='/notice_list'">커뮤니티
 					<ul class="subMenu" >
 						<li class="notice" onclick="location.href='/notice_list'">공지사항</li>
-						<li class="notice">자주하는 질문</li>
+						<li class="notice" onclick="location.href='/faq_list'">자주하는 질문</li>
 						<li class="notice" onclick="location.href='/qna_page'">1:1 문의</li>
 					</ul>
 				</li>

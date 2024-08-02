@@ -110,5 +110,34 @@ public class CommunityController {
 	public String qnaPage() {
 		return "/community/qnaWrite";
 	}
+	
+	// 1:1 문의 내용 DB에 저장
+	@RequestMapping("/qna_reg")
+	public String qnaReg(HttpServletRequest req, Model model) {
+		try {
+			req.setCharacterEncoding("UTF-8");
+
+			String qnaName = req.getParameter("qnaName");
+			String qnaPhone = req.getParameter("qnaPhone");
+			String qnaCategory = req.getParameter("qnaCategory");
+			String qnaTit = req.getParameter("qnaTit");
+			String qnaContent = req.getParameter("qnaContent");
+			
+
+			Map<String, String> map = new HashMap<>();
+			map.put("item1", qnaName);
+			map.put("item2", qnaPhone);
+			map.put("item3", qnaCategory);
+			map.put("item4", qnaTit);
+			map.put("item5", qnaContent);
+
+			communityDao.mtdQnaReg(map);
+
+		} catch (Exception e) {
+			e.getMessage();
+		}
+
+		return "redirect:/";
+	}
 
 }

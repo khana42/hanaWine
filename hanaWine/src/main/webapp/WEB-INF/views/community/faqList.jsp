@@ -10,7 +10,7 @@
 <title>공지사항</title>
 <link rel="stylesheet" href="/style/style4.css?v">
 </head>
-<body>
+<body style="transform:translateX(-8px);">
 
 	<header id="header">
 		<%@ include file="../header.jsp" %>
