@@ -2,6 +2,8 @@ package com.proj.dto;
 
 import java.sql.Timestamp;
 
+import lombok.Data;
+
 
 public class WineDto {
 
@@ -120,5 +122,5 @@ public class WineDto {
 		this.createTM = createTM;
 	}  
 
-	
+
 }

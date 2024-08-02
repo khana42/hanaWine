@@ -23,6 +23,7 @@ import com.proj.svc.SvcInface;
 public class FrontController {
 	@Autowired
 	private SvcInface svcInface;
+
 	@Autowired
 	private ProductPageSvc ProductPageSvc;
 	
@@ -31,10 +32,7 @@ public class FrontController {
 		return "/main";
 	}
 
-	@RequestMapping("/join")
-	public String join() {
-		return "/join";
- 	 }
+	
 
 	@RequestMapping("/Join02")
 	public String join02() {
@@ -202,7 +200,7 @@ public class FrontController {
 		ProductPageDto wineProduct = ProductPageSvc.getWineProduct(wineKrName);
 		
 		model.addAttribute("productPage", wineProduct);
-		//model.addAttribute("getAllWines",ProductPageSvc.getAllWines()); //이건 왜 주는거야?
+		
 		return "/productPage";
 	}
 }

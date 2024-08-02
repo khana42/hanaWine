@@ -423,4 +423,144 @@ div.agreeDiv>div.termAgree span.agreeQSpan {
 }
 
 
+/* 주소 */
+div.userInfo span.info1{
+font-size: 18px;
+   font-weight: bold;
+   
+}
+
+div.userInfo button#postbtn {
+   width: 100px;
+   margin-left: 5px;
+   padding: 4px;
+      margin-right: 168px;
+      
+      display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        outline: unset;
+        border: unset;
+
+        padding: 10px;
+        background: #333333;
+        border-radius: 5px;
+        color: #ffffff;
+
+        font-family: Noto Sans KR;
+        letter-spacing: -0.04em;
+        text-align: left;
+
+        width: fit-content;
+        height: 37px;
+        font-family: Noto Sans KR;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: -0.04em;
+        text-align: left;
+
+        word-break: keep-all;
+      
+      
+      
+      
+}
+
+div.userInfo input#zonecode {
+   width: 140px;
+   border: 1px solid #bbb;
+   bottom: none;
+   margin-left: -8px;
+}
+
+
+div.userInfo input#useraddress {
+   width: 330px;
+/*   border: 1px solid #bbb;*/
+   bottom: none;
+   margin-bottom: 15px;
+   margin-left: 60px;
+   padding: 5px;
+   
+
+   /* max-width: 320px; */
+
+
+   border: 1px solid #d4d4d4;
+   border-radius: 5px;
+   color: #333333;
+   background-color: unset;
+   font-family: Noto Sans KR;
+   font-size: 12px;
+   font-weight: 300;
+   line-height: 17px;
+   letter-spacing: -0.04em;
+   text-align: left;
+}
+
+div.userInfo input#roadAddressDetail {
+   width: 330px;
+   border: 1px solid #bbb;
+   bottom: none;
+   border-radius: 5px;
+   padding: 5px;
+   margin-left: 165px;
+   margin-bottom: 20px;
+}
+
+
+
+
+
+div.userInfo button#userAdbtn{
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   outline: unset;
+   border: unset;
+   padding: 10px;
+   background: #333333;
+   border-radius: 5px;
+   color: #ffffff;
+   font-family: Noto Sans KR;
+   letter-spacing: -0.04em;
+   text-align: left;
+   width: fit-content;
+   height: 37px;
+   font-family: Noto Sans KR;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 17px;
+   letter-spacing: -0.04em;
+   text-align: left;
+   word-break: keep-all;
+}
+
+
+
+
+
+
+.el_input::placeholder {
+   color: #d4d4d4;
+}
+
+
+
+
+.bl_stack--row {
+   flex-direction: row;
+}
+
+.form {
+   margin-bottom: 20px;
+   height: fit-content;
+}
+
+.hp_shrink-0 {
+   flex-shrink: 0;
+}
+
+
 /*나리꺼*/

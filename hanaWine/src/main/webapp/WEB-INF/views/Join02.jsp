@@ -57,9 +57,19 @@
 					</div>
 
 					<div class="userInfo">
-						<label> <span class="req info1">주소</span> <input
-							type="text" class="infoInput" id="useraddress" required
-							name="memberAddr1">
+
+						<label> <span class="req info1">주소</span> 
+							<input type="text" class="infoInput" id="zonecode" placeholder="" disabled  />								
+							<button class="el_btn el_btn--outline hp_shrink-0"
+								id="postbtn">우편번호 찾기</button>				
+				
+				
+						
+						<input type="text" class="infoInput" placeholder="" disabled id="useraddress"/>
+						<input type="text" class="el_input"
+							placeholder="상세주소를 입력해주세요." id="roadAddressDetail" />
+						
+						<button class="el_btn" id="userAdbtn">주소 등록하기</button>
 						</label>
 					</div>
 
