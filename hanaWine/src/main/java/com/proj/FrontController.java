@@ -26,27 +26,7 @@ public class FrontController {
 
 	@Autowired
 	private ProductPageSvc ProductPageSvc;
-	
-	@RequestMapping("/")
-	public String root() {
-		return "/main";
-	}
-
-	@RequestMapping("/join")
-	public String join() {
-		return "/join";
- 	 }
-
-	@RequestMapping("/Join02")
-	public String join02() {
-		return "Join02";
-	}
-
-	@RequestMapping("/login")
-	public String login() {
-		return "login";
-	}
-	
+		
 	//목록	페이지
 	@RequestMapping("/wine")
 	public String root(

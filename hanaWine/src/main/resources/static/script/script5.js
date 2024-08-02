@@ -87,4 +87,68 @@ $(function() {
         alert("회원가입을 진행합니다.");
         $joinForm.submit(); // 폼 제출
     });
+    
+    ////////////////// 주소 영역 ////////////////////////
+
+ const elZonecode = document.querySelector("#zonecode");
+      const elRoadAddress = document.querySelector("#useraddress");
+      const elRoadAddressDetail = document.querySelector("#roadAddressDetail");
+
+      // 주소검색창 열기 함수
+      const onClickSearch = () => {
+        new daum.Postcode({
+          oncomplete: function (data) {
+            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+            // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+            
+            elZonecode.setAttribute("value", data.zonecode);
+            elRoadAddress.setAttribute("value", data.address);
+          },
+        }).open();
+      };
+      
+      const register = () => {
+        console.log(`우편번호: ${elZonecode.getAttribute("value")}`);
+        console.log(`주소: ${elRoadAddress.getAttribute("value")}`);
+        console.log(`상세주소: ${elRoadAddressDetail.getAttribute("value")}`);
+
+      };
+      
+      // 이벤트 추가
+      document.querySelector("#postbtn").addEventListener("click",onClickSearch);
+      document.querySelector("#userAdbtn").addEventListener("click", register);
+
+      elRoadAddressDetail.addEventListener("change", (e) => {
+        elRoadAddressDetail.setAttribute("value", e.target.value);
+      });
+ 
+//////////////// NARI 아이디중복 체크 페이지 //////////////////////
+
+   // 아이디 중복확인 팝업창
+const btnchkDom = document.getElementById("btnchk");
+btnchkDom.addEventListener("click", function () {
+
+    let popFile = "/IDchk";
+    let alias = "";
+
+    let w = 550;
+    let h = 400;
+    let lPos = (screen.width - w) / 2;
+    // (모니터 전체 가로폭 - 팝업 가로폭)％2  
+    let tPos = (screen.height - h) / 2;
+    // (모니터 전체 세로폭 - 팝업 세로폭)％2  
+
+    let prop = "";          // 폭 , 높이 ., 가로 ,세로 
+    prop = "width=" + w + "px, ";
+    prop += "height=" + h + "px, ";
+    prop += "left=" + lPos + "px,";
+    prop += "top=" + tPos + "px";
+
+    window.open(popFile, alias, prop);
+});
+
+const Dom = document.querySelector("h1");
+Dom.innerText = "가입하기";
+
+		
 });

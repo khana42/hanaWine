@@ -6,9 +6,6 @@
 String sUid = (String)session.getAttribute("sUid");
 %>   
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -105,14 +102,10 @@ String sUid = (String)session.getAttribute("sUid");
 			<form action="/search" method="GET">
 				<input type="text" id="keyword" name="keyword" placeholder="와인을 검색해 보세요.">
 				<a id="btnSearch" href="/search">
-				
 					<img src="/img/btn_search.png" alt="검색">
 				</a>
 				
 			</form>
-
-			<input type="text" placeholder="와인을 검색해 보세요."> <img
-				src="/img/search.png" alt="검색이미지">
 
 		</div>
 

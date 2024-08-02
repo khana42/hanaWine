@@ -1,9 +1,6 @@
 @charset "UTF-8";
-<<<<<<< HEAD
 @import url(style_Reset.css);
 
-=======
->>>>>>> 07fda2a8570af5986336b987eeaaaf02414531a9
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * *회원가입 첫번째 페이지 * * * * * */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -21,17 +18,13 @@ input{
         text-align: left;
 }
 
-
-
-
 div#Join1wrap {
-<<<<<<< HEAD
+
     width: 550px;
     border: 1px solid #aaa;
     padding: 20px;
    
     margin: 20px auto;
-=======
 	width: 450px;
 	height: 300px;
 	border: 1px solid #ddd;
@@ -39,7 +32,7 @@ div#Join1wrap {
 	position: absolute;
 	top: 30%;
 	left: 38%;
->>>>>>> 07fda2a8570af5986336b987eeaaaf02414531a9
+
 }
 
 div#Join1 {
@@ -53,7 +46,7 @@ div#Join1>p {
 	cursor: pointer;
 }
 
-<<<<<<< HEAD
+
 div#Join1>span {
     display: inline-block;
     width: 450px;
@@ -61,7 +54,8 @@ div#Join1>span {
     padding: 15px 1px;
     cursor: pointer;
     font-size: 16px;
-=======
+}
+
 div#Join1>a {
 	display: inline-block;
 	width: 337px;
@@ -69,7 +63,6 @@ div#Join1>a {
 	padding: 8px 0px;
 	cursor: pointer;
 	font-size: 13px;
->>>>>>> 07fda2a8570af5986336b987eeaaaf02414531a9
 }
 
 div#Join1wrap>div#bd {
@@ -221,15 +214,10 @@ div.userInfo span.info1 {
 }
 
 div.userInfo input.infoInput {
-<<<<<<< HEAD
+
 	width: 420px;
 	padding: 5px;
-=======
-    width: 420px;
-    padding: 5px;
-   
-   
->>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
+
 }
 
 .userInfo input {
@@ -244,16 +232,11 @@ div.userInfo input.infoInput {
 }
 
 .userInfo input#useremail {
-<<<<<<< HEAD
 	width: 140px;
 	border: 1px solid #bbb;
 	bottom: none;
 	margin-left: -5px;
-=======
-    
-    border: 1px solid #bbb;
-    bottom: none;
->>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
+
 }
 
 .userInfo>button#btnchk {
@@ -334,26 +317,15 @@ div.userInfo button#postbtn {
 
         word-break: keep-all;
 		
-		
-		
-		
 }
 
-<<<<<<< HEAD
-
-
 /* 전체동의 시작 */
-
-
-=======
 div.userInfo input#zonecode {
 	width: 140px;
 	border: 1px solid #bbb;
 	bottom: none;
 	margin-left: -8px;
 }
->>>>>>> 07fda2a8570af5986336b987eeaaaf02414531a9
-
 
 div.userInfo input#useraddress {
 	width: 330px;
@@ -389,10 +361,6 @@ div.userInfo input#roadAddressDetail {
 	margin-bottom: 20px;
 }
 
-
-
-
-
 div.userInfo button#userAdbtn{
 	display: inline-flex;
 	align-items: center;
@@ -416,18 +384,9 @@ div.userInfo button#userAdbtn{
 	text-align: left;
 	word-break: keep-all;
 }
-
-
-
-
-
-
 .el_input::placeholder {
 	color: #d4d4d4;
 }
-
-
-
 
 .bl_stack--row {
 	flex-direction: row;
@@ -441,17 +400,6 @@ div.userInfo button#userAdbtn{
 .hp_shrink-0 {
 	flex-shrink: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* 주소 끝 */
 
@@ -614,15 +562,10 @@ div.termAgree {
 	padding-left: 20px;
 }
 
-<<<<<<< HEAD
-
-=======
 div.agreeDiv {
 	/* border: 1px solid #7ae450; */
 	
 }
->>>>>>> 07fda2a8570af5986336b987eeaaaf02414531a9
-
 div.agreeDiv>p.agreeP {
 	/* border: 1px solid #000; */
 	padding: 5px;

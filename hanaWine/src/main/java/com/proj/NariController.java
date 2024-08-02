@@ -29,7 +29,6 @@ public class NariController {
 		public String IDchk() {	
 			return "IDchk";
 		}
-
-
+		
 	
 }

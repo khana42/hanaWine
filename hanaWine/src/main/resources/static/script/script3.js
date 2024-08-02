@@ -23,15 +23,14 @@ $(function() {
 	
 	//로그인페이지의 회원가입 버튼
 	$("#joinBtn").click(function() {
-<<<<<<< HEAD
+
 		location.href = "/join";
 		
-=======
 
 
 		window.opener.location.href = "/Join02";
 		window.self.close();
->>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
+
 	});
 
 	//메인페이지 회원가입 클릭 시
@@ -54,10 +53,9 @@ $(function() {
 			$(this).children('ul.subMenu').stop().slideUp();
 		});
 
-<<<<<<< HEAD
+
 
 	//헤더의 gnb 클릭시 	
-=======
 ///////////커뮤니티////////////////
 $(".qBoard").click(function(){
 	location.href = "/qBoardList";
@@ -66,7 +64,6 @@ $(".qBoard").click(function(){
 });
 
 
->>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
 	$("#wineCateMain").click(function() {
 		location.href = "/wine";
 	});
@@ -79,17 +76,7 @@ $(".qBoard").click(function(){
 	//<c:url var="getBoardListURL" value="/board/getBoardList"></c:url>
 
 	//검색
-//	$("#btnSearch").click(function(e) {
-//		e.preventDefault();
-////		let url = "/search"; // URL을 직접 입력
-//		let keyword = $('#keyword').val(); // 키워드 값을 가져옴
-////		if (keyword) { // 키워드가 비어있지 않은 경우에만 추가
-////			url += "?keyword=" + encodeURIComponent(keyword); // 쿼리 문자열에 추가
-////		}
-//		location.href = "/wineList"; // 페이지 이동
-//		console.log(url); // URL 출력
-//		console.log("키워드: " + keyword);
-//});${pageContext.request.contextPath}
+
 	   $(document).ready(function() {
         $("#btnSearch").click(function(event) {
             event.preventDefault(); // 기본 링크 클릭 동작 방지

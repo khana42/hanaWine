@@ -30,9 +30,6 @@ public class HanaController {
 
 	@Autowired
 	private UserMapper userMapper;
-
-//	@Autowired
-//	private SearchService searchService;
 	
 	@Autowired
 	private WineService wineService;
@@ -101,7 +98,7 @@ public class HanaController {
 	// 회원가입
 	@RequestMapping("/join")
 	public String join() {
-		return "join";
+		return "Join02";
 	}
 
 	// 와인 종류 검색
@@ -109,7 +106,7 @@ public class HanaController {
 	public String search(@RequestParam("keyword") String keyword, Model model) {
         List<WineDto> wines = wineService.searchWines(keyword);
         model.addAttribute("wines", wines);
-        return "subpage11"; 
+        return "searchPage"; 
 	}
 		
 		
