@@ -1,167 +1,90 @@
 $(function() {
+    const $joinForm = $("#join_form1"); // 폼 요소 선택
 
-$("#narijoin").click(function() {
-		location.href = "/Join02";
-		
-	})
-$(".login_pop").off("click").on("click", function(){
-		let fName = "/login";
-		let alias = "";
-		let scrWidth = screen.width;
-		let popWidth = 440;
-		let leftPos = (scrWidth - popWidth) / 2;
-		let scrHeight = screen.height;
-		let popHeight = 400;
-		let topPos = (scrHeight - popHeight) / 2;
+    $("#joinbtn").click(function(event) {
+        event.preventDefault(); // 기본 폼 제출 방지
 
-		let prop = "width=" + popWidth;
-		prop += " height=" + popHeight;
-		prop += " left=" + leftPos;
-		prop += " top=" + topPos;
-		window.open(fName, alias, prop);
+         const phone1 = $("#usernum1").val();
+        const phone2 = $("#usernum2").val();
+        const phonePrefix = $("#phonePrefix").val(); // 선택된 전화번호 앞자리
+        const phoneFull = `${phonePrefix}-${phone1}-${phone2}`;
+        $("input[name='memberPhone']").val(phoneFull); // memberPhone에 저장
 
-	});
-	
-})
-$('#agreeAll').click(function() {
-		let allchk = $('#agreeAll').prop('checked');
-		$('.chkAgree').prop('checked', allchk);
+        const regExpUid = /[^a-z|0-9|A-Z|]/g;
+        const uidVal = $("#userid").val();
+        const uidLen = uidVal.length;
 
-	});
+        const regExppass = /[^a-z|0-9|A-Z|_@]/g;
+        const pwVal = $("#userpw1").val();
+        const pwLen = pwVal.length;
 
+        const pw2Val = $("#userpw2").val();
 
+        // ID 유효성 검사
+        if (regExpUid.test(uidVal) || uidLen < 4 || uidLen > 16) {
+            alert("ID는 4~16 사이의 영어 대소문자와 숫자만 가능합니다.");
+            return; // 유효성 검사 실패 시 함수 종료
+        }
 
-	//////////////////////////////////////////////////////////////////////
-	// 회원가입 두번째 페이지 //
-	//////////////////////////////////////////////////////////////////////
+        // 비밀번호 유효성 검사
+        if (regExppass.test(pwVal) || pwLen < 6 || pwLen > 20) {
+            alert("비밀번호는 6~20 사이의 글자, 영어 대소문자, 숫자, _@ 만 가능합니다.");
+            return; // 유효성 검사 실패 시 함수 종료
+        }
 
+        // 비밀번호 확인
+        if (pw2Val === "") {
+            alert("비밀번호를 확인해 주세요.");
+            return; // 유효성 검사 실패 시 함수 종료
+        } else if (pwVal !== pw2Val) {
+            alert('비밀번호가 일치하지 않습니다.');
+            return; // 유효성 검사 실패 시 함수 종료
+        }
 
-	// 아이디 중복확인 팝업창
-	const btnchkDom = document.getElementById("btnchk");
-	btnchkDom.addEventListener("click", function() {
+     
+       // const regExpEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      //  if (!regExpEmail.test(emailVal + "@" + emailDomainVal)) {
+        //    alert("유효한 이메일 주소를 입력해 주세요.");
+      //      return; // 유효성 검사 실패 시 함수 종료
+      //  }
+        // 이름 유효성 검사
+        const nameVal = $("#memberName").val();
+        if (nameVal.length < 2) {
+            alert("이름은 2자 이상이어야 합니다.");
+            return; // 유효성 검사 실패 시 함수 종료
+        }
 
-		let popFile = "IDchk.html";
-		let alias = "";
+        // 주소 유효성 검사
+        const addressVal = $("#useraddress").val();
+        if (addressVal === "") {
+            alert("주소를 입력해 주세요.");
+            return; // 유효성 검사 실패 시 함수 종료
+        }
 
-		let w = 460;
-		let h = 400;
-		let lPos = (screen.width - w) / 2;
-		// (모니터 전체 가로폭 - 팝업 가로폭)％2  
-		let tPos = (screen.height - h) / 2;
-		// (모니터 전체 세로폭 - 팝업 세로폭)％2  
+        // 전화번호 유효성 검사
+        const phoneFullVal = $("input[name='memberPhone1']").val();
+        if (phoneFullVal === "") {
+            alert("전화번호를 입력해 주세요.");
+            return; // 유효성 검사 실패 시 함수 종료
+        }
 
-		let prop = "";          // 폭 , 높이 ., 가로 ,세로 
-		prop = "width=" + w + "px, ";
-		prop += "height=" + h + "px, ";
-		prop += "left=" + lPos + "px,";
-		prop += "top=" + tPos + "px";
+        const phone1Val = $("#usernum1").val();
+        const phone2Val = $("#usernum2").val();
+        if (!/^\d+$/.test(phone1Val) || !/^\d+$/.test(phone2Val)) {
+            alert("전화번호는 숫자만 포함해야 합니다.");
+            return; // 유효성 검사 실패 시 함수 종료
+        }
 
-		window.open(popFile, alias, prop);
-	});
+        // 동의 체크 박스 검사
+        const isTermsAccepted = $("#reqChk1").is(":checked");
+        const isPrivacyAccepted = $("#reqChk2").is(":checked");
+        if (!isTermsAccepted || !isPrivacyAccepted) {
+            alert("이용약관 및 개인정보 수집 및 이용에 동의해야 합니다.");
+            return; // 유효성 검사 실패 시 함수 종료
+        }
 
-	const Dom = document.querySelector("h1");
-	Dom.innerText = "가입하기";
-
-
-
-
-
-
-	// 이메일 도메인
-
-	function fnemailDomain() {
-
-		let selVal = document.querySelector("#emailDomain").value;
-		document.querySelectorAll("input.emailIns")[1].value = selVal;
-	}
-
-	const btnJoinDom = document.querySelector("button#joinbtn");
-	btnJoinDom.addEventListener("click", function() {
-
-
-		///아이디 유효성검사
-		const regExpUid = /[^a-z|0-9|A-Z|]/g;
-
-
-		let uidVal = document.querySelector("#userid").value;
-		let uidLen = uidVal.length;
-
-
-		//비번 유효성 검사
-
-		const regExppass = /[^a-z|0-9|A-Z|_@]/g;
-
-		let pwVal = document.querySelector("#userpw1").value;
-		let pwLen = pwVal.length;
-
-
-		//비번확인 유효성 검사
-		const regExppass2 = "";
-		let pw2Val = document.querySelector("#userpw2").value;
-
-
-
-
-		if (regExpUid.test(uidVal) || uidLen < 6) {
-			alert("id는 6~20 영어 대소문자, 숫자만 가능합니다.");
-		} else if (regExppass.test(pwVal) || pwLen < 6) {
-			alert("패스워드는 6~20 글자,영어 대소문자, 숫자,_@ 만 가능합니다.");
-		} else if (pw2Val == "") {
-			alert("비밀번호를 확인 해 주세요.");
-
-		} else if (pwVal == pw2Val) {
-			alert('비밀번호 일치.');
-
-		} else if (pwVal != pw2Val) {
-			alert('비밀번호가 일치하지 않습니다. ');
-
-		}
-
-
-		// 이메일 정규식 패턴
-		const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]/g;
-		// 이메일 공백 및 유효성 검사 
-		let email1 = document.querySelectorAll("#useremail")[0].value;
-
-		// const regExpEmail = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}/g;
-
-		let email_domain = document.querySelector("#email_domain");
-		let mail = "";
-
-		// 이메일 패턴과 입력된 이메일을 비교
-		return emailPattern.test(email);
-
-		// 테스트 예제
-		const testEmail = "example@example.com";
-		if (validateEmail(testEmail)) {
-			console.log("유효한 이메일 주소입니다.");
-		} else {
-			console.log("유효하지 않은 이메일 주소입니다.");
-		}
-	});
-
-	// const uid = document.getElementById("userid");
-	// const upw = document.getElementById("userpw");
-	// const upwchk = document.getElementById("userpwchk");
-	// const uemail = document.getElementById("useremail");
-	// const uaddress = document.getElementById("useraddress");
-	// const uphone1 = document.getElementById("usernum1");
-	// const uphone2 = document.getElementById("usernum2");
-
-
-
-
-	//////////////////  전체 체크 동의 ////////////////////////
-	
-	
-
-
-
-
-
-
-///////////////////////////////////////////////////////////////////////////////
-//////////////// NARI 회원가입 첫 페이지 //////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-
-
+        // 모든 유효성 검사를 통과한 경우
+        alert("회원가입을 진행합니다.");
+        $joinForm.submit(); // 폼 제출
+    });
+});

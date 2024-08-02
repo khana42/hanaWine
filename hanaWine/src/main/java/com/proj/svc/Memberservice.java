@@ -1,11 +1,5 @@
 package com.proj.svc;
 
-import org.springframework.stereotype.Service;
-
-import com.proj.nariDTO.NariDTO;
-
-import lombok.RequiredArgsConstructor;
-
 @Service
 @RequiredArgsConstructor
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DTD 문서 타입 지정 -->
+<!DOCTYPE mapper 
+PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.proj.qboard.dao.QboardDao">
+
+	<!-- 자료 입력 매퍼 -->
+	<insert id="mtdQboardWrite" parameterType="java.util.HashMap">
+		insert into qBoard
+		(qCategory, qTitle, qContent)
+		values
+		(#{item1}, #{item2}, #{item3})
+	</insert>
+	
+	<!-- Qboard 글 목록 매퍼 -->
+	<select id="mtdQboardList" resultType="com.proj.qboard.dto.QboardDto">
+		select * from qBoard order by num desc
+	</select>
+	
+	<!-- QboardList에서 글 상세 내용 보기 -->
+	<select id="mtdQboardView" resultType="com.proj.qboard.dto.QboardDto">
+		select * from qBoard where num = #{param1}
+	</select>
+
+</mapper>

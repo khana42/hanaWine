@@ -14,23 +14,41 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.prog.Pagination.Pagination;
+import com.proj.dto.ProductPageDto;
 import com.proj.dto.WineDto;
+import com.proj.svc.ProductPageSvc;
 import com.proj.svc.SvcInface;
 
 @Controller
 public class FrontController {
 	@Autowired
 	private SvcInface svcInface;
+<<<<<<< HEAD
    	
+=======
+	@Autowired
+	private ProductPageSvc ProductPageSvc;
+	
+	@RequestMapping("/")
+	public String root() {
+		return "/main";
+	}
+
+	@RequestMapping("/join")
+	public String join() {
+		return "/join";
+ 	 }
+
+>>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
 	@RequestMapping("/Join02")
 	public String join02() {
 		return "Join02";
 	}
 
-	//@RequestMapping("/login")
-	//public String login() {
-	//	return "login";
-	//}
+	@RequestMapping("/login")
+	public String login() {
+		return "login";
+	}
 	
 	//목록	페이지
 	@RequestMapping("/wine")
@@ -62,7 +80,7 @@ public class FrontController {
 		if("WHITEWINE".equals(cate)) {
 			wineName = "WHITEWINE";
 		}else if("REDWINE".equals(cate)) {
-			wineName = "1";
+			wineName = "REDWINE";
 		}else if("SPARKLING".equals(cate)) {
 			wineName = "SPARKLING";
 		}
@@ -97,12 +115,14 @@ public class FrontController {
 	public String food(@PathVariable("cate") String cate, Model model) {
 		
 		String wineName = "";
-		if("소고기".equals(cate)) {
+		if("Beaf".equals(cate)) {
 			wineName = "Beaf";
-		}else if("치즈".equals(cate)) {
+		}else if("Cheese".equals(cate)) {
 			wineName = "Cheese";
-		}else if("양고기".equals(cate)) {
+		}else if("Lamb".equals(cate)) {
 			wineName = "Lamb";
+		}else if("Pasta".equals(cate)) {
+			wineName = "Pasta";
 		}
 		
 		model.addAttribute("daoWineList", svcInface.svcListFood(cate));
@@ -138,7 +158,7 @@ public class FrontController {
 		
 		String wineName = cate;
 
-		System.out.println(cate);
+		
 		model.addAttribute("daoWineList", svcInface.svcListGrape(cate));
 	
 		model.addAttribute("wineName", wineName.toUpperCase());
@@ -177,6 +197,17 @@ public class FrontController {
 		model.addAttribute("wineName", wineName.toUpperCase());
 	    
 		return "subpage4";
+	}
+	@GetMapping("/productPage")
+	public String productPageGet(
+			@RequestParam("wineKrName")String wineKrName ,Model model) {
+	
+		
+		ProductPageDto wineProduct = ProductPageSvc.getWineProduct(wineKrName);
+		
+		model.addAttribute("productPage", wineProduct);
+		//model.addAttribute("getAllWines",ProductPageSvc.getAllWines()); //이건 왜 주는거야?
+		return "/productPage";
 	}
 }
 

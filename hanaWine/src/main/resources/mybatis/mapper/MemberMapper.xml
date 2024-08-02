@@ -4,10 +4,11 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.proj.dao.MemberTestDao">
-  <select id="daoMemberTestList" resultType="com.proj.dto.MembrTestDto">
+  <insert id="memberjoin" parameterType="com.proj.dto.MembrTestDto">
   
-  select * from memberListTest
-  where uid = #{uid}
+  	insert into Join_MEMBER (memberName, memberId, memberPw, memberMail, memberAddr1, memberPhone) values
+  	(#{memberName}, #{memberId}, #{memberPw}, #{memberMail}, #{memberAddr1}, #{memberPhone})
+  </insert>
   
-  </select>
+  
   </mapper>	

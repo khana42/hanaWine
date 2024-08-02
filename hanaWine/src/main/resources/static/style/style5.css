@@ -221,8 +221,15 @@ div.userInfo span.info1 {
 }
 
 div.userInfo input.infoInput {
+<<<<<<< HEAD
 	width: 420px;
 	padding: 5px;
+=======
+    width: 420px;
+    padding: 5px;
+   
+   
+>>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
 }
 
 .userInfo input {
@@ -237,10 +244,16 @@ div.userInfo input.infoInput {
 }
 
 .userInfo input#useremail {
+<<<<<<< HEAD
 	width: 140px;
 	border: 1px solid #bbb;
 	bottom: none;
 	margin-left: -5px;
+=======
+    
+    border: 1px solid #bbb;
+    bottom: none;
+>>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
 }
 
 .userInfo>button#btnchk {

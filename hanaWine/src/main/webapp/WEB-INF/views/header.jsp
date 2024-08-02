@@ -1,27 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
+<<<<<<< HEAD
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 
 <%
 String sUid = (String)session.getAttribute("sUid");
 %>   
+=======
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+>>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
 
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="/style/style3.css?v">
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="/style/style3.css?v">
 </head>
 <body>
 	<div id="logoArea" class="dFlex">
-	
+
 		<div id="logo">
-			<a href="/">
-				<img src="/img/logo.png" alt="로고 이미지">
+			<a href="/"> <img src="/img/logo.png" alt="로고 이미지">
 			</a>
 		</div>
-		
+
 		<div id="loginArea">
 			<ul class="dFlex">
  			<% if (sUid == null) { %> 
@@ -33,10 +37,10 @@ String sUid = (String)session.getAttribute("sUid");
 				<li>장바구니</li>
 			</ul>
 		</div>
-		
+
 	</div>
 	<!-- div#logoArea -->
-	
+
 	<div id="gnbArea" class="dFlex">
 		<nav id="nav">
 			<ul id="mainMenu" class="dFlex">
@@ -45,31 +49,46 @@ String sUid = (String)session.getAttribute("sUid");
 						<li class="wineCate" data-cate="WHITEWINE">화이트 와인</li>
 						<li class="wineCate" data-cate="REDWINE">레드 와인</li>
 						<li class="wineCate" data-cate="SPARKLING">스파클링</li>
-					
-					</ul>		
+
+					</ul>
 				</li>
 				<li id="wineCateFood" data-cate="Food">음식
-					<ul class="subMenu" >
-						<li class="wineFood" data-cate="소고기">소</li>
-						<li class="wineFood" data-cate="치즈">치즈</li>
-						<li class="wineFood" data-cate="양고기">양</li>
-					
-					</ul>			
+					<ul class="subMenu">
+						<li class="wineFood" data-cate="Beaf">소</li>
+						<li class="wineFood" data-cate="Cheese">치즈</li>
+						<li class="wineFood" data-cate="Lamb">양</li>
+						<li class="wineFood" data-cate="Pasta">파스타</li>
+					</ul>
 				</li>
 				<li id="wineCateGrape" data-cate="Grape">포도종류
 					<ul class="subMenu">
-						<li class="wineGrape" data-cate="쉬라즈">시라</li>
-						<li class="wineGrape" data-cate="말벡">말벡</li>
-						<li class="wineGrape" data-cate="네비올라">네비올라</li>
-					</ul>				
+						<li class="wineGrape" data-cate="몬테풀치아노 Montepulciano">몬테풀치아노</li>
+						<li class="wineGrape" data-cate="샤도네이 Chardonnay">샤도네이</li>
+						<li class="wineGrape" data-cate="피노누아 Pinot Noir">피노누아</li>
+						<li class="wineGrape" data-cate="말벡 Malbec">말벡</li>
+						<li class="wineGrape" data-cate="소비뇽블랑 Sauvignon Blanc">소비뇽블랑</li>
+						<li class="wineGrape" data-cate="쉬라즈 Shiraz">쉬라즈</li>
+						<li class="wineGrape" data-cate="진판델 Zinfandel">진판델</li>
+						<li class="wineGrape" data-cate="네비올로 Nebbiolo">네비올로</li>
+						<li class="wineGrape" data-cate="산지오베제 Sangiovese">산지오베제</li>
+						<li class="wineGrape" data-cate="코르비나 Corvina">코르비나</li>
+						<li class="wineGrape" data-cate="모스카토 Moscato">모스카토</li>
+						<li class="wineGrape" data-cate="리슬링 Riesling">리슬링</li>
+					</ul>
 				</li>
 				<li id="wineCateCountry" data-cate="Country">나라
 					<ul class="subMenu">
-						<li class="wineCountry" data-cate="이탈리아">이탈리아</li>
-						<li class="wineCountry" data-cate="독일">독일</li>
-<!-- 						//<li class="wineCate" data-cate="PORTUGAL">포르투갈</li> -->
-					</ul>			
+						<li class="wineCountry" data-cate="Italy">이탈리아</li>
+						<li class="wineCountry" data-cate="UnitedStates">미국</li>
+						<li class="wineCountry" data-cate="NewZealand">뉴질랜드</li>
+						<li class="wineCountry" data-cate="Argentina">아르헨티나</li>
+						<li class="wineCountry" data-cate="Australia">호주</li>
+						<li class="wineCountry" data-cate="France">프랑스</li>
+						<li class="wineCountry" data-cate="Germany">독일</li>
+						<!-- 						//<li class="wineCate" data-cate="PORTUGAL">포르투갈</li> -->
+					</ul>
 				</li>
+<<<<<<< HEAD
 				<li id="community">커뮤니티
 					<ul class="subMenu">
 						<li class="notice">공지사항</li>
@@ -77,10 +96,14 @@ String sUid = (String)session.getAttribute("sUid");
 						<li class="notice">1:1 문의</li>
 					</ul>
 				</li>
+=======
+				<li class=qBoard>커뮤니티</li>
+>>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
 			</ul>
 		</nav>
-		
+
 		<div id="search">
+<<<<<<< HEAD
 			<form action="/search" method="GET">
 				<input type="text" id="keyword" name="keyword" placeholder="와인을 검색해 보세요.">
 				<a id="btnSearch" href="/search">
@@ -89,12 +112,17 @@ String sUid = (String)session.getAttribute("sUid");
 				</a>
 				
 			</form>
+=======
+			<input type="text" placeholder="와인을 검색해 보세요."> <img
+				src="/img/search.png" alt="검색이미지">
+>>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
 		</div>
-		
+
 	</div>
 	<!-- div#gnbArea -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 	<script src="/script/script3.js"></script>
 </body>
-</html>    
+</html>

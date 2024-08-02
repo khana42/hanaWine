@@ -23,8 +23,15 @@ $(function() {
 	
 	//로그인페이지의 회원가입 버튼
 	$("#joinBtn").click(function() {
+<<<<<<< HEAD
 		location.href = "/join";
 		
+=======
+
+
+		window.opener.location.href = "/Join02";
+		window.self.close();
+>>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
 	});
 
 	//메인페이지 회원가입 클릭 시
@@ -47,8 +54,19 @@ $(function() {
 			$(this).children('ul.subMenu').stop().slideUp();
 		});
 
+<<<<<<< HEAD
 
 	//헤더의 gnb 클릭시 	
+=======
+///////////커뮤니티////////////////
+$(".qBoard").click(function(){
+	location.href = "/qBoardList";
+	
+	
+});
+
+
+>>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
 	$("#wineCateMain").click(function() {
 		location.href = "/wine";
 	});

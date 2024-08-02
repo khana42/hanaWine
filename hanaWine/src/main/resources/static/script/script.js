@@ -33,9 +33,8 @@ $(function () {
 	  }   
 	});
 	
-	$("#wine").click(function(){
-		
-		location.href="/productPage"
-	});
-	
+	  $(".wineInfo").click(function() {
+       var wineKrName = $(this).data("winekrname"); // data-num 속성에서 num 값 가져오기
+      location.href = "/productPage?wineKrName=" + encodeURIComponent(wineKrName); // 상세 페이지로 이동
+    });
 	});
