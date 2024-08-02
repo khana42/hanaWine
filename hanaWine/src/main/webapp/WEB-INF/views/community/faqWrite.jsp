@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>hanaWine\공지사항 입력(관리자 페이지)</title>
+<title>hanaWine\자주하는 질문 입력(관리자 페이지)</title>
 <link rel="stylesheet" href="/style/style4.css?v">
 </head>
 <body>
@@ -17,23 +17,19 @@
 	</header>
 
 	<div id="wrap">
-		<div id="noticeWriteForm">
+		<div id="faqWriteForm">
 			<h1>공지사항 게시물 입력(관리자)</h1>
 			<hr>
-			<form action="/notice_reg">
+			<form action="/faq_reg">
 				<table>
 					<tbody>
 						<tr>
-							<td>날짜</td>
-							<td><input type="date" name="notiDate" required></td>
-						</tr>
-						<tr>
-							<td>제목</td>
-							<td><textarea name="notiTit" cols="50" rows="10" required placeholder="200자 이내로 작성" maxlength="200"></textarea></td>
+							<td>질문</td>
+							<td><textarea name="faqQues" cols="50" rows="10" required placeholder="200자 이내로 작성" maxlength="200"></textarea></td>
 						</tr>
 						<tr>
 							<td>내용</td>
-							<td><textarea name="notiCon" cols="50" rows="10" required placeholder="200자 이내로 작성" maxlength="200"></textarea></td>
+							<td><textarea name="faqAnsw" cols="50" rows="10" required placeholder="200자 이내로 작성" maxlength="200"></textarea></td>
 						</tr>
 						<tr>
 							<td colspan="2">
@@ -45,7 +41,7 @@
 				</table>
 			</form>
 		</div>
-		<!-- div#noticeWriteForm -->
+		<!-- div#qnaWriteForm -->
 	
 	</div>
 	<!-- div#wrap -->

@@ -69,4 +69,46 @@ public class CommunityController {
 		return "/community/noticeView";
 	}
 
+	// 자주하는 질문 게시판 글 작성으로 이동 (관리자)
+	@RequestMapping("/faq_write")
+	public String faqWrite() {
+		return "/community/faqWrite";
+	}
+
+	// 자주 하는 질문 내용 입력 받아 DB에 저장 후 faq 게시판으로 이동 (관리자)
+	@RequestMapping("/faq_reg")
+	public String faqReg(HttpServletRequest req, Model model) {
+		try {
+			req.setCharacterEncoding("UTF-8");
+
+			String faqQues = req.getParameter("faqQues");
+			String faqAnsw = req.getParameter("faqAnsw");
+
+			Map<String, String> map = new HashMap<>();
+			map.put("item1", faqQues);
+			map.put("item2", faqAnsw);
+
+			communityDao.mtdFaqWrite(map);
+
+		} catch (Exception e) {
+			e.getMessage();
+		}
+
+		return "redirect:/faq_list";
+	}
+
+	// faq 내용 DB에서 받아옴
+	@RequestMapping("/faq_list")
+	public String faqList(Model model) throws Exception {
+		model.addAttribute("mtdFaqList", communityDao.mtdFaqList());
+
+		return "/community/faqList";
+	}
+
+	// 1:1 문의 이동
+	@RequestMapping("/qna_page")
+	public String qnaPage() {
+		return "/community/qnaWrite";
+	}
+
 }

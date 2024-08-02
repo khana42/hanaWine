@@ -32,4 +32,27 @@ public class CommunityDto {
 		this.notiCon = notiCon;
 	}
 	
+	private int faqNum;
+	private String faqQues;
+	private String faqAnsw;
+
+	public int getFaqNum() {
+		return faqNum;
+	}
+	public void setFaqNum(int faqNum) {
+		this.faqNum = faqNum;
+	}
+	public String getFaqQues() {
+		return faqQues;
+	}
+	public void setFaqQues(String faqQues) {
+		this.faqQues = faqQues;
+	}
+	public String getFaqAnsw() {
+		return faqAnsw;
+	}
+	public void setFaqAnsw(String faqAnsw) {
+		this.faqAnsw = faqAnsw;
+	}
+	
 }

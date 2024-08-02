@@ -74,7 +74,7 @@ String sUid = (String)session.getAttribute("sUid");
 					<ul class="subMenu" >
 						<li class="notice" onclick="location.href='/notice_list'">공지사항</li>
 						<li class="notice">자주하는 질문</li>
-						<li class="notice">1:1 문의</li>
+						<li class="notice" onclick="location.href='/qna_page'">1:1 문의</li>
 					</ul>
 				</li>
 			</ul>

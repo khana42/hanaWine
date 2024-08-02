@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="/style/style4.css?v">
 </head>
 <body>
+
 	<header id="header">
 		<%@ include file="../header.jsp" %>
 	</header>
@@ -23,8 +24,8 @@
 			<!-- div.commTit -->
 			<ul class="commGnb dFlex">
 				<li><a href="/notice_list"><span>공지 사항</span></a></li>
-				<li><a href="#"><span>자주하는 질문</span></a></li>
-				<li><a href="#"><span>1:1 질문</span></a></li>
+				<li><a href="/faq_list"><span>자주하는 질문</span></a></li>
+				<li><a href="/qna_page"><span>1:1 문의</span></a></li>
 			</ul>
 		</div>
 		<!-- div.commWrap -->

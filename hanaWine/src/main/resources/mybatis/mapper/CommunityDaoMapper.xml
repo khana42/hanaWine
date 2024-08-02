@@ -8,13 +8,13 @@ PUBLIC
 
 <mapper namespace="com.proj.dao.CommunityDao">
 
-	<!-- BBS 글 목록 태그 -->
+	<!-- 공지사항 목록 태그 -->
 	<select id="mtdNoticeList"
 		resultType="com.proj.dto.CommunityDto">
 		select * from noticeTb order by notiNum desc
 	</select>
 
-	<!-- BBS 글저장 태그 -->
+	<!-- 공지사항 글저장 태그 -->
 	<insert id="mtdNoticeWrite" parameterType="java.util.HashMap">
 		insert into noticeTb
 		(notiDate, notiTit, notiCon)
@@ -22,10 +22,24 @@ PUBLIC
 		(#{item1}, #{item2}, #{item3})
 	</insert>
 
-	<!-- BBS 글 상세 내용 보기 -->
+	<!-- 공지사항 글 상세 내용 보기 -->
 	<select id="mtdNoticeView"
 		resultType="com.proj.dto.CommunityDto">
 		select * from noticeTb where notiNum = #{param1}
+	</select>
+	
+	<!-- 자주하는 질문 글저장 태그 -->
+	<insert id="mtdFaqWrite" parameterType="java.util.HashMap">
+		insert into faqTb
+		(faqQues, faqAnsw)
+		values
+		(#{item1}, #{item2})
+	</insert>
+	
+	<!-- 자주하는 질문 글 목록 태그 -->
+	<select id="mtdFaqList"
+		resultType="com.proj.dto.CommunityDto">
+		select * from faqTb order by faqNum desc
 	</select>
 
 </mapper>

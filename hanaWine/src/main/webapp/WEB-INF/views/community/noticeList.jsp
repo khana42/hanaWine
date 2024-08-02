@@ -7,13 +7,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>hanaWine\공지사항</title>
+<title>공지사항</title>
 <link rel="stylesheet" href="/style/style4.css?v">
 </head>
 <body>
+
 	<header id="header">
 		<%@ include file="../header.jsp" %>
 	</header>
+
+
 	<div id="wrap">
 		<div class="commWrap">
 			<div class="commTit">
@@ -22,8 +25,8 @@
 			<!-- div.commTit -->
 			<ul class="commGnb dFlex">
 				<li><a href="/notice_list"><span>공지 사항</span></a></li>
-				<li><a href="#"><span>자주하는 질문</span></a></li>
-				<li><a href="#"><span>1:1 질문</span></a></li>
+				<li><a href="/faq_list"><span>자주하는 질문</span></a></li>
+				<li><a href="/qna_page"><span>1:1 문의</span></a></li>
 			</ul>
 		</div>
 		<!-- div.commWrap -->
@@ -53,6 +56,7 @@
 		
 	</div>
 	<!-- div#wrap -->
+	
 	<footer id="footer">
 		<%@ include file="../footer.jsp" %>
 	</footer>

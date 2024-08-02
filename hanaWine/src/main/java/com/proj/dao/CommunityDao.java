@@ -19,4 +19,10 @@ public interface CommunityDao {
 	// 공지사항 글 저장
 	public int mtdNoticeWrite(Map<String, String> map);
 
+	// 자주하는 질문 글 저장
+	public int mtdFaqWrite(Map<String, String> map);
+
+	// 자주하는 질문 리스트 보기
+	public List<CommunityDto> mtdFaqList();
+
 }
