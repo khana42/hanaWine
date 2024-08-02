@@ -152,7 +152,7 @@ main#main{
 	text-align: center;
 }
 #main h1{
-	margin: 30px 0;
+	margin: 70px 0 30px;
 }
 #main #slideshowArea{
 	width: 1000px;
@@ -164,6 +164,7 @@ main#main{
 }
 
 #main #bestWine{
+	margin-bottom: 150px;
 	padding: 10px;
 	justify-content: space-evenly;
 }
@@ -171,20 +172,16 @@ main#main{
 	display: inline-block;
 	margin-bottom: 10px;
 }
-footer#footer{
-	text-align: center;
-}
 
 /* Main CSS 끝 */
 
 
 /* footer CSS 시작 */
 div#footerWrap{
-	/* 	border: 1px solid #000; */
+	border: 1px solid #000;
 	width: 1100px;
 	margin: 20px auto;
-	text-align: center;
-	padding: 100px 0;
+	
 }
 
 /* footer CSS 끝 */
