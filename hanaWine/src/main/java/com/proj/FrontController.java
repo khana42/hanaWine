@@ -23,9 +23,7 @@ import com.proj.svc.SvcInface;
 public class FrontController {
 	@Autowired
 	private SvcInface svcInface;
-<<<<<<< HEAD
-   	
-=======
+
 	@Autowired
 	private ProductPageSvc ProductPageSvc;
 	
@@ -39,7 +37,6 @@ public class FrontController {
 		return "/join";
  	 }
 
->>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
 	@RequestMapping("/Join02")
 	public String join02() {
 		return "Join02";

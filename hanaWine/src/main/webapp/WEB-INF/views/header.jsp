@@ -1,15 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-<<<<<<< HEAD
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 
 <%
 String sUid = (String)session.getAttribute("sUid");
 %>   
-=======
-	pageEncoding="UTF-8"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
->>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
+
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -88,7 +86,7 @@ String sUid = (String)session.getAttribute("sUid");
 						<!-- 						//<li class="wineCate" data-cate="PORTUGAL">포르투갈</li> -->
 					</ul>
 				</li>
-<<<<<<< HEAD
+
 				<li id="community">커뮤니티
 					<ul class="subMenu">
 						<li class="notice">공지사항</li>
@@ -96,14 +94,14 @@ String sUid = (String)session.getAttribute("sUid");
 						<li class="notice">1:1 문의</li>
 					</ul>
 				</li>
-=======
+
 				<li class=qBoard>커뮤니티</li>
->>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
+
 			</ul>
 		</nav>
 
 		<div id="search">
-<<<<<<< HEAD
+
 			<form action="/search" method="GET">
 				<input type="text" id="keyword" name="keyword" placeholder="와인을 검색해 보세요.">
 				<a id="btnSearch" href="/search">
@@ -112,10 +110,10 @@ String sUid = (String)session.getAttribute("sUid");
 				</a>
 				
 			</form>
-=======
+
 			<input type="text" placeholder="와인을 검색해 보세요."> <img
 				src="/img/search.png" alt="검색이미지">
->>>>>>> 44ee57d17304082306fb78077e8df7958e28e027
+
 		</div>
 
 	</div>
