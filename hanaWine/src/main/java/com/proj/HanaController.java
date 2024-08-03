@@ -5,18 +5,21 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.proj.dao.UserMapper;
-import com.proj.dto.SearchVO;
+
 import com.proj.dto.UserVO;
 import com.proj.dto.WineDto;
 
-import com.proj.svc.UserService;
+import com.proj.svc.UserServiceIf;
 import com.proj.svc.WineService;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -26,33 +29,48 @@ import jakarta.servlet.http.HttpSession;
 public class HanaController {
 
 	@Autowired
-	private UserService userService;
+	private UserServiceIf userServiceIf;
 
 	@Autowired
 	private UserMapper userMapper;
 
-//	@Autowired
-//	private SearchService searchService;
-	
+	//	@Autowired
+	//	private SearchService searchService;
+
 	@Autowired
 	private WineService wineService;
 
-//	@GetMapping("/")
-	//ublic String root() {
+	//회원가입
+	@PostMapping("/members/register")
+	public String register(@RequestParam(value = "memberName") String memberName,
+			@RequestParam(value = "memberId") String memberId, @RequestParam(value = "memberPw") String memberPw,
+			@RequestParam(value = "memberMail") String memberMail,
+			@RequestParam(value = "memberAddr1", required = false) String memberAddr1,
+			@RequestParam(value = "fullNum") String fullNum, RedirectAttributes redirectAttributes) {
 
-	//	return "main";
-//	}
+		try {
+			UserVO userVO = new UserVO();
+			userVO.setMemberName(memberName);
+			userVO.setMemberId(memberId);
+			userVO.setMemberPw(memberPw);
+			userVO.setMemberMail(memberMail);
+			userVO.setMemberAddr1(memberAddr1);
+			userVO.setMemberPhone(fullNum);
 
-//	@GetMapping("/login")
-//	public String login() {
+			userServiceIf.memberjoin(userVO);
 
-//		return "login";
-//	}
+			redirectAttributes.addFlashAttribute("message", "회원 가입이 완료되었습니다.");
+			return "redirect:/";
+		} catch (Exception e) {
+			redirectAttributes.addFlashAttribute("error", e.getMessage());
+			return "redirect:/members/register";
+		}
+	}
 
 	// 회원 목록 보기
 	@RequestMapping("/userList")
 	public String getUserID(Model model) {
-		List<UserVO> getUserID = userService.getUserID();
+		List<UserVO> getUserID = userServiceIf.getUserID();
 		model.addAttribute("list", getUserID);
 		return "userList";
 	}
@@ -61,7 +79,7 @@ public class HanaController {
 	@GetMapping("/main")
 	public String index(HttpServletRequest req) {
 		HttpSession session = req.getSession(false);
-		if (session != null && userService.isLoggedIn(session)) {
+		if (session != null && userServiceIf.isLoggedIn(session)) {
 
 			return "redirect:/"; // 로그인 상태면 메인 페이지로 이동
 		} else {
@@ -70,23 +88,24 @@ public class HanaController {
 	}
 
 	@PostMapping("/main")
-	public String handleLogin(@RequestParam("uid") String uid, @RequestParam("upw") String upw,HttpServletRequest req) {
+	public String handleLogin(@RequestParam("memberId") String memberId, @RequestParam("memberPw") String memberPw,
+			HttpServletRequest req) {
 		// 로그인 성공 여부 확인
 		HttpSession session = req.getSession(); // 새로운 세션을 생성하거나 기존 세션을 가져옴
-		boolean loginResult = userService.login(uid, upw, session);
+		boolean loginResult = userServiceIf.login(memberId, memberPw, session);
 
-        if (loginResult) {
-            // 세션에 사용자 정보 저장
-            session.setAttribute("sUid", uid);
-            session.setMaxInactiveInterval(20);
-            
-            return "main"; // 로그인 성공 시 메인 페이지로 
-            
-        } else {
-        	
-            return "login"; // 로그인 실패 시 다시 로그인 페이지로 
-            
-        }
+		if (loginResult) {
+			// 세션에 사용자 정보 저장
+			session.setAttribute("memberId", memberId);
+			session.setMaxInactiveInterval(20);
+
+			return "main"; // 로그인 성공 시 메인 페이지로
+
+		} else {
+
+			return "login"; // 로그인 실패 시 다시 로그인 페이지로
+
+		}
 	}
 
 	// 로그아웃
@@ -98,21 +117,24 @@ public class HanaController {
 		return "redirect:/";
 	}
 
-	// 회원가입
-	//@RequestMapping("/join")
-//	public String join() {
-	//	return "join";
-	//}
-
 	// 와인 종류 검색
 	@GetMapping("/search")
 	public String search(@RequestParam("keyword") String keyword, Model model) {
-        List<WineDto> wines = wineService.searchWines(keyword);
-        model.addAttribute("wines", wines);
-        return "subpage11"; 
+		List<WineDto> wines = wineService.searchWines(keyword);
+		model.addAttribute("wines", wines);
+		return "subpage11";
 	}
-		
-		
-	
-	
+
+	// 중복확인
+	@PostMapping("/idChk")
+	@ResponseBody
+	public String idChk(@RequestParam("idchk") String idchk) {
+		UserVO idChk = userServiceIf.getUserByID(idchk);
+		if (ObjectUtils.isEmpty(idChk)) {
+			
+			return "ok";
+		}
+		return "no";
+	}
+
 }

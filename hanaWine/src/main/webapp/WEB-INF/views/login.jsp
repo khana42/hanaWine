@@ -21,8 +21,8 @@
 		<h1>로그인</h1>
 
 		<form action="/main" method="post" >
-			<input type="text" name="uid" required autofocus placeholder="아이디 입력">
-			<input type="password" name="upw" required placeholder="비밀번호 입력">
+			<input type="text" name="memberId" required autofocus placeholder="아이디 입력">
+			<input type="password" name="memberPw" required placeholder="비밀번호 입력">
 			<button type="submit" id="loginBtn">로그인</button>
 			<button type="button" id="joinBtn">회원가입</button>
 			<label> <input type="checkbox"> <span>아이디 저장</span>

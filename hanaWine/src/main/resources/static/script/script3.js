@@ -55,11 +55,11 @@ $(function() {
 
 
 ///////////커뮤니티////////////////
-$(".qBoard").click(function(){
-	location.href = "/qBoardList";
-	
-	
-});
+$("#community").click(function(){
+
+	location.href = "/noticeList";
+	});
+
 
 
 
@@ -73,6 +73,33 @@ $(".qBoard").click(function(){
 		e.stopPropagation()
 		let cate = $(this).data('cate');
 		location.href = "/wine/" + cate;
+
+	});
+	$("#wineCateFood").click(function() {
+		location.href = "/food";
+	});
+	$(".wineFood").click(function(e) {
+		e.stopPropagation()
+		let cate = $(this).data('cate');
+		location.href = "/food/" + cate;
+
+	});
+	$("#wineCateGrape").click(function() {
+		location.href = "/grape";
+	});
+	$(".wineGrape").click(function(e) {
+		e.stopPropagation()
+		let cate = $(this).data('cate');
+		location.href = "/grape/" + cate;
+
+	});
+	$("#wineCateCountry").click(function() {
+		location.href = "/country";
+	});
+	$(".wineCountry").click(function(e) {
+		e.stopPropagation()
+		let cate = $(this).data('cate');
+		location.href = "/country/" + cate;
 
 	});
 	

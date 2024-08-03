@@ -37,10 +37,7 @@
 
 	
 		<div id="select" class="dFlex">
-			<div id="priceSel">
-				<input type="range" name="selecPrice" id="selecPrice">
-				<button>select</button>
-			</div>
+			
 			<div id="selecOp">
 				<ul id="select0" class="dFlex">
 					<li class="order" data-order="recent">최신순</li>
@@ -54,7 +51,7 @@
 		<!--       목록 -->
          <c:forEach	var="list"	items="${wines}">
 		 <div id="main" class="dFlex" >
-				<div id="wine" class="dFlex" name="winePage">
+				<div id="wine" class="dFlex wineInfo" name="winePage" data-winekrname="${list.wineKrName}">
 					<div class="img1">
 						<img src="http://placehold.it/200x300" alt="">
 					</div>
@@ -80,6 +77,11 @@
 			</div>
 		
 	 	</c:forEach>
+	<c:if test="${empty wines}">
+            <span>
+                검색 결과가 없습니다.
+            </span>
+        </c:if>
 	
 <!-- 		목록끝 -->
 <!-- 페이징 작업 -->

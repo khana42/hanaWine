@@ -37,10 +37,7 @@
 
 	
 		<div id="select" class="dFlex">
-			<div id="priceSel">
-				<input type="range" name="selecPrice" id="selecPrice">
-				<button>select</button>
-			</div>
+			
 			<div id="selecOp">
 				<ul id="select0" class="dFlex">
 					<li class="order" data-order="recent">최신순</li>
@@ -56,7 +53,7 @@
 		 <div id="main" class="dFlex" >
 				<div id="wine" class="dFlex wineInfo" name="winePage"  data-winekrname="${list.wineKrName}" >
 					<div class="img1">
-						<img src="http://placehold.it/200x300" alt="">
+						<img src="../wineimg/${list.goodsImg}" alt="">
 					</div>
 					<div class="name">
 						<div class="winame">

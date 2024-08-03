@@ -15,7 +15,7 @@ A.region,
 A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
 C.foodName
 FROM projectDB.wineListTest A
-LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx
+LEFT OUTER JOIN projectDB.wineFood B ON A.num = B.wineIdx
 INNER JOIN  projectDB.food C ON B.foodIdx = C.idx
 where wineKrName = #{wineKrName}
     </select>

@@ -5,12 +5,17 @@
 <mapper	namespace="com.proj.dao.UserMapper">
 
 	<select id="getUserID" resultType="com.proj.dto.UserVO">
-	SELECT * FROM memberList WHERE uid=#{uid}
+	SELECT * FROM Join_MEMBER 
 	</select>
 	
 	<select id="getUserByUid" resultType="com.proj.dto.UserVO">
-	SELECT * FROM memberList WHERE uid=#{uid}
+	SELECT * FROM Join_MEMBER WHERE memberId=#{memberId}
 	</select>
 	
+  <insert id="memberjoin" parameterType="com.proj.dto.UserVO">
+  
+  	insert into Join_MEMBER (memberName, memberId, memberPw, memberMail, memberAddr1, memberPhone) values
+  	(#{memberName}, #{memberId}, #{memberPw}, #{memberMail}, #{memberAddr1}, #{memberPhone})
+  </insert>
 	
 </mapper>

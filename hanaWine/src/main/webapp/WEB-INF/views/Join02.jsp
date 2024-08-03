@@ -10,10 +10,13 @@
 <link rel="stylesheet" href="/style/style5.css?v">
 </head>
 <body>
+<header id="header">
+		<%@ include file="header.jsp" %>
+	</header>
 	<div id="Join2wrap">
-		<header id="header">
+	
 			<h1>회원 가입</h1>
-		</header>
+		
 		<hr>
 		<main id="mainjoin">
 			<form id="join_form1" method="post" action="/members/register">
@@ -33,8 +36,10 @@
 							placeholder="(영문소문자/숫자,4~16자)" required size="11">
 						</label>
 						<button type="button" id="btnchk">중복확인</button>
+					<input type="text" value="N" id="hidChk" hidden="hidden" />
+					<input type="text" value="N" id="btnHidChk" hidden="hidden" />
 					</div>
-
+	     
 					<div class="userInfo">
 						<label> <span class="req info1">비밀번호</span> <input
 							type="password" class="infoInput" id="userpw1" name="memberPw"
@@ -65,9 +70,9 @@
 				
 				
 						
-						<input type="text" class="infoInput" placeholder="" disabled id="useraddress"/>
+						<input type="text" class="infoInput" placeholder="" disabled id="useraddress" />
 						<input type="text" class="el_input"
-							placeholder="상세주소를 입력해주세요." id="roadAddressDetail" />
+							placeholder="상세주소를 입력해주세요." id="roadAddressDetail" name="memberAddr1"/>
 						
 						<button class="el_btn" id="userAdbtn">주소 등록하기</button>
 						</label>
@@ -87,14 +92,10 @@
 							<span>-</span> <input type="text" class="phoneNum" id="usernum2"
 							required name="memberPhone2" maxlength="4" placeholder="4자리">
 						</label>
-						<button type="button" id="codenum">인증번호받기</button>
+						<input type="hidden" value="" name="fullNum">
 					</div>
 				</div>
-				<div class="userInfo">
-					<label> <span class="req info1">인증번호입력</span> <input
-						type="text" class="infoInput" id="usercode">
-					</label>
-				</div>
+				
 
 
 
@@ -155,6 +156,9 @@
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="/script/script5.js"></script>
+	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+
 </body>
 </html>
 

@@ -2,81 +2,130 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  
-  <mapper namespace="com.proj.dao.WineDao">
-  <select id="daoWineListAll" resultType="com.proj.dto.WineDto">
-SELECT A.wineKrName, A.wineEgName,
-(SELECT typeName FROM projectDB.typeOfWine WHERE IDX = A.typeOfWine ) AS TYPEOFWINE,
-(SELECT nationName FROM projectDB.nation WHERE IDX = A.nation) AS NATION,
-A.region,
-(SELECT grapeName From projectDB.grape WHERE IDX = A.grape)AS GRAPE ,
-A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
-C.foodName
-FROM projectDB.wineListTest A
-LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx
-INNER JOIN  projectDB.food C ON B.foodIdx = C.idx;
-  </select>
-  <select id="daoWineList" parameterType="String" resultType="com.proj.dto.WineDto">
-    SELECT A.wineKrName, A.wineEgName,
-(SELECT typeName FROM projectDB.typeOfWine WHERE IDX = A.typeOfWine ) AS TYPEOFWINE,
-(SELECT nationName FROM projectDB.nation WHERE IDX = A.nation) AS NATION,
-A.region,
-(SELECT grapeName From projectDB.grape WHERE IDX = A.grape)AS GRAPE ,
-A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
-C.foodName
-FROM projectDB.wineListTest A
-    INNER JOIN  projectDB.typeOfWine T ON A.typeOfWine = T.idx
-	LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx 
-    INNER JOIN  projectDB.food C ON B.foodIdx = C.idx 
-    WHERE T.typeName = #{typeName}
-    
-  </select>
-  
-  <select id="daoWineListFood" parameterType="String" resultType="com.proj.dto.WineDto">
-     SELECT A.wineKrName, A.wineEgName,
-(SELECT typeName FROM projectDB.typeOfWine WHERE IDX = A.typeOfWine ) AS TYPEOFWINE,
-(SELECT nationName FROM projectDB.nation WHERE IDX = A.nation) AS NATION,
-A.region,
-(SELECT grapeName From projectDB.grape WHERE IDX = A.grape)AS GRAPE ,
-A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
-C.foodName
-FROM projectDB.wineListTest A
-	LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx 
-    INNER JOIN  projectDB.food C ON B.foodIdx = C.idx 
-    WHERE foodName = #{foodName}
-    
-  </select>
-  <select id="daoWineListGrape" parameterType="String" resultType="com.proj.dto.WineDto">
-    SELECT A.wineKrName, A.wineEgName,
-(SELECT typeName FROM projectDB.typeOfWine WHERE IDX = A.typeOfWine ) AS TYPEOFWINE,
-(SELECT nationName FROM projectDB.nation WHERE IDX = A.nation) AS NATION,
-A.region,
-(SELECT grapeName From projectDB.grape WHERE IDX = A.grape)AS GRAPE ,
-A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
-C.foodName
-FROM projectDB.wineListTest A
-LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx
-INNER JOIN  projectDB.food C ON B.foodIdx = C.idx
-inner join projectDB.grape G on A.grape = G.idx
-WHERE G.grapename = #{grapename}
-    
-  </select>
-  <select id="daoWineListCountry" parameterType="String" resultType="com.proj.dto.WineDto">
-     SELECT A.wineKrName, A.wineEgName,
-(SELECT typeName FROM projectDB.typeOfWine WHERE IDX = A.typeOfWine ) AS TYPEOFWINE,
-(SELECT nationName FROM projectDB.nation WHERE IDX = A.nation) AS NATION,
-A.region,
-(SELECT grapeName From projectDB.grape WHERE IDX = A.grape)AS GRAPE ,
-A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
-C.foodName
-FROM projectDB.wineListTest A
-    inner join projectDB.nation N on A.nation = N.idx
-    inner join projectDB.grape G on A.grape = G.idx 
-	LEFT OUTER JOIN projectDB.wineFood B ON A.idx = B.wineIdx 
-    INNER JOIN  projectDB.food C ON B.foodIdx = C.idx 
-    WHERE N.nationName = #{nationName}
-    
-  </select>
 
-  
-  </mapper>	
+<mapper namespace="com.proj.dao.WineDao">
+	<select id="daoWineListAll" resultType="com.proj.dto.WineDto">
+		SELECT A.wineKrName, A.wineEgName,
+		(SELECT typeName FROM
+		projectDB.typeOfWine WHERE num = A.typeOfWine ) AS
+		TYPEOFWINE,
+		(SELECT
+		nationName FROM projectDB.nation WHERE num = A.nation) AS NATION,
+		A.region,
+		(SELECT grapeName From projectDB.grape WHERE num = A.grape)AS
+		GRAPE ,
+		A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
+		C.foodName
+		FROM projectDB.wineListTest A
+		LEFT OUTER JOIN
+		projectDB.wineFood B ON A.num = B.wineIdx
+		INNER JOIN projectDB.food C
+		ON B.foodIdx = C.idx
+		<choose>
+			<when test="'low'.equals(order)">
+				ORDER BY A.PRICE
+				ASC
+			</when>
+			<when test="'high'.equals(order)">
+				ORDER BY A.PRICE DESC
+			</when>
+			<otherwise>
+				ORDER BY A.CREATETM DESC
+			</otherwise>
+		</choose>
+		;
+	</select>
+	<select id="daoWineList" parameterType="String"
+		resultType="com.proj.dto.WineDto">
+		SELECT A.wineKrName, A.wineEgName,
+		(SELECT typeName FROM
+		projectDB.typeOfWine WHERE num = A.typeOfWine ) AS
+		TYPEOFWINE,
+		(SELECT
+		nationName FROM projectDB.nation WHERE num = A.nation) AS NATION,
+		A.region,
+		(SELECT grapeName From projectDB.grape WHERE num = A.grape)AS
+		GRAPE ,
+		A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
+		C.foodName
+		FROM projectDB.wineListTest A
+		INNER JOIN projectDB.typeOfWine
+		T ON A.typeOfWine = T.idx
+		LEFT OUTER JOIN projectDB.wineFood B ON A.num
+		= B.wineIdx
+		INNER JOIN projectDB.food C ON B.foodIdx = C.idx
+		WHERE
+		T.typeName = #{typeName}
+
+	</select>
+
+	<select id="daoWineListFood" parameterType="String"
+		resultType="com.proj.dto.WineDto">
+		SELECT A.wineKrName, A.wineEgName,
+		(SELECT typeName FROM
+		projectDB.typeOfWine WHERE num = A.typeOfWine ) AS
+		TYPEOFWINE,
+		(SELECT
+		nationName FROM projectDB.nation WHERE num = A.nation) AS NATION,
+		A.region,
+		(SELECT grapeName From projectDB.grape WHERE num = A.grape)AS
+		GRAPE ,
+		A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
+		C.foodName
+		FROM projectDB.wineListTest A
+		LEFT OUTER JOIN
+		projectDB.wineFood B ON A.num = B.wineIdx
+		INNER JOIN projectDB.food C
+		ON B.foodIdx = C.idx
+		WHERE foodName = #{foodName}
+
+	</select>
+	<select id="daoWineListGrape" parameterType="String"
+		resultType="com.proj.dto.WineDto">
+		SELECT A.wineKrName, A.wineEgName,
+		(SELECT typeName FROM
+		projectDB.typeOfWine WHERE num = A.typeOfWine ) AS
+		TYPEOFWINE,
+		(SELECT
+		nationName FROM projectDB.nation WHERE num = A.nation) AS NATION,
+		A.region,
+		(SELECT grapeName From projectDB.grape WHERE num = A.grape)AS
+		GRAPE ,
+		A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
+		C.foodName
+		FROM projectDB.wineListTest A
+		LEFT OUTER JOIN
+		projectDB.wineFood B ON A.num = B.wineIdx
+		INNER JOIN projectDB.food C
+		ON B.foodIdx = C.idx
+		inner join projectDB.grape G on A.grape = G.idx
+		WHERE G.grapename = #{grapename}
+
+	</select>
+	<select id="daoWineListCountry" parameterType="String"
+		resultType="com.proj.dto.WineDto">
+		SELECT A.wineKrName, A.wineEgName,
+		(SELECT typeName FROM
+		projectDB.typeOfWine WHERE num = A.typeOfWine ) AS
+		TYPEOFWINE,
+		(SELECT
+		nationName FROM projectDB.nation WHERE num = A.nation) AS NATION,
+		A.region,
+		(SELECT grapeName From projectDB.grape WHERE num = A.grape)AS
+		GRAPE ,
+		A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
+		C.foodName
+		FROM projectDB.wineListTest A
+		inner join projectDB.nation N
+		on A.nation = N.idx
+		inner join projectDB.grape G on A.grape = G.idx
+		LEFT OUTER JOIN projectDB.wineFood B ON A.num = B.wineIdx
+		INNER JOIN
+		projectDB.food C ON B.foodIdx = C.idx
+		WHERE N.nationName =
+		#{nationName}
+
+	</select>
+
+
+</mapper>	

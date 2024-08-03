@@ -4,7 +4,7 @@
 
 
 <%
-String sUid = (String)session.getAttribute("sUid");
+String memberId = (String)session.getAttribute("memberId");
 %>   
 
 <!DOCTYPE html>
@@ -24,11 +24,11 @@ String sUid = (String)session.getAttribute("sUid");
 
 		<div id="loginArea">
 			<ul class="dFlex">
- 			<% if (sUid == null) { %> 
+ 			<% if (memberId == null) { %> 
 				<li id="login">로그인</li>
 				<li id="join">회원가입</li>
 			<% } else { %>	
-				<li id="logout" ><%=sUid  %>님 로그아웃</li>
+				<li id="logout" ><%=memberId  %>님 로그아웃</li>
  			<% } %> 
 				<li>장바구니</li>
 			</ul>
@@ -85,14 +85,10 @@ String sUid = (String)session.getAttribute("sUid");
 					</ul>
 				</li>
 
-				<li class=qBoard>커뮤니티</li>
+				
 
-				<li id="community">커뮤니티
-					<ul class="subMenu">
-						<li class="notice">공지사항</li>
-						<li class="notice">자주하는 질문</li>
-						<li class="notice">1:1 문의</li>
-					</ul>
+				<li class="qBoard" id="community">커뮤니티
+				
 				</li>
 
 			</ul>

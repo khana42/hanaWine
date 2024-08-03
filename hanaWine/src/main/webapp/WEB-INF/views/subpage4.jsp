@@ -35,10 +35,7 @@
 
 		<div class="ha"></div>
 		<div id="select" class="dFlex">
-			<div id="priceSel">
-				<input type="range" name="selecPrice" id="selecPrice">
-				<button>select</button>
-			</div>
+			
 			<div id="selecOp">
 				<ul id="select0" class="dFlex">
 					<li class="select1">인기순</li>
@@ -52,7 +49,7 @@
 		<!--       목록 -->
 		<c:forEach var="list" items="${daoWineList}">
 			<div id="main" class="dFlex">
-				<div id="wine" class="dFlex" class="wine" class="winePage">
+				<div id="wine" class="dFlex wineInfo" class="wine" class="winePage" data-winekrname="${list.wineKrName}">
 					<div class="img1">
 						<img src="http://placehold.it/200x300" alt="">
 					</div>

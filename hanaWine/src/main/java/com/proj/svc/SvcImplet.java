@@ -23,8 +23,8 @@ public class SvcImplet implements SvcInface {
 	}
 
 	@Override
-	public List<WineDto> svcListAll() {
-		return wineDao.daoWineListAll();
+	public List<WineDto> svcListAll(String order) {
+		return wineDao.daoWineListAll(order);
 	}
 
 	@Override
