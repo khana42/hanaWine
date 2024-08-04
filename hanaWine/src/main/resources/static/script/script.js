@@ -22,7 +22,7 @@ $(function() {
 			moveSlide(currentIdx + 1);
 		} else {
 			moveSlide(0);
-		}
+		}File(recipe, uploadDir + recipeName);
 	});
 
 	prevBtn.addEventListener('click', function() {

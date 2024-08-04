@@ -4,6 +4,8 @@ import com.proj.dto.UploadDto;
 
 public interface UploadSvcIf {
 
-	public void upload(UploadDto uploadDto)throws Exception;
+	  void upload(UploadDto uploadDto);
+	  void uploadWineAndFood(UploadDto uploadDto, int foodIdx);
+
 	
 }

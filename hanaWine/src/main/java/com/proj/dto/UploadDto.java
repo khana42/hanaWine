@@ -16,6 +16,21 @@ public class UploadDto {
 	private String goodsImg;
 	private String recipe;
 	private String goodsInfo;
+	private int wineIdx;
+	private int foodIdx;
+	
+	public int getWineIdx() {
+		return wineIdx;
+	}
+	public void setWineIdx(int wineIdx) {
+		this.wineIdx = wineIdx;
+	}
+	public int getFoodIdx() {
+		return foodIdx;
+	}
+	public void setFoodIdx(int foodIdx) {
+		this.foodIdx = foodIdx;
+	}
 	public String getWineKrName() {
 		return wineKrName;
 	}
