@@ -1,12 +1,12 @@
 $(function() {
 	//메인페이지 슬라이드쇼
-	setInterval(fnSlide, 4000);
+	setInterval(fnSlide, 6000);
 	// fnSlide를 4초 단위로 반복함
 
 	function fnSlide() {
 		$('#slideShow').animate(
-			{ 'margin-left': '-1000px' },
-			4000,
+			{ 'margin-left': '-1100px' },
+			6000,
 			function() {
 				$('#slideShow>a:first-child').insertAfter('#slideShow>a:last-child');
 				// 넘어간 텍스트1이 텍스트3 뒤로 붙는 코드
@@ -15,22 +15,27 @@ $(function() {
 		);
 	}
 
-	//로그인 페이지로 이동
+	//로그인 페이지 모달
 	$("#login").click(function() {
-	location.href = "/login";
-
+		$("#loginWrap").show();
 	});
+	
+	$("#closeIcon").click(function(){  // 모달 닫기
+	    $("div#loginWrap").css({
+	            "display": "none"
+	    });
+    });
+    
+    // 페이지 로드 시 오류 메시지가 있으면 모달 열기
+    var errorMessage = $("#error-message p").text().trim();
+    if (errorMessage) {
+        $("#loginWrap").show();
+    }
+
 	
 	//로그인페이지의 회원가입 버튼
 	$("#joinBtn").click(function() {
-
-
-
-		window.opener.location.href = "/Join02";
-		window.self.close();
-        location.href = "/join";
-		
-
+        location.href = "/Join02";
 	});
 
 	//메인페이지 회원가입 클릭 시
@@ -39,7 +44,7 @@ $(function() {
 	});
 
 	//메인페이지의 로그아웃 클릭
-	$("#logout").click(function() {
+	$("#logout").off().click(function() {
 		confirm("로그아웃 하시겠습니까?");
 		location.href="/logout";
 	});
@@ -59,9 +64,6 @@ $("#community").click(function(){
 
 	location.href = "/noticeList";
 	});
-
-
-
 
 
 	//헤더의 gnb 클릭시 	
@@ -103,9 +105,10 @@ $("#community").click(function(){
 
 	});
 	
-	   $(document).ready(function() {
-        $("#btnSearch").click(function(event) {
-            event.preventDefault(); // 기본 링크 클릭 동작 방지
+	///////////검색창////////////////
+	$(document).ready(function() {
+    	$("#btnSearch").click(function(event) {
+        	event.preventDefault(); // 기본 링크 클릭 동작 방지
             var keyword = $("#keyword").val(); // 검색어 가져오기
             
             // 검색어가 있는 경우에만 링크로 이동
@@ -118,7 +121,9 @@ $("#community").click(function(){
             }
         });
 
-});
+	});
+	
+	
 });
 
 

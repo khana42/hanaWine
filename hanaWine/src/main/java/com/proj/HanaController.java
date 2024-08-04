@@ -76,20 +76,20 @@ public class HanaController {
 	}
 
 	// 로그인
-	@GetMapping("/main")
-	public String index(HttpServletRequest req) {
-		HttpSession session = req.getSession(false);
-		if (session != null && userServiceIf.isLoggedIn(session)) {
-
-			return "redirect:/"; // 로그인 상태면 메인 페이지로 이동
-		} else {
-			return "login"; // 로그인 되지 않았으면 로그인 페이지로 이동
-		}
-	}
-
-	@PostMapping("/main")
+//	@GetMapping("/login")
+//	public String index(HttpServletRequest req) {
+//		HttpSession session = req.getSession(false);
+//		if (session != null && userServiceIf.isLoggedIn(session)) {
+//
+//			return "redirect:/"; // 로그인 상태면 메인 페이지로 이동
+//		} else {
+//			return "redirect:/"; // 로그인 되지 않았으면 로그인 페이지로 이동
+//		}
+//	}
+	
+	@PostMapping("/login")
 	public String handleLogin(@RequestParam("memberId") String memberId, @RequestParam("memberPw") String memberPw,
-			HttpServletRequest req) {
+			HttpServletRequest req,Model model) {
 		// 로그인 성공 여부 확인
 		HttpSession session = req.getSession(); // 새로운 세션을 생성하거나 기존 세션을 가져옴
 		boolean loginResult = userServiceIf.login(memberId, memberPw, session);
@@ -99,11 +99,11 @@ public class HanaController {
 			session.setAttribute("memberId", memberId);
 			session.setMaxInactiveInterval(20);
 
-			return "main"; // 로그인 성공 시 메인 페이지로
+			return "redirect:/"; // 로그인 성공 시 메인 페이지로
 
 		} else {
-
-			return "login"; // 로그인 실패 시 다시 로그인 페이지로
+			model.addAttribute("error", "아이디와 비밀번호가 일치하지 않습니다.");
+			return "redirect:/"; // 로그인 실패 시 다시 로그인 페이지로
 
 		}
 	}
@@ -136,5 +136,7 @@ public class HanaController {
 		}
 		return "no";
 	}
+
+	
 
 }

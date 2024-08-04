@@ -36,6 +36,43 @@ String memberId = (String)session.getAttribute("memberId");
 
 	</div>
 	<!-- div#logoArea -->
+	
+	<!-- modal -->
+	<div id="loginWrap">		
+		<div id="loginModal" class="modal">
+			<div class="modal-content">
+				<div id="modalCloseIconArea">
+	            	<span id="closeIcon">&times;</span>
+	       		</div>
+	       	</div>
+	       	
+			<h1>로그인</h1>
+			
+			<form action="/login" method="post">
+				<input type="text" name="memberId" required autofocus
+					placeholder="아이디 입력"> <input type="password"
+					name="memberPw" required placeholder="비밀번호 입력">
+				<button type="submit" id="loginBtn">로그인</button>
+				<button type="button" id="joinBtn">회원가입</button>
+			</form>
+			
+			 <div id="errorMessage">
+                        ${error}
+                    </div> <!-- 오류 메시지 -->
+	
+			<div id="find">
+				<ul class="dFlex">
+					<li>아이디 찾기</li>
+					<li>|</li>
+					<li>비밀번호 찾기</li>
+				</ul>
+			</div>
+			<!-- div#find -->
+					
+		</div>
+		<!-- div#loginModal -->
+	</div>	
+	<!-- div#loginWrap -->
 
 	<div id="gnbArea" class="dFlex">
 		<nav id="nav">
@@ -95,9 +132,6 @@ String memberId = (String)session.getAttribute("memberId");
 		</nav>
 
 		<div id="search">
-
-		
-
 			<form action="/search" method="GET">
 				<input type="text" id="keyword" name="keyword" placeholder="와인을 검색해 보세요.">
 				<a id="btnSearch" href="/search">

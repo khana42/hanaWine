@@ -18,13 +18,12 @@
 	<main id="main">
 		<div id="slideshowArea">
 			<div id="slideShow" class="dFlex">
-				<a href="#"><img src="/img/slideShow_01.jpg" alt="이미지"></a>
-				<a href="#"><img src="/img/slideShow_02.jpg" alt="이미지"></a>
-				<a href="#"><img src="/img/slideShow_03.jpg" alt="이미지"></a>
+				<a href="#"><img src="/img/wineSlide1.jpg" alt="이미지"></a>
+				<a href="#"><img src="/img/wineSlide2.jpg" alt="이미지"></a>
+				<a href="#"><img src="/img/wineSlide3.jpg" alt="이미지"></a>
 			</div>
 		</div>
-			
-		<h1>BEST WINE</h1>
+	
 		
 		<div id="bestWine" class="dFlex">
 			<div id="img1">
