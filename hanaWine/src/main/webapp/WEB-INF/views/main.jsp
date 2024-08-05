@@ -25,25 +25,24 @@
 		</div>
 	
 
-    <div id="bestWine" class="dFlex">
+    <div class="bestWine dFlex">
 
         <div id="img1" class="dFlex">
             <a href="#"><img src="/img/mainWine.jpg" alt="이미지"></a>
             <div id="txt"></div>
-            <p id="p1">Enjoy a variety of different
-                <br>
-                <span id="span1">wines at Hana Wine Shop</span>
-                <br>
-                <span id="span2">Hana Wine Shop inspects and sells only wines of the best quality.</span>
-            </p>
+	            <p id="p1">Enjoy a variety of different
+	                <br>
+	                <span id="span1">wines at Hana Wine Shop</span>
+	                <br>
+	                <span id="span2">Hana Wine Shop inspects and sells only wines of the best quality.</span>
+	            </p>
 
-            <!-- <div id="txt"></div> -->
         </div>
-    </div>
+   	</div>
+	
 
 
-
-    <div id="bestWine" class="dFlex">
+    <div class="bestWine dFlex">
 
         <div id="img1" class="dFlex">
             <p id="p1">Enjoy a variety of different

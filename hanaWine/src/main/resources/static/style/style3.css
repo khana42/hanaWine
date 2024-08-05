@@ -170,20 +170,23 @@ main#main {
 	/* 	border: 1px solid #000; */
 }
 
-#main #bestWine {
-	margin-bottom: 150px;
+#main .bestWine {
+	margin-bottom: 20px;
 	padding: 10px;
 	justify-content: space-evenly;
 }
-
-#main #bestWine a {
+#main .bestWine:last-child{
+	margin-bottom: 150px;
+}
+#main .bestWine a {
 	display: inline-block;
 	margin-bottom: 10px;
 }
 
-div#bestWine {
+div.bestWine {
+	
 	padding: 100px;
-	border: 1px solid #cf1616;
+/* 	border: 1px solid #cf1616; */
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 70px;
@@ -193,26 +196,28 @@ div#bestWine {
 div#img1 {
 	/* border: 1px solid #000; */
 	display: flex;
-	padding: 50px;
-	margin-left: 200px;
+	padding: 5px;
+	margin-left: 5px;
 }
 
 div#txt {
 	border: 1px solid #fce6c9;
 	margin: 50px;
+
 }
 
-#bestWine>#img1 p#p1 {
-	width: 700px;
+.bestWine>#img1 p#p1 {
+	width: 400px;
 	height: 500px;
 	text-align: center;
 	font-family: "Playfair Display", serif;
-	font-size: 100px;
+	font-size: 70px;
 	color: #333131;
 	background-color: rgb(255, 235, 205, 0.5);
+	margin-top: 100px;
 }
 
-#bestWine>#img1 span {
+.bestWine>#img1 span {
 	width: 500px;
 	text-align: center;
 	font-family: "Playfair Display", serif;
@@ -221,7 +226,7 @@ div#txt {
 	background-color: rgb(255, 235, 205, 0.5);
 }
 
-#bestWine>#img1 span#span2 {
+.bestWine>#img1 span#span2 {
 	width: 500px;
 	text-align: center;
 	font-family: "Playfair Display", serif;
