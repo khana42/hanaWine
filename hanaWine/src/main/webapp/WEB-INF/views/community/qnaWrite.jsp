@@ -22,11 +22,14 @@
 				<h1>1:1 문의</h1>
 			</div>
 			<!-- div.commTit -->
-			<ul class="commGnb dFlex">
-				<li><a href="/notice_list"><span>공지 사항</span></a></li>
-				<li><a href="faq_list"><span>자주하는 질문</span></a></li>
-				<li><a href="/qna_page"><span>1:1 문의</span></a></li>
-			</ul>
+			<div class="commGnbArea">
+				<ul class="commGnb dFlex">
+					<li><a href="/notice_list"><span>공지 사항</span></a></li>
+					<li><a href="/faq_list"><span>자주하는 질문</span></a></li>
+					<li><a href="/qna_page"><span>1:1 문의</span></a></li>
+				</ul>
+			</div>
+			<!-- div.commGnbArea -->
 		</div>
 		<!-- div.commWrap -->
 
