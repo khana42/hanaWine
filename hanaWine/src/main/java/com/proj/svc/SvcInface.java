@@ -8,7 +8,7 @@ import com.proj.dto.WineDto;
 
 public interface SvcInface {
 
-	public List<WineDto> svcListAll();
+	public List<WineDto> svcListAll(String order);
 
 	public List<WineDto> svcList(String typeName);
 	public List<WineDto> svcListFood(String foodName);

@@ -47,7 +47,7 @@ ul#select0>li{
 	margin: 7px;
 	width: 300px
 }
-h1 {
+#wrap h1 {
     font-size: 36px;
     text-align: left;
     padding: 0 0 0 25px;
@@ -153,4 +153,69 @@ width: 450px;
  margin-top: 150px;
 }
 
+/* /////업로드/////////// */
 
+
+div#wineUpload {
+   text-align: center;
+}
+
+#wineUpload h1{
+   margin: 20px 0;
+}
+
+#wineUpload #Regtable{
+   margin: 20px auto;
+/*    border: 1px solid #000; */
+   border-collapse: collapse;
+   
+}
+
+#wineUpload #Regtable th{
+/*     border: 1px solid black;  */
+    padding: 5px 14px; 
+    font-size: 18px;
+
+}
+
+#wineUpload #Regtable td{
+   padding: 5px 0;
+/*    border: 1px solid black;  */
+   text-align: left;
+}
+
+#wineUpload #Regtable td input[type=text]{
+   padding: 5px;
+   font-size: 18px;
+   width: 270px;
+}
+
+#wineUpload #Regtable td select{
+   font-size: 18px;
+   padding: 5px 0;
+   width: 270px;
+}
+
+#wineUpload #Regtable td input[type=file]{
+   padding: 5px;
+   font-size: 18px;
+   width: 270px;
+}
+
+#wineUpload #Regtable td input[type=radio]{
+   font-size: 20px;
+   margin-right: 5px;
+}
+
+#wineUpload #Regtable .regBtn td{
+   text-align: center;
+}
+
+#wineUpload #Regtable .regBtn button{
+   font-size: 20px;
+   padding: 8px;
+   margin-top: 20px;
+}
+#wineUpload #Regtable .regBtn button#wineRegBtn{
+   margin-right: 20px;
+}

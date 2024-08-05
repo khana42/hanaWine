@@ -132,6 +132,12 @@ String memberId = (String)session.getAttribute("memberId");
 		</nav>
 
 		<div id="search">
+<<<<<<< HEAD
+=======
+
+		
+
+>>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 			<form action="/search" method="GET">
 				<input type="text" id="keyword" name="keyword" placeholder="와인을 검색해 보세요.">
 				<a id="btnSearch" href="/search">

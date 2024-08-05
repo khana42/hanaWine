@@ -26,165 +26,178 @@ public class FrontController {
 
 	@Autowired
 	private ProductPageSvc ProductPageSvc;
+<<<<<<< HEAD
 		
 	//목록	페이지
+=======
+
+	@RequestMapping("/")
+	public String root() {
+		return "main";
+	}
+
+	@RequestMapping("Join02")
+	public String Join() {
+		return "Join02";
+	}
+
+	@RequestMapping("login")
+	public String login() {
+		return "login";
+	}
+
+	// 목록 페이지
+>>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 	@RequestMapping("/wine")
-	public String root(
-		
-			@RequestParam(name = "winePage" ,defaultValue = "1")int curPage,
-			Model model)throws Exception {
-		List<WineDto> allWines = svcInface.svcListAll();
-		Pagination pagination = new Pagination(allWines.size(), curPage); 
-		
+	public String root(@RequestParam(name = "winePage", defaultValue = "1") int curPage,
+			@RequestParam(name = "order", defaultValue = "recent") String order, Model model) throws Exception {
+
+		List<WineDto> allWines = svcInface.svcListAll(order);
+		Pagination pagination = new Pagination(allWines.size(), curPage);
+
 		int starIndex = pagination.getStartIndex();
 		int endIndex = Math.min(starIndex + pagination.getPageSize(), allWines.size());
-		 List<WineDto> paginatedWines = allWines.subList(starIndex, endIndex);
-	
+		List<WineDto> paginatedWines = allWines.subList(starIndex, endIndex);
 
-		model.addAttribute("list", paginatedWines);
-		model.addAttribute("listCnt", allWines.size());
+		// model.addAttribute("list", paginatedWines);
+		// model.addAttribute("listCnt", allWines.size());
 		model.addAttribute("pagination", pagination);
-		model.addAttribute("daoWineList", svcInface.svcListAll());
+		model.addAttribute("daoWineList", paginatedWines);
 		String wineName = "WINE";
 		model.addAttribute("wineName", wineName); // 얘를 페이지에서 보여줘
 
 		return "subpage1";
 	}
-	
+
 	@RequestMapping("/wine/{cate}")
 	public String wine(@PathVariable("cate") String cate, Model model) {
 		String wineName = "";
-		if("WHITEWINE".equals(cate)) {
+		if ("WHITEWINE".equals(cate)) {
 			wineName = "WHITEWINE";
-		}else if("REDWINE".equals(cate)) {
+		} else if ("REDWINE".equals(cate)) {
 			wineName = "REDWINE";
-		}else if("SPARKLING".equals(cate)) {
+		} else if ("SPARKLING".equals(cate)) {
 			wineName = "SPARKLING";
 		}
-		
+
 		model.addAttribute("daoWineList", svcInface.svcList(cate));
 		model.addAttribute("wineName", wineName.toUpperCase());
 
 		return "subpage1";
 	}
-	
+
 	@RequestMapping("/food")
-	public String food(
-			@RequestParam(name = "winePage" ,defaultValue = "1")int curPage,
-			Model model)throws Exception {
-		List<WineDto> allWines = svcInface.svcListAll();
-		Pagination pagination = new Pagination(allWines.size(), curPage); 
-		
+	public String food(@RequestParam(name = "order", defaultValue = "recent") String order,
+			@RequestParam(name = "winePage", defaultValue = "1") int curPage, Model model) throws Exception {
+		List<WineDto> allWines = svcInface.svcListAll(order);
+		Pagination pagination = new Pagination(allWines.size(), curPage);
+
 		int starIndex = pagination.getStartIndex();
 		int endIndex = Math.min(starIndex + pagination.getPageSize(), allWines.size());
-		 List<WineDto> paginatedWines = allWines.subList(starIndex, endIndex);
-		
-		model.addAttribute("list", paginatedWines);
-		model.addAttribute("listCnt", allWines.size());
+		List<WineDto> paginatedWines = allWines.subList(starIndex, endIndex);
+
+		// model.addAttribute("list", paginatedWines);
+		// model.addAttribute("listCnt", allWines.size());
 		model.addAttribute("pagination", pagination);
-		model.addAttribute("daoWineList", svcInface.svcListAll());
-		String wineName = "Food";
+		model.addAttribute("daoWineList", paginatedWines);
+		String wineName = "FOOD";
 		model.addAttribute("wineName", wineName); // 얘를 페이지에서 보여줘
 
 		return "subpage2";
 	}
+
 	@RequestMapping("/food/{cate}")
 	public String food(@PathVariable("cate") String cate, Model model) {
-		
+
 		String wineName = "";
-		if("Beaf".equals(cate)) {
+		if ("Beaf".equals(cate)) {
 			wineName = "Beaf";
-		}else if("Cheese".equals(cate)) {
+		} else if ("Cheese".equals(cate)) {
 			wineName = "Cheese";
-		}else if("Lamb".equals(cate)) {
+		} else if ("Lamb".equals(cate)) {
 			wineName = "Lamb";
-		}else if("Pasta".equals(cate)) {
+		} else if ("Pasta".equals(cate)) {
 			wineName = "Pasta";
 		}
-		
+
 		model.addAttribute("daoWineList", svcInface.svcListFood(cate));
-	
+
 		model.addAttribute("wineName", wineName.toUpperCase());
-	    
+
 		return "subpage2";
 	}
 
-
 	@RequestMapping("/grape")
-	public String grape(
-			@RequestParam(name = "winePage" ,defaultValue = "1")int curPage,
-			Model model)throws Exception {
-		List<WineDto> allWines = svcInface.svcListAll();
-		Pagination pagination = new Pagination(allWines.size(), curPage); 
-		
+	public String grape(@RequestParam(name = "order", defaultValue = "recent") String order,
+			@RequestParam(name = "winePage", defaultValue = "1") int curPage, Model model) throws Exception {
+		List<WineDto> allWines = svcInface.svcListAll(order);
+		Pagination pagination = new Pagination(allWines.size(), curPage);
+
 		int starIndex = pagination.getStartIndex();
 		int endIndex = Math.min(starIndex + pagination.getPageSize(), allWines.size());
-		 List<WineDto> paginatedWines = allWines.subList(starIndex, endIndex);
-		
-		model.addAttribute("list", paginatedWines);
-		model.addAttribute("listCnt", allWines.size());
+		List<WineDto> paginatedWines = allWines.subList(starIndex, endIndex);
+
+		// model.addAttribute("list", paginatedWines);
+		// model.addAttribute("listCnt", allWines.size());
 		model.addAttribute("pagination", pagination);
-		model.addAttribute("daoWineList", svcInface.svcListAll());
-		String wineName = "Grape";
+		model.addAttribute("daoWineList", paginatedWines);
+		String wineName = "GRAPE";
 		model.addAttribute("wineName", wineName); // 얘를 페이지에서 보여줘
 
 		return "subpage3";
 	}
+
 	@RequestMapping("/grape/{cate}")
 	public String grape(@PathVariable("cate") String cate, Model model) {
-		
+
 		String wineName = cate;
 
-		
 		model.addAttribute("daoWineList", svcInface.svcListGrape(cate));
-	
+
 		model.addAttribute("wineName", wineName.toUpperCase());
-	    
+
 		return "subpage3";
 	}
 
 	@RequestMapping("/country")
-	public String country(
-			@RequestParam(name = "winePage" ,defaultValue = "1")int curPage,
-			Model model)throws Exception {
-		List<WineDto> allWines = svcInface.svcListAll();
-		Pagination pagination = new Pagination(allWines.size(), curPage); 
-		
+	public String country(@RequestParam(name = "order", defaultValue = "recent") String order,
+			@RequestParam(name = "winePage", defaultValue = "1") int curPage, Model model) throws Exception {
+		List<WineDto> allWines = svcInface.svcListAll(order);
+		Pagination pagination = new Pagination(allWines.size(), curPage);
+
 		int starIndex = pagination.getStartIndex();
 		int endIndex = Math.min(starIndex + pagination.getPageSize(), allWines.size());
-		 List<WineDto> paginatedWines = allWines.subList(starIndex, endIndex);
-		
-		model.addAttribute("list", paginatedWines);
-		model.addAttribute("listCnt", allWines.size());
+		List<WineDto> paginatedWines = allWines.subList(starIndex, endIndex);
+
+		// model.addAttribute("list", paginatedWines);
+		// model.addAttribute("listCnt", allWines.size());
 		model.addAttribute("pagination", pagination);
-		model.addAttribute("daoWineList", svcInface.svcListAll());
-		String wineName = "country";
+		model.addAttribute("daoWineList", paginatedWines);
+		String wineName = "COUNTRY";
 		model.addAttribute("wineName", wineName); // 얘를 페이지에서 보여줘
 
 		return "subpage4";
-		}
+	}
+
 	@RequestMapping("/country/{cate}")
 	public String country(@PathVariable("cate") String cate, Model model) {
-		
+
 		String wineName = cate;
 
-		
 		model.addAttribute("daoWineList", svcInface.svcListCountry(cate));
-	
+
 		model.addAttribute("wineName", wineName.toUpperCase());
-	    
+
 		return "subpage4";
 	}
+
 	@GetMapping("/productPage")
-	public String productPageGet(
-			@RequestParam("wineKrName")String wineKrName ,Model model) {
-	
-		
+	public String productPageGet(@RequestParam("wineKrName") String wineKrName, Model model) {
+
 		ProductPageDto wineProduct = ProductPageSvc.getWineProduct(wineKrName);
-		
+
 		model.addAttribute("productPage", wineProduct);
-		//model.addAttribute("getAllWines",ProductPageSvc.getAllWines()); //이건 왜 주는거야?
+
 		return "/productPage";
 	}
 }
-

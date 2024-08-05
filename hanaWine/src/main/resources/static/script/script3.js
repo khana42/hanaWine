@@ -24,18 +24,26 @@ $(function() {
 	//로그인페이지의 회원가입 버튼
 	$("#joinBtn").click(function() {
 
+<<<<<<< HEAD
 		location.href = "/join";
 		
+=======
+>>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 
 
 		window.opener.location.href = "/Join02";
 		window.self.close();
+<<<<<<< HEAD
+=======
+        location.href = "/join";
+		
+>>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 
 	});
 
 	//메인페이지 회원가입 클릭 시
 	$("#join").click(function() {
-		location.href = "/join";
+		location.href = "/Join02";
 	});
 
 	//메인페이지의 로그아웃 클릭
@@ -54,16 +62,26 @@ $(function() {
 		});
 
 
+<<<<<<< HEAD
 
 	//헤더의 gnb 클릭시 	
+=======
+>>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 ///////////커뮤니티////////////////
-$(".qBoard").click(function(){
-	location.href = "/qBoardList";
-	
-	
-});
+$("#community").click(function(){
+
+	location.href = "/noticeList";
+	});
 
 
+
+
+<<<<<<< HEAD
+=======
+
+	//헤더의 gnb 클릭시 	
+
+>>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 	$("#wineCateMain").click(function() {
 		location.href = "/wine";
 	});
@@ -73,10 +91,39 @@ $(".qBoard").click(function(){
 		location.href = "/wine/" + cate;
 
 	});
-	//<c:url var="getBoardListURL" value="/board/getBoardList"></c:url>
+	$("#wineCateFood").click(function() {
+		location.href = "/food";
+	});
+	$(".wineFood").click(function(e) {
+		e.stopPropagation()
+		let cate = $(this).data('cate');
+		location.href = "/food/" + cate;
 
+<<<<<<< HEAD
 	//검색
 
+=======
+	});
+	$("#wineCateGrape").click(function() {
+		location.href = "/grape";
+	});
+	$(".wineGrape").click(function(e) {
+		e.stopPropagation()
+		let cate = $(this).data('cate');
+		location.href = "/grape/" + cate;
+
+	});
+	$("#wineCateCountry").click(function() {
+		location.href = "/country";
+	});
+	$(".wineCountry").click(function(e) {
+		e.stopPropagation()
+		let cate = $(this).data('cate');
+		location.href = "/country/" + cate;
+
+	});
+	
+>>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 	   $(document).ready(function() {
         $("#btnSearch").click(function(event) {
             event.preventDefault(); // 기본 링크 클릭 동작 방지

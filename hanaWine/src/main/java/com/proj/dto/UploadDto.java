@@ -1,58 +1,35 @@
 package com.proj.dto;
 
-import java.sql.Timestamp;
+public class UploadDto {
 
-import lombok.Data;
-
-<<<<<<< HEAD
-
-@Data
-public class WineDto  { 
-	private int idx;
 	private String wineKrName;
 	private String wineEgName;
 	private String typeOfWine;
 	private String nation;
 	private String region;
 	private String grape;
-	private Double price;
-	private Double alcohol;
-	private Double sweetness;
-	private Double acidity;
-	private Double body;
+	private double price;
+	private double alcohol;
+	private double sweetness;
+	private double acidity;
+	private double body;
 	private String goodsImg;
 	private String recipe;
 	private String goodsInfo;
-	private Timestamp createTM;
-
+	private int wineIdx;
+	private int foodIdx;
 	
-=======
-
-public class WineDto {
-
-	
-
-	private	int idx;
-	private String wineKrName;
-	private String wineEgName;
-	private String typeOfWine;
-	private String nation;	    
-	private String region;     
-	private String grape;	    
-	private Double price;       
-	private Double alcohol;     
-	private Double sweetness;
-	private Double acidity;     
-	private Double body;        
-	private String goodsImg;    
-	private String recipe;     
-	private String goodsInfo;   
-	private Timestamp createTM;
-	public int getIdx() {
-		return idx;
+	public int getWineIdx() {
+		return wineIdx;
 	}
-	public void setIdx(int idx) {
-		this.idx = idx;
+	public void setWineIdx(int wineIdx) {
+		this.wineIdx = wineIdx;
+	}
+	public int getFoodIdx() {
+		return foodIdx;
+	}
+	public void setFoodIdx(int foodIdx) {
+		this.foodIdx = foodIdx;
 	}
 	public String getWineKrName() {
 		return wineKrName;
@@ -90,34 +67,34 @@ public class WineDto {
 	public void setGrape(String grape) {
 		this.grape = grape;
 	}
-	public Double getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(Double price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
-	public Double getAlcohol() {
+	public double getAlcohol() {
 		return alcohol;
 	}
-	public void setAlcohol(Double alcohol) {
+	public void setAlcohol(double alcohol) {
 		this.alcohol = alcohol;
 	}
-	public Double getSweetness() {
+	public double getSweetness() {
 		return sweetness;
 	}
-	public void setSweetness(Double sweetness) {
+	public void setSweetness(double sweetness) {
 		this.sweetness = sweetness;
 	}
-	public Double getAcidity() {
+	public double getAcidity() {
 		return acidity;
 	}
-	public void setAcidity(Double acidity) {
+	public void setAcidity(double acidity) {
 		this.acidity = acidity;
 	}
-	public Double getBody() {
+	public double getBody() {
 		return body;
 	}
-	public void setBody(Double body) {
+	public void setBody(double body) {
 		this.body = body;
 	}
 	public String getGoodsImg() {
@@ -138,13 +115,5 @@ public class WineDto {
 	public void setGoodsInfo(String goodsInfo) {
 		this.goodsInfo = goodsInfo;
 	}
-	public Timestamp getCreateTM() {
-		return createTM;
-	}
-	public void setCreateTM(Timestamp createTM) {
-		this.createTM = createTM;
-	}  
-
-
->>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
+	
 }

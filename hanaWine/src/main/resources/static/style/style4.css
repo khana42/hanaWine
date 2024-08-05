@@ -2,87 +2,268 @@
 
 @import url(style_Reset.css);
 
+/*/// 공통 사항 Start ///*/
 div#wrap {
-	width: 690px;
-	border: 3px solid #aaa;
-	padding: 10px;
-	margin: 10px auto;
+	width: 1100px;
+	margin: 0 auto;
+}
+/*/// 공통 사항 End ///*/
+
+/*/// noticeList.jsp Start ///*/
+div.commWrap {
+	margin: 0 auto;
+	text-align: center;
+	border-bottom: 1px solid #000;
 }
 
-hr {
-	margin: 10px 0;
+div.commTit {
+	height: 200px;
+	display: block;
+	line-height: 200px;
+	background-color: rgba(125, 125, 0, 0.1);
 }
 
-table {
-	width: 100%;
+div.commTit h1 {
+	font-size: 30px;
+}
+/* .commGnb Start */
+ul.commGnb {
+	display: inline-block;
+}
+
+ul.commGnb li {
+	padding: 20px;
+	display: inline-block;
+	justify-content: space-around;
+	display: inline-block;
+}
+
+ul.commGnb li span {
+	font-size: 20px;
+}
+
+ul.commGnb li a:hover {
+	font-weight: bold;
+}
+/* .commGnb End */
+
+/* .noticeListWrap Start */
+div.noticeListWrap table {
 	border-collapse: collapse;
 }
 
-th {
-	color: #000;
-	padding: 10px;
-	background-color: rgba(136, 136, 136, 0.1);
+div.noticeListWrap thead tr {
+	height: 60px;
+	border-bottom: 1px solid #aaa;
+	font-size: 20px;
 }
 
-td {
-	padding: 6px;
-	border-bottom: 1px solid #ddd;
+div.noticeListWrap tbody tr {
+	height: 80px;
+	border-bottom: 1px solid #aaa;
+	font-size: 20px;
 }
 
-td:not(:nth-child(3)) {
+div.noticeListWrap tbody tr:hover {
+	background-color: rgba(100, 100, 0, 0.03);
+	font-weight: bold;
+}
+
+div.noticeListWrap tbody tr td:not(:nth-child(2)) {
 	text-align: center;
 }
 
-td.ques {
-	text-align: left;
+div.noticeListWrap tbody tr td:nth-child(2) {
+	text-indent: 30px;
 }
 
-a {
-	color: #333;
-	text-decoration: none;
+th.num {
+	width: 110px;
 }
 
-a:hover {
-	color: rgba(51, 51, 51, 0.5);
-	font-weight: bold;
+th.title {
+	width: 730px;
 }
 
-button:hover {
-	cursor: pointer;
+th.date {
+	width: 260px;
 }
 
-li {
-	line-height: 30px;
+/* .noticeListWrap End */
+
+/*/// noticeList.jsp End ///*/
+
+/*/// noticeWrite.jsp Start ///*/
+div#noticeWriteForm {
+	width: 600px;
+	margin: 0 auto;
+	border: 1px solid #000;
 }
 
-td.delIcon:hover {
-	cursor: pointer;
-	font-weight: bold;
+div#noticeWriteForm hr {
+	margin: 10px;
 }
 
-button {
+div#noticeWriteForm input {
+	margin: 5px;
+	padding: 3px 5px;
+	width: 100%;
+}
+
+div#noticeWriteForm textarea {
 	padding: 10px;
 }
 
-div#search>ul>li {
+div#noticeWriteForm tr {
+	display: block;
+	margin: 10px;
+}
+
+div#noticeWriteForm button {
+	padding: 5px;
+}
+/*/// noticeWrite.jsp End ///*/
+
+/*/// noticeView.jsp Start ///*/
+div#noticeListView {
+	margin-top: 50px;
+}
+
+div.notiTitWrap {
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #aaa;
+	text-indent: 50px;
+}
+
+div.notiConWrap {
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #aaa;
+	text-indent: 50px;
+}
+
+div.commBtnArea {
+	text-align: center;
+}
+
+div.commBtnArea button {
 	display: inline-block;
-	font-size: 14px;
-	padding: 0 5px;
+	padding: 10px 20px;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+	font-size: 20px;
+	background-color: rgba(100, 100, 0, 0.07);
+	color: #666;
 }
 
-div#search>ul>li:hover {
-	color: #aaa;
+div.commBtnArea button:hover {
+	cursor: pointer;
+	font-weight: bold;
+	background-color: rgba(100, 100, 0, 0.5);
+	color: #000;
+}
+/*/// noticeView.jsp End ///*/
+
+/*/// qnaWrite.jsp Start ///*/
+div#qnaWrap {
+	width: 1100px;
+	height: 800px;
+	margin: 0 auto;
 }
 
-textarea{
-	
-	transform: translateX(-110px);
-	
+div.qnaTitWrap {
+	border-bottom: 1px solid #aaa;
+	padding: 30px 0;
 }
 
-div#quesWrap {
-	width: 690px;
-	border: 3px solid #aaa;
+div#qnaWrap h3 {
+	text-align: center;
+}
+
+div.qnaArticleWrap {
+	width: 500px;
+	margin: 0 auto;
 	padding: 10px;
-	margin: 10px auto;
 }
+
+div.qnaArticle label {
+	padding: 10px;
+}
+
+div.qnaArticle label p {
+	font-size: 20px;
+}
+
+div.qnaArticle label input {
+	width: 100%;
+	height: 30px;
+	margin: 10px 0;
+	padding: 5px;
+}
+
+div.qnaArticle label select {
+	width: 100%;
+	height: 30px;
+	margin: 10px 0;
+}
+
+div.qnaArticle label textarea {
+	width: 100%;
+	margin: 10px 0;
+	padding: 5px;
+}
+
+/*/// qnaWrite.jsp End ///*/
+
+/*/// faqList.jsp Start ///*/
+div.faqTit {
+	height: 60px;
+	text-align: center;
+	border-bottom: 1px solid #aaa;
+	line-height: 60px;
+}
+
+.faqList>li>span {
+	display: inline-block;
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	border-bottom: 1px solid #aaa;
+	font-size: 20px;
+	text-indent: 50px
+}
+
+.faqList>li>span:hover {
+	cursor: pointer;
+	font-weight: bold;
+	background-color: rgba(100, 100, 0, 0.03);
+}
+
+.a {
+	display: none;
+}
+
+.a>span {
+	display: block;
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	font-size: 20px;
+	text-indent: 50px;
+	background-color: rgba(100, 100, 0, 0.2);
+}
+
+.on .a {
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #aaa;
+}
+
+div.aside{
+	margin-top: 10px;
+	text-align:center;
+	height: 50px;
+}
+
+/*/// faqList.jsp End ///*/

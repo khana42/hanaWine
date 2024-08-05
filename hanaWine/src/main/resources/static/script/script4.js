@@ -1,42 +1,21 @@
 $(function() {
 
-	$(".delIcon").click(function() {
+	$(".faqList>li>span").click(function() {
 
-		let chk = confirm(`해당 내용을 삭제하시겠습니까?`)
+		$(this).parent().toggleClass("on");
+		$(this).parent().siblings().removeClass("on");
+		$(this).parent().siblings().find(".a").slideUP();
+		$(this).next(".a").stop().slideToggle();
+	});
 
-		if (chk) {
+	$("#qnaBtn").click(function() {
 
-			let num = $(this).children("input[type=hidden]").val();
-			location.href = '/boardDelete?num=' + num;
+		alert(`
+		운영자에게 문의하셨습니다.
+		최대한 빠른 시일 내에 답변드리겠습니다.
+		메인 페이지로 돌아갑니다.`)
 
-		} else {
-			alert(`사용자가 취소하셨습니다.`)
-		}
 
 	});
-	
-	$("#chkBtn").click(function(){
-		
-		let chk = confirm("글 작성을 마치시겠습니까?")
-		
-		if(chk){
-			location.href = `/boardWrite`;
-			
-		}		
-		
-	});
-	
-	
-	
-	$("#cancelBtn").click(function(){
-		
-		let chk = confirm("질문을 취소하시겠습니까?\n확인을 클릭하면 목록으로 돌아갑니다.")
-		
-		if(chk){
-			location.href = `/`;
-			
-		}		
-		
-	});
-	
+
 });
