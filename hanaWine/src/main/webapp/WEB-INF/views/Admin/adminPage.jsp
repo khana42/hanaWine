@@ -135,7 +135,7 @@ footer#footer{
 	<div id="Adminwrap">
 		 <header id="header">
 
-            	<h1><a href="/adminPage">관리자 페이지</a></h1>
+            	<h1><a href="/adminPage">관리자 페이지1</a></h1>
 
             <nav id="AdmintabArea">
             	<ul id="AdminTab" class="dFlex">
