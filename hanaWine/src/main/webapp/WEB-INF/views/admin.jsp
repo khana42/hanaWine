@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+    
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div id="wrap">
-		<h1>검색</h1>
+		<h1>관리자 페이지</h1>
 	</div>
 	<!-- div#wrap -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

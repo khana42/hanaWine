@@ -7,24 +7,42 @@
 <head>
 <meta charset="UTF-8">
 <title>Document</title>
+
+
+ <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="/style/style5.css?v">
+	 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="/script/script5.js"></script>
 </head>
 <body>
 <header id="header">
 		<%@ include file="header.jsp" %>
 	</header>
 	<div id="Join2wrap">
+<<<<<<< HEAD
+
+		
+        <header id="header">
+            <h1>회원 가입</h1>
+        </header>
+        <hr>
+		<div id="bd"></div>
+
+=======
 	
 			<h1>회원 가입</h1>
 		
 		<hr>
+>>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 		<main id="mainjoin">
-			<form id="join_form1" method="post" action="/members/register">
+			<form action="/member/Join02" method="post">
+
 				<div id="basicInfoarea">
+
 					<div class="userInfo">
 						<label id="username"> <span class="req info1">이름</span> <input
-							type="text" class="infoInput" id="memberName" required
-							name="memberName" minlength="2">
+							type="text" class="infoInput" id="username" name="username" required>
 						</label>
 					</div>
 
@@ -32,34 +50,58 @@
 
 					<div class="userInfo">
 						<label> <span class="req info1">아이디</span> <input
-							type="text" name="memberId" class="infoInput" id="userid"
+							type="text" class="infoInput" id="userid"
 							placeholder="(영문소문자/숫자,4~16자)" required size="11">
+<<<<<<< HEAD
+						</label> <input type="button" id="btnchk" value="중복확인">
+					</div>
+
+
+=======
 						</label>
 						<button type="button" id="btnchk">중복확인</button>
 					<input type="text" value="N" id="hidChk" hidden="hidden" />
 					<input type="text" value="N" id="btnHidChk" hidden="hidden" />
 					</div>
 	     
+>>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 					<div class="userInfo">
 						<label> <span class="req info1">비밀번호</span> <input
-							type="password" class="infoInput" id="userpw1" name="memberPw"
-							required>
+							type="password" class="infoInput" id="userpw1" name="userpw1"required
+							placeholder="(영문대소문자/숫자/특수문자 중 2가지 이상 조합 ,10~16자)">
 						</label>
+
 					</div>
+
 
 					<div class="userInfo">
 						<label> <span class="req info1">비밀번호 확인</span> <input
 							type="password" class="infoInput" id="userpw2" required>
 						</label>
-					</div>
 
+					</div>
 
 					<div class="userInfo">
 						<label> <span class="req info1">이메일</span> <input
-							type="email" name="memberMail" class="infoInput" id="useremail"
-							required placeholder="이메일 주소를 입력해 주세요.">
+							type="email" class="infoInput" id="useremail" required size="10">
+							<span>@</span>
+
+							<select id="emailDomain"
+							onchange="fnemailDomain(this.value); return false;">
+								<option value="">-선택-</option>
+								<option value="naver.com">naver.com</option>
+								<option value="gmail.com">gmail.com</option>
+								<option value="hanmail.net">hanmail.net</option>
+								<option value="hotmail.com">hotmail.com</option>
+								<option value="korea.com">korea.com</option>
+								<option value="nate.com">nate.com</option>
+								<option value="yahoo.com">yahoo.com</option>
+						</select>
 						</label>
 					</div>
+					
+					
+								
 
 					<div class="userInfo">
 
@@ -70,38 +112,68 @@
 				
 				
 						
+<<<<<<< HEAD
+						<input type="text" class="infoInput" placeholder="" disabled id="useraddress"/>
+						<input type="text" class="el_input"
+							placeholder="상세주소를 입력해주세요." id="roadAddressDetail" />
+=======
 						<input type="text" class="infoInput" placeholder="" disabled id="useraddress" />
 						<input type="text" class="el_input"
 							placeholder="상세주소를 입력해주세요." id="roadAddressDetail" name="memberAddr1"/>
+>>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 						
 						<button class="el_btn" id="userAdbtn">주소 등록하기</button>
 						</label>
 					</div>
+					<!-- div.userInfo -->
+			
+			
+			
+		
 
 					<div class="userInfo" id="phoneArea">
-						<label> <span class="req info1" id="phone">휴대전화</span> <select
-							name="memberPhone" id="phonePrefix" required>
-								<option value="">-선택-</option>
-								<option value="010">010</option>
-								<option value="011">011</option>
-								<option value="017">017</option>
-								<option value="018">018</option>
-								<option value="019">019</option>
+						<label> <span class="req info1" id="phone">휴대전화</span> <select>
+								<option>010</option>
+								<option>011</option>
+								<option>017</option>
+								<option>018</option>
+								<option>019</option>
 						</select> <span>-</span> <input type="text" class="phoneNum" id="usernum1"
-							required name="memberPhone1" maxlength="4" placeholder="4자리">
-							<span>-</span> <input type="text" class="phoneNum" id="usernum2"
-							required name="memberPhone2" maxlength="4" placeholder="4자리">
+							required> <span>-</span> <input type="text"
+							class="phoneNum" id="usernum2" required>
+
 						</label>
+<<<<<<< HEAD
+
+
+						<button type="button" id="codenum">인증번호받기</button>
+
+					</div>
+					<div class="userInfo">
+						<label> <span class="req info1">인증번호입력</span> <input
+							type="text" class="infoInput" id="usercode">
+						</label>
+					</div>
+					<!--div.userInfo-->
+					<!-- 휴대폰 영역 끝 <div class="userInfo" id="phoneArea"> -->
+=======
 						<input type="hidden" value="" name="fullNum">
 					</div>
 				</div>
 				
+>>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 
 
+				</div>
+				<!--div.basicInfoarea-->
+
+				<!-- 전체동의 -->
+				<div id="agreeAllarea">
 
 				<div id="uAA">
 				
 					<div id="agreeAllarea">
+
 						<label id="labelchkAll"> <input type="checkbox"
 							id="agreeAll"> <span>전체동의</span> <span>이용약관 및
 								개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다. </span>
@@ -109,18 +181,26 @@
 
 						<div class="agreeDiv">
 							<p class="agreeP">[필수] 이용약관 동의</p>
-							<iframe src="약관동의 텍스트/이용약관동의.txt"></iframe>
+							<iframe src="/iframe/text01.html"></iframe>
+
+
 							<div class="termAgree">
 								<label id="reqLable1"> <span class="agreeQSpan">이용약관에
 										동의하십니까?</span> <input type="checkbox" class="chkAgree" id="reqChk1">
 									<span class="agreeSpan">동의함 (필수)</span>
 								</label>
 							</div>
+
+
 						</div>
+						<!-- div.agreeDiv 이용약관동의 -->
+
 
 						<div class="agreeDiv">
+
 							<p class="agreeP">[필수] 개인정보 수집 및 이용 동의</p>
-							<iframe src="약관동의 텍스트/개인정보 수집 및 이용동의.txt"></iframe>
+							<iframe src="/iframe/text02.html"></iframe>
+
 							<div class="termAgree">
 								<label id="reqLable2"> <span class="agreeQSpan">개인정보
 										수집 및 이용에 동의 하십니까</span> <input type="checkbox" class="chkAgree"
@@ -129,10 +209,14 @@
 							</div>
 						</div>
 
+						<!-- div.agreeDiv 개인정보동의 -->
 						<div class="agreeDiv">
+
 							<p class="agreeP">[선택] 쇼핑정보 수신 동의</p>
-							<iframe src="약관동의 텍스트/쇼핑정보 선택동의.txt"></iframe>
+							<iframe src="/iframe/text03.html"></iframe>
+
 							<div class="termAgree">
+
 								<div class="agreeleftArea">
 									<label> <span class="agreeQSpan">[선택] SMS 수신을
 											동의하십니까?</span> <input type="checkbox" class="chkAgree">
@@ -140,25 +224,37 @@
 											동의하십니까?</span> <input type="checkbox" class="chkAgree">
 									</label>
 								</div>
+
 							</div>
 						</div>
+						<!-- div.agreeDiv 쇼핑동의 -->
+
 					</div>
+					<!-- div#agreeAllarea-->
 
 					<div id="btnArea">
-						<button type="button" id="joinbtn">회원 가입</button>
+						<button type="submit" id="joinbtn">회원 가입</button>
+						
 					</div>
-				</div>
-
+		
 			</form>
-		</main>
-	</div>
 
+<<<<<<< HEAD
+
+		</main>
+		<!-- main#main -->
+
+	</div>
+	<!-- div#wrap -->
+	 
+=======
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="/script/script5.js"></script>
 	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
 
+>>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 </body>
 </html>
-
+							

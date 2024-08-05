@@ -9,33 +9,41 @@
 <head>
     <meta charset="UTF-8">
     <title>회원가입</title>
-   <link rel="stylesheet" href="/style/style5.css?v">
+<link rel="stylesheet" href="/style/style5.css?v">
 </head>
 
 <body>
     <div id="Join1wrap">
-	<!-- <h1>${"회원가입 첫 페이지(join01.jsp)" }</h1> -->
-        <div id="Join1">
-            <a href="join_02.html">쇼핑몰 회원가입</a>
+		<div id="Join1">
+            <p id=joingo>쇼핑몰 회원가입</p>
+            <a href="/member/Join02.jsp">쇼핑몰 회원가입</a>
         </div>
-        <hr>
+        <div id="bd"></div>
         <!-- div#Join -->
 
-        <div id="N_K">
+        <div class="N_K">
 
             <a href="#">
-                <img src="n_k/n.jpg" alt="">
-                <span class="nk">네이버 아이디 회원가입</span>
+                <img src="/img5/kko.jpg" alt="">
+                <span class="n_k">네이버 아이디 회원가입</span>
             </a>
+        </div>
+        
+        
 
+		<div class="N_K">
             <a href="#">
-                <img src="n_k/kko.jpg" alt="">
-                <span class="nk">카카오 아이디 회원가입</span>
+               <img src="/img5/n.jpg" alt="">
+                <span class="n_k">카카오 아이디 회원가입</span>
             </a>
+            
+            </div>
+            
+            <div class="N_K">
             <span id="text">！ SNS계정을 연동하여 빠르고 쉽고 안전하게 회원가입 할 수 있습니다<br>
                 　이 과정에서 고객님의 데이터는 철저하게 보호됩니다.
             </span>
-        </div>
+ 			</div>
 
 
         <div id="login_go">

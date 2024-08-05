@@ -32,14 +32,9 @@ public class FrontController {
 		return "main";
 	}
 
-	@RequestMapping("Join02")
+	@RequestMapping("/Join02")
 	public String Join() {
 		return "Join02";
-	}
-
-	@RequestMapping("login")
-	public String login() {
-		return "login";
 	}
 
 	// 목록 페이지
