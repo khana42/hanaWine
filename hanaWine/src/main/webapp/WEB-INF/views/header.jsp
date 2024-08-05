@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 
 <%
-String sUid = (String)session.getAttribute("sUid");
+String memberId = (String)session.getAttribute("memberId");
 %>   
 
 <!DOCTYPE html>
@@ -23,11 +24,11 @@ String sUid = (String)session.getAttribute("sUid");
 
 		<div id="loginArea">
 			<ul class="dFlex">
- 			<% if (sUid == null) { %> 
+ 			<% if (memberId == null) { %> 
 				<li id="login">로그인</li>
 				<li id="join">회원가입</li>
 			<% } else { %>	
-				<li id="logout" ><%=sUid  %>님 로그아웃</li>
+				<li id="logout" ><%=memberId  %>님 로그아웃</li>
  			<% } %> 
 				<li>장바구니</li>
 			</ul>
@@ -35,6 +36,43 @@ String sUid = (String)session.getAttribute("sUid");
 
 	</div>
 	<!-- div#logoArea -->
+	
+	<!-- modal -->
+	<div id="loginWrap">		
+		<div id="loginModal" class="modal">
+			<div class="modal-content">
+				<div id="modalCloseIconArea">
+	            	<span id="closeIcon">&times;</span>
+	       		</div>
+	       	</div>
+	       	
+			<h1>로그인</h1>
+			
+			<form action="/login" method="post">
+				<input type="text" name="memberId" required autofocus
+					placeholder="아이디 입력"> <input type="password"
+					name="memberPw" required placeholder="비밀번호 입력">
+				<button type="submit" id="loginBtn">로그인</button>
+				<button type="button" id="joinBtn">회원가입</button>
+			</form>
+			
+			 <div id="errorMessage">
+                        ${error}
+                    </div> <!-- 오류 메시지 -->
+	
+			<div id="find">
+				<ul class="dFlex">
+					<li>아이디 찾기</li>
+					<li>|</li>
+					<li>비밀번호 찾기</li>
+				</ul>
+			</div>
+			<!-- div#find -->
+					
+		</div>
+		<!-- div#loginModal -->
+	</div>	
+	<!-- div#loginWrap -->
 
 	<div id="gnbArea" class="dFlex">
 		<nav id="nav">
@@ -84,24 +122,20 @@ String sUid = (String)session.getAttribute("sUid");
 					</ul>
 				</li>
 
-				<li id="community">커뮤니티
-					<ul class="subMenu">
-						<li class="notice">공지사항</li>
-						<li class="notice">자주하는 질문</li>
-						<li class="notice">1:1 문의</li>
-					</ul>
-				</li>
+				
 
-				<li class=qBoard>커뮤니티</li>
+				<li class="qBoard" id="community">커뮤니티
+				
+				</li>
 
 			</ul>
 		</nav>
 
 		<div id="search">
-
 			<form action="/search" method="GET">
 				<input type="text" id="keyword" name="keyword" placeholder="와인을 검색해 보세요.">
 				<a id="btnSearch" href="/search">
+				
 					<img src="/img/btn_search.png" alt="검색">
 				</a>
 				
