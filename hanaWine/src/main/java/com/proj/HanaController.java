@@ -101,6 +101,7 @@ public class HanaController {
 		return "Join02";
 	}
 
+	
 	// 와인 종류 검색
 	@GetMapping("/search")
 	public String search(@RequestParam("keyword") String keyword, Model model) {
