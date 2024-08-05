@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -29,22 +30,23 @@ public class UploadController {
 		return "Upload";
 	}
 	
-	@PostMapping("/insert")
-	public String upload(@RequestParam(value = "wineKrName")String wineKrName,
-			@RequestParam(value = "wineEgName")String wineEgName,
-			@RequestParam(value = "typeOfWine")String typeOfWine,
-			@RequestParam(value = "nation")String nation,
-			@RequestParam(value = "region")String region,
-			@RequestParam(value = "grape")String grape,
-			@RequestParam(value = "price")double price,
-			@RequestParam(value = "alcohol")double alcohol,
-			@RequestParam(value = "sweetness")double sweetness,
-			@RequestParam(value = "acidity")double acidity,
-			@RequestParam(value = "body")double body,
-		    @RequestParam(value = "goodsImg")MultipartFile  goodsImg,
-			@RequestParam(value = "recipe")MultipartFile  recipe,
-			@RequestParam(value = "goodsInfo")MultipartFile  goodsInfo,
-			@RequestParam(value = "foodIdx") List<Integer> foodIdxList,
+	@RequestMapping(value="/insert", method = {RequestMethod.GET, RequestMethod.POST})
+//	@PostMapping("/insert")
+	public String upload(@RequestParam("wineKrName")String wineKrName,
+			@RequestParam("wineEgName")String wineEgName,
+			@RequestParam("typeOfWine")String typeOfWine,
+			@RequestParam("nation")String nation,
+			@RequestParam("region")String region,
+			@RequestParam("grape")String grape,
+			@RequestParam("price")double price,
+			@RequestParam("alcohol")double alcohol,
+			@RequestParam("sweetness")double sweetness,
+			@RequestParam( "acidity")double acidity,
+			@RequestParam("body")double body,
+		    @RequestParam("goodsImg")MultipartFile  goodsImg,
+			@RequestParam("recipe")MultipartFile  recipe,
+			@RequestParam("goodsInfo")MultipartFile  goodsInfo,
+			@RequestParam("foodIdx") List<Integer> foodIdxList,
 			RedirectAttributes redirectAttributes) {
 		try{
 			
