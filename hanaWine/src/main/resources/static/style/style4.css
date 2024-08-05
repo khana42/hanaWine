@@ -4,42 +4,53 @@
 
 /*/// 공통 사항 Start ///*/
 div#wrap {
-	width: 1100px;
+	width: 90%;
 	margin: 0 auto;
 }
 /*/// 공통 사항 End ///*/
 
 /*/// noticeList.jsp Start ///*/
 div.commWrap {
+	width: 80%;
 	margin: 0 auto;
 	text-align: center;
-	border-bottom: 1px solid #000;
+	padding: 30px 60px;
 }
 
 div.commTit {
+	border-width: 10%;
 	height: 200px;
 	display: block;
 	line-height: 200px;
-	background-color: rgba(125, 125, 0, 0.1);
+	/* background-color: rgba(125, 125, 0, 0.1); */
 }
 
 div.commTit h1 {
-	font-size: 30px;
+	font-family: "Playfair Display", serif;
+	font-optical-sizing: auto;
+	margin-bottom: 10px;
+	color: #333131;
 }
 /* .commGnb Start */
 ul.commGnb {
 	display: inline-block;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin: 0 auto;
+	text-align: center;
 }
 
 ul.commGnb li {
-	padding: 20px;
+	padding: 20px 30px;
 	display: inline-block;
 	justify-content: space-around;
 	display: inline-block;
 }
 
 ul.commGnb li span {
-	font-size: 20px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	font-size: 13px;
+	font-weight: 300;
 }
 
 ul.commGnb li a:hover {
@@ -48,20 +59,35 @@ ul.commGnb li a:hover {
 /* .commGnb End */
 
 /* .noticeListWrap Start */
+div.noticeListWrap{
+	width: 80%;
+	margin: 0 auto;
+}
+
+
 div.noticeListWrap table {
+	margin: 0 auto;
 	border-collapse: collapse;
 }
 
 div.noticeListWrap thead tr {
 	height: 60px;
 	border-bottom: 1px solid #aaa;
-	font-size: 20px;
+}
+
+div.noticeListWrap thead tr th {
+	font-size: 15px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 div.noticeListWrap tbody tr {
 	height: 80px;
 	border-bottom: 1px solid #aaa;
-	font-size: 20px;
+}
+
+div.noticeListWrap tbody tr td {
+	font-size: 14px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 div.noticeListWrap tbody tr:hover {
@@ -95,19 +121,22 @@ th.date {
 
 /*/// noticeWrite.jsp Start ///*/
 div#noticeWriteForm {
-	width: 600px;
+	width: 80%;
 	margin: 0 auto;
-	border: 1px solid #000;
 }
 
 div#noticeWriteForm hr {
-	margin: 10px;
+	margin: 10px 0;
 }
 
 div#noticeWriteForm input {
 	margin: 5px;
 	padding: 3px 5px;
 	width: 100%;
+}
+
+div#noticeWriteForm table{
+	margin: 0 auto;
 }
 
 div#noticeWriteForm textarea {
@@ -126,6 +155,8 @@ div#noticeWriteForm button {
 
 /*/// noticeView.jsp Start ///*/
 div#noticeListView {
+	width: 80%;
+	margin: 0 auto;
 	margin-top: 50px;
 }
 
@@ -136,6 +167,11 @@ div.notiTitWrap {
 	text-indent: 50px;
 }
 
+div.notiTitWrap h3{
+	font-size: 15px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
 div.notiConWrap {
 	padding-bottom: 30px;
 	margin-bottom: 30px;
@@ -143,8 +179,14 @@ div.notiConWrap {
 	text-indent: 50px;
 }
 
+div.notiConWrap p {
+	font-size: 14px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
 div.commBtnArea {
 	text-align: center;
+	margin: 10px 0 40px 0;
 }
 
 div.commBtnArea button {
@@ -152,7 +194,8 @@ div.commBtnArea button {
 	padding: 10px 20px;
 	border: 1px solid #aaa;
 	border-radius: 3px;
-	font-size: 20px;
+	font-size: 14px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
 	background-color: rgba(100, 100, 0, 0.07);
 	color: #666;
 }
@@ -167,9 +210,9 @@ div.commBtnArea button:hover {
 
 /*/// qnaWrite.jsp Start ///*/
 div#qnaWrap {
-	width: 1100px;
-	height: 800px;
+	width: 80%;
 	margin: 0 auto;
+	margin-top: 20px;
 }
 
 div.qnaTitWrap {
@@ -179,6 +222,8 @@ div.qnaTitWrap {
 
 div#qnaWrap h3 {
 	text-align: center;
+	font-size: 15px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 div.qnaArticleWrap {
@@ -192,7 +237,8 @@ div.qnaArticle label {
 }
 
 div.qnaArticle label p {
-	font-size: 20px;
+	font-size: 14px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 div.qnaArticle label input {
@@ -224,6 +270,17 @@ div.faqTit {
 	line-height: 60px;
 }
 
+div.faqListWrap{
+	width: 80%;
+	margin: 0 auto;
+}
+
+div.faqContent{
+	width: 80%;
+	margin: 0 auto;
+}
+
+
 .faqList>li>span {
 	display: inline-block;
 	width: 100%;
@@ -231,7 +288,10 @@ div.faqTit {
 	line-height: 80px;
 	border-bottom: 1px solid #aaa;
 	font-size: 20px;
-	text-indent: 50px
+	text-indent: 50px;
+	font-size: 15px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	
 }
 
 .faqList>li>span:hover {
@@ -242,6 +302,7 @@ div.faqTit {
 
 .a {
 	display: none;
+	background-color: rgba(100, 100, 0, 0.1);
 }
 
 .a>span {
@@ -249,9 +310,9 @@ div.faqTit {
 	width: 100%;
 	height: 80px;
 	line-height: 80px;
-	font-size: 20px;
+	font-size: 14px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
 	text-indent: 50px;
-	background-color: rgba(100, 100, 0, 0.2);
 }
 
 .on .a {
@@ -260,10 +321,15 @@ div.faqTit {
 	border-bottom: 1px solid #aaa;
 }
 
-div.aside{
-	margin-top: 10px;
-	text-align:center;
+div.aside {
+	margin-top: 50px;
+	text-align: center;
 	height: 50px;
+}
+
+div.aside h3 {
+	font-size: 15px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 /*/// faqList.jsp End ///*/
