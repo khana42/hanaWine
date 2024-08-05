@@ -1,20 +1,6 @@
 
 $(function() {
 
-// //<div id="RouteArea"> 시작 // //
-    $(document).ready(function() {
-        var currentPath = window.location.pathname;
-        if (currentPath.includes("main.jsp")) {
-            $('#mainLink').addClass('bold');
-        } else if (currentPath.includes("subpage1.jsp")) {
-            $('#subpageLink').addClass('bold');
-        } else if (currentPath.includes("productPage.jsp")) {
-            $('#productpageLink').addClass('bold');
-        }
-    });
-// //<div id="RouteArea"> 끝 // //
-
-
 	// // 상세페이지 시작//  //
 
 	$(document).ready(function() {
@@ -42,6 +28,14 @@ $(function() {
 				"background-color": "#000",
 				"color": "#fff"
 			});
+
+
+        // 해당 섹션으로 스크롤 포커스 이동
+        $('html, body').animate({
+          scrollTop: $("." + targetClass).offset().top
+        }, 'fast');
+
+
 
 		});
 

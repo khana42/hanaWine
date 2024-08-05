@@ -6,7 +6,7 @@ import lombok.Data;
 public class ProductPageDto {
 	
 
-	  private int num;
+	  private int idx;
 	    private String brand;
 	    private String typeOfWine;
 	    private String nation;
