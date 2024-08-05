@@ -10,16 +10,54 @@
 </head>
 <body>
 	<div id="wrap">
-		<div id="adminHeader" class="dFlex">
-			<a id="adminPageLogo" href="adminPage"><img src="/images/adminlogo.png" alt="관리자페이지로"></a> 
-			<div id="adminLogoArea">
-				<a id="adminLogoImg" href="/"> 
-					<img id="adminLogo" src="/img/logo.png" alt="메인으로"> 
-				</a>
+
+		<a id="adminPageLogo" href="adminPage"><img
+			src="/images/adminlogo.png" alt="관리자페이지로"></a>
+
+		<div id="adminLogoArea" class="dFlex">
+
+			<div id="wineList" class="dFlex">
+				<a id="adminLogoImg" href="/"> <img id="adminLogo"
+					src="/img/logo.png" alt="메인으로">
+				</a> 
 				<span>와인 목록 보기</span>
 			</div>
+
+			<div id="wineListCode" class="dFlex">
+				<ul>
+					<span>종류</span>
+					<li>T01 : WhiteWine</li>
+					<li>T02 : redWine</li>
+					<li>T03 : sparkling</li>
+				</ul>
+				<ul>
+					<span>나라</span>
+					<li>N01 : Italy</li>
+					<li>N02 : UnitedStates</li>
+					<li>N03 : NewZealand</li>
+					<li>N04 : Argentina</li>
+					<li>N05 : Australia</li>
+					<li>N06 : France</li>
+					<li>N07 : Germany</li>
+				</ul>
+				<ul>
+					<span>종류</span>
+					<li>G1 : 몬테풀치아노 Montepulciano</li>
+					<li>G2 : 샤도네이 Chardonnay</li>
+					<li>G3 : 피노누아 Pinot Noir</li>
+					<li>G4 : 말벡 Malbec</li>
+					<li>G5 : 소비뇽블랑 Sauvignon Blanc</li>
+					<li>G6 : 쉬라즈 Shiraz</li>
+					<li>G7 : 진판델 Zinfandel</li>
+					<li>G8 : 네비올로 Nebbiolo</li>
+					<li>G9 : 산지오베제 Sangiovese</li>
+					<li>G10 : 코르비나 Corvina</li>
+					<li>G11 : 모스카토 Moscato</li>
+					<li>G12 : 리슬링 Riesling</li>
+				</ul>
+			</div>
 		</div>
-		
+
 		<table id="Listtable">
 			<tbody id="prnArea">
 				<tr id="colArea">
