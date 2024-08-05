@@ -26,10 +26,6 @@ public class FrontController {
 
 	@Autowired
 	private ProductPageSvc ProductPageSvc;
-<<<<<<< HEAD
-		
-	//목록	페이지
-=======
 
 	@RequestMapping("/")
 	public String root() {
@@ -47,7 +43,6 @@ public class FrontController {
 	}
 
 	// 목록 페이지
->>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 	@RequestMapping("/wine")
 	public String root(@RequestParam(name = "winePage", defaultValue = "1") int curPage,
 			@RequestParam(name = "order", defaultValue = "recent") String order, Model model) throws Exception {

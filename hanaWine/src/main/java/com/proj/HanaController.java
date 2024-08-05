@@ -34,9 +34,6 @@ public class HanaController {
 	@Autowired
 	private UserMapper userMapper;
 
-	//	@Autowired
-	//	private SearchService searchService;
-
 	@Autowired
 	private WineService wineService;
 
@@ -75,63 +72,29 @@ public class HanaController {
 		return "userList";
 	}
 
-	// 로그인
-<<<<<<< HEAD
-//	@GetMapping("/login")
-//	public String index(HttpServletRequest req) {
-//		HttpSession session = req.getSession(false);
-//		if (session != null && userServiceIf.isLoggedIn(session)) {
-//
-//			return "redirect:/"; // 로그인 상태면 메인 페이지로 이동
-//		} else {
-//			return "redirect:/"; // 로그인 되지 않았으면 로그인 페이지로 이동
-//		}
-//	}
-	
-	@PostMapping("/login")
-	public String handleLogin(@RequestParam("memberId") String memberId, @RequestParam("memberPw") String memberPw,
-			HttpServletRequest req,Model model) {
-=======
-	@GetMapping("/main")
-	public String index(HttpServletRequest req) {
-		HttpSession session = req.getSession(false);
-		if (session != null && userServiceIf.isLoggedIn(session)) {
-
-			return "redirect:/"; // 로그인 상태면 메인 페이지로 이동
-		} else {
-			return "login"; // 로그인 되지 않았으면 로그인 페이지로 이동
-		}
-	}
-
+	//로그인
 	@PostMapping("/main")
 	public String handleLogin(@RequestParam("memberId") String memberId, @RequestParam("memberPw") String memberPw,
-			HttpServletRequest req) {
->>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
+			HttpServletRequest req, Model model) {
+
 		// 로그인 성공 여부 확인
-		HttpSession session = req.getSession(); // 새로운 세션을 생성하거나 기존 세션을 가져옴
-		boolean loginResult = userServiceIf.login(memberId, memberPw, session);
+				HttpSession session = req.getSession(); // 새로운 세션을 생성하거나 기존 세션을 가져옴
+				boolean loginResult = userServiceIf.login(memberId, memberPw, session);
 
-		if (loginResult) {
-			// 세션에 사용자 정보 저장
-			session.setAttribute("memberId", memberId);
-			session.setMaxInactiveInterval(20);
+				if (loginResult) {
+					// 세션에 사용자 정보 저장
+					session.setAttribute("memberId", memberId);
+					session.setMaxInactiveInterval(20);
 
-<<<<<<< HEAD
-			return "redirect:/"; // 로그인 성공 시 메인 페이지로
+					return "redirect:/"; // 로그인 성공 시 메인 페이지로
 
-		} else {
-			model.addAttribute("error", "아이디와 비밀번호가 일치하지 않습니다.");
-			return "redirect:/"; // 로그인 실패 시 다시 로그인 페이지로
-=======
-			return "main"; // 로그인 성공 시 메인 페이지로
+				} else {
+					model.addAttribute("error", "아이디와 비밀번호가 일치하지 않습니다.");
+					return "redirect:/"; // 로그인 실패 시 다시 로그인 페이지로
 
-		} else {
-
-			return "login"; // 로그인 실패 시 다시 로그인 페이지로
->>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
-
-		}
+				}
 	}
+	
 
 	// 로그아웃
 	@RequestMapping("/logout")
@@ -147,23 +110,7 @@ public class HanaController {
 	public String search(@RequestParam("keyword") String keyword, Model model) {
 		List<WineDto> wines = wineService.searchWines(keyword);
 		model.addAttribute("wines", wines);
-<<<<<<< HEAD
 		return "searchPage"; 
-	}
-
-	// 중복확인
-	@PostMapping("/idChk")
-	@ResponseBody
-	public String idChk(@RequestParam("idchk") String idchk) {
-		UserVO idChk = userServiceIf.getUserByID(idchk);
-		if (ObjectUtils.isEmpty(idChk)) {
-			
-			return "ok";
-		}
-		return "no";
-=======
-		return "subpage11";
->>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 	}
 
 	// 중복확인
