@@ -49,17 +49,12 @@ String memberId = (String)session.getAttribute("memberId");
 			<h1>로그인</h1>
 			
 			<form action="/login" method="post">
-				<input type="text" name="memberId" required autofocus
-					placeholder="아이디 입력"> <input type="password"
-					name="memberPw" required placeholder="비밀번호 입력">
+				<input type="text" name="memberId" required autofocus placeholder="아이디 입력"> 
+				<input type="password" name="memberPw" required placeholder="비밀번호 입력">
 				<button type="submit" id="loginBtn">로그인</button>
 				<button type="button" id="joinBtn">회원가입</button>
 			</form>
 			
-			 <div id="errorMessage">
-                        ${error}
-                    </div> <!-- 오류 메시지 -->
-	
 			<div id="find">
 				<ul class="dFlex">
 					<li>아이디 찾기</li>
@@ -132,12 +127,7 @@ String memberId = (String)session.getAttribute("memberId");
 		</nav>
 
 		<div id="search">
-<<<<<<< HEAD
-=======
 
-		
-
->>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 			<form action="/search" method="GET">
 				<input type="text" id="keyword" name="keyword" placeholder="와인을 검색해 보세요.">
 				<a id="btnSearch" href="/search">

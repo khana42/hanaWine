@@ -184,7 +184,6 @@ main#main {
 
 /* footer CSS 시작 */
 div#footerWrap {
-	border: 1px solid #000;
 	width: 1100px;
 	margin: 20px auto;
 	justify-content: space-between;
@@ -192,11 +191,25 @@ div#footerWrap {
 #footerWrap #text{
 	width: 700px;
 	padding: 25px 0 0 15px;
-	border: 1px solid #000;
+	line-height: 2;
+}
+#footerWrap #text .email{
+	justify-content: space-between;
+}
+#footerWrap #text .email1 p:last-child{
+	padding-right: 19px;
+}
+#footerWrap #text .email2 p:last-child{
+	padding-right: 28px;
+}
+#footerWrap #footerLogo{
+	padding-top: 80px;
+	margin-right: 30px;
 }
 /* footer CSS 끝 */
 
 /* login CSS 시작 */
+/* 로그인 모달 CSS 시작*/
 #loginModal h1 {
 	text-align: center;
 	margin: 20px 0 ;
@@ -267,7 +280,7 @@ div#footerWrap {
 	font-weight: bold;
 }
 
-/* 로그인 모달 CSS 시작*/
+
 
 /* 모달 배경 스타일 */
 div#loginWrap {
@@ -319,4 +332,88 @@ div#loginModal {
 }
 /* 로그인 모달 CSS 끝*/
 
+div#loginPage {
+/*    border: 1px solid #000; */
+   width: 320px;
+   padding: 15px;
+   margin: 20px auto;
+   text-align: center;
+}
+
+#loginPage #logo{
+   text-align: center;
+}
+
+#loginPage h1 {
+	text-align: center;
+	margin-top: 150px;
+}
+
+#loginPage form {
+	width: 100%;
+	padding: 15px 20px 10px;
+	margin: 10px auto;
+}
+
+#loginPage form input[type=text] {
+	font-size: 17px;
+	padding: 3px 8px;
+	margin-bottom: 4px;
+}
+
+#loginPage form input[type=password] {
+	font-size: 17px;
+	padding: 3px 8px;
+	margin-bottom: 4px;
+}
+
+#loginPage form button {
+	width: 83%;
+	font-size: 17px;
+	font-weight: bold;
+	padding: 3px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+#loginPage form label {
+	display: block;
+	/* 	border: 1px solid #000; */
+	margin-top: 3px;
+}
+
+#loginPage form span {
+	font-size: 12px;
+}
+
+#loginPage form input[type=checkbox] {
+	transform: translateY(2px);
+}
+
+#loginPage  p {
+	color: red;
+	text-align: center;
+}
+
+#loginPage #find {
+	margin-top: 30px;
+}
+
+#loginPage #find ul {
+	justify-content: center;
+}
+
+#loginPage #find ul li {
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+#loginPage #find ul li:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+#loginPage #errorMessage{
+	color: red;
+}
 /* login CSS 끝 */

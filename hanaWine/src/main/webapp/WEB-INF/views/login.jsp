@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/style/style3.css?v">
 </head>
 <body>
-	<div id="loginWrap">
+	<div id="loginPage">
 
 		<div id="logo">
 			<a href="/">
@@ -20,7 +20,7 @@
 		
 		<h1>로그인</h1>
 
-		<form action="/main" method="post" >
+		<form action="/login" method="post" >
 			<input type="text" name="memberId" required autofocus placeholder="아이디 입력">
 			<input type="password" name="memberPw" required placeholder="비밀번호 입력">
 			<button type="submit" id="loginBtn">로그인</button>
@@ -28,6 +28,10 @@
 			<label> <input type="checkbox"> <span>아이디 저장</span>
 			</label>
 		</form>
+		
+		<div id="errorMessage">
+			${error}
+		</div> <!-- 오류 메시지 -->
 		
 		<div id="idSave"></div>
 

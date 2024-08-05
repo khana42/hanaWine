@@ -1,0 +1,283 @@
+@charset "UTF-8";
+@import url(style_Reset.css);
+
+div#wrap {
+    width: 95%;
+    border: 2px solid #80f; 
+    border-radius: 6px;
+    padding: 10px 6px;
+    margin: 20px auto;
+}
+
+#wrap #adminHeader{
+	
+	
+}
+
+#wrap #adminHeader #adminPageLogo{
+	width: 200px;
+/* 	border: 2px solid #000; */
+}
+#wrap #adminHeader #adminLogoArea{
+	text-align: center;
+	border: 2px solid #000;
+}
+#wrap #adminHeader #adminLogoImg{
+	border: 2px solid #08f;
+	
+	text-align: center;
+}
+#wrap #adminHeader #adminLogoArea span{
+	font-weight: bold;
+	font-size: 35px;
+	border: 2px solid #08f;
+	margin-top: 40px;
+}
+
+hr {
+   margin: 10px 0;
+}
+   
+table {
+   width: 97%;
+/*    border: 1px solid #aaa; */
+   margin: 10px auto;
+}
+
+#prnArea>tr#colArea{
+   background-color: rgba(170, 170, 170, 0.1);
+/*    background-color: rgba(0, 128, 255, 0.2); */
+   display : Flex;
+}
+
+#prnArea>tr#colArea>th {
+   font-weight: bold;
+   /* border: 1px solid #000; */
+}
+
+#prnArea>th td {
+   text-align: center;
+   padding: 7px 3px;
+}
+
+#prnArea>tr.rowArea {
+/*    border-bottom: 1px solid #ccc; */
+}
+
+#prnArea>tr#colArea>th {
+   text-align: center;
+}
+#prnArea>tr#colArea>th:nth-child(1) {
+   width: 197px;
+}
+#prnArea>#colArea>th:nth-child(2) {
+   width: 243px;
+}
+#prnArea>#colArea>th:nth-child(3) {
+   width: 76px;
+}
+#prnArea>#colArea>th:nth-child(4) {   
+   width: 199px;
+}
+#prnArea>#colArea>th:nth-child(5) {
+   width: 80px;
+}
+#prnArea>#colArea>th:nth-child(6) {
+   width: 75px;
+}
+#prnArea>#colArea>th:nth-child(7) {
+   width: 86px;
+}
+#prnArea>#colArea>th:nth-child(8) {
+   width: 92px;
+}
+#prnArea>#colArea>th:nth-child(9) {
+   width: 110px;
+}
+#prnArea>#colArea>th:nth-child(10) {
+   width: 140px;
+}
+#prnArea>#colArea>th:nth-child(11) {
+   width: 195px;
+}
+#prnArea>#colArea>th:nth-child(12) {
+   width: 195px;
+}
+#prnArea>#colArea>th:nth-child(13) {
+   width: 55px;
+}
+
+#prnArea>div.rowArea {
+   /* border: 1px solid #000; */
+}
+#prnArea>div.rowArea>td {
+/*    border: 1px solid #000; */
+   font-weight: bold;
+
+}
+#prnArea>tr.rowArea>td {
+   text-align: center;
+}
+#prnArea>tr.rowArea>td:nth-child(1) {
+   width: 197px;
+}
+#prnArea>tr.rowArea>td:nth-child(2) {
+   width: 243px;
+}
+#prnArea>tr.rowArea>td:nth-child(3) {
+   width: 76px;
+}
+#prnArea>tr.rowArea>td:nth-child(4) {
+   width: 199px;
+}
+#prnArea>tr.rowArea>td:nth-child(5) {
+   width: 80px;
+}
+#prnArea>tr.rowArea>td:nth-child(6) {
+   width: 75px;
+}
+#prnArea>tr.rowArea>td:nth-child(7) {
+   width: 86px;
+}
+#prnArea>tr.rowArea>td:nth-child(8) {
+   width: 92px;
+}
+#prnArea>tr.rowArea>td:nth-child(9) {
+   width: 110px;
+}
+#prnArea>tr.rowArea>td:nth-child(10) {
+   width: 140px;
+}
+#prnArea>tr.rowArea>td:nth-child(11) {
+   width: 195px;
+}
+#prnArea>tr.rowArea>td:nth-child(12) {
+   width: 195px;
+}
+#prnArea>tr.rowArea>td:nth-child(13) {
+   width: 55px;
+}
+td.delIcon:hover {
+   color: #e6f9ff;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+#prnArea>tr.rowArea:hover {
+   background-color: #aca6c7;
+}
+
+div#modifyIns {
+   padding: 8px 0;
+   border-bottom: 1px solid #aaa;
+   
+   justify-content: center; 
+}
+
+#modifyIns>label:first-child {
+   margin-right: 30px;
+}
+#modifyIns span {
+   font-size: 15px;
+}
+
+#modifyIns input {
+   font-size: 15px;
+   padding: 2px 6px;
+}
+#modifyIns input#modNum {
+   width: 60px;
+}
+#modifyIns input#modTitle {
+   width: 100px;
+}
+
+
+
+/* 수정하기 버튼 */
+div#modifyArea {
+   text-align: center;
+   margin-top: 20px;
+}
+
+
+
+#modifyArea>button {
+   font-size: 18px;
+   padding: 3px 7px;
+   cursor: pointer;
+}
+
+/*----------------------------------revise.jsp 끝----------------------------------*/
+
+/*----------------------------------winelistReg.jsp 시작----------------------------------*/
+
+div#regWrap {
+    width: 900px;
+    border: 2px solid #80f;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+div#regWrap>h1 {
+   text-indent: 20px;
+   margin-bottom: 10px;
+   text-align: center;
+}
+
+table {
+   width: 850px;
+   border-collapse: collapse;
+}
+/* th {
+   width: 123px;
+   text-align: center;
+}  */
+
+table th, td {
+   padding: 10px;
+}
+table th {
+   text-align: right;
+}
+
+table td>input {
+   width: 300px;
+   font-size: 18px;
+   padding: 4px 8px;
+}
+
+table tr:nth-child(1) td>input {
+   width: 700px;
+}
+
+table tr:nth-child(2) td>input {
+   width: 700px;
+}
+
+table td button {
+   width: 80px;
+   font-size: 17px;
+   font-weight: bold;
+   padding: 3px 10px;
+   cursor: pointer;
+}
+tr.regBtn button {
+   width: 410px;
+}
+
+/* table tr:nth-child(5) td {
+   text-align: center;
+} */
+
+
+div#wrap.insertWrap {
+   text-align: center;
+}
+
+button#btnBack {
+   font-size: 18px;
+   padding: 3px 15px;
+   cursor: pointer;
+}
