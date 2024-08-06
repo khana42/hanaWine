@@ -2,7 +2,6 @@
 @import url(style_Reset.css);
 
 
-
 div#wrap {
     width: 1200px;
     padding: 20px 10px;
@@ -125,6 +124,10 @@ button {
 .next:hover {
 	cursor: pointer;
 }
+#select #selecOp li.order:hover{
+	cursor: pointer;
+	font-weight: bold;
+}
 
 div#main{
 /* 	border: 3px solid #000; */
@@ -218,4 +221,17 @@ div#wineUpload {
 }
 #wineUpload #Regtable .regBtn button#wineRegBtn{
    margin-right: 20px;
+}
+
+/* 검색 결과 화면  */
+#wrap #keywordH{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#wrap .no-results{
+	margin-top: 50px;
+	font-weight: bold;
+	text-align: center;
+	font-size: 50px;
 }
