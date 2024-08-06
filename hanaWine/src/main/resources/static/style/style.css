@@ -82,6 +82,7 @@ button {
   overflow:hidden;
   margin-bottom: 10px;
   margin-top: 10px;
+  z-index: 1;
 }
 
 .slides{
@@ -218,4 +219,21 @@ div#wineUpload {
 }
 #wineUpload #Regtable .regBtn button#wineRegBtn{
    margin-right: 20px;
+}
+/* 검색 결과 화면  */
+#wrap #keywordH{
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+#select #selecOp li.order:hover{
+   cursor: pointer;
+   font-weight: bold;
+}
+
+#wrap .no-results{
+	margin-top: 50px;
+   font-weight: bold;
+   text-align: center;
+   font-size: 50px;
 }

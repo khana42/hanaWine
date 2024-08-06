@@ -36,11 +36,11 @@ public class FrontController {
 	public String Join() {
 		return "Join02";
 	}
-
-	@RequestMapping("login")
-	public String login() {
-		return "login";
-	}
+//    
+//	@RequestMapping("login")
+//	public String login() {
+//		return "login";
+//	}
 
 	// 목록 페이지
 	@RequestMapping("/wine")
@@ -82,8 +82,8 @@ public class FrontController {
 	}
 
 	@RequestMapping("/food")
-	public String food(@RequestParam(name = "order", defaultValue = "recent") String order,
-			@RequestParam(name = "winePage", defaultValue = "1") int curPage, Model model) throws Exception {
+	public String food (@RequestParam(name = "winePage", defaultValue = "1") int curPage ,
+	   @RequestParam(name = "order", defaultValue = "recent") String order, Model model) throws Exception {
 		List<WineDto> allWines = svcInface.svcListAll(order);
 		Pagination pagination = new Pagination(allWines.size(), curPage);
 
@@ -186,13 +186,16 @@ public class FrontController {
 		return "subpage4";
 	}
 
-	@GetMapping("/productPage")
-	public String productPageGet(@RequestParam("wineKrName") String wineKrName, Model model) {
+		@GetMapping("/productPage")
+		public String productPageGet(@RequestParam("wineKrName") String wineKrName, Model model) {
+	
+			List<ProductPageDto> wineProducts = ProductPageSvc.getWineProduct(wineKrName);
+	
+			model.addAttribute("wineProducts", wineProducts.get(0));
+	
+			return "/productPage";
+		}
 
-		ProductPageDto wineProduct = ProductPageSvc.getWineProduct(wineKrName);
-
-		model.addAttribute("productPage", wineProduct);
-
-		return "/productPage";
-	}
+		
+		
 }

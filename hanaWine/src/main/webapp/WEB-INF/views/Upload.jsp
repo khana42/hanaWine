@@ -13,12 +13,12 @@
 		<h1>와인 등록</h1>
 		<a href="wineList" id="wineList"><img
 			src="/img/logo.png" alt="관리자페이지로"></a>
-		<form action="/insert" method="post" enctype="multipart/form-data">
+		<form action="/insert" name="wineInsert" method="post" enctype="multipart/form-data">
 			<table id="Regtable">
 				<tbody>
 					<tr>
 						<th>제품명</th>
-						<td><input type="text" name="wineKrName" autofocus required></td>
+						<td><input type="text" name="wineKrName"  autofocus required></td>
 					</tr>
 					<tr>
 						<th>제품영문명</th>

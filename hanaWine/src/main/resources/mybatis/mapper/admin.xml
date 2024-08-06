@@ -15,4 +15,10 @@
   insert into wineFood (wineIdx , foodIdx) values
     (#{wineIdx},#{foodIdx})
   </insert>
+  <select id="AdminWineList" resultType="com.proj.dto.UploadDto">
+  select * from wineListTest
+  </select>
+  <delete id="AdminWineDel">
+  DELETE FROM wineListTest WHERE num = #{num}
+	</delete>
   </mapper>	

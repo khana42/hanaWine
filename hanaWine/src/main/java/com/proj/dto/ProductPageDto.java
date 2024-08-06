@@ -2,12 +2,14 @@ package com.proj.dto;
 
 import java.sql.Timestamp;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import lombok.Data;
 
 @Data
 public class ProductPageDto {
 	
-	private	int idx;
+	private	int num;
 	private String wineKrName;
 	private String wineEgName;
 	private String typeOfWine;
@@ -23,11 +25,11 @@ public class ProductPageDto {
 	private String recipe;     
 	private String goodsInfo;   
 	private Timestamp createTM;
-	public int getIdx() {
-		return idx;
+	public int getNum() {
+		return num;
 	}
-	public void setIdx(int idx) {
-		this.idx = idx;
+	public void setNum(int num) {
+		this.num = num;
 	}
 	public String getWineKrName() {
 		return wineKrName;

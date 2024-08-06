@@ -1,7 +1,7 @@
 package com.proj.dto;
 
 public class UploadDto {
-
+    private int num;
 	private String wineKrName;
 	private String wineEgName;
 	private String typeOfWine;
@@ -19,6 +19,12 @@ public class UploadDto {
 	private int wineIdx;
 	private int foodIdx;
 	
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+	}
 	public int getWineIdx() {
 		return wineIdx;
 	}

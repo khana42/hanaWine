@@ -30,11 +30,40 @@ String memberId = (String)session.getAttribute("memberId");
 			<% } else { %>	
 				<li id="logout" ><%=memberId  %>님 로그아웃</li>
  			<% } %> 
-				<li>장바구니</li>
+				<li id="cart">장바구니</li>
 			</ul>
 		</div>
 
 	</div>
+	<div id="loginWrap">		
+		<div id="loginModal" class="modal">
+			<div class="modal-content">
+				<div id="modalCloseIconArea">
+	            	<span id="closeIcon">&times;</span>
+	       		</div>
+	       	</div>
+	       	
+			<h1>로그인</h1>
+			
+			<form action="/login" method="post">
+				<input type="text" name="memberId" required autofocus placeholder="아이디 입력"> 
+				<input type="password" name="memberPw" required placeholder="비밀번호 입력">
+				<button type="submit" id="loginBtn">로그인</button>
+				<button type="button" id="joinBtn">회원가입</button>
+			</form>
+			
+			<div id="find">
+				<ul class="dFlex">
+					<li>아이디 찾기</li>
+					<li>|</li>
+					<li>비밀번호 찾기</li>
+				</ul>
+			</div>
+			<!-- div#find -->
+					
+		</div>
+		<!-- div#loginModal -->
+	</div>	
 	<!-- div#logoArea -->
 
 	<div id="gnbArea" class="dFlex">
@@ -76,7 +105,7 @@ String memberId = (String)session.getAttribute("memberId");
 					<ul class="subMenu">
 						<li class="wineCountry" data-cate="Italy">이탈리아</li>
 						<li class="wineCountry" data-cate="UnitedStates">미국</li>
-						<li class="wineCountry" data-cate="NewZealand">뉴질랜드</li>
+						<li class="wineCountry" data-cate="New Zealand">뉴질랜드</li>
 						<li class="wineCountry" data-cate="Argentina">아르헨티나</li>
 						<li class="wineCountry" data-cate="Australia">호주</li>
 						<li class="wineCountry" data-cate="France">프랑스</li>
@@ -87,10 +116,13 @@ String memberId = (String)session.getAttribute("memberId");
 
 				
 
-				<li class="qBoard" id="community">커뮤니티
-				
+				<li id="community" onclick="location.href='/notice'">커뮤니티
+					<ul class="subMenu" >
+						<li class="notice" onclick="event.stopPropagation(); location.href='/notice_list'">공지사항</li>
+						<li class="notice" onclick="event.stopPropagation(); location.href='/faq_list'">자주하는 질문</li>
+						<li class="notice" onclick="event.stopPropagation(); location.href='/qna_page'">1:1 문의</li>
+					</ul>
 				</li>
-
 			</ul>
 		</nav>
 
