@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 $(function () {
 	
 	// 와인제품페이지
 	  $(document).ready(function () {
+=======
+$(function() {
+	 $(document).ready(function () {
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
         // 탭 클릭 이벤트
         $("#mainTab li").click(function (e) {
             e.preventDefault();
@@ -31,6 +36,7 @@ $(function () {
 
 
     });
+<<<<<<< HEAD
 
 	// 게시글 삭제하기
 	$(".delIcon").click(function(){
@@ -127,3 +133,37 @@ $(function () {
 
 
 
+=======
+	 $(".delIcon").click(function() {
+    let chk = confirm('해당 와인 정보를 삭제하시겠습니까?');
+    if (chk) {
+        let num = $(this).find("input[type=hidden]").val();
+
+        $.ajax({
+            url: 
+            '/adminlist/delete/'+num, // DELETE 요청할 URL
+            type: 'DELETE',
+            success: function(response) {
+                alert(response); // 성공 메시지
+               location.reload(); // 페이지 새로 고침
+            },
+            error: function(xhr) {
+                alert('삭제에 실패했습니다: ' + xhr.responseText +num); // 에러 메시지
+            }
+        });
+    } else {
+        alert(`사용자가 취소하셨습니다.`);
+    }
+    });
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+});
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b

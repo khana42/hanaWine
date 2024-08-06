@@ -28,4 +28,8 @@ public interface CommunityDao {
 	// 1:1 문의 하기 DB에 저장 DAO
 	public int mtdQnaReg(Map<String, String> map);
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b

@@ -99,4 +99,8 @@ public class CommunityDto {
 	private String qnaTit;
 	private String qnaContent;
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b

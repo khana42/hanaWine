@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.prog.Pagination.Pagination;
+import com.proj.dto.ProductPageDto;
 import com.proj.dto.WineDto;
+import com.proj.svc.ProductPageSvc;
 import com.proj.svc.SvcInface;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -30,11 +32,18 @@ public class FrontController {
 	@Autowired
 	private SvcInface svcInface;
 
+<<<<<<< HEAD
+=======
+	@Autowired
+	private ProductPageSvc ProductPageSvc;
+
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 	@RequestMapping("/")
 	public String root() {
-		return "/main";
+		return "main";
 	}
 
+<<<<<<< HEAD
 	@RequestMapping("/join")
 	public String join() {
 		return "/join";
@@ -42,9 +51,19 @@ public class FrontController {
 
 	@RequestMapping("/Join02")
 	public String join02() {
+=======
+	@RequestMapping("Join02")
+	public String Join() {
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 		return "Join02";
 	}
+//    
+//	@RequestMapping("login")
+//	public String login() {
+//		return "login";
+//	}
 
+<<<<<<< HEAD
 	// @RequestMapping("/login")
 	// public String login() {
 	// return "login";
@@ -56,16 +75,24 @@ public class FrontController {
 
 			@RequestParam(name = "winePage", defaultValue = "1") int curPage, Model model) throws Exception {
 		List<WineDto> allWines = svcInface.svcListAll();
+=======
+	// 목록 페이지
+	@RequestMapping("/wine")
+	public String root(@RequestParam(name = "winePage", defaultValue = "1") int curPage,
+			@RequestParam(name = "order", defaultValue = "recent") String order, Model model) throws Exception {
+
+		List<WineDto> allWines = svcInface.svcListAll(order);
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 		Pagination pagination = new Pagination(allWines.size(), curPage);
 
 		int starIndex = pagination.getStartIndex();
 		int endIndex = Math.min(starIndex + pagination.getPageSize(), allWines.size());
 		List<WineDto> paginatedWines = allWines.subList(starIndex, endIndex);
 
-		model.addAttribute("list", paginatedWines);
-		model.addAttribute("listCnt", allWines.size());
+		// model.addAttribute("list", paginatedWines);
+		// model.addAttribute("listCnt", allWines.size());
 		model.addAttribute("pagination", pagination);
-		model.addAttribute("daoWineList", svcInface.svcListAll());
+		model.addAttribute("daoWineList", paginatedWines);
 		String wineName = "WINE";
 		model.addAttribute("wineName", wineName); // 얘를 페이지에서 보여줘
 
@@ -78,7 +105,11 @@ public class FrontController {
 		if ("WHITEWINE".equals(cate)) {
 			wineName = "WHITEWINE";
 		} else if ("REDWINE".equals(cate)) {
+<<<<<<< HEAD
 			wineName = "1";
+=======
+			wineName = "REDWINE";
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 		} else if ("SPARKLING".equals(cate)) {
 			wineName = "SPARKLING";
 		}
@@ -90,19 +121,30 @@ public class FrontController {
 	}
 
 	@RequestMapping("/food")
+<<<<<<< HEAD
 	public String food(@RequestParam(name = "winePage", defaultValue = "1") int curPage, Model model) throws Exception {
 		List<WineDto> allWines = svcInface.svcListAll();
+=======
+	public String food (@RequestParam(name = "winePage", defaultValue = "1") int curPage ,
+	   @RequestParam(name = "order", defaultValue = "recent") String order, Model model) throws Exception {
+		List<WineDto> allWines = svcInface.svcListAll(order);
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 		Pagination pagination = new Pagination(allWines.size(), curPage);
 
 		int starIndex = pagination.getStartIndex();
 		int endIndex = Math.min(starIndex + pagination.getPageSize(), allWines.size());
 		List<WineDto> paginatedWines = allWines.subList(starIndex, endIndex);
 
+<<<<<<< HEAD
 		model.addAttribute("list", paginatedWines);
 		model.addAttribute("listCnt", allWines.size());
+=======
+		// model.addAttribute("list", paginatedWines);
+		// model.addAttribute("listCnt", allWines.size());
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 		model.addAttribute("pagination", pagination);
-		model.addAttribute("daoWineList", svcInface.svcListAll());
-		String wineName = "Food";
+		model.addAttribute("daoWineList", paginatedWines);
+		String wineName = "FOOD";
 		model.addAttribute("wineName", wineName); // 얘를 페이지에서 보여줘
 
 		return "subpage2";
@@ -112,12 +154,22 @@ public class FrontController {
 	public String food(@PathVariable("cate") String cate, Model model) {
 
 		String wineName = "";
+<<<<<<< HEAD
 		if ("소고기".equals(cate)) {
 			wineName = "Beaf";
 		} else if ("치즈".equals(cate)) {
 			wineName = "Cheese";
 		} else if ("양고기".equals(cate)) {
+=======
+		if ("Beaf".equals(cate)) {
+			wineName = "Beaf";
+		} else if ("Cheese".equals(cate)) {
+			wineName = "Cheese";
+		} else if ("Lamb".equals(cate)) {
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 			wineName = "Lamb";
+		} else if ("Pasta".equals(cate)) {
+			wineName = "Pasta";
 		}
 
 		model.addAttribute("daoWineList", svcInface.svcListFood(cate));
@@ -128,20 +180,31 @@ public class FrontController {
 	}
 
 	@RequestMapping("/grape")
+<<<<<<< HEAD
 	public String grape(@RequestParam(name = "winePage", defaultValue = "1") int curPage, Model model)
 			throws Exception {
 		List<WineDto> allWines = svcInface.svcListAll();
+=======
+	public String grape(@RequestParam(name = "order", defaultValue = "recent") String order,
+			@RequestParam(name = "winePage", defaultValue = "1") int curPage, Model model) throws Exception {
+		List<WineDto> allWines = svcInface.svcListAll(order);
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 		Pagination pagination = new Pagination(allWines.size(), curPage);
 
 		int starIndex = pagination.getStartIndex();
 		int endIndex = Math.min(starIndex + pagination.getPageSize(), allWines.size());
 		List<WineDto> paginatedWines = allWines.subList(starIndex, endIndex);
 
+<<<<<<< HEAD
 		model.addAttribute("list", paginatedWines);
 		model.addAttribute("listCnt", allWines.size());
+=======
+		// model.addAttribute("list", paginatedWines);
+		// model.addAttribute("listCnt", allWines.size());
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 		model.addAttribute("pagination", pagination);
-		model.addAttribute("daoWineList", svcInface.svcListAll());
-		String wineName = "Grape";
+		model.addAttribute("daoWineList", paginatedWines);
+		String wineName = "GRAPE";
 		model.addAttribute("wineName", wineName); // 얘를 페이지에서 보여줘
 
 		return "subpage3";
@@ -152,7 +215,6 @@ public class FrontController {
 
 		String wineName = cate;
 
-		System.out.println(cate);
 		model.addAttribute("daoWineList", svcInface.svcListGrape(cate));
 
 		model.addAttribute("wineName", wineName.toUpperCase());
@@ -161,20 +223,31 @@ public class FrontController {
 	}
 
 	@RequestMapping("/country")
+<<<<<<< HEAD
 	public String country(@RequestParam(name = "winePage", defaultValue = "1") int curPage, Model model)
 			throws Exception {
 		List<WineDto> allWines = svcInface.svcListAll();
+=======
+	public String country(@RequestParam(name = "order", defaultValue = "recent") String order,
+			@RequestParam(name = "winePage", defaultValue = "1") int curPage, Model model) throws Exception {
+		List<WineDto> allWines = svcInface.svcListAll(order);
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 		Pagination pagination = new Pagination(allWines.size(), curPage);
 
 		int starIndex = pagination.getStartIndex();
 		int endIndex = Math.min(starIndex + pagination.getPageSize(), allWines.size());
 		List<WineDto> paginatedWines = allWines.subList(starIndex, endIndex);
 
+<<<<<<< HEAD
 		model.addAttribute("list", paginatedWines);
 		model.addAttribute("listCnt", allWines.size());
+=======
+		// model.addAttribute("list", paginatedWines);
+		// model.addAttribute("listCnt", allWines.size());
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 		model.addAttribute("pagination", pagination);
-		model.addAttribute("daoWineList", svcInface.svcListAll());
-		String wineName = "country";
+		model.addAttribute("daoWineList", paginatedWines);
+		String wineName = "COUNTRY";
 		model.addAttribute("wineName", wineName); // 얘를 페이지에서 보여줘
 
 		return "subpage4";
@@ -192,6 +265,7 @@ public class FrontController {
 		return "subpage4";
 	}
 
+<<<<<<< HEAD
 
 	@RequestMapping("/adminPage")
 	public String adminPage() {
@@ -315,4 +389,18 @@ public class FrontController {
 //	      return "redirect:/Admin/revise";
 	// }
 
+=======
+		@GetMapping("/productPage")
+		public String productPageGet(@RequestParam("wineKrName") String wineKrName, Model model) {
+	
+			List<ProductPageDto> wineProducts = ProductPageSvc.getWineProduct(wineKrName);
+	
+			model.addAttribute("wineProducts", wineProducts.get(0));
+	
+			return "/productPage";
+		}
+
+		
+		
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 }

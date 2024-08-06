@@ -31,10 +31,17 @@
 							<td>내용</td>
 							<td><textarea name="faqAnsw" cols="50" rows="10" required placeholder="200자 이내로 작성" maxlength="200"></textarea></td>
 						</tr>
+<<<<<<< HEAD
 						<tr class="regBtn">
 							<td colspan="2">
 								<button type="submit">저장</button>
 								<button type="reset">취소</button>
+=======
+						<tr>
+							<td colspan="2">
+								<button type="submit">저장</button>
+								<button type="button">취소</button>
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 							</td>
 						</tr>
 					</tbody>

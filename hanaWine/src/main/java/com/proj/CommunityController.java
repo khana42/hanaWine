@@ -19,10 +19,19 @@ public class CommunityController {
 	private CommunityDao communityDao;
 
 	// 공지 사항 내용 DB에서 받아옴
+<<<<<<< HEAD
 	@RequestMapping("/notice_list")
 	public String noticeList(Model model) throws Exception {
 		model.addAttribute("mtdNoticeList", communityDao.mtdNoticeList());
 
+=======
+	
+    @RequestMapping("/notice_list")
+	public String noticeList(Model model) throws Exception {
+		
+		
+		model.addAttribute("mtdNoticeList", communityDao.mtdNoticeList());
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 		return "/community/noticeList";
 	}
 
@@ -74,6 +83,18 @@ public class CommunityController {
 	public String faqWrite() {
 		return "/community/faqWrite";
 	}
+<<<<<<< HEAD
+=======
+	
+
+	// 자주묻는 질문////
+	@RequestMapping("/faq_listsub")
+	public String faqListub(Model model) throws Exception {
+		model.addAttribute("mtdFaqList", communityDao.mtdFaqList());
+
+		return "/community/faqListub";
+	}
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 
 	// 자주 하는 질문 내용 입력 받아 DB에 저장 후 faq 게시판으로 이동 (관리자)
 	@RequestMapping("/faq_reg")
@@ -140,4 +161,8 @@ public class CommunityController {
 		return "redirect:/";
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b

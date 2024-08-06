@@ -2,64 +2,34 @@ package com.proj.dto;
 
 import java.sql.Timestamp;
 
+import lombok.Data;
+
 
 public class WineDto {
 
 	
-	private int idx;
-	private String brand;
-	private String wineKind;
+
+	private	int idx;
 	private String wineKrName;
-	private String wineEnName;
-	private String country;
-	private String grape;
-	private int price;
-	private String img;  
+	private String wineEgName;
+	private String typeOfWine;
+	private String nation;	    
+	private String region;     
+	private String grape;	    
+	private Double price;       
+	private Double alcohol;     
+	private Double sweetness;
+	private Double acidity;     
+	private Double body;        
+	private String goodsImg;    
+	private String recipe;     
+	private String goodsInfo;   
 	private Timestamp createTM;
-	private String foodIdx;
-	private String foodName;
-	private String wineIdx;
-	private String grapeName;
-	private String countryName;
-	
-	
-	public String getCountryName() {
-		return countryName;
+	public int getIdx() {
+		return idx;
 	}
-	public void setCountryName(String countryName) {
-		this.countryName = countryName;
-	}
-	public String getGrapeName() {
-		return grapeName;
-	}
-	public void setGrapeName(String grapeName) {
-		this.grapeName = grapeName;
-	}
-	public String getWineIdx() {
-		return wineIdx;
-	}
-	public void setWineIdx(String wineIdx) {
-	
-		
-	}
-	public String getFoodName() {
-		return foodName;
-	}
-	public void setFoodName(String foodName) {
-		this.foodName = foodName;
-		
-	}
-	public String getFoodIdx() {
-		return foodIdx;
-	}
-	public void setFoodIdx(String foodIdx) {
-		this.foodIdx = foodIdx;
-	}
-	public String getWineKind() {
-		return wineKind;
-	}
-	public void setWineKind(String wineKind) {
-		this.wineKind = wineKind;
+	public void setIdx(int idx) {
+		this.idx = idx;
 	}
 	public String getWineKrName() {
 		return wineKrName;
@@ -67,56 +37,90 @@ public class WineDto {
 	public void setWineKrName(String wineKrName) {
 		this.wineKrName = wineKrName;
 	}
-	public String getWineEnName() {
-		return wineEnName;
+	public String getWineEgName() {
+		return wineEgName;
 	}
-	public void setWineEnName(String wineEnName) {
-		this.wineEnName = wineEnName;
+	public void setWineEgName(String wineEgName) {
+		this.wineEgName = wineEgName;
 	}
-	
-	public int getIdx() {
-		return idx;
+	public String getTypeOfWine() {
+		return typeOfWine;
 	}
-	public void setIdx(int idx) {
-		this.idx = idx;
+	public void setTypeOfWine(String typeOfWine) {
+		this.typeOfWine = typeOfWine;
 	}
-	public String getBrand() {
-		return brand;
+	public String getNation() {
+		return nation;
 	}
-	public void setBrand(String brand) {
-		this.brand = brand;
+	public void setNation(String nation) {
+		this.nation = nation;
 	}
-	public String getCountry() {
-		return country;
+	public String getRegion() {
+		return region;
 	}
-	public void setCountry(String country) {
-		this.country = country;
+	public void setRegion(String region) {
+		this.region = region;
 	}
 	public String getGrape() {
 		return grape;
 	}
 	public void setGrape(String grape) {
 		this.grape = grape;
-		
 	}
-	public int getPrice() {
+	public Double getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
-	public String getImg() {
-		return img;
+	public Double getAlcohol() {
+		return alcohol;
 	}
-	public void setImg(String img) {
-		this.img = img;
+	public void setAlcohol(Double alcohol) {
+		this.alcohol = alcohol;
+	}
+	public Double getSweetness() {
+		return sweetness;
+	}
+	public void setSweetness(Double sweetness) {
+		this.sweetness = sweetness;
+	}
+	public Double getAcidity() {
+		return acidity;
+	}
+	public void setAcidity(Double acidity) {
+		this.acidity = acidity;
+	}
+	public Double getBody() {
+		return body;
+	}
+	public void setBody(Double body) {
+		this.body = body;
+	}
+	public String getGoodsImg() {
+		return goodsImg;
+	}
+	public void setGoodsImg(String goodsImg) {
+		this.goodsImg = goodsImg;
+	}
+	public String getRecipe() {
+		return recipe;
+	}
+	public void setRecipe(String recipe) {
+		this.recipe = recipe;
+	}
+	public String getGoodsInfo() {
+		return goodsInfo;
+	}
+	public void setGoodsInfo(String goodsInfo) {
+		this.goodsInfo = goodsInfo;
 	}
 	public Timestamp getCreateTM() {
 		return createTM;
 	}
 	public void setCreateTM(Timestamp createTM) {
 		this.createTM = createTM;
-	}
+	}  
 
-	
+
 }

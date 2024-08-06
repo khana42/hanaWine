@@ -35,39 +35,37 @@
 
 		<div class="ha"></div>
 		<div id="select" class="dFlex">
-			<div id="priceSel">
-				<input type="range" name="selecPrice" id="selecPrice">
-				<button>select</button>
-			</div>
+			
 			<div id="selecOp">
 				<ul id="select0" class="dFlex">
-					<li class="select1">인기순</li>
+					<li class="order" data-order="recent">최신순</li>
 					<li>|</li>
-					<li class="select1">가격 높은순</li>
+					<li class="order" data-order="high">가격 높은순</li>
 					<li>|</li>
-					<li class="select1">가격 낮은순</li>
+					<li class="order" data-order="low">가격 낮은순</li>
 				</ul>
 			</div>
 		</div>
 		<!--       목록 -->
-		<c:forEach var="list" items="${daoWineList}">
+		<c:forEach var="list" items="${daoWineList}" >
 			<div id="main" class="dFlex">
-				<div id="wine" class="dFlex" class="winePage">
+				<div id="wine" class="dFlex wineInfo" class="winePage" data-winekrname="${list.wineKrName}">
 					<div class="img1">
-						<img src="http://placehold.it/200x300" alt="">
+							<img style="width: 110px" src="<c:url value='/wineimg/${list.goodsImg}' />" alt="">
 					</div>
 					<div class="name">
-						<div class="bdname">
-							<span>${list.brand}</span>
-						</div>
+						
 						<div class="winame">
 							<span>${list.wineKrName}</span>
 						</div>
 						<div class="enWiname">
-							<span>${list.wineEnName}</span>
+							<span>${list.wineEgName}</span>
 						</div>
 						<div class="con">
-							<span>${list.country}</span>
+							<span>${list.nation}</span>
+						</div>
+						<div class="region">
+							<span>${list.region}</span>
 						</div>
 						<div class="price">
 							<span>${list.price}</span>

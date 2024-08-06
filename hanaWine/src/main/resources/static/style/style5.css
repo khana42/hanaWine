@@ -1,156 +1,121 @@
 @charset "UTF-8";
-@import url(style_Reset.css);
+/* 회원가입 페이지 공통 스타일 */
+/* @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=IBM+Plex+Sans+KR&family=Noto+Sans+KR:wght@100..900&display=swap'); */
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* * * * * *회원가입 첫번째 페이지 * * * * * */
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-div#Join1wrap {
-    width: 550px;
-    border: 1px solid #aaa;
-    padding: 20px;
-   
-    margin: 20px auto;
+body {
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
-div#Join1 {
-    width: 550px;
-    text-align: center;
-    /* border: 1px solid #000; */
-    padding: 30px 20px;
-}
-
-div#Join1>span {
-    display: inline-block;
-    width: 450px;
-    border: 1px solid #aaa;
-    padding: 15px 1px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-div#N_K {
-    /* border: 1px solid #f70505; */
-    width: 550px;
-    height: 300px;
-    padding: 20px;
-    text-align: center;
-}
-
-div#N_K img {
-    display: inline-block;
-    border: 1px solid #000;
-    width: 50px;
-
-}
-
-div#N_K>a {
-    padding: 15px 1px;
-    margin: 5px;
-    display: inline-block;
-    width: 450px;
-    border: 1px solid #aaa;
-    font-size: 20px;
-
-}
-
-div#N_K>span#text {
-    display: inline-block;
-    width: 450px;
-    font-size: 14px;
-    text-align: left;
-    margin: 15px 0;
-}
-
-div#login_go {
-    width: 550px;
-    text-align: center;
-    margin: 5px 0 20px;
-}
-
-div#login_go>a#login_go {
-    cursor: pointer;
-}
-
-div#login_go>span {
-    color: #aaa;
-}
-
-
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* * * * * *회원가입 2번째 페이지 * * * * * */
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 div#Join2wrap {
-    width: 800px;
+    width: 1500px;
     padding: 10px;
-    border: 2px solid #999;
+    /* border: 2px solid rgb(200, 0, 255); */
     margin: 20px auto;
 }
 
-#Join2wrap>hr {
-    border-top: 1px solid #000;
-    bottom: none;
-    margin-top: 30px;
+#Join2wrap #bd {
+    /* border: 0.25px solid rgba(0, 0, 0, 0.25); */
+    width: 535px;
+    border-bottom: none;
+    margin-left: 32px;
 }
 
-#Join2wrap>header#header>h1 {
-    margin: 10px 20px;
-    /* border: 1px solid #000; */
+#Join2wrap>#header>h1 {
+    margin-top: 70px;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
     line-height: 60px;
-    font-family: Arial, malgun gothic, 맑은고딕, NanumGothic, dotum, 돋움, sans-serif;
-    border-spacing: 0;
-    border-collapse: collapse;
-    word-break: break-all;
-    word-wrap: break-word;
-    color: #236be2;
-    margin-top: 3px;
+    color: #414040;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: 300;
+
 }
 
 
-#Join2wrap>main#mainjoin>div#basicInfoarea {
-    margin-bottom: 50px;
+#mainjoin #basicInfoarea {
+    margin: 120px 20px 20px 20px;
+    /* border: 1px solid #086e26; */
+}
+
+.left {
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
 }
 
 
 
 .req::after {
-    /*required 필수사항* /
-    /*슈도 엘리먼트 선택자*/
     content: "*";
     color: #08f;
-    font-size: 20px;
+    font-size: 13px;
     margin-left: 5px;
     font-weight: bold;
     transform: translateY(4px);
     display: inline-block;
 }
 
-div.userInfo {
-    /* border: 1px solid #000; */
-    margin: 30px;
+.userInfo {
 
+    margin: 20px;
+    padding-bottom: 10px;
     text-align: center;
-    padding: 2px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 0.5px solid #ddd;
+    border-width: 25%;
+    display: flex;
+
 }
 
-div.userInfo span.info1 {
+.userInfo::first-letter {
+    border: 1px solid #000;
+}
+
+
+.left span.info1 {
     display: inline-block;
-    width: 150px;
-    margin-bottom: 20px;
-    font-family: Arial, malgun gothic, 맑은고딕, NanumGothic, dotum, 돋움, sans-serif;
-    /* border: 1px solid #000; */
+    width: 100px;
+    margin-right: 10px;
+    line-height: 17px;
+    letter-spacing: -0.04em;
+    text-align: right;
+    /* border: 1px solid #eb33b4; */
+    font-size: 14px;
+    color: #414040;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: 300;
+}
+
+.input {
+    width: 700px;
+    background-color: #fff;
+    border-radius: 5px;
+    /* border: 2px solid #b97b09; */
+    color: #333;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    width: 40%;
+    padding: 4px;
+    box-sizing: border-box;
 }
 
 
-
-
-div.userInfo input.infoInput {
-    width: 420px;
-    padding: 5px;
+.description {
+    width: 40%;
+    font-size: 1.1em;
+    color: #888;
+    text-align: left;
+    padding-left: 10px;
+    /* border: 1px solid #3eba10; */
 }
 
 .userInfo input {
@@ -159,21 +124,15 @@ div.userInfo input.infoInput {
 }
 
 
-.userInfo input#userid {
-    width: 330px;
-    border: 1px solid #bbb;
-    bottom: none;
-}
 
-.userInfo input#useremail {
-    width: 140px;
-    border: 1px solid #bbb;
-    bottom: none;
-}
 
-.userInfo>button#btnchk {
-    width: 80px;
+
+.userInfo button#btnchk {
+    width: 70px;
+    border: 1px solid #868585;
+    border-radius: 4px;
     margin-left: 5px;
+    padding: 4px;
 }
 
 
@@ -185,38 +144,26 @@ div.userInfo input.infoInput {
 
 
 
-/* 휴대전화 영역 시작 */
-div#phoneArea {
-    text-align: left;
-    margin-left: 100px;
-}
+/* 휴대전화 영역 */
 
-div#phoneArea span#phone {
-    text-align: center;
-    /* border: 1px solid #000; */
-}
-
-div.userInfo select {
-    /* border: 1px solid #e61414; */
-    margin-left: 7px;
+.userInfo select {
     font-size: 14px;
     padding: 2px 0;
     width: 70px;
 }
 
-div.userInfo input.phoneNum {
+.userInfo input.phoneNum {
     font-size: 14px;
     padding: 2px 0;
     width: 70px;
 }
 
-div#phoneArea>button#codenum {
+#phoneArea button#codenum {
     font-size: 13px;
     padding: 2px 10px;
     margin-left: 12px;
 }
 
-/* 휴대전화 영역 끝 */
 
 
 
@@ -225,200 +172,630 @@ div#phoneArea>button#codenum {
 
 
 
-
-
-/* 전체동의 시작 */
-
-
-
-
-div#uAA>div#agreeAllarea {
-    /* border: 1px solid #ff1616; */
-    margin: 10px;
-    margin-left: 55px;
-}
-
-div#uAA>div#agreeAllarea input#agreeAll {
-    width: 20px;
-    height: 20px;
-}
-
-div#uAA>div#agreeAllarea span {
-    font-family: Arial, malgun gothic, 맑은고딕, NanumGothic, dotum, 돋움, sans-serif;
-    border-spacing: 0;
+/* 주소 영역 */
+.userInfo button#postbtn {
+    width: 110px;
+    margin-right: 168px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: unset;
+    border: unset;
+    padding: 3px 0;
+    background: #333;
+    border-radius: 5px;
+    color: #fff;
     font-size: 12px;
-    display: inline-block;
-    margin-left: 5px;
-
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+    word-break: keep-all;
 }
 
-#uAA>#agreeAllarea>label#labelchkAll span:last-child {
-    margin-left: 25px;
-
+input#roadAddressDetail,
+input#useraddress {
+    /* border: 1px solid #d11515; */
+    margin: 5px 0;
 }
 
-div#uAA>div#agreeAllarea>label#labelchkAll {
-    /* border: 1px solid #000; */
+.userInfo button#userAdbtn {
+    width: 110px;
+    margin-right: 168px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: unset;
+    border: unset;
+    padding: 3px 0;
+    background: #333;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+    word-break: keep-all;
+}
+
+
+
+
+
+
+
+
+/* 이용약관 동의 */
+#uAA {
+    margin: 10px;
+    margin-left: 175px;
+}
+
+#uAA #agreeAllarea {
+    margin: 20px;
     padding: 30px;
-    margin: 20px;
-
 }
 
-div#uAA>div#agreeAllarea>div.agreeApart {
-    /* border: 1px solid #3e50f0; */
-    padding: 20px 10px 10px 10px;
-    margin: 20px;
-}
-
-div#uAA>div#agreeAllarea>div.agreeApart span+input[type=checkbox] {
-    margin-left: 15px;
-}
-
-div#uAA>div#agreeAllarea>div.agreeApart span.agree {
-    margin-left: 70px;
-    /* border: 1px solid #000; */
-}
-
-div#uAA input#agreeAll {
+#uAA #agreeAllarea input#agreeAll {
+    width: 15px;
+    height: 20px;
     margin-left: 10px;
-    width: 24px;
-    height: 24px;
     transform: translateY(4px);
 }
 
-
-
-
-#uAA label#labelchkAll>span:nth-child(2) {
-    font-size: 20px;
-    font-weight: bold;
+#uAA #agreeAllarea label span {
+    color: #333;
+    font-size: 13px;
+    font-weight: 300;
+    margin-left: 5px;
 }
 
-#uAA label>span:nth-child(3) {
-    font-size: 14px;
-}
-
-div#agreeAllarea {
-    width: 800px;
-    /* border: 1px solid #000; */
-    border-bottom: #000;
-    padding-bottom: 20px;
-    margin-left: 70px;
-}
-
-div.agreeApart {
+#uAA #agreeAllarea div.agreeDiv {
     padding: 15px 0;
-
+    margin: 20px;
 }
 
-div.agreeApart span {
+#uAA .agreeDiv span,
+#uAA .agreeDiv a {
     font-size: 14px;
-}
-
-div.agreeApart a {
     color: #999;
 }
 
-div.agreeApart input[type=checkbox] {
+#uAA .agreeDiv iframe {
+    width: 90%;
+}
+
+#uAA .agreeApart input[type=checkbox] {
     width: 16px;
     height: 16px;
     transform: translateY(3px);
 }
 
-div.agreeleftArea {
+#uAA .agreeleftArea {
     width: 530px;
-    /* border: 1px solid #000; */
     display: inline-block;
-}
-
-div.agreeleftArea label {
     margin-right: 8px;
 }
 
 
-/* 전체동의 끝 */
 
-/* 회원가입 버튼 영역 시작 */
 
-div#uAA div#btnArea {
+
+/* 회원가입 버튼 */
+#btnArea {
     text-align: center;
 }
 
-div#btnArea button {
-    width: 170px;
-    height: 55px;
-    line-height: 55px;
-    /*  height와 line-height 값을 동일하게 적용하면 
-    세로 가운데 정렬이 이루어진다 */
-
-    font-size: 17px;
+#btnArea button {
+    width: 140px;
+    font-size: 14px;
     font-weight: bold;
     color: #fff;
     background-color: #000;
+    padding: 10px 0;
     border: none;
-
-}
-
-div#btnArea button:hover {
+    border-radius: 4px;
     cursor: pointer;
 }
 
-/* div#btnArea */
-
-
-
-div#wrapAgree {
-    width: 910px;
-    border: 2px solid #aaa;
-    border-radius: 2px;
-    margin: 10px auto;
-    padding: 10px;
-
+/* 아이디 중복 체크 창 */
+#IDCHKwrap {
+    width: 280px;
+    border: 2px solid skyblue;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 20px;
+    position: absolute;
+    top: 18%;
+    left: 20%;
 }
 
-input[type=checkbox] {
-    width: 19px;
-    height: 19px;
-    transform: translateY(3px);
+#IDCHKwrap h3 {
+    text-align: center;
+    font-weight: bold;
+    margin-right: 14px;
+}
+
+#IDCHKwrap hr {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+#IDCHKwrap label input#idchkinput {
+    width: 140px;
+    margin-left: 5px;
+    border: 2px solid #000;
+    border-radius: 2px;
+}
+
+#IDCHKwrap label span#idchkspan {
+    margin-left: 45px;
+}
+
+#IDCHKwrap #IDCHKbtn {
+    text-align: center;
+    padding: 10px;
+}
+
+#IDCHKwrap #IDCHKbtn button {
+    font-size: 17px;
+    padding: 0 25px;
+    margin: 20px 10px 0;
+    font-weight: bold;
+}
+
+/* 기타 스타일 */
+.el_input::placeholder {
+    color: #d4d4d4;
+}
+
+.bl_stack--row {
+    flex-direction: row;
+}
+
+.form {
+    margin-bottom: 20px;
+    height: fit-content;
+}
+
+.hp_shrink-0 {
+    flex-shrink: 0;
+}div#Cartwrap {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#Cartwrap>h1 {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    margin-bottom: 100px;
+    color: #333131;
+}
+
+#Cartwrap div.prodbox {
+    width: 100%;
+    margin: 20px auto;
+    /* border: 5px solid #07c085; */
+}
+
+.cart-container {
+    width: 90%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px 0;
+    margin-left: 100px;
+}
+
+.cart-header,
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.header-item {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+.item-image,
+.item-info,
+.item-price,
+.item-quantity,
+.item-reward,
+.item-delivery,
+.item-delivery-fee,
+.item-total,
+.item-select {
+    flex: 1;
+    text-align: center;
+}
+
+.item-image img {
+    width: 100px;
+    height: auto;
+}
+
+.item-quantity input {
+    width: 50px;
+    margin-right: 5px;
+}
+
+.cart-footer {
+    padding: 10px;
+    font-weight: bold;
+    text-align: right;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
+
+/* 버튼 및 입력 필드 스타일 */
+input[type="text"],
+input[type="number"] {
+    height: 25px;
+    /* 버튼 및 입력 필드 높이 설정 */
+    margin: 0 5px;
+    /* 여백 */
+}
+
+
+
+#summary {
+    width: 100%;
+    text-align: right;
+    padding: 20px 0;
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#summary>p {
+    margin-right: 120px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#actions {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#actions button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#actions button:hover {
+    background-color: #555;
+}
+
+
+.info-container {
+    width: 85%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin: 50px 0 50px 100px;
+}
+
+.info-container>p {
+    margin-left: 10px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 13px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.guide-section>p {
+    margin-left: 10px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 13px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.guide-section {
+    margin-bottom: 20px;
 }
 
 h3 {
-    text-indent: 20px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-iframe {
-    width: 80%;
-    border: 1px solid #aaa;
-    margin-left: 40px;
-}
-
-div#chkAllArea {
-    margin: 25px;
-}
-
-div.termAgree {
+ol {
     padding-left: 20px;
 }
 
+div.guide-section li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 11px;
+}
 
 
-div.agreeDiv>p.agreeP {
-    /* border: 1px solid #000; */
-    padding: 5px;
-    margin-left: 40px;
-    display: inline-block;
+
+
+/* pay 시작   */
+div#payform-Wrap {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#payform-Wrap h1 {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: #333131;
+}
+
+#payform-Wrap div.prodbox {
+    width: 100%;
+    margin: 20px auto;
+    /* border: 5px solid #07c085; */
+}
+
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 130px;
     font-weight: bold;
-    margin-top: 10px;
-    padding: 20px 5px;
+}
+
+.form-group {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    margin-left: 20px;
+}
+
+.form-group:last-child {
+    border-bottom: none;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+label {
+    width: 150px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: right;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    /* border: 1px solid #269b09; */
+}
+
+label#sameInfo {
+    margin: 5px 5px 10px 50px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.required {
+    color: red;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    width: 80%;
 }
 
 
-div.agreeDiv>div.termAgree span.agreeQSpan {
+.input-group select,
+.input-group input[type="text"],
+input[type="text"] {
+    margin-right: 5px;
+}
+
+.short-input {
+    width: 70px;
     padding: 5px;
-    margin-left: 22px;
-    /* border: 1px solid #4d44c7; */
-    display: inline-block;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#phoneInput{
+   width: 300px;
 }
 
 
-/*나리꺼*/
+#emailInput{
+   width: 400px;
+}
+
+
+.address-group input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 30px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.notice {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+span {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+div#paygogo {
+    margin: 30px;
+    text-align: center;
+}
+
+button#paygogo {
+
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #f1f1f1;
+}
+
+.summary {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.summary-item span {
+    font-weight: normal;
+}
+
+
+/* payProc 시작  */
+
+div#payProcwrap {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+   
+}
+
+div#payProcwrap>h1{
+ text-align: center;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: #333131;
+
+}
+#orderNextproc{
+   border: 1px solid #ddd;
+   margin: 100px 20px 100px 20px;
+   padding: 20px 0 40px 20px;
+}
+
+#orderNextproc>p {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+
+#orderNextproc>span {
+    margin-left: 30px;
+}
+
+div.cart-header{
+
+   margin-bottom: 50px;
+   border-top: 1px solid #ddd;
+   border-bottom: 1px solid #ddd;
+}
+
+.item-image>input[type=checkbox]{
+    width: 16px;
+    height: 16px;
+    transform: translateY(-3px);
+   
+}
+
+ul{
+   display: flex;
+   margin-left: 30px;
+   
+}
+div.prodbox>ul>li{
+   display: block;
+   width: 110px;
+}
+
+div.prodbox>ul>li#point{
+   display: block;
+   width: 200px;
+}
+
+div#deposit{
+text-align: left;
+   width: 100%;
+   
+    padding: 20px 0;
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#deposit>p{
+     margin-left: 70px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+   
+}
+/* payProc 끝 */

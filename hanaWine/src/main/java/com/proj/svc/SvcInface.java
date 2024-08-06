@@ -8,13 +8,13 @@ import com.proj.dto.WineDto;
 
 public interface SvcInface {
 
-	public List<WineDto> svcListAll();
+	public List<WineDto> svcListAll(String order);
 
-	public List<WineDto> svcList(String wineKind);
+	public List<WineDto> svcList(String typeName);
 	public List<WineDto> svcListFood(String foodName);
 	public List<WineDto> svcListGrape(String grapename);
-	public List<WineDto> svcListCountry(String countryname);
-	public List<WineDto> scvPriceHighList(@Param("sortByPrice") String sortByPrice);
+	public List<WineDto> svcListCountry(String nationName);
+
 	
 
 	

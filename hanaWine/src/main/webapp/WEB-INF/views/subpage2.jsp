@@ -35,10 +35,7 @@
 
 		<div class="ha"></div>
 		<div id="select" class="dFlex">
-			<div id="priceSel">
-				<input type="range" name="selecPrice" id="selecPrice">
-				<button>select</button>
-			</div>
+		
 			<div id="selecOp">
 				<ul id="select0" class="dFlex">
 					<li class="select1">인기순</li>
@@ -51,23 +48,24 @@
 		</div>
 		<!--       목록 -->
 		<c:forEach var="list" items="${daoWineList}">
-			<div id="main" class="dFlex">
+			<div id="main" class="dFlex wineInfo" data-winekrname="${list.wineKrName}">
 				<div id="wine" class="dFlex" class="winePage">
 					<div class="img1">
-						<img src="http://placehold.it/200x300" alt="">
+							<img style="width: 110px" src="<c:url value='/wineimg/${list.goodsImg}' />" alt="">
 					</div>
 					<div class="name">
-						<div class="bdname">
-							<span>${list.brand}</span>
-						</div>
+						
 						<div class="winame">
 							<span>${list.wineKrName}</span>
 						</div>
 						<div class="enWiname">
-							<span>${list.wineEnName}</span>
+							<span>${list.wineEgName}</span>
 						</div>
-						<div class="con">
-							<span>${list.country}</span>
+						<div class="nation">
+							<span>${list.nation}</span>
+						</div>
+						<div class="region">
+							<span>${list.region}</span>
 						</div>
 						<div class="price">
 							<span>${list.price}</span>

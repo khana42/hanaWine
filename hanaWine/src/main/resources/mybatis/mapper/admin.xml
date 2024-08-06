@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.proj.dao.UploadDao">
+ <insert id="upload" parameterType="com.proj.dto.UploadDto" useGeneratedKeys="true" keyProperty="wineIdx" >
+  
+  	insert into wineListTest (wineKrName, wineEgName, typeOfWine, nation, region, grape, price, alcohol, sweetness, acidity, body, goodsImg, recipe, goodsInfo) values
+  	(#{wineKrName}, #{wineEgName}, #{typeOfWine}, #{nation}, #{region}, #{grape}, #{price}, #{alcohol}, #{sweetness}, #{acidity}, #{body}, #{goodsImg}, #{recipe}, #{goodsInfo})
+    
+  
+  </insert>
+  <insert id="uploadWineAndFood" parameterType="map">
+  insert into wineFood (wineIdx , foodIdx) values
+    (#{wineIdx},#{foodIdx})
+  </insert>
+  <select id="AdminWineList" resultType="com.proj.dto.UploadDto">
+  select * from wineListTest
+  </select>
+  <delete id="AdminWineDel">
+  DELETE FROM wineListTest WHERE num = #{num}
+	</delete>
+  </mapper>	

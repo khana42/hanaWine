@@ -19,6 +19,7 @@
 	<div id="wrap">
 		<div class="commWrap">
 			<div class="commTit">
+<<<<<<< HEAD
 				<h1>공지사항</h1>
 			</div>
 			<!-- div.commTit -->
@@ -30,6 +31,16 @@
 				</ul>
 			</div>
 			<!-- div.commGnbArea -->
+=======
+				<h1>공지 사항</h1>
+			</div>
+			<!-- div.commTit -->
+			<ul class="commGnb dFlex">
+				<li><a href="/notice_list"><span>공지 사항</span></a></li>
+				<li><a href="/faq_list"><span>자주하는 질문</span></a></li>
+				<li><a href="/qna_page"><span>1:1 문의</span></a></li>
+			</ul>
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 		</div>
 		<!-- div.commWrap -->
 		

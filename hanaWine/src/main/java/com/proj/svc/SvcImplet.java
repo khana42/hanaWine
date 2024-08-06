@@ -1,7 +1,7 @@
 package com.proj.svc;
 
 import java.util.List;
-import java.util.Map;
+
 
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,15 +16,15 @@ public class SvcImplet implements SvcInface {
 	WineDao wineDao;
 
 	@Override
-	public List<WineDto> svcList(String wineKind) {
-		System.out.println(wineKind);
+	public List<WineDto> svcList(String typeName) {
+	
 
-		return wineDao.daoWineList(wineKind);
+		return wineDao.daoWineList(typeName);
 	}
 
 	@Override
-	public List<WineDto> svcListAll() {
-		return wineDao.daoWineListAll();
+	public List<WineDto> svcListAll(String order) {
+		return wineDao.daoWineListAll(order);
 	}
 
 	@Override
@@ -42,15 +42,11 @@ public class SvcImplet implements SvcInface {
 		return wineDao.daoWineListGrape(grapename);
 	}
 	@Override
-	public List<WineDto> svcListCountry(String countryname){
+	public List<WineDto> svcListCountry(String nationName){
 		
-		return wineDao.daoWineListCountry(countryname);
+		return wineDao.daoWineListCountry(nationName);
 	}
 	
 
-	@Override
-	public List<WineDto> scvPriceHighList(@Param("sortByPrice") String sortByPrice) {
 
-		return wineDao.daoPriceHighList(sortByPrice);
-	}
 }
