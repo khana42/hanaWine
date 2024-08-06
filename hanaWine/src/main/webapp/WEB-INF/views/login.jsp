@@ -11,9 +11,13 @@
 </head>
 <body>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	<div id="loginPage">
 >>>>>>> 2b513cfa13e1efc73ccfca1ae75e28e3044ab9e4
+=======
+	<div id="loginPage">
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 
 	<div id="loginModal" class="modal" >
 		<div class="modal-content">
@@ -55,11 +59,17 @@
 			<label> <input type="checkbox"> <span>아이디 저장</span>
 			</label>
 		</form>
+<<<<<<< HEAD
 		
 		<div id="errorMessage">
 			${error}
 		</div> <!-- 오류 메시지 -->
 		
+=======
+		<div id="errorMessage">
+			${error}
+		</div> <!-- 오류 메시지 -->
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 		<div id="idSave"></div>
 
 		<div id="find">

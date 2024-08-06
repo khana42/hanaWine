@@ -14,6 +14,7 @@
 		<div id="text">
 			<p>서울시 구로구 경인로 557 (구로동 606-4 삼영빌딩 4층)</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 			<p>강하나 E-MAIL : khn5963@naver.com</p>
 			<p>곽우석 E-MAIL : us000000@naver.com</p>
 			<p>이승호 E-MAIL : drugsite89@naver.com </p>
@@ -21,6 +22,8 @@
 			<p>정현수 E-MAIL : amglar18@naver.com </p>
 			<p>박빛나리 E-MAIL : o881black@gmail.com </p>
 =======
+=======
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 			<div class="email email1 dFlex">
 				<p>강하나 E-MAIL : khn5963@naver.com</p>
 				<p>곽우석 E-MAIL : us000000@naver.com</p>
@@ -33,7 +36,10 @@
 				<p>정현수 E-MAIL : amglar18@naver.com </p>
 				<p>박빛나리 E-MAIL : o881black@gmail.com </p>
 			</div>
+<<<<<<< HEAD
 >>>>>>> 2b513cfa13e1efc73ccfca1ae75e28e3044ab9e4
+=======
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 			<p>&copy;2024 HANA WINE. All rights reserved.</p>
 		</div>
 		

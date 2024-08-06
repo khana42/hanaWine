@@ -9,7 +9,11 @@ $(function() {
 		const phonePrefix = $("#phonePrefix").val(); // 선택된 전화번호 앞자리
 		const phoneFull = `${phonePrefix}-${phone1}-${phone2}`;
 		$("input[name='fullNum']").val(phoneFull); // memberPhone에 저장
-
+        
+        const add1VAl  = $("#useraddress").val()
+        const add1VA2  = $("#roadAddressDetail").val() 
+		const addFullVall = `${add1VAl}${add1VA2}`;
+         $("input[name='addFull']").val(addFullVall);
 		const regExpUid = /[^a-z|0-9|A-Z|]/g;
 		const uidVal = $("#userid").val();
 		const uidLen = uidVal.length;
@@ -19,24 +23,24 @@ $(function() {
 		const pwLen = pwVal.length;
 
 		const pw2Val = $("#userpw2").val();
-        var hidChk = $("#hidChk").val();
-        var btnHidChk = $("#btnHidChk").val();
-        
+		var hidChk = $("#hidChk").val();
+		var btnHidChk = $("#btnHidChk").val();
+
 		// ID 유효성 검사
 		if (regExpUid.test(uidVal) || uidLen < 4 || uidLen > 16) {
 			alert("ID는 4~16 사이의 영어 대소문자와 숫자만 가능합니다.");
 			return; // 유효성 검사 실패 시 함수 종료
 		}
-		if(btnHidChk == 'N'){
+		if (btnHidChk == 'N') {
 			alert("ID 중복체크 바랍니다.");
-			return;	
+			return;
 		}
-		
-		if(hidChk == 'N'){
+
+		if (hidChk == 'N') {
 			alert("존재하는 ID 입니다.");
-			return;	
+			return;
 		}
-		
+
 
 		// 비밀번호 유효성 검사
 		if (regExppass.test(pwVal) || pwLen < 6 || pwLen > 20) {
@@ -53,12 +57,12 @@ $(function() {
 			return; // 유효성 검사 실패 시 함수 종료
 		}
 
-          const emailVal = $("#useremail").val();  
-		 const regExpEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		  if (!regExpEmail.test(emailVal)) {
-		    alert("유효한 이메일 주소를 입력해 주세요.");
-		      return; // 유효성 검사 실패 시 함수 종료
-		  }
+		const emailVal = $("#useremail").val();
+		const regExpEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		if (!regExpEmail.test(emailVal)) {
+			alert("유효한 이메일 주소를 입력해 주세요.");
+			return; // 유효성 검사 실패 시 함수 종료
+		}
 		// 이름 유효성 검사
 		const nameVal = $("#memberName").val();
 		if (nameVal.length < 2) {
@@ -150,15 +154,25 @@ $(function() {
 
 	//아이디 중복체크
 	$("#btnchk").click(function() {
-		var idchk = $("#userid").val();
-
+		var idchk = $("#userid").val().trim();
+		const regExpUid = /[^a-z|0-9|A-Z|]/g;
+		const uidVal = $("#userid").val();
+		const uidLen = uidVal.length;
+		if (idchk === '') {
+			alert("아이디를 입력해 주세요.");
+			return; // 함수를 종료하고 더 이상 실행하지 않음
+		}
+		if (regExpUid.test(uidVal) || uidLen < 4 || uidLen > 16) {
+			alert("ID는 4~16 사이의 영어 대소문자와 숫자만 가능합니다.");
+			return; // 유효성 검사 실패 시 함수 종료
+		}
 		$.ajax({
 			url: '/idChk',
 			method: 'post',
 			data: { "idchk": idchk },
 			dataType: 'text',
 			success: function(data, status, xhr) {
-				$("#btnHidChk").val('Y');			
+				$("#btnHidChk").val('Y');
 				if ("ok" == data) {
 					$("#hidChk").val('Y');//가입유효성 체크 위해
 					alert("사용 가능한 아이디입니다.");
@@ -172,6 +186,37 @@ $(function() {
 			}
 
 		});
+
+
+// DOMContentLoaded 이벤트 사용
+    document.addEventListener('DOMContentLoaded', function () {
+        const deleteButtons = document.querySelectorAll('button[name="delete"]');
+
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // 삭제 버튼 클릭 시 동작 구현
+                alert('상품이 삭제되었습니다.');
+            });
+        });
+
+        // 장바구니 창에서 주문하기 클릭하면 결제페이지로 넘어가기
+        const orderButton = document.querySelector('button#order');
+        if (orderButton) {
+            orderButton.addEventListener('click', function () {
+                location.href = "/pay";
+            });
+        }
+
+        // pay창에서 쇼핑계속하기 클릭하면 메인페이지로 넘어가기
+   
+        // 결제 페이지 버튼 
+        document.querySelector('form').addEventListener('submit', function (event) {
+            alert('주문이 완료되었습니다.');
+        });
+
+        // 결제완료로 넘어가기
+
+    });
 
 
 

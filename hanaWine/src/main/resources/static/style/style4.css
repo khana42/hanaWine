@@ -4,89 +4,119 @@
 
 /*/// 공통 사항 Start ///*/
 div#wrap {
-	width: 1100px;
-	margin: 0 auto;
+   width: 1100px;
+   margin: 0 auto;
 }
 /*/// 공통 사항 End ///*/
 
 /*/// noticeList.jsp Start ///*/
 div.commWrap {
-	margin: 0 auto;
-	text-align: center;
-	border-bottom: 1px solid #000;
+   width: 1100px;
+   margin: 0 auto;
+   text-align: center;
+   padding: 30px 60px;
 }
 
 div.commTit {
-	height: 200px;
-	display: block;
-	line-height: 200px;
-	background-color: rgba(125, 125, 0, 0.1);
+   border-width: 10%;
+   height: 200px;
+   display: block;
+   line-height: 200px;
+   /* background-color: rgba(125, 125, 0, 0.1); */
 }
 
 div.commTit h1 {
-	font-size: 30px;
+   font-family: "Playfair Display", serif;
+   font-optical-sizing: auto;
+   margin-bottom: 10px;
+   color: #333131;
+}
+
+div.commGnbArea {
+   display: block;
+   border-top: 1px solid #ddd;
+   border-bottom: 1px solid #ddd;
 }
 /* .commGnb Start */
 ul.commGnb {
-	display: inline-block;
+   display: inline-block;
+   margin: 0 auto;
+   text-align: center;
 }
 
 ul.commGnb li {
-	padding: 20px;
-	display: inline-block;
-	justify-content: space-around;
-	display: inline-block;
+   padding: 20px 30px;
+   display: inline-block;
+   justify-content: space-around;
+   display: inline-block;
 }
 
 ul.commGnb li span {
-	font-size: 20px;
+   font-family: 'IBM Plex Sans KR', sans-serif;
+   font-size: 13px;
+   font-weight: 300;
 }
 
-ul.commGnb li a:hover {
-	font-weight: bold;
+ul.commGnb li span:hover{
+   font-weight: bold;
+   text-decoration: underline; 
 }
 /* .commGnb End */
 
 /* .noticeListWrap Start */
+div.noticeListWrap {
+   width: 80%;
+   margin: 0 auto;
+}
+
 div.noticeListWrap table {
-	border-collapse: collapse;
+   margin: 0 auto;
+   border-collapse: collapse;
 }
 
 div.noticeListWrap thead tr {
-	height: 60px;
-	border-bottom: 1px solid #aaa;
-	font-size: 20px;
+   height: 60px;
+   border-bottom: 1px solid #aaa;
+}
+
+div.noticeListWrap thead tr th {
+   font-size: 15px;
+   font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 div.noticeListWrap tbody tr {
-	height: 80px;
-	border-bottom: 1px solid #aaa;
-	font-size: 20px;
+   height: 80px;
+   border-bottom: 1px solid #aaa;
+}
+
+div.noticeListWrap tbody tr td {
+   font-size: 14px;
+   font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 div.noticeListWrap tbody tr:hover {
-	background-color: rgba(100, 100, 0, 0.03);
-	font-weight: bold;
+   background-color: rgba(100, 100, 0, 0.03);
+   font-weight: bold;
 }
 
 div.noticeListWrap tbody tr td:not(:nth-child(2)) {
-	text-align: center;
+   text-align: center;
 }
 
 div.noticeListWrap tbody tr td:nth-child(2) {
-	text-indent: 30px;
+   text-indent: 30px;
 }
 
 th.num {
-	width: 110px;
+   width: 110px;
 }
 
 th.title {
-	width: 730px;
+   width: 730px;
 }
 
 th.date {
-	width: 260px;
+   width: 260px;
 }
 
 /* .noticeListWrap End */
@@ -95,175 +125,213 @@ th.date {
 
 /*/// noticeWrite.jsp Start ///*/
 div#noticeWriteForm {
-	width: 600px;
-	margin: 0 auto;
-	border: 1px solid #000;
+   width: 600px;
+   margin: 0 auto;
 }
 
 div#noticeWriteForm hr {
-	margin: 10px;
+   margin: 10px;
 }
 
 div#noticeWriteForm input {
-	margin: 5px;
-	padding: 3px 5px;
-	width: 100%;
+   margin: 5px;
+   padding: 3px 5px;
+   width: 100%;
 }
 
 div#noticeWriteForm textarea {
-	padding: 10px;
+   padding: 10px;
 }
 
 div#noticeWriteForm tr {
-	display: block;
-	margin: 10px;
+   display: block;
+   margin: 10px;
 }
 
 div#noticeWriteForm button {
-	padding: 5px;
+   padding: 5px;
 }
 /*/// noticeWrite.jsp End ///*/
 
 /*/// noticeView.jsp Start ///*/
 div#noticeListView {
-	margin-top: 50px;
+   width: 80%;
+   margin: 0 auto;
+   margin-top: 50px;
 }
 
 div.notiTitWrap {
-	padding-bottom: 30px;
-	margin-bottom: 30px;
-	border-bottom: 1px solid #aaa;
-	text-indent: 50px;
+   padding-bottom: 30px;
+   margin-bottom: 30px;
+   border-bottom: 1px solid #aaa;
+   text-indent: 50px;
+}
+
+div.notiTitWrap h3 {
+   font-size: 15px;
+   font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 div.notiConWrap {
-	padding-bottom: 30px;
-	margin-bottom: 30px;
-	border-bottom: 1px solid #aaa;
-	text-indent: 50px;
+   padding-bottom: 30px;
+   margin-bottom: 30px;
+   border-bottom: 1px solid #aaa;
+   text-indent: 50px;
+}
+
+div.notiConWrap p {
+   font-size: 14px;
+   font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 div.commBtnArea {
-	text-align: center;
+   text-align: center;
+   margin: 10px 0 40px 0;
 }
 
 div.commBtnArea button {
-	display: inline-block;
-	padding: 10px 20px;
-	border: 1px solid #aaa;
-	border-radius: 3px;
-	font-size: 20px;
-	background-color: rgba(100, 100, 0, 0.07);
-	color: #666;
+   display: inline-block;
+   padding: 10px 20px;
+   border: 1px solid #aaa;
+   border-radius: 3px;
+   font-size: 14px;
+   font-family: 'IBM Plex Sans KR', sans-serif;
+   background-color: rgba(100, 100, 0, 0.07);
+   color: #666;
 }
 
 div.commBtnArea button:hover {
-	cursor: pointer;
-	font-weight: bold;
-	background-color: rgba(100, 100, 0, 0.5);
-	color: #000;
+   cursor: pointer;
+   font-weight: bold;
+   background-color: rgba(100, 100, 0, 0.5);
+   color: #000;
 }
 /*/// noticeView.jsp End ///*/
 
 /*/// qnaWrite.jsp Start ///*/
 div#qnaWrap {
-	width: 1100px;
-	height: 800px;
-	margin: 0 auto;
+   width: 80%;
+   margin: 0 auto;
+   margin-top: 20px;
 }
 
 div.qnaTitWrap {
-	border-bottom: 1px solid #aaa;
-	padding: 30px 0;
+   border-bottom: 1px solid #aaa;
+   padding: 30px 0;
 }
 
 div#qnaWrap h3 {
-	text-align: center;
+   text-align: center;
+   font-size: 15px;
+   font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 div.qnaArticleWrap {
-	width: 500px;
-	margin: 0 auto;
-	padding: 10px;
+   width: 500px;
+   margin: 0 auto;
+   padding: 10px;
 }
 
 div.qnaArticle label {
-	padding: 10px;
+   padding: 10px;
 }
 
 div.qnaArticle label p {
-	font-size: 20px;
+   font-size: 14px;
+   font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 div.qnaArticle label input {
-	width: 100%;
-	height: 30px;
-	margin: 10px 0;
-	padding: 5px;
+   width: 100%;
+   height: 30px;
+   margin: 10px 0;
+   padding: 5px;
 }
 
 div.qnaArticle label select {
-	width: 100%;
-	height: 30px;
-	margin: 10px 0;
+   width: 100%;
+   height: 30px;
+   margin: 10px 0;
 }
 
 div.qnaArticle label textarea {
-	width: 100%;
-	margin: 10px 0;
-	padding: 5px;
+   width: 100%;
+   margin: 10px 0;
+   padding: 5px;
 }
 
 /*/// qnaWrite.jsp End ///*/
 
 /*/// faqList.jsp Start ///*/
 div.faqTit {
-	height: 60px;
-	text-align: center;
-	border-bottom: 1px solid #aaa;
-	line-height: 60px;
+   height: 60px;
+   text-align: center;
+   border-bottom: 1px solid #aaa;
+   line-height: 60px;
+}
+
+div.faqListWrap {
+   width: 80%;
+   margin: 0 auto;
+}
+
+.faqList>li {
+   width: 100%;
 }
 
 .faqList>li>span {
-	display: inline-block;
-	width: 100%;
-	height: 80px;
-	line-height: 80px;
-	border-bottom: 1px solid #aaa;
-	font-size: 20px;
-	text-indent: 50px
+   display: inline-block;
+   width: 100%;
+   height: 80px;
+   line-height: 80px;
+   border-bottom: 1px solid #aaa;
+   font-size: 20px;
+   text-indent: 50px;
+   font-size: 15px;
+   font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .faqList>li>span:hover {
-	cursor: pointer;
-	font-weight: bold;
-	background-color: rgba(100, 100, 0, 0.03);
+   cursor: pointer;
+   font-weight: bold;
+   background-color: rgba(100, 100, 0, 0.03);
 }
 
 .a {
-	display: none;
+   display: none;
+   background-color: rgba(100, 100, 0, 0.1);
 }
 
 .a>span {
-	display: block;
-	width: 100%;
-	height: 80px;
-	line-height: 80px;
-	font-size: 20px;
-	text-indent: 50px;
-	background-color: rgba(100, 100, 0, 0.2);
+   display: block;
+   width: 100%;
+   height: 80px;
+   line-height: 80px;
+   font-size: 14px;
+   font-family: 'IBM Plex Sans KR', sans-serif;
+   text-indent: 50px;
 }
 
 .on .a {
-	display: block;
-	width: 100%;
-	border-bottom: 1px solid #aaa;
+   display: block;
+   width: 100%;
+   border-bottom: 1px solid #aaa;
 }
 
-div.aside{
-	margin-top: 10px;
-	text-align:center;
-	height: 50px;
+div.aside {
+   margin-top: 50px;
+   text-align: center;
+   height: 50px;
+}
+
+div.aside h3 {
+   font-size: 15px;
+   font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+.community img{
+	
+ margin: 30px;
 }
 
 /*/// faqList.jsp End ///*/

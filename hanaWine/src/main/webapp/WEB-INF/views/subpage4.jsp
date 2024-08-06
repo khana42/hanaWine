@@ -36,13 +36,13 @@
 		<div class="ha"></div>
 		<div id="select" class="dFlex">
 			
-			<div id="selecOp">
+		<div id="selecOp">
 				<ul id="select0" class="dFlex">
-					<li class="select1">인기순</li>
+					<li class="order" data-order="recent">최신순</li>
 					<li>|</li>
-					<li class="select1">가격 높은순</li>
+					<li class="order" data-order="high">가격 높은순</li>
 					<li>|</li>
-					<li class="select1">가격 낮은순</li>
+					<li class="order" data-order="low">가격 낮은순</li>
 				</ul>
 			</div>
 		</div>
@@ -51,7 +51,7 @@
 			<div id="main" class="dFlex">
 				<div id="wine" class="dFlex wineInfo" class="wine" class="winePage" data-winekrname="${list.wineKrName}">
 					<div class="img1">
-						<img src="http://placehold.it/200x300" alt="">
+							<img style="width: 110px" src="<c:url value='/wineimg/${list.goodsImg}' />" alt="">
 					</div>
 					<div class="name">
 						

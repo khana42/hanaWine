@@ -2,7 +2,10 @@
 
 @import url(style_Reset.css);
 
+<<<<<<< HEAD
 /* header CSS 시작 */
+=======
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 div#logoArea {
 	width: 1100px;
 	text-align: center;
@@ -59,6 +62,10 @@ div#gnbArea {
 	margin: 0;
 	display: inline-block;
 	position: relative;
+<<<<<<< HEAD
+=======
+	z-index: 10;
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 }
 
 #gnbArea #nav ul#mainMenu>li:hover {
@@ -168,6 +175,7 @@ main#main {
 	overflow: hidden;
 	margin: 0 auto;
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 	border: 1px solid #000; */
 }
 
@@ -187,15 +195,29 @@ main#main {
 	padding: 10px;
 	justify-content: space-evenly;
 }
+=======
+	/* 	border: 1px solid #000; */
+}
+
+#main .bestWine {
+	margin-bottom: 20px;
+	padding: 10px;
+	justify-content: space-evenly;
+}
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 #main .bestWine:last-child{
 	margin-bottom: 150px;
 }
 #main .bestWine a {
+<<<<<<< HEAD
 >>>>>>> 2b513cfa13e1efc73ccfca1ae75e28e3044ab9e4
+=======
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 	display: inline-block;
 	margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* Main CSS 끝 */
 
@@ -311,6 +333,100 @@ div#footerWrap {
 >>>>>>> 2b513cfa13e1efc73ccfca1ae75e28e3044ab9e4
 }
 
+=======
+div.bestWine {
+	
+	padding: 100px;
+/* 	border: 1px solid #cf1616; */
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+	background-color: rgb(255, 235, 205, 0.5);
+}
+
+div#img1 {
+	/* border: 1px solid #000; */
+	display: flex;
+	padding: 5px;
+	margin-left: 5px;
+}
+
+div#txt {
+	border: 1px solid #fce6c9;
+	margin: 50px;
+
+}
+
+.bestWine>#img1 p#p1 {
+	width: 400px;
+	height: 500px;
+	text-align: center;
+	font-family: "Playfair Display", serif;
+	font-size: 70px;
+	color: #333131;
+	background-color: rgb(255, 235, 205, 0.5);
+	margin-top: 100px;
+}
+
+.bestWine>#img1 span {
+	width: 500px;
+	text-align: center;
+	font-family: "Playfair Display", serif;
+	font-size: 50px;
+	color: #333131;
+	background-color: rgb(255, 235, 205, 0.5);
+}
+
+.bestWine>#img1 span#span2 {
+	width: 500px;
+	text-align: center;
+	font-family: "Playfair Display", serif;
+	font-size: 15px;
+	color: #333131;
+	background-color: rgb(255, 235, 205, 0.5);
+}
+
+/* Main CSS 끝 */
+
+/* footer CSS 시작 */
+div#footerWrap {
+	width: 1100px;
+	margin: 20px auto;
+	justify-content: space-between;
+}
+
+#footerWrap #text {
+	width: 700px;
+	padding: 25px 0 0 15px;
+	line-height: 2;
+}
+
+#footerWrap #text .email {
+	justify-content: space-between;
+}
+
+#footerWrap #text .email1 p:last-child {
+	padding-right: 19px;
+}
+
+#footerWrap #text .email2 p:last-child {
+	padding-right: 28px;
+}
+
+#footerWrap #footerLogo {
+	padding-top: 80px;
+	margin-right: 30px;
+}
+/* footer CSS 끝 */
+
+/* login CSS 시작 */
+/* 로그인 모달 CSS 시작*/
+#loginModal h1 {
+	text-align: center;
+	margin: 20px 0;
+}
+
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 #loginModal form {
 	width: 100%;
 	padding: 15px 20px 10px;
@@ -377,14 +493,18 @@ div#footerWrap {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 로그인 모달 CSS 시작*/
 
 =======
 >>>>>>> 2b513cfa13e1efc73ccfca1ae75e28e3044ab9e4
+=======
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 /* 모달 배경 스타일 */
 div#loginWrap {
 	z-index: 1000;
 	width: 100%;
+<<<<<<< HEAD
 <<<<<<< HEAD
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
@@ -394,17 +514,23 @@ div#loginWrap {
     left: 0;
     top: 0;
 =======
+=======
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.7);
 	display: none;
 	position: fixed;
 	left: 0;
 	top: 0;
+<<<<<<< HEAD
 >>>>>>> 2b513cfa13e1efc73ccfca1ae75e28e3044ab9e4
+=======
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 }
 
 /* 모달 레이어 종료하기 아이콘 시작 */
 #loginModal div#modalCloseIconArea {
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 60px;
     height: 64px;
@@ -428,6 +554,8 @@ div#loginWrap {
     font-weight: bold;
 }
 =======
+=======
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 	width: 60px;
 	height: 64px;
 	text-align: center;
@@ -449,11 +577,15 @@ div#loginWrap {
 	font-weight: bold;
 }
 
+<<<<<<< HEAD
 >>>>>>> 2b513cfa13e1efc73ccfca1ae75e28e3044ab9e4
+=======
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 div#loginModal {
 	z-index: 1001;
 	width: 360px;
 	height: 400px;
+<<<<<<< HEAD
 <<<<<<< HEAD
     padding: 30px;
     border: 4px solid #fff;
@@ -466,6 +598,8 @@ div#loginModal {
 /* 로그인 모달 CSS 끝*/
 
 =======
+=======
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 	padding: 30px;
 	border: 4px solid #fff;
 	background-color: #fff;
@@ -558,6 +692,10 @@ div#loginPage {
 
 #loginPage #errorMessage {
 	color: red;
+<<<<<<< HEAD
 }
 >>>>>>> 2b513cfa13e1efc73ccfca1ae75e28e3044ab9e4
 /* login CSS 끝 */
+=======
+}
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b

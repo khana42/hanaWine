@@ -51,7 +51,7 @@
 			<div id="main" class="dFlex wineInfo" data-winekrname="${list.wineKrName}">
 				<div id="wine" class="dFlex" class="winePage">
 					<div class="img1">
-						<img src="http://placehold.it/200x300" alt="">
+							<img style="width: 110px" src="<c:url value='/wineimg/${list.goodsImg}' />" alt="">
 					</div>
 					<div class="name">
 						

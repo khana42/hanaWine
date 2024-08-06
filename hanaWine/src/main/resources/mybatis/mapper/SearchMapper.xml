@@ -11,11 +11,26 @@
 A.region,
 (SELECT grapeName From projectDB.grape WHERE IDX = A.grape)AS GRAPE ,
 A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
-C.foodName
+GROUP_CONCAT(DISTINCT C.foodName) AS foodNames
 FROM projectDB.wineListTest A
 LEFT OUTER JOIN projectDB.wineFood B ON A.num = B.wineIdx
 INNER JOIN  projectDB.food C ON B.foodIdx = C.idx
 WHERE wineKrName LIKE CONCAT('%', #{keyword}, '%')
         OR wineEgName LIKE CONCAT('%', #{keyword}, '%')
+        GROUP BY 
+        A.wineKrName, 
+        A.wineEgName,
+        A.typeOfWine,
+        A.nation,
+        A.region,
+        A.price,
+        A.alcohol,
+        A.sweetness,
+        A.acidity,
+        A.body,
+        A.goodsImg,
+        A.recipe,
+        A.goodsInfo,
+        A.createTM;
 	</select>
 </mapper>

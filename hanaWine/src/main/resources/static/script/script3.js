@@ -18,6 +18,7 @@ $(function() {
 
 	//로그인 페이지 모달
 	$("#login").click(function() {
+<<<<<<< HEAD
 		$("#loginWrap").show();
 	});
 	
@@ -66,18 +67,42 @@ $(function() {
 	$("#joinBtn").click(function() {
         location.href = "/Join02";
 	});
+=======
+	 $("#loginWrap").show();
+
+	});
+	$("#closeIcon").click(function(){  // 모달 닫기
+       $("div#loginWrap").css({
+               "display": "none"
+       });
+    });
+     var errorMessage = $("#error-message p").text().trim();
+    if (errorMessage) {
+        $("#loginWrap").show();
+    }
+	//로그인페이지의 회원가입 버튼
+	$("#joinBtn").click(function() {
+        location.href = "/Join02";
+   });
+
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 
 	//메인페이지 회원가입 클릭 시
 	$("#join").click(function() {
 		location.href = "/Join02";
 	});
-
+    
 	//메인페이지의 로그아웃 클릭
 	$("#logout").off().click(function() {
 		confirm("로그아웃 하시겠습니까?");
 		location.href="/logout";
 	});
-
+   //메인페이지의 장바구니 클릭
+   $("#cart").click(function(){
+	location.href = "/cart";
+	
+})
+   
 	//헤더에 마우스 올릴 시 메뉴 펼쳐져지고 닫혀짐
 	$('#mainMenu>li').mouseover(function() {
 		$(this).children('ul.subMenu').stop().slideDown(0);
@@ -115,11 +140,17 @@ $(function() {
 >>>>>>> 2b513cfa13e1efc73ccfca1ae75e28e3044ab9e4
 
 
+<<<<<<< HEAD
 ///////////커뮤니티////////////////
 $("#community").click(function(){
 
    location.href = "/noticeList";
    });
+=======
+
+
+
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 
 
 <<<<<<< HEAD
@@ -193,6 +224,7 @@ $("#community").click(function(){
 
 	});
 	
+<<<<<<< HEAD
 	///////////검색창////////////////
 	$(document).ready(function() {
     	$("#btnSearch").click(function(event) {
@@ -205,6 +237,11 @@ $("#community").click(function(){
        $("#btnSearch").off().click(function(event) {
            event.preventDefault(); // 기본 링크 클릭 동작 방지
 >>>>>>> 2b513cfa13e1efc73ccfca1ae75e28e3044ab9e4
+=======
+	   $(document).ready(function() {
+        $("#btnSearch").off().click(function(event) {
+            event.preventDefault(); // 기본 링크 클릭 동작 방지
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
             var keyword = $("#keyword").val(); // 검색어 가져오기
             
             // 검색어가 있는 경우에만 링크로 이동

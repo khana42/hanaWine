@@ -23,11 +23,16 @@
 				<a href="#"><img src="/img/wineSlide3.jpg" alt="이미지"></a>
 			</div>
 		</div>
+<<<<<<< HEAD
 	
 <<<<<<< HEAD
 =======
 
     <div class="bestWine dFlex">
+=======
+			
+		 <div class="bestWine dFlex">
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 
         <div id="img1" class="dFlex">
             <a href="#"><img src="/img/mainWine.jpg" alt="이미지"></a>
@@ -59,7 +64,10 @@
             <!-- <div id="txt"></div> -->
         </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> 2b513cfa13e1efc73ccfca1ae75e28e3044ab9e4
+=======
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 		
 	</main>
 	

@@ -22,7 +22,7 @@ $(function() {
 			moveSlide(currentIdx + 1);
 		} else {
 			moveSlide(0);
-		}File(recipe, uploadDir + recipeName);
+		} File(recipe, uploadDir + recipeName);
 	});
 
 	prevBtn.addEventListener('click', function() {
@@ -33,21 +33,35 @@ $(function() {
 		}
 	});
 
+<<<<<<< HEAD
 	
+=======
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 	$(".order").click(function() {
 
 		var order = $(this).data("order");
-		location.href="/wine?order="+order;
+		location.href = "/wine?order=" + order;
 	});
 
 
+});
+$(document).ready(function() {
+	$(".wineInfo").click(function(e) {
+		e.stopPropagation()
+		var wineKrName = $(this).data("winekrname"); // data-winekrname 속성에서 값을 가져옴
+		location.href = "/productPage?wineKrName=" + encodeURIComponent(wineKrName); // 상세 페이지로 이동
+	});
+});
 
 
 });
 
+<<<<<<< HEAD
 $(document).ready(function() {
     $(".wineInfo").click(function() {
         var wineKrName = $(this).data("winekrname"); // data-winekrname 속성에서 값을 가져옴
         location.href = "/productPage?wineKrName=" + encodeURIComponent(wineKrName); // 상세 페이지로 이동
     });
 });
+=======
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b

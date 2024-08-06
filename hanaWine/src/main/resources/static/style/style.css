@@ -87,6 +87,7 @@ button {
   overflow:hidden;
   margin-bottom: 10px;
   margin-top: 10px;
+  z-index: 1;
 }
 
 .slides{
@@ -224,6 +225,7 @@ div#wineUpload {
    margin-right: 20px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2b513cfa13e1efc73ccfca1ae75e28e3044ab9e4
 =======
 
@@ -231,12 +233,30 @@ div#wineUpload {
 #wrap #keywordH{
 	text-align: center;
 	margin-bottom: 20px;
+=======
+/* 검색 결과 화면  */
+#wrap #keywordH{
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+#select #selecOp li.order:hover{
+   cursor: pointer;
+   font-weight: bold;
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b
 }
 
 #wrap .no-results{
 	margin-top: 50px;
+<<<<<<< HEAD
 	font-weight: bold;
 	text-align: center;
 	font-size: 50px;
 }
 >>>>>>> b768fac978ac38f67f005d8fc0c847136cc2780a
+=======
+   font-weight: bold;
+   text-align: center;
+   font-size: 50px;
+}
+>>>>>>> d6f4215777fa5b35f108a0cc15b4068abc6ded3b

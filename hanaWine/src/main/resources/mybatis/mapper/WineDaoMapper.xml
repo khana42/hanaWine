@@ -15,12 +15,28 @@
 		(SELECT grapeName From projectDB.grape WHERE num = A.grape)AS
 		GRAPE ,
 		A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
-		C.foodName
+		GROUP_CONCAT(DISTINCT C.foodName) AS foodNames
 		FROM projectDB.wineListTest A
 		LEFT OUTER JOIN
-		projectDB.wineFood B ON A.num = B.wineIdx
+		projectDB.wineFood B ON A.num
+		= B.wineIdx
 		INNER JOIN projectDB.food C
 		ON B.foodIdx = C.idx
+		GROUP BY
+		A.wineKrName,
+		A.wineEgName,
+		A.typeOfWine,
+		A.nation,
+		A.region,
+		A.price,
+		A.alcohol,
+		A.sweetness,
+		A.acidity,
+		A.body,
+		A.goodsImg,
+		A.recipe,
+		A.goodsInfo,
+		A.createTM
 		<choose>
 			<when test="'low'.equals(order)">
 				ORDER BY A.PRICE
@@ -47,7 +63,7 @@
 		(SELECT grapeName From projectDB.grape WHERE num = A.grape)AS
 		GRAPE ,
 		A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
-		C.foodName
+		GROUP_CONCAT(DISTINCT C.foodName) AS foodNames
 		FROM projectDB.wineListTest A
 		INNER JOIN projectDB.typeOfWine
 		T ON A.typeOfWine = T.idx
@@ -71,7 +87,7 @@
 		(SELECT grapeName From projectDB.grape WHERE num = A.grape)AS
 		GRAPE ,
 		A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
-		C.foodName
+		GROUP_CONCAT(DISTINCT C.foodName) AS foodNames
 		FROM projectDB.wineListTest A
 		LEFT OUTER JOIN
 		projectDB.wineFood B ON A.num = B.wineIdx
@@ -92,7 +108,7 @@
 		(SELECT grapeName From projectDB.grape WHERE num = A.grape)AS
 		GRAPE ,
 		A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
-		C.foodName
+		GROUP_CONCAT(DISTINCT C.foodName) AS foodNames
 		FROM projectDB.wineListTest A
 		LEFT OUTER JOIN
 		projectDB.wineFood B ON A.num = B.wineIdx
@@ -114,7 +130,7 @@
 		(SELECT grapeName From projectDB.grape WHERE num = A.grape)AS
 		GRAPE ,
 		A.price,A.alcohol,A.sweetness,A.acidity,A.body,A.goodsImg,A.recipe,A.goodsInfo,A.createTM,
-		C.foodName
+		GROUP_CONCAT(DISTINCT C.foodName) AS foodNames
 		FROM projectDB.wineListTest A
 		inner join projectDB.nation N
 		on A.nation = N.idx
