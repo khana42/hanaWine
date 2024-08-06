@@ -14,17 +14,15 @@ div#logoArea{
 
 #logoArea #logo{
 /* 	border: 1px solid #000; */
-	margin-left: 35px;
-	
+	margin-left: 380px;
 }
 #logoArea #loginArea{
-	font-size: 16px;
+	font-size: 15px;
 	margin-right: 10px;
-	transform: translateY(70px);
+	transform: translateY(18px);
 }
 #logoArea #loginArea li{
 	margin-right: 15px;
-	
 }
 #logoArea #loginArea li:hover{
 	cursor: pointer;
@@ -62,54 +60,13 @@ div#gnbArea{
 	font-weight: bold;
 }
 
-#gnbArea #nav li#wineCateMain ul.subMenu {
-	width: 130px;
+#gnbArea #nav ul.subMenu {
+	width: 150px;
 	background-color: #fff;
-	
+
     display: none;
 
     position: absolute;
-	left: -50px;    
-    top: 30px;
-}
-#gnbArea #nav li#wineCateFood ul.subMenu {
-	width: 90px;
-	background-color: #fff;
-	
-    display: none;
-
-    position: absolute;
-	left: -30px;    
-    top: 30px;
-}
-#gnbArea #nav li#wineCateGrape ul.subMenu {
-	width: 120px;
-	background-color: #fff;
-	
-    display: none;
-
-    position: absolute;
-	left: -30px;    
-    top: 30px;
-}
-#gnbArea #nav li#wineCateCountry ul.subMenu {
-	width: 120px;
-	background-color: #fff;
-	
-    display: none;
-
-    position: absolute;
-	left: -45px;    
-    top: 30px;
-}
-#gnbArea #nav li#community ul.subMenu {
-	width: 125px;
-	background-color: #fff;
-	
-    display: none;
-
-    position: absolute;
-	left: -32px;    
     top: 30px;
 }
 #gnbArea #nav ul.subMenu li {
@@ -125,22 +82,18 @@ div#gnbArea{
 	width: 250px;
 	position: relative;
 	left: -20px;
-	top: -10px;
 }
 #gnbArea #search input{
 	width: 100%;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	padding: 10px;
+	padding: 5px;
 }
 #gnbArea #search img{
 	position: absolute;
 	width: 20px;
-	top: 9px;
-	right: 10px;
-}
-#gnbArea #search img:hover{
-	cursor: pointer;
+	top: 5px;
+	right: 7px;
 }
 /* GNB 시작 */
 /* header CSS 끝 */
@@ -196,13 +149,8 @@ div#loginWrap {
 	padding: 15px;
 	margin: 20px auto;
 }
-#loginWrap #logo{
-	text-align: center;
-	
-}
 #loginWrap h1{
 	text-align: center;
-	margin-top: 150px;
 }
 #loginWrap form {
 	width: 100%;

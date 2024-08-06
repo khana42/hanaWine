@@ -1,64 +1,64 @@
 package com.prog.Pagination;
 
 public class Pagination {
-	/** í•œ í˜ì´ì§€ë‹¹ ê²Œì‹œê¸€ ìˆ˜ **/
+	/** ÇÑ ÆäÀÌÁö´ç °Ô½Ã±Û ¼ö **/
 	private int pageSize = 10;
 
-	/** í•œ ë¸”ëŸ­(range)ë‹¹ í˜ì´ì§€ ìˆ˜ **/
+	/** ÇÑ ºí·°(range)´ç ÆäÀÌÁö ¼ö **/
 	private int rangeSize = 10;
 
-	/** í˜„ì¬ í˜ì´ì§€ **/
+	/** ÇöÀç ÆäÀÌÁö **/
 	private int curPage = 1;
 
-	/** í˜„ì¬ ë¸”ëŸ­(range) **/
+	/** ÇöÀç ºí·°(range) **/
 	private int curRange = 1;
 
-	/** ì´ ê²Œì‹œê¸€ ìˆ˜ **/
+	/** ÃÑ °Ô½Ã±Û ¼ö **/
 	private int listCnt;
 
-	/** ì´ í˜ì´ì§€ ìˆ˜ **/
+	/** ÃÑ ÆäÀÌÁö ¼ö **/
 	private int pageCnt;
 
-	/** ì´ ë¸”ëŸ­(range) ìˆ˜ **/
+	/** ÃÑ ºí·°(range) ¼ö **/
 	private int rangeCnt;
 
-	/** ì‹œì‘ í˜ì´ì§€ **/
+	/** ½ÃÀÛ ÆäÀÌÁö **/
 	private int startPage = 1;
 
-	/** ë í˜ì´ì§€ **/
+	/** ³¡ ÆäÀÌÁö **/
 	private int endPage = 1;
 
-	/** ì‹œì‘ index **/
+	/** ½ÃÀÛ index **/
 	private int startIndex = 0;
 
-	/** ì´ì „ í˜ì´ì§€ **/
+	/** ÀÌÀü ÆäÀÌÁö **/
 	private int prevPage;
 
-	/** ë‹¤ìŒ í˜ì´ì§€ **/
+	/** ´ÙÀ½ ÆäÀÌÁö **/
 	private int nextPage;
 public Pagination(int listCnt, int curPage){
         
         /**
-         * í˜ì´ì§• ì²˜ë¦¬ ìˆœì„œ
-         * 1. ì´ í˜ì´ì§€ìˆ˜
-         * 2. ì´ ë¸”ëŸ­(range)ìˆ˜
+         * ÆäÀÌÂ¡ Ã³¸® ¼ø¼­
+         * 1. ÃÑ ÆäÀÌÁö¼ö
+         * 2. ÃÑ ºí·°(range)¼ö
          * 3. range setting
          */
         
-        // ì´ ê²Œì‹œë¬¼ ìˆ˜ì™€ í˜„ì¬ í˜ì´ì§€ë¥¼ Controllerë¡œ ë¶€í„° ë°›ì•„ì˜¨ë‹¤.
-        /** í˜„ì¬í˜ì´ì§€ **/
+        // ÃÑ °Ô½Ã¹° ¼ö¿Í ÇöÀç ÆäÀÌÁö¸¦ Controller·Î ºÎÅÍ ¹Ş¾Æ¿Â´Ù.
+        /** ÇöÀçÆäÀÌÁö **/
         setCurPage(curPage);
-        /** ì´ ê²Œì‹œë¬¼ ìˆ˜ **/
+        /** ÃÑ °Ô½Ã¹° ¼ö **/
         setListCnt(listCnt);
         
-        /** 1. ì´ í˜ì´ì§€ ìˆ˜ **/
+        /** 1. ÃÑ ÆäÀÌÁö ¼ö **/
         setPageCnt(listCnt);
-        /** 2. ì´ ë¸”ëŸ­(range)ìˆ˜ **/
+        /** 2. ÃÑ ºí·°(range)¼ö **/
         setRangeCnt(pageCnt);
-        /** 3. ë¸”ëŸ­(range) setting **/
+        /** 3. ºí·°(range) setting **/
         rangeSetting(curPage);
         
-        /** DB ì§ˆì˜ë¥¼ ìœ„í•œ startIndex ì„¤ì • **/
+        /** DB ÁúÀÇ¸¦ À§ÇÑ startIndex ¼³Á¤ **/
         setStartIndex(curPage);
         
     }

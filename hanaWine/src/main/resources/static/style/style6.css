@@ -1,34 +1,55 @@
 @charset "UTF-8";
 @import url(reset.css);
 
-/*----------------------------------revise.jsp 시작----------------------------------*/
+/*----------------------------------wineList.jsp 시작----------------------------------*/
 
 div#wrap {
-    width: 95%;
-    border: 2px solid #80f; 
+    width: 2180px;
+ 	/* border: 2px solid #80f; */  
     border-radius: 6px;
     padding: 10px 6px;
     margin: 20px auto;
 }
-
-
+div#Revisewrap {
+	width: 858px;	
+/* 	border: 2px solid #80f;  */
+	border-radius: 6px;
+	padding: 10px 6px;
+	margin: 20px auto;
+}
 h1 {
 	flex: 1;
 	text-align: center;
-
+	margin: 20px auto;
 }
 
 hr {
 	margin: 10px 0;
 }
 	
-table {
-	width: 97%;
+table#Listtable {
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
 /* 	border: 1px solid #aaa; */
 	margin: 10px auto;
 }
 
-#prnArea>tr#colArea{
+table#listTable {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1215px;
+ 	border: 1px solid #aaa; 
+	margin: 20px auto;
+}
+
+table#Listtable>tbody#prnArea>tr#colArea{
+	background-color: rgba(170, 170, 170, 0.1);
+/* 	background-color: rgba(0, 128, 255, 0.2); */
+	display : Flex;
+}
+
+table#listTable>tbody#prnArea>tr#Colarea{
 	background-color: rgba(170, 170, 170, 0.1);
 /* 	background-color: rgba(0, 128, 255, 0.2); */
 	display : Flex;
@@ -36,58 +57,100 @@ table {
 
 #prnArea>tr#colArea>th {
 	font-weight: bold;
-	/* border: 1px solid #000; */
+}
+/*목차*/
+#prnArea>tr#Colarea>th {
+	text-align: center;
+	font-weight: bold;
 }
 
-#prnArea>th td {
+#prnArea>th td{
 	text-align: center;
 	padding: 7px 3px;
 }
 
 #prnArea>tr.rowArea {
-/* 	border-bottom: 1px solid #ccc; */
+ 	border-bottom: 1px solid #ccc; 
 }
 
+#prnArea>tr.Rowarea {
+ 	border-bottom: 1px solid #ccc; 
+}
+/* #prnArea>tr.Rowarea>td {
+	border: 1px solid #000;
+} */
+/*와인 목록 목차*/
 #prnArea>tr#colArea>th {
+ 
 	text-align: center;
 }
 #prnArea>tr#colArea>th:nth-child(1) {
 	width: 197px;
 }
+#prnArea>tr#Colarea>th:nth-child(1) {
+	width: 100px;
+}
 #prnArea>#colArea>th:nth-child(2) {
 	width: 243px;
+}
+#prnArea>tr#Colarea>th:nth-child(2) {
+	width: 180px;
 }
 #prnArea>#colArea>th:nth-child(3) {
 	width: 76px;
 }
+#prnArea>tr#Colarea>th:nth-child(3) {
+	width: 150px;
+}
 #prnArea>#colArea>th:nth-child(4) {	
-	width: 199px;
+	width: 76px;
+}
+#prnArea>tr#Colarea>th:nth-child(4) {
+	width: 180px;
 }
 #prnArea>#colArea>th:nth-child(5) {
-	width: 80px;
-}
-#prnArea>#colArea>th:nth-child(6) {
-	width: 75px;
-}
-#prnArea>#colArea>th:nth-child(7) {
-	width: 86px;
-}
-#prnArea>#colArea>th:nth-child(8) {
-	width: 92px;
-}
-#prnArea>#colArea>th:nth-child(9) {
-	width: 110px;
-}
-#prnArea>#colArea>th:nth-child(10) {
 	width: 140px;
 }
+#prnArea>tr#Colarea>th:nth-child(5) {
+	width: 300px;
+}
+#prnArea>#colArea>th:nth-child(6) {
+	width: 76px;
+}
+#prnArea>tr#Colarea>th:nth-child(6) {
+	width: 250px;
+}
+#prnArea>#colArea>th:nth-child(7) {
+	width: 90px;
+}
+#prnArea>tr#Colarea>th:nth-child(7) {
+	width: 55px;
+}
+#prnArea>#colArea>th:nth-child(8) {
+	width: 90px;
+}
+#prnArea>#colArea>th:nth-child(9) {
+	width: 76px;
+}
+#prnArea>#colArea>th:nth-child(10) {
+	width: 76px;
+}
 #prnArea>#colArea>th:nth-child(11) {
-	width: 195px;
+	width: 76px;
 }
 #prnArea>#colArea>th:nth-child(12) {
-	width: 195px;
+	width: 270px;
 }
 #prnArea>#colArea>th:nth-child(13) {
+	width: 270px;
+}
+#prnArea>#colArea>th:nth-child(14) {
+	width: 270px;
+}
+#prnArea>#colArea>th:nth-child(15) {
+	width: 55px;
+}
+#prnArea>#colArea>th:nth-child(16) {
 	width: 55px;
 }
 
@@ -97,51 +160,95 @@ table {
 #prnArea>div.rowArea>td {
 /* 	border: 1px solid #000; */
 	font-weight: bold;
-
 }
+#prnArea>div.Rowarea>th {
+/* 	border: 1px solid #000; */
+	font-weight: bold;
+}
+
 #prnArea>tr.rowArea>td {
+	
+	text-align: center;
+	height: 100px;
+}
+#prnArea>tr.Rowarea>td {
 	text-align: center;
 }
 #prnArea>tr.rowArea>td:nth-child(1) {
 	width: 197px;
 }
+#prnArea>tr.Rowarea>td:nth-child(1) {
+	width: 100px;
+}
 #prnArea>tr.rowArea>td:nth-child(2) {
 	width: 243px;
+}
+#prnArea>tr.Rowarea>td:nth-child(2) {
+	width: 180px;
 }
 #prnArea>tr.rowArea>td:nth-child(3) {
 	width: 76px;
 }
+#prnArea>tr.Rowarea>td:nth-child(3) {
+	width: 150px;
+}
 #prnArea>tr.rowArea>td:nth-child(4) {
-	width: 199px;
+	width: 76px;
+}
+#prnArea>tr.Rowarea>td:nth-child(4) {
+	width: 180px;
 }
 #prnArea>tr.rowArea>td:nth-child(5) {
-	width: 80px;
-}
-#prnArea>tr.rowArea>td:nth-child(6) {
-	width: 75px;
-}
-#prnArea>tr.rowArea>td:nth-child(7) {
-	width: 86px;
-}
-#prnArea>tr.rowArea>td:nth-child(8) {
-	width: 92px;
-}
-#prnArea>tr.rowArea>td:nth-child(9) {
-	width: 110px;
-}
-#prnArea>tr.rowArea>td:nth-child(10) {
 	width: 140px;
 }
+#prnArea>tr.Rowarea>td:nth-child(5) {
+	width: 300px;
+}
+#prnArea>tr.rowArea>td:nth-child(6) {
+	width: 76px;
+}
+#prnArea>tr.Rowarea>td:nth-child(6) {
+	width: 250px;
+}
+#prnArea>tr.rowArea>td:nth-child(7) {
+	width: 90px;
+}
+#prnArea>tr.Rowarea>td:nth-child(7) {
+	width: 55px;
+}
+#prnArea>tr.rowArea>td:nth-child(8) {
+	width: 90px;
+}
+#prnArea>tr.rowArea>td:nth-child(9) {
+	width: 76px;
+}
+#prnArea>tr.rowArea>td:nth-child(10) {
+	width: 76px;
+}
 #prnArea>tr.rowArea>td:nth-child(11) {
-	width: 195px;
+	width: 76px;
 }
 #prnArea>tr.rowArea>td:nth-child(12) {
-	width: 195px;
+	width: 270px;
 }
 #prnArea>tr.rowArea>td:nth-child(13) {
+	width: 270px;
+}
+#prnArea>tr.rowArea>td:nth-child(14) {
+	width: 270px;
+}
+#prnArea>tr.rowArea>td:nth-child(15) {
+	width: 55px;
+}
+#prnArea>tr.rowArea>td:nth-child(16) {
 	width: 55px;
 }
 td.delIcon:hover {
+	color: #e6f9ff;
+	font-weight: bold;
+	cursor: pointer;
+}
+td.Delicon:hover {
 	color: #e6f9ff;
 	font-weight: bold;
 	cursor: pointer;
@@ -150,7 +257,9 @@ td.delIcon:hover {
 #prnArea>tr.rowArea:hover {
 	background-color: #aca6c7;
 }
-
+#prnArea>tr.Rowarea:hover {
+	background-color: #aca6c7;
+}
 div#modifyIns {
 	padding: 8px 0;
 	border-bottom: 1px solid #aaa;
@@ -192,13 +301,13 @@ div#modifyArea {
 	cursor: pointer;
 }
 
-/*----------------------------------revise.jsp 끝----------------------------------*/
+/*----------------------------------wineList 끝----------------------------------*/
 
 /*----------------------------------winelistReg.jsp 시작----------------------------------*/
 
 div#regWrap {
     width: 900px;
-    border: 2px solid #80f;
+/*     border: 2px solid #80f; */
     border-radius: 6px;
     padding: 20px;
     margin: 20px auto;
@@ -227,6 +336,11 @@ table th {
 }
 
 table td>input {
+	width: 300px;
+	font-size: 18px;
+	padding: 4px 8px;
+}
+table td>select {
 	width: 300px;
 	font-size: 18px;
 	padding: 4px 8px;
@@ -266,4 +380,9 @@ button#btnBack {
 	cursor: pointer;
 }
 
+a#wineList {
+	position: relative;
+	left: 745px;
+	bottom: 75px;
+}
 /*----------------------------------winelistReg.jsp 끝----------------------------------*/

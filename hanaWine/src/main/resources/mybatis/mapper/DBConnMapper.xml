@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE mapper	
+<!DOCTYPE mapper   
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.demo.DBConn">
+<mapper namespace="com.proj.DBConn">
 
-	<!-- BBS 글목록 태그 -->
-	<select id="mtdBoardList" resultType="com.example.demo.DataBean">
-		select * from wineList order by num desc  
-	</select>
-	
-	<!-- BBS 글저장 태그 -->
-	<insert id="mtdBoardWrite" >
-		insert into wineList (productNameKR, productNameEN, typeOfWine, grape, brand, price, nation, nationDetail, region, goodsImg, goodsInfo, recipe)
-		values ( #{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6}, #{param7}, #{param8}, #{param9}, #{param10}, #{param11}, #{param12})
-	</insert>
-	
-	
-	<!-- BBS 글 상세내용 보기 -->
-	<select id="mtdBoardView"
-	resultType="com.example.demo.DataBean">
-		select * from wineList where num = #{param1}
-	</select>
-	
-	<!-- BBS 글 삭제 -->
-	<delete id="mtdBoardDelete">
-		delete from wineList where num= #{param1}
-	</delete>
+   <!-- BBS 글목록 태그 -->
+   <select id="mtdBoardList" resultType="com.example.demo.DataBean">
+      select * from wineListTest order by num desc  
+   </select>
+   
+   <!-- BBS 글저장 태그 -->
+   <insert id="mtdBoardWrite" parameterType="com.example.demo.DataBean">
+      insert into wineListTest (wineKrName, wineEgName, typeOfWine, nation, region, grape, price, alcohol, sweetness, acidity, body, goodsImg, recipe, goodsInfo)
+      values ( #{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6}, #{param7}, #{param8}, #{param9}, #{param10}, #{param11}, #{param12}, #{param13}, #{param14})
+   </insert>
+   
+   
+   <!-- BBS 글 상세내용 보기 -->
+   <select id="mtdBoardView"
+   resultType="com.example.demo.DataBean">
+      select * from wineListTest where num = #{param1}
+   </select>
+   
+   <!-- BBS 글 삭제 -->
+   <delete id="mtdBoardDelete">
+      delete from wineListTest where num= #{num}
+   </delete>
 
 </mapper>
 

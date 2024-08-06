@@ -1,32 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
     
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>Document</title>
+<title>관리자 페이지</title>
 <style>
 
 div#Adminwrap {
-    width: 900px;
+    width: 1180px;
     padding: 20px;
-    border: 1px solid #80f;
     border-radius: 4px;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
-header#header>h1 {
+#Adminwrap>header#header>h1 {
     /* border: 1px solid #000; */
     /* padding-right: 50px; */
     position: relative;
     /* right: 10px; */
     margin-bottom: 25px;
     text-align: center;
-}
-h1 {
-	
 }
 
 table {
@@ -116,6 +111,10 @@ footer#footer{
 }
 .adminLi:nth-child(4) {
 	border-left: 2px solid #000;
+	
+}
+.adminLi:nth-child(5) {
+	border-left: 2px solid #000;
 	border-right: 2px solid #000;
 }
 .adminLi a {
@@ -139,31 +138,29 @@ footer#footer{
 	<div id="Adminwrap">
 		 <header id="header">
 
-            	<h1><a href="adminPage.jsp">관리자 페이지</a></h1>
+            	<h1><a href="/adminPage">관리자 페이지</a></h1>
 
             <nav id="AdmintabArea">
             	<ul id="AdminTab" class="dFlex">
                 	<li class="adminLi">
-                    <!--<a href="main">메인으로</a> --> 
+                    	<a href="/">메인으로</a>
                 	</li>
                		 <li class="adminLi">
-                    	<a href="winelistReg">와인 상품등록</a>
+                    	<a href="/winelistReg">와인 상품등록</a>
                	 	</li>
                 	<li class="adminLi">
-                    <!--<a href="memList">회원목록</a> -->
+                    	<a href="memList">회원목록</a>
                 	</li>
                 	<li class="adminLi">
-                     <!--<a href="revise">커뮤니티 수정/삭제</a>-->
+                     	<a href="/notice_write">공지사항 등록</a>
+                	</li>
+                	<li class="adminLi">
+                     	<a href="/faq_write">자주하는 질문</a>
                 	</li>
             	</ul>
             </nav>
         </header>
-        
         <br>
-
-        <footer id="footer">
-        	<h1>footer 이미지</h1>
-        </footer>
 	</div>
 	<!-- div#wrap -->
 	<script src="/lib/jquery-3.7.1.min.js"></script>
