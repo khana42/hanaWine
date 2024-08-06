@@ -202,7 +202,7 @@ $("#community").click(function(){
    
    ///////////검색창////////////////
    $(document).ready(function() {
-       $("#btnSearch").click(function(event) {
+       $("#btnSearch").off().click(function(event) {
            event.preventDefault(); // 기본 링크 클릭 동작 방지
 >>>>>>> 2b513cfa13e1efc73ccfca1ae75e28e3044ab9e4
             var keyword = $("#keyword").val(); // 검색어 가져오기

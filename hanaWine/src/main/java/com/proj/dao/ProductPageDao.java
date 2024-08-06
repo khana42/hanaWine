@@ -9,6 +9,6 @@ import com.proj.dto.ProductPageDto;
 
 @Mapper
 public interface ProductPageDao {
-	ProductPageDto getWineByName(String wineKrName);
+	List<ProductPageDto> getWineByName(String wineKrName);
 	
 }

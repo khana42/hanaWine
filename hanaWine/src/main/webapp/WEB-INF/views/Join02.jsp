@@ -20,8 +20,6 @@
 		<%@ include file="header.jsp" %>
 	</header>
 	<div id="Join2wrap">
-<<<<<<< HEAD
-
 		
         <header id="header">
             <h1>회원 가입</h1>
@@ -29,12 +27,6 @@
         <hr>
 		<div id="bd"></div>
 
-=======
-	
-			<h1>회원 가입</h1>
-		
-		<hr>
->>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 		<main id="mainjoin">
 			<form action="/member/Join02" method="post">
 
@@ -52,19 +44,14 @@
 						<label> <span class="req info1">아이디</span> <input
 							type="text" class="infoInput" id="userid"
 							placeholder="(영문소문자/숫자,4~16자)" required size="11">
-<<<<<<< HEAD
-						</label> <input type="button" id="btnchk" value="중복확인">
-					</div>
 
-
-=======
-						</label>
+						</label> <input type="button" id="btnchk" value="중복확인"></label>
 						<button type="button" id="btnchk">중복확인</button>
 					<input type="text" value="N" id="hidChk" hidden="hidden" />
 					<input type="text" value="N" id="btnHidChk" hidden="hidden" />
 					</div>
 	     
->>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
+
 					<div class="userInfo">
 						<label> <span class="req info1">비밀번호</span> <input
 							type="password" class="infoInput" id="userpw1" name="userpw1"required
@@ -109,18 +96,15 @@
 							<input type="text" class="infoInput" id="zonecode" placeholder="" disabled  />								
 							<button class="el_btn el_btn--outline hp_shrink-0"
 								id="postbtn">우편번호 찾기</button>				
-				
-				
-						
-<<<<<<< HEAD
-						<input type="text" class="infoInput" placeholder="" disabled id="useraddress"/>
+			
+										<input type="text" class="infoInput" placeholder="" disabled id="useraddress"/>
 						<input type="text" class="el_input"
 							placeholder="상세주소를 입력해주세요." id="roadAddressDetail" />
-=======
+
 						<input type="text" class="infoInput" placeholder="" disabled id="useraddress" />
 						<input type="text" class="el_input"
 							placeholder="상세주소를 입력해주세요." id="roadAddressDetail" name="memberAddr1"/>
->>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
+
 						
 						<button class="el_btn" id="userAdbtn">주소 등록하기</button>
 						</label>
@@ -143,8 +127,6 @@
 							class="phoneNum" id="usernum2" required>
 
 						</label>
-<<<<<<< HEAD
-
 
 						<button type="button" id="codenum">인증번호받기</button>
 
@@ -156,12 +138,12 @@
 					</div>
 					<!--div.userInfo-->
 					<!-- 휴대폰 영역 끝 <div class="userInfo" id="phoneArea"> -->
-=======
+
 						<input type="hidden" value="" name="fullNum">
 					</div>
 				</div>
 				
->>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
+
 
 
 				</div>
@@ -239,7 +221,7 @@
 		
 			</form>
 
-<<<<<<< HEAD
+
 
 		</main>
 		<!-- main#main -->
@@ -247,14 +229,13 @@
 	</div>
 	<!-- div#wrap -->
 	 
-=======
+
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="/script/script5.js"></script>
 	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
 
->>>>>>> f8c1430d7a349a1d99aaf55b56f2b3be36022ac2
 </body>
 </html>
 							

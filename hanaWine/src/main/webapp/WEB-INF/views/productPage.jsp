@@ -37,7 +37,7 @@
 					<div id="wineImgArea">
 						<img src="images/testImg.png" alt="제품이미지영역">
 					</div>
-<%-- 				<c:forEach	var="list"	items="${getAllWines}"> --%>
+				<c:forEach	var="list"	items="${getAllWines}">
 					<div id="wineDetailArea">
 						<h2>${productPage.wineKrName}</h2>
 						<p class="wineSubtitle">${productPage.wineEgName}</p>
@@ -82,7 +82,7 @@
 						<!-- div#btnArea -->
 
 					</div>
-<%-- 					</c:forEach> --%>
+					</c:forEach>
 					<!-- div#wineDetailArea -->
 				</div>
 				<!-- div#wineInfo -->

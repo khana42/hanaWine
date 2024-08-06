@@ -6,7 +6,7 @@
 <mapper namespace="com.proj.dao.ProductPageDao">
 
 	
-    <select id="getWineByName" resultType="com.proj.dto.ProductPageDto">
+    <select id="getWineByName" parameterType="String" resultType="com.proj.dto.ProductPageDto">
        SELECT A.wineKrName, A.wineEgName,
 (SELECT typeName FROM projectDB.typeOfWine WHERE IDX = A.typeOfWine ) AS TYPEOFWINE,
 (SELECT nationName FROM projectDB.nation WHERE IDX = A.nation) AS NATION,

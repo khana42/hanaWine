@@ -184,7 +184,7 @@ public class FrontController {
 	@GetMapping("/productPage")
 	public String productPageGet(@RequestParam("wineKrName") String wineKrName, Model model) {
 
-		ProductPageDto wineProduct = ProductPageSvc.getWineProduct(wineKrName);
+		List<ProductPageDto> wineProduct = ProductPageSvc.getWineProduct(wineKrName);
 
 		model.addAttribute("productPage", wineProduct);
 
