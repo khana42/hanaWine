@@ -93,7 +93,7 @@
                     <div class="form-group">
                         <label>받으시는 분 <span class="required">*</span></label>
                         <div class="input-group">
-                            <input type="text" name="recipient" value="박빛나리">
+                            <input type="text" name="recipient" id="nari" value="박빛나리">
                         </div>
                     </div>
 

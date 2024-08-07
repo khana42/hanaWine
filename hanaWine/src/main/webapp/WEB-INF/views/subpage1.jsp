@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<% %>
+<%
+
+%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,34 +12,29 @@
 <link rel="stylesheet" href="/style/style.css?v">
 </head>
 <body>
-    <header id="header">
-		<%@ include file="header.jsp" %>
+	<header id="header">
+		<%@ include file="header.jsp"%>
 	</header>
 	<div id="wrap">
 
 		<h1>${wineName}</h1>
 		<div class="slide_wrapper">
-			<div class="ha"><span>신상품 와인</span></div>
 			<ul class="slides dFlex">
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
+		<c:forEach var="list" items="${daoWineList}">
+				<li><img style="width: 200px; height: 200px; border: 1px solid #000;" src="
+					<c:url value='/wineimg/${list.goodsImg}' />" alt=""></li>
+       </c:forEach> 
+				
 			</ul>
 			<p class="controls">
 				<span class="prev">&lt;</span> <span class="next">&gt;</span>
 			</p>
 		</div>
+		<div class="ha"></div>
 
-	
+
 		<div id="select" class="dFlex">
-			
+
 			<div id="selecOp">
 				<ul id="select0" class="dFlex">
 					<li class="order" data-order="recent">최신순</li>
@@ -49,11 +46,13 @@
 			</div>
 		</div>
 		<!--       목록 -->
-         <c:forEach	var="list"	items="${daoWineList}">
-		 <div id="main" class="dFlex" >
-				<div id="wine" class="dFlex wineInfo" name="winePage"  data-winekrname="${list.wineKrName}" >
+		<c:forEach var="list" items="${daoWineList}">	
+			<div id="main" class="dFlex">
+				<div id="wine" class="dFlex wineInfo" name="winePage"
+					data-winekrname="${list.wineKrName}">
 					<div class="img1">
-						<img style="width: 110px" src="<c:url value='/wineimg/${list.goodsImg}' />" alt="">
+						<img style="width: 110px; height: 300px;"
+							src="<c:url value='/wineimg/${list.goodsImg}' />" alt="">
 					</div>
 					<div class="name">
 						<div class="winame">
@@ -74,42 +73,46 @@
 					</div>
 				</div>
 			</div>
+</c:forEach>
 		
-	 	</c:forEach>
-	
-<!-- 		목록끝 -->
-<!-- 페이징 작업 -->
-<div>
-                    <c:if test="${pagination.curRange ne 1 }">
-                        <a href="#" onClick="fn_paging(1)">[처음]</a> 
-                    </c:if>
-                    <c:if test="${pagination.curPage ne 1}">
-                        <a href="#" onClick="fn_paging('${pagination.prevPage }')">[이전]</a> 
-                    </c:if>
-                    <c:forEach var="pageNum" begin="${pagination.startPage }" end="${pagination.endPage }">
-                        <c:choose>
-                            <c:when test="${pageNum eq  pagination.curPage}">
-                                <span style="font-weight: bold;"><a href="#" onClick="fn_paging('${pageNum }')">${pageNum }</a></span> 
-                            </c:when>
-                            <c:otherwise>
-                                <a href="#" onClick="fn_paging('${pageNum }')">${pageNum }</a> 
-                            </c:otherwise>
-                        </c:choose>
-                    </c:forEach>
-                    <c:if test="${pagination.curPage ne pagination.pageCnt && pagination.pageCnt > 0}">
-                        <a href="#" onClick="fn_paging('${pagination.nextPage }')">[다음]</a> 
-                    </c:if>
-                    <c:if test="${pagination.curRange ne pagination.rangeCnt && pagination.rangeCnt > 0}">
-                        <a href="#" onClick="fn_paging('${pagination.pageCnt }')">[끝]</a> 
-                    </c:if>
-                </div>
-                
-                <div>
-                    총 게시글 수 : ${pagination.listCnt } /    총 페이지 수 : ${pagination.pageCnt } / 현재 페이지 : ${pagination.curPage } / 현재 블럭 : ${pagination.curRange } / 총 블럭 수 : ${pagination.rangeCnt }
-                </div>
+		<!-- 		목록끝 -->
+		<!-- 페이징 작업 -->
+		<div>
+			<c:if test="${pagination.curRange ne 1 }">
+				<a href="#" onClick="fn_paging(1)">[처음]</a>
+			</c:if>
+			<c:if test="${pagination.curPage ne 1}">
+				<a href="#" onClick="fn_paging('${pagination.prevPage }')">[이전]</a>
+			</c:if>
+			<c:forEach var="pageNum" begin="${pagination.startPage }"
+				end="${pagination.endPage }">
+				<c:choose>
+					<c:when test="${pageNum eq  pagination.curPage}">
+						<span style="font-weight: bold;"><a href="#"
+							onClick="fn_paging('${pageNum }')">${pageNum }</a></span>
+					</c:when>
+					<c:otherwise>
+						<a href="#" onClick="fn_paging('${pageNum }')">${pageNum }</a>
+					</c:otherwise>
+				</c:choose>
+			</c:forEach>
+			<c:if
+				test="${pagination.curPage ne pagination.pageCnt && pagination.pageCnt > 0}">
+				<a href="#" onClick="fn_paging('${pagination.nextPage }')">[다음]</a>
+			</c:if>
+			<c:if
+				test="${pagination.curRange ne pagination.rangeCnt && pagination.rangeCnt > 0}">
+				<a href="#" onClick="fn_paging('${pagination.pageCnt }')">[끝]</a>
+			</c:if>
+		</div>
 
+		<div>총 게시글 수 : ${pagination.listCnt } / 총 페이지 수 :
+			${pagination.pageCnt } / 현재 페이지 : ${pagination.curPage } / 현재 블럭 :
+			${pagination.curRange } / 총 블럭 수 : ${pagination.rangeCnt }</div>
+	
 	</div>
-<!-- div#wrap -->
+	
+	<!-- div#wrap -->
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="/script/script.js"></script>

@@ -17,25 +17,20 @@
 		<h1>${wineName}</h1>
 		<div class="slide_wrapper">
 			<ul class="slides dFlex">
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
-				<li><img src="http://placehold.it/200x200" alt=""></li>
+		<c:forEach var="list" items="${daoWineList}">
+				<li ><img style="width: 200px; height: 200px; border: 1px solid #000;" src="
+					<c:url value='/wineimg/${list.goodsImg}' />" alt=""></li>
+<%-- 					<input type="hidden" data-winekrname="${list.wineKrName}" name="wineinfo" > --%>
+       </c:forEach> 
+				
 			</ul>
 			<p class="controls">
 				<span class="prev">&lt;</span> <span class="next">&gt;</span>
 			</p>
 		</div>
-
 		<div class="ha"></div>
 		<div id="select" class="dFlex">
-			
+
 			<div id="selecOp">
 				<ul id="select0" class="dFlex">
 					<li class="order" data-order="recent">최신순</li>
@@ -47,14 +42,16 @@
 			</div>
 		</div>
 		<!--       목록 -->
-		<c:forEach var="list" items="${daoWineList}" >
+		<c:forEach var="list" items="${daoWineList}">
 			<div id="main" class="dFlex">
-				<div id="wine" class="dFlex wineInfo" class="winePage" data-winekrname="${list.wineKrName}">
+				<div id="wine" class="dFlex wineInfo" class="winePage"
+					data-winekrname="${list.wineKrName}">
 					<div class="img1">
-							<img style="width: 110px" src="<c:url value='/wineimg/${list.goodsImg}' />" alt="">
+						<img style="width: 110px; height: 300px;"
+							src="<c:url value='/wineimg/${list.goodsImg}' />" alt="">
 					</div>
 					<div class="name">
-						
+
 						<div class="winame">
 							<span>${list.wineKrName}</span>
 						</div>

@@ -53,7 +53,22 @@ $(function() {
 	
 	
 	
-	
+	//관리자 페이지
+   $("#admin-wine").click(function(){
+      location.href="/upload";
+   });
+   $("#admin-list").click(function(){
+      location.href="/Adminlist";
+   });
+   $("#admin-memList").click(function(){
+      location.href="/memList";
+   });
+   $("#admin-faq_write").click(function(){
+      location.href="/faq_write";
+   });
+   $("#admin-notice_write").click(function(){
+      location.href="/notice_write";
+   });
 	
 	
 	
