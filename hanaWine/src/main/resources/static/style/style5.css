@@ -593,13 +593,13 @@ label {
 }
 
 label {
-    width: 550px;
+    width: 150px;
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    text-align: left;
+    text-align: right;
     font-family: 'IBM Plex Sans KR', sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 300;
     /* border: 1px solid #269b09; */
 }
@@ -622,6 +622,7 @@ label#sameInfo {
     margin-left: 30px;
     width: 80%;
 }
+
 
 .input-group select,
 .input-group input[type="text"],
@@ -765,11 +766,11 @@ div.cart-header{
    
 }
 
-/* ul{ */
-/*    display: flex; */
-/*    margin-left: 30px; */
+ul{
+   display: flex;
+   margin-left: 30px;
    
-/* } */
+}
 div.prodbox>ul>li{
    display: block;
    width: 110px;

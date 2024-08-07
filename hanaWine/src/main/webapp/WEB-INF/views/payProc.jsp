@@ -25,7 +25,7 @@
                     <span>주문번호 : 20240802-0000111</span>
                     <br>
                     <span>주문일자 : 2024-08-02 23:59:57</span>
-                 <br>
+                    <br>
                  
                 </div>
                 
@@ -118,7 +118,7 @@
         </div>
 
         <div id="actions">
-            <button type="button" name="keepgoing" id="keepgoing" onclick="location.href='/'">쇼핑계속하기</button>
+            <button type="button" name="keepgoing" id="keepgoing">쇼핑계속하기</button>
         </div>
     </div>
     <!-- div#Cartwrap -->

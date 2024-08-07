@@ -47,8 +47,8 @@ public class Upload {
 			@RequestParam(value = "foodIdx") List<Integer> foodIdxList, Model model) {
 
 		try {
-		
-			String uploadDir = "C:\\Users/us000/OneDrive/바탕 화면/hanaWine/hanaWine/hanaWine/src/main/resources/static/wineimg/";
+
+			String uploadDir = "C:\\Users/us000/OneDrive/바탕 화면/hanaWine/hanaWine/wineimg/";
 			String goodsImgName = UUID.randomUUID() + "_" + goodsImg.getOriginalFilename();
 			String recipeName = UUID.randomUUID() + "_" + goodsImg.getOriginalFilename();
 		    String goodsInfoName = UUID.randomUUID() + "_" + goodsInfo.getOriginalFilename();

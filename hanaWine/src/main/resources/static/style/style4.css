@@ -57,9 +57,9 @@ ul.commGnb li span {
    font-weight: 300;
 }
 
-ul.commGnb li span:hover {
+ul.commGnb li span:hover{
    font-weight: bold;
-   text-decoration: underline;
+   text-decoration: underline; 
 }
 /* .commGnb End */
 
@@ -125,32 +125,16 @@ th.date {
 
 /*/// noticeWrite.jsp Start ///*/
 div#noticeWriteForm {
-   width: 1000px;
+   width: 600px;
    margin: 0 auto;
-   text-align: center;
-}
-div#noticeWriteForm span {
-   font-size: 20px;
 }
 
-div#noticeWriteForm h1 {
-   margin: 50px;
-}
-
-div#noticeWriteForm {
-   text-align: center;
-}
-
-div#noticeWriteForm table {
-   width: 1100px;
-}
-
-div#noticeWriteForm table>tbody>tr>td:first-child {
-   width: 200px;
+div#noticeWriteForm hr {
+   margin: 10px;
 }
 
 div#noticeWriteForm input {
-   margin: 10px;
+   margin: 5px;
    padding: 3px 5px;
    width: 100%;
 }
@@ -161,22 +145,11 @@ div#noticeWriteForm textarea {
 
 div#noticeWriteForm tr {
    display: block;
-   margin: 20px;
-}
-
-div#noticeWriteForm tr:last-child>td {
-   display: inline-block;
+   margin: 10px;
 }
 
 div#noticeWriteForm button {
-   display: inline-block;
-   padding: 10px;
-   font-weight: bold;
-   font-size: 20px;
-}
-
-div#noticeWriteForm button:hover {
-   cursor: pointer;
+   padding: 5px;
 }
 /*/// noticeWrite.jsp End ///*/
 
@@ -356,69 +329,9 @@ div.aside h3 {
    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
-.community img {
-   margin: 30px;
+.community img{
+	
+ margin: 30px;
 }
 
 /*/// faqList.jsp End ///*/
-
-/*/// faqWrite.jsp Start ///*/
-
-div#faqWriteForm {
-   width: 1000px;
-   margin: 0 auto;
-   text-align: center;
-}
-
-div#faqWriteForm h1 {
-   margin: 50px;
-}
-
-div#faqWriteForm {
-   text-align: center;
-}
-
-div#faqWriteForm table {
-   width: 1100px;
-}
-
-div#faqWriteForm table>tbody>tr>td:first-child {
-   width: 200px;
-}
-
-div#faqWriteForm input {
-   margin: 10px;
-   padding: 3px 5px;
-   width: 100%;
-}
-
-div#faqWriteForm textarea {
-   padding: 10px;
-}
-
-div#faqWriteForm tr {
-   display: block;
-   margin: 20px;
-}
-
-div#faqWriteForm tr:last-child>td {
-   display: inline-block;
-}
-
-div#faqWriteForm button {
-   display: inline-block;
-   padding: 10px;
-   font-weight: bold;
-   font-size: 20px;
-}
-
-div#faqWriteForm button:hover {
-   cursor: pointer;
-}
-
-div#faqWriteForm span {
-   font-size: 20px;
-}
-
-
-/*/// faqWrite.jsp End ///*/

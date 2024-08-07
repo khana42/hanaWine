@@ -41,7 +41,7 @@ $(function() {
 	});
     
 	//메인페이지의 로그아웃 클릭
-	$("#logout").off().click(function() {
+	$("#logout").click(function() {
 		confirm("로그아웃 하시겠습니까?");
 		location.href="/logout";
 	});

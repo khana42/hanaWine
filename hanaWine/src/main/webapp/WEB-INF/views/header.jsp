@@ -116,7 +116,7 @@ String memberId = (String)session.getAttribute("memberId");
 
 				
 
-				<li id="community" onclick="location.href='/notice_list'">커뮤니티
+				<li id="community" onclick="location.href='/notice'">커뮤니티
 					<ul class="subMenu" >
 						<li class="notice" onclick="event.stopPropagation(); location.href='/notice_list'">공지사항</li>
 						<li class="notice" onclick="event.stopPropagation(); location.href='/faq_list'">자주하는 질문</li>

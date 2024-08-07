@@ -10,11 +10,9 @@
 </head>
 <body>
 	<div id="wineUpload">
-	<header id="header">
-		<%@ include file="adminHeader.jsp"%>
-	</header>
 		<h1>와인 등록</h1>
-		
+		<a href="wineList" id="wineList"><img
+			src="/img/logo.png" alt="관리자페이지로"></a>
 		<form action="/insert" name="wineInsert" method="post" enctype="multipart/form-data">
 			<table id="Regtable">
 				<tbody>

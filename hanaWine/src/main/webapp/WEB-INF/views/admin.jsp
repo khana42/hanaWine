@@ -1,8 +1,5 @@
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%> 
-
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -11,102 +8,167 @@
 <title>Document</title>
 
 <style>
-#logo {
-   text-align: center;
-   margin: 20px auto;
-}
 
-div#AdminWrap {
-    width: 90%;
-    margin: 0 auto;
-    border: 1px solid #ddd;
+div#Adminwrap {
+    width: 900px;
     padding: 20px;
-    box-sizing: border-box;
-
+    border: 1px solid #80f;
+    border-radius: 4px;
+    margin: 10px auto;
 }
 
-div#AdminWrap>h1 {
+header#header>h1 {
+    /* border: 1px solid #000; */
+    /* padding-right: 50px; */
+    position: relative;
+    /* right: 10px; */
+    margin-bottom: 25px;
     text-align: center;
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    color: #333131;
-
+}
+h1 {
+	
 }
 
+table {
+    width: 858px;
+    border-collapse: collapse;
+    /* border: 1px solid #000; */
+}
 
+td.click {
+    border: 1px solid #000;
+    width: 207px;
+}
 
-.Admin-header {
-/*     width: 1500px; */
+td.exercise {
+    text-align: left;
+}
 
-    height: 500px;
+th,
+td {
+    border-bottom: 1px solid #aaa;
+}
+
+th {
+    border: 1px solid none;
+    padding: 10px 0;
+    background-color: #ebfaff;
+}
+
+td {
+    border: 1px solid none;
     text-align: center;
-
+    padding: 8px 0;
+    /* 위아래 우좌 */
+}
+a:hover {
+	color: #08f;
+}
+div.btnArea {
+	text-align: center;
+}
+div.btnArea button {
+	font-size: 18px;
+	padding: 3px 10px;
+	cursor: pointer;
+}
+main#main {
+	margin: 20px auto;
+	width: 900px;
+	border: 1px solid #000;
+	height: 500px;
+}
+footer#footer{
+     border: 1px solid #000; 
+    /* padding-right: 50px; */
+    position: relative;
+    /* right: 10px; */
+    margin-bottom: 25px;
+    text-align: center;
+  
+}
+#AdmintabArea {
+    margin-top: 20px;
 }
 
-.Admin-header,
-.Admin-item {
+#AdminTab {
     display: flex;
-    align-items: center;
-    padding: 10px;
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    font-size: 15px;
-    font-weight: 300;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    margin: 0;
 }
 
-
-
-.Admin-item {
-    width: 550px;
-    height: 200px;
-    line-height: 200px;
-    margin: 5px;
-    border: 1px solid #ddd;
-    flex: unset;
+.adminLi {
+    flex: 1;
+    text-align: center;
+}
+.adminLi:nth-child(1) {
+	border-left : 2px solid #000;
+}
+.adminLi:nth-child(2) {
+	border-left : 2px solid #000;
+}
+.adminLi:nth-child(3) {
+	border-left : 2px solid #000;
+}
+.adminLi:nth-child(4) {
+	border-left: 2px solid #000;
+	border-right: 2px solid #000;
+}
+.adminLi a {
+    display: block;
+    padding: 15px 0;
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;
     font-weight: bold;
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    padding-left: 100px;
 }
 
+.adminLi a:hover {
+    background-color: #aca6c7;
+    color: #e6f9ff;
+}
 </style>
 
 
 </head>
 <body>
-   <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style/style10.css">
-</head>
+	<div id="Adminwrap">
+		 <header id="header">
 
-<body>
+            	<h1><a href="adminPage.jsp">관리자 페이지</a></h1>
 
-    <div id="AdminWrap">
-        <div id="logo">
-         <a href="/admin"> <img src="/img/logo.png" alt="로고 이미지"></a>
-      </div>
-        <hr>
+            <nav id="AdmintabArea">
+            	<ul id="AdminTab" class="dFlex">
+                	
+               		 <li class="adminLi">
+                    	<a href="upload">와인 상품등록</a>
+               	 	</li>
+               	 	<li class="adminLi">
+                    <a href="Adminlist">와인 목록 페이지</a> 
+                	</li>
+                	<li class="adminLi">
+                    <a href="memList">회원목록</a> 
+                	</li>
+                	<li class="adminLi">
+                     <a href="faq_write">자주하는 질문 등록</a>
+                	</li>
+                	<li class="adminLi">
+                     <a href="notice_write">공지사항 등록</a>
+                	</li>
+            	</ul>
+            </nav>
+        </header>
+        
+        <br>
 
-        <form action="/payProc" method="post" id="payProc">
-
-            <div class="Admin-header">
-
-                <div id="admin-wine" class="Admin-item">와인 상품등록</div>
-                <div id="admin-list" class="Admin-item">와인 목록 페이지</div>
-                <div id="admin-memList" class="Admin-item">회원목록</div>
-                <div id="admin-faq_write" class="Admin-item">자주하는 질문 등록</div>
-                <div id="admin-notice_write" class="Admin-item">공지사항 등록</div>
-            </div>
-            <hr>
-        </form>
-   
-   
-   
-   
-   <script src="/lib/jquery-3.7.1.min.js"></script>
-   <script src="/script/script6.js"></script>
-
+        
+	</div>
+	<!-- div#wrap -->
+	<script src="/lib/jquery-3.7.1.min.js"></script>
+	<script src="/script/script6.js"></script>
 </body>
 </html>    

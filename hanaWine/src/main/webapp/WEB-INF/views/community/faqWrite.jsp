@@ -13,7 +13,7 @@
 <body>
 
 	<header id="header">
-		<%@ include file="../adminHeader.jsp" %>
+		<%@ include file="../header.jsp" %>
 	</header>
 
 	<div id="wrap">
@@ -46,7 +46,9 @@
 	</div>
 	<!-- div#wrap -->
 	
-
+	<footer id="footer">
+		<%@ include file="../footer.jsp" %>
+	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="/script/script4.js"></script>
