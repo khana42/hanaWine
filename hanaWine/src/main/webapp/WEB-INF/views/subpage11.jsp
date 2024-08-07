@@ -23,7 +23,7 @@
 			<div id="main" class="dFlex">
 				<div id="wine" class="dFlex wineInfo" name="winePage"  data-winekrname="${list.wineKrName}" >
 					<div class="img1">
-							<img style="width: 110px" src="<c:url value='/wineimg/${list.goodsImg}' />" alt="">
+							<img style="width: 110px; height: 300px;" src="<c:url value='/wineimg/${list.goodsImg}' />" alt="">
 					</div>
 					<div class="name">
 

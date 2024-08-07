@@ -9,14 +9,15 @@
 <link rel="stylesheet" href="/style/style6.css?v">
 </head>
 <body>
+<header id="header">
+		<%@ include file="adminHeader.jsp" %>
+	</header>
 	<div id="wrap">
 		
 		  <div id="adminLogoArea" class="dFlex">
 
          <div id="wineList" class="dFlex">
-            <a id="adminLogoImg" href="/"> <img id="adminLogo"
-               src="/img/logo.png" alt="메인으로">
-            </a> 
+         
             <span>와인 목록 보기</span>
          </div>
 

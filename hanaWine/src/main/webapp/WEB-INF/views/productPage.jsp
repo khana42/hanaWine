@@ -160,7 +160,8 @@ div#wrap {
 
 #btnArea {
     display: flex;
-    justify-content: space-between;
+    width : 350px;
+justify-content :center;
     gap: 10px;
 }
 
@@ -316,9 +317,8 @@ width: 1000px;
 						</div>
 						<div id="btnArea">
 					
-							<button>장바구니</button>
-							<button>구매하기</button>
-
+							 <a href="cart"><button>장바구니</button></a>
+                     <a href="pay"><button>구매하기</button></a>
 						</div>
 						<!-- div#btnArea -->
 

@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
 	<div id="Revisewrap">
 		<a href="/Admin/adminPage"><img src="/images/adminlogo.png" alt="관리자페이지로"></a>
 		<h1>커뮤니티 수정</h1>
