@@ -40,10 +40,7 @@ public class HanaController {
 	@Autowired
 	private WineService wineService;
 	
-	@RequestMapping("/admin")
-	public String admin() {
-		return "admin";
-	}
+
 //	@RequestMapping("/wineList")
 //	public String wineList() {
 //		return "wineList";
@@ -91,15 +88,7 @@ public class HanaController {
 			// 세션에 사용자 정보 저장
 			session.setAttribute("memberId", memberId);
 			session.setMaxInactiveInterval(20);
-			
-			UserVO adminUser = userServiceIf.getUserByID("hanawineadmin"); // 관리자 아이디를 "hanawineadmin"으로 
-			UserVO loggedInUser  = userServiceIf.getUserByID(memberId); // 로그인한 사용자 이름
-			
-			// 관리자 아이디와 비교
-	        if (adminUser != null && loggedInUser != null && loggedInUser.getMemberId().equals(adminUser.getMemberId())) {
-	            model.addAttribute("message", "관리자 권한으로 로그인했습니다.");
-	            return "redirect:/admin"; // 관리자 페이지로 리다이렉트
-	        }
+		
 
 			return "redirect:/"; // 로그인 성공 시 메인 페이지로
 

@@ -28,18 +28,7 @@ public class UserService implements UserServiceIf {
 	public List<UserVO> getUserID() {
 
 		List<UserVO> list = userMapper.getUserID();
-		for (int i = 0; i < list.size(); i++) {
-			UserVO uvo = list.get(i);
 
-			System.out.println("memberName : " + uvo.getMemberName());
-			System.out.println("memberId : " + uvo.getMemberId());
-			System.out.println("memberPw : " + uvo.getMemberPw());
-			System.out.println("memberMail : " + uvo.getMemberMail());
-			System.out.println("memberAddr1 : " + uvo.getMemberAddr1());
-			System.out.println("memberPhone : " + uvo.getMemberPhone());
-			System.out.println("--------------------------");
-
-		}
 		return list;
 	}
 

@@ -35,6 +35,7 @@ public void uploadWineAndFood(UploadDto uploadDto, int foodIdx) {
 @Override
 public List<UploadDto> AdminWineList(){
 	return uploadDao.AdminWineList();
+	
 }
 @Override
 public String AdminWineDel(int num) {

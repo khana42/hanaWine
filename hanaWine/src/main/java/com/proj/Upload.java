@@ -31,7 +31,7 @@ public class Upload {
 
 	@RequestMapping(value = "/upload", method = RequestMethod.GET)
 	String upload() {
-		return "Upload";
+		return "admin/UploadList";
 	}
 
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)

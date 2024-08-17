@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.proj.dao.AdminJoinDao">
+  	<insert id="adminJoin" parameterType="com.proj.dto.AdminJoin">
+  
+  	insert into admin_Join (admin_id, admin_password, admin_username, admin_email) values
+  	(#{admin_id}, #{admin_password}, #{admin_username}, #{admin_email})
+  </insert>
+  <select id="adminLoginId" resultType="com.proj.dto.AdminJoin">
+	SELECT * FROM admin_Join WHERE admin_id=#{admin_id}
+	</select>
+  </mapper>	

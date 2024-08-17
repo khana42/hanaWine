@@ -12,9 +12,9 @@
 </head>
 <body>
 
-		<header id="header">
-		<%@ include file="../adminHeader.jsp" %>
-	</header>
+<!-- 		<header id="header"> -->
+<%-- 		<%@ include file="../adminHeader.jsp" %> --%>
+<!-- 	</header> -->
 	<div id="wrap">
 		<div id="noticeWriteForm">
 			<h1>공지사항 게시물 입력(관리자)</h1>

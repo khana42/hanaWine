@@ -12,9 +12,9 @@
 </head>
 <body>
 
-	<header id="header">
-		<%@ include file="../adminHeader.jsp" %>
-	</header>
+<!-- 	<header id="header"> -->
+<%-- 		<%@ include file="/adminHeader.jsp" %> --%>
+<!-- 	</header> -->
 
 	<div id="wrap">
 		<div id="faqWriteForm">

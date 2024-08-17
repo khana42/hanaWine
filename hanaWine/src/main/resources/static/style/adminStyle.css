@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+@import url(style_Reset.css);
+
+h1 {
+	text-align: center;
+}
+
+div#AdminWrap {
+	width: 1100px;
+	padding: 15px;
+	margin: 30px auto;
+}
+
+/*  관리자 로그인 */
+div#adminLoginArea {
+	margin: 30px;
+}
+
+div#adminLoginArea>ul.dFlex {
+	justify-content: flex-end;
+}
+
+div#adminLoginArea>ul>li {
+	padding: 10px;
+	font-size: 18px;
+}
+/* 관리자 gnb 메뉴 */
+div#adminGnb {
+	margin: 30px;
+}
+
+div#adminGnb>ul.dFlex {
+	justify-content: center;
+	font-size: 18px;
+}
+
+div#adminGnb>ul>li {
+	padding: 20px;
+}
+
+div#wineUpload {
+	text-align: center;
+	flex: 1;
+}
+
+#wineUpload h1 {
+	margin: 20px 0;
+}
+
+#wineUpload #Regtable {
+	margin: 20px auto;
+	/*    border: 1px solid #000; */
+	border-collapse: collapse;
+}
+
+#wineUpload #Regtable th {
+	/*     border: 1px solid black;  */
+	padding: 5px 14px;
+	font-size: 18px;
+}
+
+#wineUpload #Regtable td {
+	padding: 5px 0;
+	/*    border: 1px solid black;  */
+	text-align: left;
+}
+
+#wineUpload #Regtable td input[type=text] {
+	padding: 5px;
+	font-size: 18px;
+	width: 270px;
+}
+
+#wineUpload #Regtable td select {
+	font-size: 18px;
+	padding: 5px 0;
+	width: 270px;
+}
+
+#wineUpload #Regtable td input[type=file] {
+	padding: 5px;
+	font-size: 18px;
+	width: 270px;
+}
+
+#wineUpload #Regtable td input[type=radio] {
+	font-size: 20px;
+	margin-right: 5px;
+}
+
+#wineUpload #Regtable .regBtn td {
+	text-align: center;
+}
+
+#wineUpload #Regtable .regBtn button {
+	font-size: 20px;
+	padding: 8px;
+	margin-top: 20px;
+}
+
+#wineUpload #Regtable .regBtn button#wineRegBtn {
+	margin-right: 20px;
+}
+/* admin winelist CSS */
+#prnArea>tr#colArea>th {
+	text-align: center;
+	padding: 15px;
+	border-bottom: 1px solid #000 /*    border: 1px solid #000; */
+}
+
+#prnArea>tr#colArea>th:nth-child(1) {
+	width: 65px;
+}
+
+#prnArea>#colArea>th:nth-child(2) {
+	width: 450px;
+}
+
+#prnArea>#colArea>th:nth-child(3) {
+	width: 450px;
+}
+
+#prnArea>#colArea>th:nth-child(4) {
+	width: 65px;
+}
+
+#prnArea>#colArea>th:nth-child(5) {
+	width: 65px;
+}
+
+#prnArea>#colArea>th:nth-child(6) {
+	width: 110px;
+}
+
+#prnArea>#colArea>th:nth-child(7) {
+	width: 65px;
+}
+
+#prnArea>#colArea>th:nth-child(8) {
+	width: 100px;
+}
+
+#prnArea>#colArea>th:nth-child(9) {
+	width: 65px;
+}
+
+#prnArea>tr.rowArea>td {
+	text-align: center;
+	padding: 15px;
+	border-bottom: 1px solid #000
+}
+
+#prnArea>tr.rowArea>td:nth-child(1) {
+	width: 65px;
+}
+
+#prnArea>tr.rowArea>td:nth-child(2) {
+	width: 450px;
+}
+
+#prnArea>tr.rowArea>td:nth-child(3) {
+	width: 450px;
+}
+
+#prnArea>tr.rowArea>td:nth-child(4) {
+	width: 65px;
+}
+
+#prnArea>tr.rowArea>td:nth-child(5) {
+	width: 65px;
+}
+
+#prnArea>tr.rowArea>td:nth-child(6) {
+	width: 110px;
+}
+
+#prnArea>tr.rowArea>td:nth-child(7) {
+	width: 65px;
+}
+
+#prnArea>tr.rowArea>td:nth-child(8) {
+	width: 100px;
+}
+
+#prnArea>tr.rowArea>td:nth-child(9) {
+	width: 65px;
+}
+
+#prnArea>tr#colArea {
+	background-color: rgba(170, 170, 170, 0.1);
+	display: Flex;
+}
+
+table {
+	width: 550px;
+	margin: 10px auto;
+}
+/* 관리자 회원가입 */
+
+
+/* 관리자 회원가입 래퍼 스타일 */
+#adiminJoinwrap {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    height: 110vh;
+    margin: 0 auto;
+    
+}
+
+/* 메인 제목 스타일 */
+#joinMain h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 입력 필드 스타일 */
+#adminId, #adminPw, #adminName, #adminEmail {
+    margin-bottom: 15px;
+}
+
+#adminId span, #adminPw span, #adminName span, #adminEmail span {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* 버튼 스타일 */
+#adminjoinbtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#adminjoinbtn:hover {
+    background-color: #0056b3;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 500px) {
+    #adiminJoinwrap {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+/* 관리자 로그인 */
+
+#adminloginwrap {
+    width: 400px; /* 폼 너비 설정 */
+    margin: 100px auto; /* 수직 중앙 배치 및 수평 중앙 배치 */
+    padding: 20px; /* 내부 여백 */
+    background-color: #fff; /* 배경색 흰색 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+#adminloginH1 {
+    text-align: center; /* 제목 중앙 정렬 */
+    color: #333; /* 텍스트 색상 */
+    margin-bottom: 20px; /* 하단 마진 */
+}
+
+form {
+    display: flex; /* 플렉스 박스 사용 */
+    flex-direction: column; /* 세로 방향 정렬 */
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px; /* 내부 여백 */
+    margin: 10px 0; /* 상하 마진 */
+    border: 1px solid #ccc; /* 테두리 색상 */
+    border-radius: 4px; /* 모서리 둥글게 */
+    font-size: 16px; /* 폰트 크기 */
+    transition: border-color 0.3s; /* 테두리 색상 변화 애니메이션 */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff; /* 포커스 시 테두리 색상 */
+    outline: none; /* 기본 포커스 아웃라인 제거 */
+}
+
+button {
+    padding: 10px; /* 내부 여백 */
+    margin-top: 10px; /* 상단 마진 */
+    border: none; /* 기본 테두리 제거 */
+    border-radius: 4px; /* 모서리 둥글게 */
+    font-size: 16px; /* 폰트 크기 */
+    color: #fff; /* 텍스트 색상 흰색 */
+    background-color: #007bff; /* 버튼 배경색 */
+    cursor: pointer; /* 마우스 커서 포인터로 변경 */
+    transition: background-color 0.3s; /* 배경색 변화 애니메이션 */
+}
+
+button:hover {
+    background-color: #0056b3; /* 버튼 호버 색상 */
+}
+
+input[type="checkbox"] {
+    margin-right: 5px; /* 체크박스 오른쪽 여백 */
+}
+
+span {
+    font-size: 14px; /* 폰트 크기 */
+}

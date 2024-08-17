@@ -186,10 +186,10 @@ button#btnBack {
 	<header id="header">
 		<%@ include file="adminHeader.jsp" %>
 	</header>
-      <div id="wineList" class="dFlex">
+
          
-            <<h1>회원목록</h1>
-         </div>
+            <h1>회원목록</h1>
+       
 	
 		<table id="Listtable">
 			<tbody id="prnArea">

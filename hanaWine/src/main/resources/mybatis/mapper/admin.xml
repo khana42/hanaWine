@@ -21,4 +21,5 @@
   <delete id="AdminWineDel">
   DELETE FROM wineListTest WHERE num = #{num}
 	</delete>
+
   </mapper>	
