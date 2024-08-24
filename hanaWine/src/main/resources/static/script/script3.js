@@ -41,8 +41,11 @@ $(function() {
 	});
     
 	//메인페이지의 로그아웃 클릭
-	$("#logout").off().click(function() {
-		confirm("로그아웃 하시겠습니까?");
+	$("#logout").off().click(function(event) {
+		if(!confirm("로그아웃 하시겠습니까?")){
+			event.preventDefault();
+			return false;
+		}
 		location.href="/logout";
 	});
    //메인페이지의 장바구니 클릭

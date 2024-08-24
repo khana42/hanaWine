@@ -38,9 +38,9 @@ boolean isLoggedIn = (admin_id != null);
 		<div id="adminGnb">
 			<ul class="dFlex">
 				<c:if test="${isLoggedIn}">
-					<li class="menu-link">회원 목록</li>
+					<li><a href="memList" class="menu-link">회원 목록</a>  </li>
 					<li>|</li>
-					<li class="menu-link">메인 페이지 업로드</li>
+					<li><a href="mainupload" class="menu-link">메인 페이지 업로드</a></li>
 					<li>|</li>
 					<li><a href="upload" class="menu-link">상품 업로드</a></li>
 					<li>|</li>

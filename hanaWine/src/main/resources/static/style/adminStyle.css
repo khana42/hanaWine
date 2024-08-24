@@ -328,3 +328,6 @@ input[type="checkbox"] {
 span {
     font-size: 14px; /* 폰트 크기 */
 }
+.delIcon {
+	cursor: pointer;
+}
